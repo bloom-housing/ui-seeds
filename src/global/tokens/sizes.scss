@@ -1,11 +1,15 @@
 :root {
+  /**
+   * Base Sizes
+   */
+
   --bloom-s0_5: 0.125rem;
   --bloom-s1: 0.25rem;
   --bloom-s1_5: 0.375rem;
   --bloom-s2: 0.5rem;
   --bloom-s2_5: 0.625rem;
   --bloom-s3: 0.75rem;
-  --bloom-s3_5: 0.875;
+  --bloom-s3_5: 0.875rem;
   --bloom-s4: 1rem;
   --bloom-s5: 1.25rem;
   --bloom-s6: 1.5rem;
@@ -47,4 +51,15 @@
   --bloom-width-prose: 65ch;
   --bloom-width-1-3rd: 33.333333%;
   --bloom-width-2-3rd: 66.666667%;
+
+  /** 
+   * Semantic Sizes
+   */
+
+  --bloom-spacer-container: var(--bloom-s12);
+  --bloom-spacer-section: var(--bloom-s8);
+  --bloom-spacer-content: var(--bloom-s6);
+  --bloom-spacer-header: var(--bloom-s4);
+  --bloom-spacer-label: var(--bloom-s3);
+  --bloom-spacer-text: var(--bloom-s2);
 }

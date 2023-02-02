@@ -1,0 +1,191 @@
+import { Meta } from "@storybook/addon-docs";
+import { Swatch } from "../../../documentation/components/Swatch.tsx";
+
+<Meta title="Tokens/Color Tokens" />
+
+# Color Tokens
+
+* [Global Tokens](#global-tokens)
+* [Semantic Tokens](#semantic-tokens)
+* [Common Component Tokens](#common-component-tokens)
+
+## Global Tokens
+
+Global color tokens are the complete palette of color tokens from which any project can build a theme palette.
+
+| Name                  | Swatch                                             |
+| --------------------- | -------------------------------------------------- |
+| `--bloom-color-white` | <Swatch color="bloom-color-white" border={true} /> |
+| `--bloom-color-black` | <Swatch color="bloom-color-black" />               |
+
+### Red
+
+| Name                                      | Swatch                                                                                                                                                                                             |
+| ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--bloom-color-red-{x}` | <Swatch color="bloom-color-red-900" label="900" /> <Swatch color="bloom-color-red-700" label="700" /> <Swatch color="bloom-color-red-500" label="500" /> <Swatch color="bloom-color-red-300" label="300" /> <Swatch color="bloom-color-red-100" label="100" /> |
+
+### Green
+
+| Name                                        | Swatch                                                                                                                                                                                                       |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--bloom-color-green-{x}` | <Swatch color="bloom-color-green-900" label="900" /> <Swatch color="bloom-color-green-700" label="700" /> <Swatch color="bloom-color-green-500" label="500" /> <Swatch color="bloom-color-green-300" label="300" /> <Swatch color="bloom-color-green-100" label="100" /> |
+
+### Blue
+
+| Name                                        | Swatch                                                                                                                                                                                                       |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--bloom-color-blue-{x}` | <Swatch color="bloom-color-blue-900" label="900" /> <Swatch color="bloom-color-blue-700" label="700" /> <Swatch color="bloom-color-blue-500" label="500" /> <Swatch color="bloom-color-blue-300" label="300" /> <Swatch color="bloom-color-blue-100" label="100" /> |
+
+### Cyan
+
+| Name                                        | Swatch                                                                                                                                                                                                       |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--bloom-color-cyan-{x}` | <Swatch color="bloom-color-cyan-900" label="900" /> <Swatch color="bloom-color-cyan-700" label="700" /> <Swatch color="bloom-color-cyan-500" label="500" /> <Swatch color="bloom-color-cyan-300" label="300" /> <Swatch color="bloom-color-cyan-100" label="100" /> |
+
+### Orange
+
+| Name                                        | Swatch                                                                                                                                                                                                       |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--bloom-color-orange-{x}` | <Swatch color="bloom-color-orange-900" label="900" /> <Swatch color="bloom-color-orange-700" label="700" /> <Swatch color="bloom-color-orange-500" label="500" /> <Swatch color="bloom-color-orange-300" label="300" /> <Swatch color="bloom-color-orange-100" label="100" /> |
+
+### Yellow
+
+| Name                                        | Swatch                                                                                                                                                                                                       |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--bloom-color-yellow-{x}` | <Swatch color="bloom-color-yellow-900" label="900" /> <Swatch color="bloom-color-yellow-700" label="700" /> <Swatch color="bloom-color-yellow-500" label="500" /> <Swatch color="bloom-color-yellow-300" label="300" /> <Swatch color="bloom-color-yellow-100" label="100" /> |
+
+### Gray
+
+| Name                                        | Swatch                                                                                                                                                                                                       |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--bloom-color-gray-{x}` | <Swatch color="bloom-color-gray-950" label="950" /> <Swatch color="bloom-color-gray-900" label="900" /> <Swatch color="bloom-color-gray-850" label="850" /> <Swatch color="bloom-color-gray-800" label="800" /> <Swatch color="bloom-color-gray-750" label="750" /> <Swatch color="bloom-color-gray-700" label="700" /> <Swatch color="bloom-color-gray-650" label="650" /> <Swatch color="bloom-color-gray-600" label="600" /> <Swatch color="bloom-color-gray-550" label="550" /> <Swatch color="bloom-color-gray-500" label="500" /> <Swatch color="bloom-color-gray-450" label="450" /> <Swatch color="bloom-color-gray-400" label="400" /> <Swatch color="bloom-color-gray-300" label="300" /> <Swatch color="bloom-color-gray-200" label="200" /> <Swatch color="bloom-color-gray-100" label="100" /> |
+
+
+## Semantic Tokens
+
+Global tokens map to semantic color tokens and provide accessible, customizable color choices that describe the color's intended role.
+
+### Primary
+
+| Name                            | Swatch                                         | Description            |
+| ------------------------------- | ---------------------------------------------- | ---------------------- |
+| `--bloom-color-primary`         | <Swatch color="bloom-color-primary" />         | Used for primary stuff |
+| `--bloom-color-primary-dark`    | <Swatch color="bloom-color-primary-dark" />    |
+| `--bloom-color-primary-darker`  | <Swatch color="bloom-color-primary-darker" />  |
+| `--bloom-color-primary-light`   | <Swatch color="bloom-color-primary-light" border={true} />   |
+| `--bloom-color-primary-lighter` | <Swatch color="bloom-color-primary-lighter" border={true} /> |
+
+### Secondary
+
+| Name                            | Swatch                                         | Description            |
+| ------------------------------- | ---------------------------------------------- | ---------------------- |
+| `--bloom-color-secondary`         | <Swatch color="bloom-color-secondary" />         | Used for secondary stuff |
+| `--bloom-color-secondary-dark`    | <Swatch color="bloom-color-secondary-dark" />    |
+| `--bloom-color-secondary-darker`  | <Swatch color="bloom-color-secondary-darker" />  |
+| `--bloom-color-secondary-light`   | <Swatch color="bloom-color-secondary-light" border={true} />   |
+| `--bloom-color-secondary-lighter` | <Swatch color="bloom-color-secondary-lighter" border={true} /> |
+
+### Alert
+
+| Name                            | Swatch                                         | Description            |
+| ------------------------------- | ---------------------------------------------- | ---------------------- |
+| `--bloom-color-alert`         | <Swatch color="bloom-color-alert" />         | Used for alert stuff |
+| `--bloom-color-alert-dark`    | <Swatch color="bloom-color-alert-dark" />    |
+| `--bloom-color-alert-darker`  | <Swatch color="bloom-color-alert-darker" />  |
+| `--bloom-color-alert-light`   | <Swatch color="bloom-color-alert-light" />   |
+| `--bloom-color-alert-lighter` | <Swatch color="bloom-color-alert-lighter" border={true} /> |
+
+### Success
+
+| Name                            | Swatch                                         | Description            |
+| ------------------------------- | ---------------------------------------------- | ---------------------- |
+| `--bloom-color-success`         | <Swatch color="bloom-color-success" />         | Used for success stuff |
+| `--bloom-color-success-dark`    | <Swatch color="bloom-color-success-dark" />    |
+| `--bloom-color-success-darker`  | <Swatch color="bloom-color-success-darker" />  |
+| `--bloom-color-success-light`   | <Swatch color="bloom-color-success-light" />   |
+| `--bloom-color-success-lighter` | <Swatch color="bloom-color-success-lighter" border={true} /> |
+
+### Warn
+
+| Name                            | Swatch                                         | Description            |
+| ------------------------------- | ---------------------------------------------- | ---------------------- |
+| `--bloom-color-warn`         | <Swatch color="bloom-color-warn" />         | Used for warning stuff |
+| `--bloom-color-warn-dark`    | <Swatch color="bloom-color-warn-dark" />    |
+| `--bloom-color-warn-darker`  | <Swatch color="bloom-color-warn-darker" />  |
+| `--bloom-color-warn-light`   | <Swatch color="bloom-color-warn-light" />   |
+| `--bloom-color-warn-lighter` | <Swatch color="bloom-color-warn-lighter" border={true} /> |
+
+### Accent
+
+| Name                            | Swatch                                         | Description            |
+| ------------------------------- | ---------------------------------------------- | ---------------------- |
+| `--bloom-color-accent-warm`         | <Swatch color="bloom-color-accent-warm" />         | Used for accent stuff |
+| `--bloom-color-accent-warm-dark`    | <Swatch color="bloom-color-accent-warm-dark" />    |
+| `--bloom-color-accent-warm-darker`  | <Swatch color="bloom-color-accent-warm-darker" />  |
+| `--bloom-color-accent-warm-light`   | <Swatch color="bloom-color-accent-warm-light" />   |
+| `--bloom-color-accent-warm-lighter` | <Swatch color="bloom-color-accent-warm-lighter" border={true} /> |
+
+| Name                            | Swatch                                         | Description            |
+| ------------------------------- | ---------------------------------------------- | ---------------------- |
+| `--bloom-color-accent-cool`         | <Swatch color="bloom-color-accent-cool" />         | Used for accent stuff |
+| `--bloom-color-accent-cool-dark`    | <Swatch color="bloom-color-accent-cool-dark" />    |
+| `--bloom-color-accent-cool-darker`  | <Swatch color="bloom-color-accent-cool-darker" />  |
+| `--bloom-color-accent-cool-light`   | <Swatch color="bloom-color-accent-cool-light" />   |
+| `--bloom-color-accent-cool-lighter` | <Swatch color="bloom-color-accent-cool-lighter" border={true} /> |
+
+## Common Component Tokens
+
+### Text
+
+| Name                            | Swatch                                         | Description            |
+| ------------------------------- | ---------------------------------------------- | ---------------------- |
+| `--bloom-text-color`         | <Swatch color="bloom-text-color" />         | Used for text stuff |
+| `--bloom-text-color-light`    | <Swatch color="bloom-text-color-light" />    |
+| `--bloom-text-color-disabled`  | <Swatch color="bloom-text-color-disabled" />  |
+| `--bloom-text-color-dark`   | <Swatch color="bloom-text-color-dark" />   |
+| `--bloom-text-color-darker` | <Swatch color="bloom-text-color-darker" /> |
+
+### Form Inputs
+
+| Name                            | Swatch                                         | Description            |
+| ------------------------------- | ---------------------------------------------- | ---------------------- |
+| `--bloom-input-text-label-color` | <Swatch color="bloom-input-text-label-color" /> | Text color for input labels |
+| `--bloom-input-text-placeholder-color` | <Swatch color="bloom-input-text-placeholder-color" /> |
+| `--bloom-input-text-highlight-color` | <Swatch color="bloom-input-text-highlight-color" /> |
+| `--bloom-input-icon-color` | <Swatch color="bloom-input-icon-color" /> |
+| `--bloom-input-bg-color` | <Swatch color="bloom-input-bg-color" border={true} /> |
+| `--bloom-input-border-color` | <Swatch color="bloom-input-border-color" /> |
+| `--bloom-input-text-color-disabled` | <Swatch color="bloom-input-text-color-disabled" /> |
+| `--bloom-input-icon-color-disabled` | <Swatch color="bloom-input-icon-color-disabled" /> |
+| `--bloom-input-bg-color-disabled` | <Swatch color="bloom-input-bg-color-disabled" border={true} /> |
+| `--bloom-input-border-color-disabled` | <Swatch color="bloom-input-border-color-disabled" /> |
+
+### Backgrounds
+
+| Name                            | Swatch                                         | Description            |
+| ------------------------------- | ---------------------------------------------- | ---------------------- |
+| `--bloom-bg-color-canvas` | <Swatch color="bloom-bg-color-canvas" border={true} /> |
+| `--bloom-bg-color-surface` | <Swatch color="bloom-bg-color-surface" border={true} /> |
+| `--bloom-bg-color-muted` | <Swatch color="bloom-bg-color-muted" border={true} /> |
+| `--bloom-bg-color-disabled` | <Swatch color="bloom-bg-color-disabled" /> |
+| `--bloom-bg-color-inverse` | <Swatch color="bloom-bg-color-inverse" border={true} /> |
+| `--bloom-bg-color-surface-primary` | <Swatch color="bloom-bg-color-surface-primary" border={true} /> |
+| `--bloom-bg-color-surface-primary-inverse` | <Swatch color="bloom-bg-color-surface-primary-inverse" /> |
+
+### Borders
+
+| Name                            | Swatch                                         | Description            |
+| ------------------------------- | ---------------------------------------------- | ---------------------- |
+| `--bloom-border-color` | <Swatch color="bloom-border-color" /> |
+
+### Colors on Top of Backgrounds
+
+| Name                            | Swatch                                         | Description            |
+| ------------------------------- | ---------------------------------------------- | ---------------------- |
+| `--bloom-color-on-canvas` | <Swatch color="bloom-color-gray-950" /> |
+| `--bloom-color-on-surface` | <Swatch color="bloom-color-gray-950" /> |
+| `--bloom-color-on-disabled` | <Swatch color="bloom-color-gray-700" /> |
+| `--bloom-color-on-inverse` | <Swatch color="bloom-color-white" border={true} /> |
+| `--bloom-color-on-inverse-muted` | <Swatch color="bloom-color-gray-500" /> |
+
+
