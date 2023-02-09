@@ -1,7 +1,28 @@
 {
   "name": "@bloom-housing/ui-seeds",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "https://github.com/bloom-housing/ui-seeds",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "release": {
+    "branches": [
+      "main",
+      {
+        "name": "alpha",
+        "prerelease": true
+      }
+    ]
+  },
+  "files": [
+    "dist",
+    "src",
+    "index.ts"
+  ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "6.2.0",
     "@fortawesome/free-regular-svg-icons": "6.2.0",
@@ -26,7 +47,7 @@
   },
   "scripts": {
     "start": "start-storybook -s ./public",
-    "build": "react-scripts build",
+    "build": "tsc",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -77,6 +98,7 @@
     "postcss-loader": "7.0.1",
     "prop-types": "^15.8.1",
     "sass": "1.56.1",
+    "semantic-release": "19.0.5",
     "ts-loader": "9.4.1",
     "webpack": "^5.75.0"
   }
