@@ -1,0 +1,18 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs"
+import Icon from "../Icon"
+import { faCoffee } from "@fortawesome/free-solid-svg-icons"
+
+<Meta title="Icons/Icon" component={Icon} />
+
+# Icon
+
+The icon yay.
+
+<Canvas>
+  <Story name="Icon">
+    <div style={{fontSize: "2em"}}>
+      <Icon icon={faCoffee} />
+      Coffee
+    </div>
+  </Story>
+</Canvas>
