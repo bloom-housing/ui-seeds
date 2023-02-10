@@ -1,6 +1,6 @@
 // .storybook/preview.js
-import "../src/global/app-css.scss";
-import "../documentation/storybook.css";
+import "../src/global/app-css.scss"
+import "../documentation/storybook.css"
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -15,8 +15,8 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['Tokens', 'Actions', 'Forms'],
+      order: ["Tokens", "Actions", "Forms"],
     },
   },
-  viewMode: 'docs',
-};
+  viewMode: "docs",
+}

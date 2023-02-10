@@ -1,1 +1,1 @@
-export * from "./src/expandableText/ExpandableText";
+export * from "./src/expandableText/ExpandableText"
