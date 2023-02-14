@@ -5,7 +5,7 @@ afterEach(cleanup)
 
 describe("<FormErrorMessage>", () => {
   it("displays the error message", () => {
-    const content = "Error message here"
+    const content = "Error Message Here"
     const { getByText, container } = render(<FormErrorMessage id="err" className="test-class">{content}</FormErrorMessage>)
     expect(getByText(content)).toBeInTheDocument()
     expect(container.querySelector("#err")).not.toBeNull()
