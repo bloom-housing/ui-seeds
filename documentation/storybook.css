@@ -1,0 +1,15 @@
+:root {
+  --link-color: #1EA7FD;
+}
+
+.sbdocs-table {
+  width: 100%;
+}
+
+.sbdocs-table thead tr th:first-child {
+  width: 38%;
+}
+
+.sbdocs-content {
+  max-width: 1200px !important;
+}

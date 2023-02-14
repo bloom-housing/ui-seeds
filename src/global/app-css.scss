@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Fonts */
+@import "../fonts/OpenSans/OpenSans.css";
+@import "../fonts/NotoSerif/NotoSerif.css";
+@import "../fonts/Lato/Lato.css";
+
 /* Design Tokens: */
 @import "tokens/borders.scss";
 @import "tokens/colors.scss";
@@ -8,13 +10,60 @@
 @import "tokens/screens.scss";
 @import "tokens/sizes.scss";
 
+/**
+ * Minimal CSS Reset
+ */
+
 html {
-  @apply antialiased;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
-  --background-color: var(--bloom-color-primary-lighter);
-  --text-color: var(--bloom-color-gray-900);
-  background-color: var(--background-color);
-  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p, ul, ol, blockquote, figure {
+  overflow-wrap: break-word;
+}
+
+:where(a) {
+  color: var(--bloom-color-primary);
+  text-decoration: inherit;
+}
+
+:where(input, button, textarea, select),
+:where(input[type="file"])::-webkit-file-upload-button {
+  font: inherit;
+  font-size: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+:where(button) {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+}
+
+/**
+ * Global Styles
+ */
+html {
+  font-family: var(--bloom-font-sans);
+  line-height: var(--bloom-line-height-normal);
+}
+
+body {
+  background-color: var(--bloom-bg-color-surface);
+  color: var(--bloom-color-on-surface);
+  line-height: inherit;
 }

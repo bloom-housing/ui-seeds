@@ -1,5 +1,6 @@
 // .storybook/preview.js
-import "../src/global/app-css.scss";
+import "../src/global/app-css.scss"
+import "../documentation/storybook.css"
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -12,4 +13,10 @@ export const parameters = {
   previewTabs: {
     "storybook/docs/panel": { index: -1 },
   },
-};
+  options: {
+    storySort: {
+      order: ["Tokens", "Actions", "Forms"],
+    },
+  },
+  viewMode: "docs",
+}
