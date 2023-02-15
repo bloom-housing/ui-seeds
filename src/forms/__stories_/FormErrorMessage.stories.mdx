@@ -1,5 +1,5 @@
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import FormErrorMessage from "../FormErrorMessage";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import FormErrorMessage from "../FormErrorMessage"
 
 <Meta title="Forms/FormErrorMessage" component={FormErrorMessage} />
 
@@ -56,13 +56,12 @@ The FormErrorMessage component is used to display an error message under a form 
         type="text"
         value="Invalid content"
         aria-describedby="example-error"
-        style={
-          {
-            border: "1px solid var(--bloom-color-alert)",
-            padding: "var(--bloom-s2) var(--bloom-s3)",
-            borderRadius: "var(--bloom-rounded)"
-          }
-        } />
+        style={{
+          border: "1px solid var(--bloom-color-alert)",
+          padding: "var(--bloom-s2) var(--bloom-s3)",
+          borderRadius: "var(--bloom-rounded)",
+        }}
+      />
     </div>
     <FormErrorMessage id="example-error">Error message</FormErrorMessage>
   </Story>
@@ -70,6 +69,7 @@ The FormErrorMessage component is used to display an error message under a form 
 
 ## Theme Variables
 
-| Name   | Description        | Default  |
-| ------ | ------------------ | -------- |
-| `name` | Description stuff. | Default. |
+| Name           | Description          | Default                |
+| -------------- | -------------------- | ---------------------- |
+| `--font-color` | Component text color | `--bloom-color-alert`  |
+| `--font-size`  | Component text size  | `--bloom-font-size-xs` |
