@@ -1,4 +1,4 @@
-import { Canvas, Meta, Story } from "@storybook/addon-docs"
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
 import Icon from "../Icon"
 import { faCoffee } from "@fortawesome/free-solid-svg-icons"
 
@@ -6,7 +6,7 @@ import { faCoffee } from "@fortawesome/free-solid-svg-icons"
 
 # Icon
 
-The icon yay.
+Displays supported icon definitions from Font Awesome (Free by default, optionally Pro).
 
 <Canvas>
   <Story name="Icon">
@@ -16,3 +16,35 @@ The icon yay.
     </div>
   </Story>
 </Canvas>
+
+## Props
+
+<ArgsTable of={Icon} />
+
+## Best Practices
+
+### When to Use
+
+- Use this component to add visual cues and enhance the user experience in interfaces such as buttons, navigation, and other interactive elements.
+
+### When Not to Use
+
+- Do not use this component for non-iconographic content, such as images or illustrations.
+
+### Usability
+
+- Use icons that are easily recognizable and have a clear meaning. Avoid using icons that are abstract or metaphorical.
+- Use the correct icon according to the context, meaning, and action associated with the element.
+
+### Content Guidelines
+
+- Use the Font Awesome icon set for standard icons.
+- Use the Pro icons option for additional icons that are not available in the free version.
+- For specific needs that are not covered by the Font Awesome icon set, use the CustomIcon component instead.
+
+### Accessibility Notes
+
+- Use the "aria-hidden" attribute for purely decorative icons that do not convey any information.
+- Provide a text alternative for icons that convey information, such as using an "aria-label" or "aria-labelledby" attribute.
+- Ensure that the icons are visible and can be easily distinguished by users with low vision or color blindness.
+- Avoid using only icons to convey information, as it can be difficult for users who rely on assistive technologies to understand the meaning of the icons.
