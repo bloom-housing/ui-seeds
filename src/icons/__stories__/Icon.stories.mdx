@@ -1,6 +1,8 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
 import Icon from "../Icon"
 import { faCoffee } from "@fortawesome/free-solid-svg-icons"
+import { faStar } from "@fortawesome/free-solid-svg-icons"
+import { faUser } from "@fortawesome/free-solid-svg-icons"
 
 <Meta title="Icons/Icon" component={Icon} />
 
@@ -10,9 +12,17 @@ Displays supported icon definitions from Font Awesome (Free by default, optional
 
 <Canvas>
   <Story name="Icon">
-    <div style={{fontSize: "2em"}}>
-      <Icon icon={faCoffee} />
+    <div style={{fontSize: "1.5em"}}>
+      <Icon icon={faCoffee} />{" "}
       Coffee
+    </div>
+    <div style={{fontSize: "1.5em"}}>
+      <Icon icon={faStar} />{" "}
+      Star
+    </div>
+    <div style={{fontSize: "1.5em"}}>
+      <Icon icon={faUser} />{" "}
+      User
     </div>
   </Story>
 </Canvas>
@@ -44,7 +54,40 @@ Displays supported icon definitions from Font Awesome (Free by default, optional
 
 ### Accessibility Notes
 
-- Use the "aria-hidden" attribute for purely decorative icons that do not convey any information.
-- Provide a text alternative for icons that convey information, such as using an "aria-label" or "aria-labelledby" attribute.
+- Use the `aria-hidden` attribute for purely decorative icons that do not convey any information.
+- Provide a text alternative for icons that convey information, such as using an `aria-label` or `aria-labelledby` attribute.
 - Ensure that the icons are visible and can be easily distinguished by users with low vision or color blindness.
 - Avoid using only icons to convey information, as it can be difficult for users who rely on assistive technologies to understand the meaning of the icons.
+
+## Sizes
+
+By default, the icon will scale with container's font size.
+
+<Canvas>
+  <Story name="Icon Sizes">
+    <div style={{fontSize: "var(--bloom-font-size-sm)"}}>
+      <Icon icon={faStar} />{" "}
+      Star
+    </div>
+    <div style={{fontSize: "var(--bloom-font-size-md)"}}>
+      <Icon icon={faStar} />{" "}
+      Star
+    </div>
+    <div style={{fontSize: "var(--bloom-font-size-lg)"}}>
+      <Icon icon={faStar} />{" "}
+      Star
+    </div>
+    <div style={{fontSize: "var(--bloom-font-size-xl)"}}>
+      <Icon icon={faStar} />{" "}
+      Star
+    </div>
+    <div style={{fontSize: "var(--bloom-font-size-2xl)"}}>
+      <Icon icon={faStar} />{" "}
+      Star
+    </div>
+    <div style={{fontSize: "var(--bloom-font-size-3xl)"}}>
+      <Icon icon={faStar} />{" "}
+      Star
+    </div>
+  </Story>
+</Canvas>

@@ -1,0 +1,60 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import CustomIcon from "../CustomIcon"
+
+export const customSVG = (
+  <svg viewBox={"0 0 34 32"}>
+    <path
+      fill="#ecba16"
+      d="M0 17.714c0 2.606 0.87 5.030 2.363 7.053-0.197 2.338-0.76 5.629-2.363 7.232 0 0 4.898-0.688 8.216-2.691 1.843 0.776 3.899 1.213 6.070 1.213 7.89 0 14.286-5.734 14.286-12.808s-6.397-12.808-14.286-12.808c-7.89 0-14.286 5.734-14.286 12.808z"
+    ></path>
+    <path
+      fill="#dd691d"
+      d="M33.142 12.808c0-7.074-6.397-12.808-14.286-12.808-5.698 0-10.614 2.99-12.907 7.317 2.347-1.515 5.224-2.41 8.336-2.41 7.89 0 14.286 5.734 14.286 12.808 0 2.706-0.938 5.214-2.536 7.282 3.2 1.546 7.107 2.098 7.107 2.098-1.603-1.603-2.166-4.896-2.363-7.232 1.491-2.022 2.363-4.446 2.363-7.053z"
+    ></path>
+  </svg>
+)
+
+<Meta title="Icons/Custom Icon" component={CustomIcon} />
+
+# Custom Icon
+
+Displays an icon via the supplied SVG markup.
+
+<Canvas>
+  <Story name="CustomIcon">
+    <div style={{fontSize: "1.5em"}}>
+      <CustomIcon icon={customSVG} />{" "}
+      Chat
+    </div>
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={CustomIcon} />
+
+## Best Practices
+
+### When to Use
+
+- Use this component to add visual cues and enhance the user experience in interfaces such as buttons, navigation, and other interactive elements.
+
+### When Not to Use
+
+- Do not use this component for non-iconographic content, such as images or illustrations.
+
+### Usability
+
+- Use icons that are easily recognizable and have a clear meaning. Avoid using icons that are abstract or metaphorical.
+- Use the correct icon according to the context, meaning, and action associated with the element.
+
+### Content Guidelines
+
+- Use only for specific needs that are not covered by the Font Awesome icon set. Otherwise, use the Icon component instead.
+
+### Accessibility Notes
+
+- Use the `aria-hidden` attribute for purely decorative icons that do not convey any information.
+- Provide a text alternative for icons that convey information, such as using an `aria-label` or `aria-labelledby` attribute.
+- Ensure that the icons are visible and can be easily distinguished by users with low vision or color blindness.
+- Avoid using only icons to convey information, as it can be difficult for users who rely on assistive technologies to understand the meaning of the icons.

@@ -1,11 +1,9 @@
 import React from "react"
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import "./Icon.scss"
 
-export interface IconProps {
-  icon: IconDefinition
+export interface CustomIconProps {
+  icon: React.ReactNode
   id?: string
   className?: string
   "aria-hidden"?: boolean
@@ -13,7 +11,7 @@ export interface IconProps {
   "aria-labelledby"?: string
 }
 
-const Icon = (props: IconProps) => {
+const CustomIcon = (props: CustomIconProps) => {
   const classNames = ["ui-icon"]
   let isHidden = true
 
@@ -28,9 +26,9 @@ const Icon = (props: IconProps) => {
       aria-label={props["aria-label"]}
       aria-labelledby={props["aria-labelledby"]}
     >
-      <FontAwesomeIcon icon={props.icon} />
+      {props.icon}
     </span>
   )
 }
 
-export default Icon
+export default CustomIcon
