@@ -1,4 +1,5 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { Swatch } from "../../../documentation/components/Swatch.tsx"
 import FormErrorMessage from "../FormErrorMessage"
 
 <Meta title="Forms/FormErrorMessage" component={FormErrorMessage} />
@@ -69,7 +70,7 @@ The FormErrorMessage component is used to display an error message under a form 
 
 ## Theme Variables
 
-| Name           | Description          | Default                |
-| -------------- | -------------------- | ---------------------- |
-| `--font-color` | Component text color | `--bloom-color-alert`  |
-| `--font-size`  | Component text size  | `--bloom-font-size-xs` |
+| Name                             | Description               | Default                                                    |
+| -------------------------------- | ------------------------- | ---------------------------------------------------------- |
+| `--form-error-message-color`     | Color of the text content | `--bloom-color-alert` <Swatch color="bloom-color-alert" /> |
+| `--form-error-message-font-size` | Component font size       | `--bloom-font-size-xs`                                     |
