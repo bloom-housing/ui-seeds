@@ -64,12 +64,8 @@ Displays supported icon definitions from Font Awesome (Free by default, optional
 By default, the icon will scale with container's font size.
 
 <Canvas>
-  <Story name="Icon Sizes">
+  <Story name="Container-based Sizes">
     <div style={{fontSize: "var(--bloom-font-size-sm)"}}>
-      <Icon icon={faStar} />{" "}
-      Star
-    </div>
-    <div style={{fontSize: "var(--bloom-font-size-md)"}}>
       <Icon icon={faStar} />{" "}
       Star
     </div>
@@ -77,17 +73,32 @@ By default, the icon will scale with container's font size.
       <Icon icon={faStar} />{" "}
       Star
     </div>
-    <div style={{fontSize: "var(--bloom-font-size-xl)"}}>
-      <Icon icon={faStar} />{" "}
-      Star
-    </div>
     <div style={{fontSize: "var(--bloom-font-size-2xl)"}}>
       <Icon icon={faStar} />{" "}
       Star
     </div>
-    <div style={{fontSize: "var(--bloom-font-size-3xl)"}}>
-      <Icon icon={faStar} />{" "}
-      Star
+  </Story>
+</Canvas>
+
+You can use preset sizes to ensure consistency for specific use cases.
+
+<Canvas>
+  <Story name="Preset Sizes">
+    <div>
+      <Icon icon={faStar} size={"utility-sm"} />{" "}
+      Star (utility-sm)
+    </div>
+    <div>
+      <Icon icon={faStar} size={"utility-md"} />{" "}
+      Star (utility-md)
+    </div>
+    <div>
+      <Icon icon={faStar} size={"badge-lg"} />{" "}
+      Star (badge-lg)
+    </div>
+    <div>
+      <Icon icon={faStar} size={"badge-xl"} />{" "}
+      Star (badge-xl)
     </div>
   </Story>
 </Canvas>

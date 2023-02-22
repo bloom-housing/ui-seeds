@@ -1,24 +1,17 @@
 import React from "react"
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { CommonIconProps, iconClassNames } from "./CommonIconProps"
 
 import "./Icon.scss"
 
-export interface IconProps {
+export interface IconProps extends CommonIconProps {
   icon: IconDefinition
-  id?: string
-  className?: string
-  "aria-hidden"?: boolean
-  "aria-label"?: string
-  "aria-labelledby"?: string
 }
 
 const Icon = (props: IconProps) => {
-  const classNames = ["ui-icon"]
-  let isHidden = true
-
-  if (props.className) classNames.push(props.className)
-  if (props["aria-hidden"] === false) isHidden = false
+  const classNames = iconClassNames(props)
+  const isHidden = !(props["aria-hidden"] === false)
 
   return (
     <span

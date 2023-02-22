@@ -1,22 +1,15 @@
 import React from "react"
+import { CommonIconProps, iconClassNames } from "./CommonIconProps"
 
 import "./Icon.scss"
 
-export interface CustomIconProps {
+export interface CustomIconProps extends CommonIconProps {
   icon: React.ReactNode
-  id?: string
-  className?: string
-  "aria-hidden"?: boolean
-  "aria-label"?: string
-  "aria-labelledby"?: string
 }
 
 const CustomIcon = (props: CustomIconProps) => {
-  const classNames = ["ui-icon"]
-  let isHidden = true
-
-  if (props.className) classNames.push(props.className)
-  if (props["aria-hidden"] === false) isHidden = false
+  const classNames = iconClassNames(props)
+  const isHidden = !(props["aria-hidden"] === false)
 
   return (
     <span
