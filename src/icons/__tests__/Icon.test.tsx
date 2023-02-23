@@ -11,4 +11,11 @@ describe("<Icon>", () => {
     expect(container.querySelector("#icn.test-class")).not.toBeNull()
     expect(container.querySelector("#icn svg")).not.toBeNull()
   })
+
+  it("supports different sizes", () => {
+    const { getByText, container } = render(<Icon icon={faCoffee} size="utility-md" id="icn" />)
+    expect(container.querySelector("#icn")).not.toBeNull()
+    expect(container.querySelector("#icn[data-size='utility-md']")).not.toBeNull()
+    expect(container.querySelector("#icn svg")).not.toBeNull()
+  })
 })

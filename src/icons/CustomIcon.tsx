@@ -4,6 +4,7 @@ import { CommonIconProps, iconClassNames } from "./CommonIconProps"
 import "./Icon.scss"
 
 export interface CustomIconProps extends CommonIconProps {
+  /** SVG element from JSX code */
   icon: React.ReactNode
 }
 
@@ -15,6 +16,7 @@ const CustomIcon = (props: CustomIconProps) => {
     <span
       id={props.id}
       className={classNames.join(" ")}
+      data-size={props.size}
       aria-hidden={isHidden}
       aria-label={props["aria-label"]}
       aria-labelledby={props["aria-labelledby"]}

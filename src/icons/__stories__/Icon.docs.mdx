@@ -1,30 +1,12 @@
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { ArgsTable, Canvas, Story } from "@storybook/addon-docs"
 import Icon from "../Icon"
-import { faCoffee } from "@fortawesome/free-solid-svg-icons"
-import { faStar } from "@fortawesome/free-solid-svg-icons"
-import { faUser } from "@fortawesome/free-solid-svg-icons"
-
-<Meta title="Icons/Icon" component={Icon} />
 
 # Icon
 
 Displays supported icon definitions from Font Awesome (Free by default, optionally Pro).
 
 <Canvas>
-  <Story name="Icon">
-    <div style={{fontSize: "1.5em"}}>
-      <Icon icon={faCoffee} />{" "}
-      Coffee
-    </div>
-    <div style={{fontSize: "1.5em"}}>
-      <Icon icon={faStar} />{" "}
-      Star
-    </div>
-    <div style={{fontSize: "1.5em"}}>
-      <Icon icon={faUser} />{" "}
-      User
-    </div>
-  </Story>
+  <Story id="icons-icon--icons" />
 </Canvas>
 
 ## Props
@@ -64,41 +46,11 @@ Displays supported icon definitions from Font Awesome (Free by default, optional
 By default, the icon will scale with container's font size.
 
 <Canvas>
-  <Story name="Container-based Sizes">
-    <div style={{fontSize: "var(--bloom-font-size-sm)"}}>
-      <Icon icon={faStar} />{" "}
-      Star
-    </div>
-    <div style={{fontSize: "var(--bloom-font-size-lg)"}}>
-      <Icon icon={faStar} />{" "}
-      Star
-    </div>
-    <div style={{fontSize: "var(--bloom-font-size-2xl)"}}>
-      <Icon icon={faStar} />{" "}
-      Star
-    </div>
-  </Story>
+  <Story id="icons-icon--container-based-sizes" />
 </Canvas>
 
 You can use preset sizes to ensure consistency for specific use cases.
 
 <Canvas>
-  <Story name="Preset Sizes">
-    <div>
-      <Icon icon={faStar} size={"utility-sm"} />{" "}
-      Star (utility-sm)
-    </div>
-    <div>
-      <Icon icon={faStar} size={"utility-md"} />{" "}
-      Star (utility-md)
-    </div>
-    <div>
-      <Icon icon={faStar} size={"badge-lg"} />{" "}
-      Star (badge-lg)
-    </div>
-    <div>
-      <Icon icon={faStar} size={"badge-xl"} />{" "}
-      Star (badge-xl)
-    </div>
-  </Story>
+  <Story id="icons-icon--preset-sizes" />
 </Canvas>

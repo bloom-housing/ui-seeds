@@ -6,6 +6,7 @@ import { CommonIconProps, iconClassNames } from "./CommonIconProps"
 import "./Icon.scss"
 
 export interface IconProps extends CommonIconProps {
+  /** Icon SVG metadata imported from Font Awesome */
   icon: IconDefinition
 }
 
@@ -17,6 +18,7 @@ const Icon = (props: IconProps) => {
     <span
       id={props.id}
       className={classNames.join(" ")}
+      data-size={props.size}
       aria-hidden={isHidden}
       aria-label={props["aria-label"]}
       aria-labelledby={props["aria-labelledby"]}

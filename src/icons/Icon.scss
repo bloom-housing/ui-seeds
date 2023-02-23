@@ -14,22 +14,22 @@
   vertical-align: var(--icon-alignment);
   height: var(--icon-height);
 
-  &--utility-sm {
+  &[data-size="utility-sm"] {
     --icon-height: var(--icon-utility-sm);
     --icon-alignment: var(--icon-utility-sm-alignment);
   }
 
-  &--utility-md {
+  &[data-size="utility-md"] {
     --icon-height: var(--icon-utility-md);
     --icon-alignment: var(--icon-utility-md-alignment);
   }
 
-  &--badge-lg {
+  &[data-size="badge-lg"] {
     --icon-height: var(--icon-badge-lg);
     --icon-alignment: var(--icon-badge-lg-alignment);
   }
 
-  &--badge-xl {
+  &[data-size="badge-xl"] {
     --icon-height: var(--icon-badge-xl);
     --icon-alignment: var(--icon-badge-xl-alignment);
   }
