@@ -1,0 +1,8 @@
+.form-error-message {
+  --form-error-message-color: var(--bloom-color-alert);
+  --form-error-message-font-size: var(--bloom-font-size-xs);
+
+  display: inline-block;
+  color: var(--form-error-message-color);
+  font-size: var(--form-error-message-font-size);
+}

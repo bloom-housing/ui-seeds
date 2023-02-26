@@ -1,0 +1,76 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { Swatch } from "../../../documentation/components/Swatch.tsx"
+import FormErrorMessage from "../FormErrorMessage"
+
+<Meta title="Forms/FormErrorMessage" component={FormErrorMessage} />
+
+# FormErrorMessage
+
+The FormErrorMessage component is used to display an error message under a form field when the user input is invalid.
+
+<Canvas>
+  <Story name="Error Message">
+    <FormErrorMessage>Looks like you made a mistake.</FormErrorMessage>
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={FormErrorMessage} />
+
+## Best Practices
+
+### When to Use
+
+- Use this component when a form field's input is invalid and the user needs to be informed of the error.
+- Use this component in conjunction with form validation to provide real-time feedback to the user.
+
+### When Not to Use
+
+- Do not use this component to display success messages or general information messages. Use other components, such as an alert box or modal, for those types of messages.
+- Do not use this component to display warnings or non-critical messages. Use other components, such as helper text, for those types of messages.
+
+### Usability
+
+- Place the FormErrorMessage component directly under the form field where the error occurred.
+
+### Content Guidelines
+
+- The error message should be specific to the form field and the error that occurred.
+- The error message should be phrased in a way that is easy for the user to understand and correct.
+- The error message should be concise, typically one sentence or phrase.
+
+### Accessibility Notes
+
+- Use ARIA attributes, such as "aria-describedby" and "role=alert", to associate the error message with the form field and convey its importance to assistive technologies.
+- Ensure that the error message is announced by assistive technologies, such as screen readers, when the form field receives focus.
+- Use a contrasting color between the error message text and background for better visibility for low vision and color blind users.
+
+## Use Cases
+
+### Single Field
+
+<Canvas>
+  <Story name="Single Field Error">
+    <div>
+      <input
+        type="text"
+        value="Invalid content"
+        aria-describedby="example-error"
+        style={{
+          border: "1px solid var(--bloom-color-alert)",
+          padding: "var(--bloom-s2) var(--bloom-s3)",
+          borderRadius: "var(--bloom-rounded)",
+        }}
+      />
+    </div>
+    <FormErrorMessage id="example-error">Error message</FormErrorMessage>
+  </Story>
+</Canvas>
+
+## Theme Variables
+
+| Name                             | Description               | Default                                                    |
+| -------------------------------- | ------------------------- | ---------------------------------------------------------- |
+| `--form-error-message-color`     | Color of the text content | `--bloom-color-alert` <Swatch color="bloom-color-alert" /> |
+| `--form-error-message-font-size` | Component font size       | `--bloom-font-size-xs`                                     |
