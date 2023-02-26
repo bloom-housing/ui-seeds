@@ -1,4 +1,5 @@
 import React from "react"
+import { Story } from "@storybook/react"
 import { faCoffee } from "@fortawesome/free-solid-svg-icons"
 import { faStar } from "@fortawesome/free-solid-svg-icons"
 import { faUser } from "@fortawesome/free-solid-svg-icons"
@@ -6,6 +7,7 @@ import { faUser } from "@fortawesome/free-solid-svg-icons"
 import Icon from "../Icon"
 
 import MDXDocs from "./Icon.docs.mdx"
+import { CommonIconProps } from "icons/CommonIconProps"
 
 export default {
   title: "Icons/Icon",
@@ -15,21 +17,37 @@ export default {
       page: MDXDocs,
     },
   },
+  argTypes: {
+    size: {
+      options: [undefined, "utility-sm", "utility-md", "badge-lg", "badge-xl"],
+      control: {
+        labels: {
+          undefined: "Default (undefined)"
+        },
+      },
+    }
+  },
 }
 
-export const icons = () => (
+const Template: Story<CommonIconProps> = ({ size }) => (
   <>
     <div style={{ fontSize: "1.5em" }}>
-      <Icon icon={faCoffee} /> Coffee
+      <Icon icon={faCoffee} size={size} /> Coffee
     </div>
     <div style={{ fontSize: "1.5em" }}>
-      <Icon icon={faStar} /> Star
+      <Icon icon={faStar} size={size} /> Star
     </div>
     <div style={{ fontSize: "1.5em" }}>
-      <Icon icon={faUser} /> User
+      <Icon icon={faUser} size={size} /> User
     </div>
   </>
 )
+
+export const icons: Story<CommonIconProps> = Template.bind({})
+// es-ignore-next-line
+icons.args = {
+  size: undefined,
+};
 
 export const containerBasedSizes = () => (
   <>
