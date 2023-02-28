@@ -1,7 +1,10 @@
 import React from "react"
+import { Story } from "@storybook/react"
+
 import CustomIcon from "../CustomIcon"
 
 import MDXDocs from "./CustomIcon.docs.mdx"
+import { CommonIconProps } from "../CommonIconProps"
 
 export default {
   title: "Icons/Custom Icon",
@@ -9,6 +12,16 @@ export default {
   parameters: {
     docs: {
       page: MDXDocs,
+    },
+  },
+  argTypes: {
+    size: {
+      options: [undefined, "utility-sm", "utility-md", "badge-lg", "badge-xl"],
+      control: {
+        labels: {
+          undefined: "Default (undefined)",
+        },
+      },
     },
   },
 }
@@ -26,8 +39,14 @@ const customSVG = (
   </svg>
 )
 
-export const customIconUsingSvg = () => (
+const Template: Story<CommonIconProps> = ({ size }) => (
   <div style={{ fontSize: "1.5em" }}>
-    <CustomIcon icon={customSVG} /> Chat
+    <CustomIcon icon={customSVG} size={size} /> Chat
   </div>
 )
+
+export const customIconUsingSvg: Story<CommonIconProps> = Template.bind({})
+// es-ignore-next-line
+customIconUsingSvg.args = {
+  size: undefined,
+}

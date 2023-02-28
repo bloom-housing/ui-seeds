@@ -7,7 +7,7 @@ import { faUser } from "@fortawesome/free-solid-svg-icons"
 import Icon from "../Icon"
 
 import MDXDocs from "./Icon.docs.mdx"
-import { CommonIconProps } from "icons/CommonIconProps"
+import { CommonIconProps } from "../CommonIconProps"
 
 export default {
   title: "Icons/Icon",
@@ -22,10 +22,10 @@ export default {
       options: [undefined, "utility-sm", "utility-md", "badge-lg", "badge-xl"],
       control: {
         labels: {
-          undefined: "Default (undefined)"
+          undefined: "Default (undefined)",
         },
       },
-    }
+    },
   },
 }
 
@@ -47,7 +47,7 @@ export const icons: Story<CommonIconProps> = Template.bind({})
 // es-ignore-next-line
 icons.args = {
   size: undefined,
-};
+}
 
 export const containerBasedSizes = () => (
   <>
