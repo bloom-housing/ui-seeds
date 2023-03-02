@@ -1,8 +1,11 @@
 import React from "react"
 import { Story } from "@storybook/react"
-import { faCoffee } from "@fortawesome/free-solid-svg-icons"
-import { faStar } from "@fortawesome/free-solid-svg-icons"
-import { faUser } from "@fortawesome/free-solid-svg-icons"
+
+import { faHouseChimney } from "@fortawesome/free-solid-svg-icons"
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
+import { faDoorOpen } from "@fortawesome/free-solid-svg-icons"
+import { faPhone } from "@fortawesome/free-solid-svg-icons"
+import { faCircleUser } from "@fortawesome/free-regular-svg-icons"
 
 import Icon from "../Icon"
 
@@ -32,13 +35,19 @@ export default {
 const Template: Story<CommonIconProps> = ({ size }) => (
   <>
     <div style={{ fontSize: "1.5em" }}>
-      <Icon icon={faCoffee} size={size} /> Coffee
+      <Icon icon={faHouseChimney} size={size} /> house-chimney
     </div>
     <div style={{ fontSize: "1.5em" }}>
-      <Icon icon={faStar} size={size} /> Star
+      <Icon icon={faEnvelope} size={size} /> envelope
     </div>
     <div style={{ fontSize: "1.5em" }}>
-      <Icon icon={faUser} size={size} /> User
+      <Icon icon={faDoorOpen} size={size} /> door-open
+    </div>
+    <div style={{ fontSize: "1.5em" }}>
+      <Icon icon={faPhone} size={size} /> phone
+    </div>
+    <div style={{ fontSize: "1.5em" }}>
+      <Icon icon={faCircleUser} size={size} /> circle-user
     </div>
   </>
 )
@@ -52,13 +61,13 @@ icons.args = {
 export const containerBasedSizes = () => (
   <>
     <div style={{ fontSize: "var(--bloom-font-size-sm)" }}>
-      <Icon icon={faStar} /> Star
+      <Icon icon={faDoorOpen} /> door-open
     </div>
     <div style={{ fontSize: "var(--bloom-font-size-lg)" }}>
-      <Icon icon={faStar} /> Star
+      <Icon icon={faDoorOpen} /> door-open
     </div>
     <div style={{ fontSize: "var(--bloom-font-size-2xl)" }}>
-      <Icon icon={faStar} /> Star
+      <Icon icon={faDoorOpen} /> door-open
     </div>
   </>
 )
@@ -66,16 +75,16 @@ export const containerBasedSizes = () => (
 export const presetSizes = () => (
   <>
     <div>
-      <Icon icon={faStar} size={"utility-sm"} /> Star (utility-sm)
+      <Icon icon={faHouseChimney} size={"utility-sm"} /> house-chimney (utility-sm)
     </div>
     <div>
-      <Icon icon={faStar} size={"utility-md"} /> Star (utility-md)
+      <Icon icon={faHouseChimney} size={"utility-md"} /> house-chimney (utility-md)
     </div>
     <div>
-      <Icon icon={faStar} size={"badge-lg"} /> Star (badge-lg)
+      <Icon icon={faHouseChimney} size={"badge-lg"} /> house-chimney (badge-lg)
     </div>
     <div>
-      <Icon icon={faStar} size={"badge-xl"} /> Star (badge-xl)
+      <Icon icon={faHouseChimney} size={"badge-xl"} /> house-chimney (badge-xl)
     </div>
   </>
 )
