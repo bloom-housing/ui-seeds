@@ -18,4 +18,11 @@ describe("<Icon>", () => {
     expect(container.querySelector("#icn[data-size='utility-md']")).not.toBeNull()
     expect(container.querySelector("#icn svg")).not.toBeNull()
   })
+
+  it("displays SVG child content", () => {
+    const { getByText, container } = render(<Icon id="icn" className="test-class"><svg /></Icon>)
+    expect(container.querySelector("#icn")).not.toBeNull()
+    expect(container.querySelector("#icn.test-class")).not.toBeNull()
+    expect(container.querySelector("#icn svg")).not.toBeNull()
+  })
 })

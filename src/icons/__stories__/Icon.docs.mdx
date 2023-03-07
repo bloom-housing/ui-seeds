@@ -3,7 +3,7 @@ import Icon from "../Icon"
 
 # Icon
 
-Displays supported icon definitions from Font Awesome (Free by default, optionally Pro).
+Displays supported icon definitions from Font Awesome (Free by default, optionally Pro), or by supplied SVG markup.
 
 <Canvas>
   <Story id="icons-icon--icons" />
@@ -32,7 +32,7 @@ Displays supported icon definitions from Font Awesome (Free by default, optional
 
 - Use the Font Awesome icon set for standard icons.
 - Use the Pro icons option for additional icons that are not available in the free version.
-- For specific needs that are not covered by the Font Awesome icon set, use the CustomIcon component instead.
+- For specific needs that are not covered by the Font Awesome icon set, you can provide an SVG (in JSX form) as child content.
 
 ### Accessibility Notes
 
@@ -53,6 +53,12 @@ You can use preset sizes to ensure consistency for specific use cases.
 
 <Canvas>
   <Story id="icons-icon--preset-sizes" />
+</Canvas>
+
+## Custom Icon SVG
+
+<Canvas>
+  <Story id="icons-icon--custom-icon-using-svg" />
 </Canvas>
 
 ## Theme Variables
