@@ -1,0 +1,27 @@
+.field-value {
+  font-family: var(--bloom-font-alt-sans);
+
+  /* Reset child margins */
+  > * {
+    margin: 0;
+  }
+
+  /* Owl selector for flow margins */
+  > * + * {
+    margin-block-start: var(--bloom-spacer-label);
+  }
+
+  > [data-part="label"] {
+    color: var(--bloom-input-text-label-color);
+    font-size: var(--bloom-type-label);
+  }
+
+  > [data-part="value"] {
+    color: var(--bloom-input-text-highlight-color);
+  }
+
+  > [data-part="helper-text"] {
+    color: var(--bloom-input-text-label-color);
+    font-size: var(--bloom-type-label);
+  }
+}
