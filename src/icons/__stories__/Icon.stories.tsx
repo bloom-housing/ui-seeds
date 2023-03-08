@@ -21,7 +21,7 @@ export default {
   },
   argTypes: {
     size: {
-      options: [undefined, "utility-sm", "utility-md", "badge-lg", "badge-xl"],
+      options: [undefined, "sm", "md", "lg", "xl"],
       control: {
         labels: {
           undefined: "Default (undefined)",
@@ -74,16 +74,16 @@ export const containerBasedSizes = () => (
 export const presetSizes = () => (
   <>
     <div>
-      <Icon icon={faHouseChimney} size={"utility-sm"} /> house-chimney (utility-sm)
+      <Icon icon={faHouseChimney} size={"sm"} /> house-chimney (sm)
     </div>
     <div>
-      <Icon icon={faHouseChimney} size={"utility-md"} /> house-chimney (utility-md)
+      <Icon icon={faHouseChimney} size={"md"} /> house-chimney (md)
     </div>
     <div>
-      <Icon icon={faHouseChimney} size={"badge-lg"} /> house-chimney (badge-lg)
+      <Icon icon={faHouseChimney} size={"lg"} /> house-chimney (lg)
     </div>
     <div>
-      <Icon icon={faHouseChimney} size={"badge-xl"} /> house-chimney (badge-xl)
+      <Icon icon={faHouseChimney} size={"xl"} /> house-chimney (xl)
     </div>
   </>
 )
