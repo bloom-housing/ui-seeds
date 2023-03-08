@@ -1,12 +1,12 @@
 .icon {
-  --icon-utility-sm: 0.75rem;
-  --icon-utility-sm-alignment: -0.05rem;
-  --icon-utility-md: 1rem;
-  --icon-utility-md-alignment: -0.125rem;
-  --icon-badge-lg: 2.5rem;
-  --icon-badge-lg-alignment: -0.75rem;
-  --icon-badge-xl: 3rem;
-  --icon-badge-xl-alignment: -1rem;
+  --icon-sm: 0.75rem;
+  --icon-sm-alignment: -0.05rem;
+  --icon-md: 1rem;
+  --icon-md-alignment: -0.125rem;
+  --icon-lg: 2.5rem;
+  --icon-lg-alignment: -0.75rem;
+  --icon-xl: 3rem;
+  --icon-xl-alignment: -1rem;
   --icon-height: 1em;
   --icon-alignment: -0.125em;
 
@@ -14,24 +14,24 @@
   vertical-align: var(--icon-alignment);
   height: var(--icon-height);
 
-  &[data-size="utility-sm"] {
-    --icon-height: var(--icon-utility-sm);
-    --icon-alignment: var(--icon-utility-sm-alignment);
+  &[data-size="sm"] {
+    --icon-height: var(--icon-sm);
+    --icon-alignment: var(--icon-sm-alignment);
   }
 
-  &[data-size="utility-md"] {
-    --icon-height: var(--icon-utility-md);
-    --icon-alignment: var(--icon-utility-md-alignment);
+  &[data-size="md"] {
+    --icon-height: var(--icon-md);
+    --icon-alignment: var(--icon-md-alignment);
   }
 
-  &[data-size="badge-lg"] {
-    --icon-height: var(--icon-badge-lg);
-    --icon-alignment: var(--icon-badge-lg-alignment);
+  &[data-size="lg"] {
+    --icon-height: var(--icon-lg);
+    --icon-alignment: var(--icon-lg-alignment);
   }
 
-  &[data-size="badge-xl"] {
-    --icon-height: var(--icon-badge-xl);
-    --icon-alignment: var(--icon-badge-xl-alignment);
+  &[data-size="xl"] {
+    --icon-height: var(--icon-xl);
+    --icon-alignment: var(--icon-xl-alignment);
   }
 }
 
