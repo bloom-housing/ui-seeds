@@ -1,0 +1,43 @@
+.icon {
+  --icon-sm: 0.75rem;
+  --icon-sm-alignment: -0.05rem;
+  --icon-md: 1rem;
+  --icon-md-alignment: -0.125rem;
+  --icon-lg: 2.5rem;
+  --icon-lg-alignment: -0.75rem;
+  --icon-xl: 3rem;
+  --icon-xl-alignment: -1rem;
+  --icon-height: 1em;
+  --icon-alignment: -0.125em;
+
+  display: inline-block;
+  vertical-align: var(--icon-alignment);
+  height: var(--icon-height);
+
+  &[data-size="sm"] {
+    --icon-height: var(--icon-sm);
+    --icon-alignment: var(--icon-sm-alignment);
+  }
+
+  &[data-size="md"] {
+    --icon-height: var(--icon-md);
+    --icon-alignment: var(--icon-md-alignment);
+  }
+
+  &[data-size="lg"] {
+    --icon-height: var(--icon-lg);
+    --icon-alignment: var(--icon-lg-alignment);
+  }
+
+  &[data-size="xl"] {
+    --icon-height: var(--icon-xl);
+    --icon-alignment: var(--icon-xl-alignment);
+  }
+}
+
+.icon svg {
+  display: block;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  fill: currentColor;
+}

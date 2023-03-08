@@ -1,0 +1,77 @@
+import { ArgsTable, Canvas, Story } from "@storybook/addon-docs"
+import Icon from "../Icon"
+
+# Icon
+
+Displays supported icon definitions from Font Awesome (Free by default, optionally Pro), or by supplied SVG markup.
+
+<Canvas>
+  <Story id="icons-icon--icons" />
+</Canvas>
+
+## Props
+
+<ArgsTable of={Icon} />
+
+## Best Practices
+
+### When to Use
+
+- Use this component to add visual cues and enhance the user experience in interfaces such as buttons, navigation, and other interactive elements.
+
+### When Not to Use
+
+- Do not use this component for non-iconographic content, such as images or illustrations.
+
+### Usability
+
+- Use icons that are easily recognizable and have a clear meaning. Avoid using icons that are abstract or metaphorical.
+- Use the correct icon according to the context, meaning, and action associated with the element.
+
+### Content Guidelines
+
+- Use the Font Awesome icon set for standard icons.
+- Use the Pro icons option for additional icons that are not available in the free version.
+- For specific needs that are not covered by the Font Awesome icon set, you can provide an SVG (in JSX form) as child content.
+
+### Accessibility Notes
+
+- Use the `aria-hidden` attribute for purely decorative icons that do not convey any information.
+- Provide a text alternative for icons that convey information, such as using an `aria-label` or `aria-labelledby` attribute.
+- Ensure that the icons are visible and can be easily distinguished by users with low vision or color blindness.
+- Avoid using only icons to convey information, as it can be difficult for users who rely on assistive technologies to understand the meaning of the icons.
+
+## Sizes
+
+By default, the icon will scale with container's font size.
+
+<Canvas>
+  <Story id="icons-icon--container-based-sizes" />
+</Canvas>
+
+You can use preset sizes to ensure consistency for specific use cases.
+
+<Canvas>
+  <Story id="icons-icon--preset-sizes" />
+</Canvas>
+
+## Custom Icon SVG
+
+<Canvas>
+  <Story id="icons-icon--custom-icon-using-svg" />
+</Canvas>
+
+## Theme Variables
+
+| Name                  | Description                | Default     |
+| --------------------- | -------------------------- | ----------- |
+| `--icon-sm`           | Small size                 | `0.75rem`   |
+| `--icon-sm-alignment` | Small vertical alignment   | `-0.05rem`  |
+| `--icon-md`           | Medium size                | `1rem`      |
+| `--icon-md-alignment` | Medium vertical alignment  | `-0.125rem` |
+| `--icon-lg`           | Large size                 | `2.5rem`    |
+| `--icon-lg-alignment` | Large vertical alignment   | `-0.75rem`  |
+| `--icon-xl`           | X-large size               | `3rem`      |
+| `--icon-xl-alignment` | X-large vertical alignment | `-1rem`     |
+| `--icon-height`       | Default font-based size    | `1em`       |
+| `--icon-alignment`    | Default vertical alignment | `-0.125em`  |
