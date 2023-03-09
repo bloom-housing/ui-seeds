@@ -15,6 +15,10 @@ export default {
   },
 }
 
+export const errorMessage = () => (
+  <FormErrorMessage>Looks like you made a mistake.</FormErrorMessage>
+)
+
 export const singleFieldError = () => (
   <>
     <div>
