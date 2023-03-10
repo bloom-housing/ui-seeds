@@ -13,9 +13,9 @@ describe("<Icon>", () => {
   })
 
   it("supports different sizes", () => {
-    const { getByText, container } = render(<Icon icon={faCoffee} size="utility-md" id="icn" />)
+    const { getByText, container } = render(<Icon icon={faCoffee} size="md" id="icn" />)
     expect(container.querySelector("#icn")).not.toBeNull()
-    expect(container.querySelector("#icn[data-size='utility-md']")).not.toBeNull()
+    expect(container.querySelector("#icn[data-size='md']")).not.toBeNull()
     expect(container.querySelector("#icn svg")).not.toBeNull()
   })
 
