@@ -5,8 +5,10 @@ import "./FieldValue.scss"
 export interface FieldValueProps {
   /** Value content */
   children: React.ReactNode
-  label: string
-  helperText?: string
+  /** Label content */
+  label?: string
+  /** Additional help text below the content */
+  helpText?: string
 }
 
 const FieldValue = (props: FieldValueProps) => {
@@ -14,7 +16,7 @@ const FieldValue = (props: FieldValueProps) => {
     <div className="field-value" role="gridcell">
       {props.label && <p data-part="label">{props.label}</p>}
       <p data-part="value">{props.children}</p>
-      {props.helperText && <p data-part="helper-text">{props.helperText}</p>}
+      {props.helpText && <p data-part="help-text">{props.helpText}</p>}
     </div>
   )
 }

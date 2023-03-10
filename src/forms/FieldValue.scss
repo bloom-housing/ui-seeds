@@ -8,20 +8,21 @@
 
   /* Owl selector for flow margins */
   > * + * {
-    margin-block-start: var(--bloom-spacer-label);
+    margin-block-start: var(--bloom-spacer-text);
   }
 
   > [data-part="label"] {
     color: var(--bloom-input-text-label-color);
     font-size: var(--bloom-type-label);
+    margin-block-end: var(--bloom-spacer-label);
   }
 
   > [data-part="value"] {
     color: var(--bloom-input-text-highlight-color);
   }
 
-  > [data-part="helper-text"] {
-    color: var(--bloom-input-text-label-color);
+  > [data-part="help-text"] {
+    color: var(--bloom-input-text-placeholder-color);
     font-size: var(--bloom-type-label);
   }
 }
