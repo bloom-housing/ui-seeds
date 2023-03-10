@@ -16,6 +16,12 @@ export default {
 
 export const standalone = () => <FieldValue>Pool, BBQ, Rooftop View</FieldValue>
 
-export const withLabel = () => <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
+export const withLabel = () => (
+  <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
+)
 
-export const withHelperText = () => <FieldValue label="Property Amenities" helpText="All good stuff">Pool, BBQ, Rooftop View</FieldValue>
+export const withHelperText = () => (
+  <FieldValue label="Property Amenities" helpText="All good stuff">
+    Pool, BBQ, Rooftop View
+  </FieldValue>
+)
