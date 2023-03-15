@@ -25,3 +25,19 @@ export const withHelperText = () => (
     Pool, BBQ, Rooftop View
   </FieldValue>
 )
+
+export const inAGrid = () => (
+  <div role="grid" style={{maxWidth: "var(--bloom-width-4xl)"}}>
+    <div role="row" style={{display: "grid", gridTemplateColumns: "1fr 1fr 1fr"}}>
+      <FieldValue label="Property Amenities" helpText="All good stuff">
+        Pool, BBQ, Rooftop View
+      </FieldValue>
+      <FieldValue label="Property Amenities" helpText="All good stuff">
+        Pool, BBQ, Rooftop View
+      </FieldValue>
+      <FieldValue label="Property Amenities" helpText="All good stuff">
+        Pool, BBQ, Rooftop View
+      </FieldValue>
+    </div>
+  </div>
+)
