@@ -54,6 +54,10 @@ p, ul, ol, blockquote, figure {
   border: none;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 /**
  * Global Styles
  */
