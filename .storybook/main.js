@@ -2,6 +2,7 @@ const path = require("path")
 
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  features: { buildStoriesJson: true },
   /** Expose public folder to storybook as static */
   // staticDirs: ['../public'],
   addons: [

@@ -13,3 +13,24 @@
 .sbdocs-content {
   max-width: 1200px !important;
 }
+
+:is(.sbdocs-table, .docblock-argstable) {
+  font-family: var(--bloom-font-sans) !important;
+  font-size: var(--bloom-font-size-sm) !important;
+  border: 1px solid var(--bloom-border-color);
+  color: var(--bloom-text-color-darker);
+}
+
+:is(.sbdocs-table, .docblock-argstable) thead th {
+  font-size: var(--bloom-font-size-base);
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--bloom-input-text-placeholder-color) !important;
+  background-color: var(--bloom-color-primary-lighter);
+  border-bottom: 1px solid var(--bloom-border-color) !important;
+  border-radius: none !important;
+}
+
+:is(.sbdocs-table, .docblock-argstable) :is(th, td) {
+  border-inline: none !important;
+}
