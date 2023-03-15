@@ -3,10 +3,10 @@ import React from "react"
 import "./FieldValue.scss"
 
 export interface FieldValueProps {
-  /** Value content */
-  children: React.ReactNode
   /** Label content */
   label?: string
+  /** Value content */
+  children: React.ReactNode
   /** Additional help text below the content */
   helpText?: string
   /** Element ID */
