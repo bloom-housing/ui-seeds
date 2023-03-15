@@ -10,13 +10,9 @@ export const parameters = {
       date: /Date$/,
     },
   },
-  previewTabs: {
-    "storybook/docs/panel": { index: -1 },
-  },
   options: {
     storySort: {
       order: ["Tokens", "Actions", "Forms"],
     },
   },
-  viewMode: "docs",
 }
