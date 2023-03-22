@@ -20,15 +20,15 @@ export default {
       options: [
         undefined,
         "primary",
-        "primary-light",
+        "primary-inverse",
         "alert",
-        "alert-light",
+        "alert-inverse",
         "success",
-        "success-light",
+        "success-inverse",
         "secondary",
-        "secondary-light",
+        "secondary-inverse",
         "warn",
-        "warn-light"
+        "warn-inverse"
       ],
       control: {
         labels: {
@@ -55,4 +55,18 @@ alert.args = {
 
 export const withCustomIcon = () => (
   <Alert customIcon={<Icon icon={faHouseChimney} />}>An alert with a custom icon</Alert>
+)
+
+export const wideContainerLayout = () => (
+  <>
+    <Alert id="in-container" variant="alert" fullwidth>An alert that scales to full container width</Alert>
+  
+    <style>
+      {`
+      #in-container {
+        --alert-max-width: var(--bloom-width-4xl);
+      }
+      `}
+    </style>
+  </>
 )

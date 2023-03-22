@@ -1,0 +1,24 @@
+#toast-stack {
+  --toast-stack-gap: var(--bloom-s4);
+  --toast-stack-inset-top: var(--bloom-s3);
+  --toast-stack-inset-right: var(--bloom-s3);
+
+  position: fixed;
+  z-index: var(--bloom-z-index-overlay);
+  display: flex;
+  flex-direction: column;
+  gap: var(--toast-stack-gap);
+  top: var(--toast-stack-inset-top);
+  right: var(--toast-stack-inset-right);
+}
+
+.toast {
+  --common-message-padding: var(--toast-padding);
+  --common-message-border-radius: var(--toast-border-radius);
+  --common-message-border: var(--toast-border);
+  --common-message-flex-gap: var(--toast-flex-gap);
+  --common-message-icon-size: var(--toast-icon-size);
+  --common-message-max-width: var(--toast-max-width);
+  --common-message-font: var(--toast-font);
+  --common-message-font-size: var(--toast-font-size);
+}
