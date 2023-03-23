@@ -4,7 +4,7 @@ import CommonMessage, { CommonMessageProps } from "./shared/CommonMessage"
 
 import "./Toast.scss"
 
-interface ToastProps extends Omit<CommonMessageProps, "role"> {}
+interface ToastProps extends Omit<CommonMessageProps, "role" | "closable"> {}
 
 const Toast = (props: ToastProps) => {
   const classNames = ["toast"]

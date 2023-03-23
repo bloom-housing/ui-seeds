@@ -1,0 +1,25 @@
+import { ArgsTable } from "@storybook/addon-docs"
+import Message from "../Message"
+
+# &lt;Message /&gt;
+
+## Properties
+
+<ArgsTable of={Message} />
+
+## Theme Variables
+
+The Alert, Message, and Toast components all share a common set of theme variables. You can set those variables simultaneously using `.common-message` along with `--common-message` variable prefixes, or you can individually customize `.message`:
+
+| Name                         | Description                   | Default                        |
+| ---------------------------- | ----------------------------- | ------------------------------ |
+| `--message-padding`          | Interior spacing              | `--bloom-s4`                   |
+| `--message-border-radius`    | Radius                        | `0`                            |
+| `--message-border`           | Border shorthand              | `none`                         |
+| `--message-flex-gap`         | Space between icons/text      | `--bloom-s3`                   |
+| `--message-icon-size`        | Size                          | `1em`                          |
+| `--message-max-width`        | Size                          | `--bloom-width-sm`             |
+| `--message-font`             | Font                          | `--bloom-font-sans`            |
+| `--message-font-size`        | Component font size           | `--bloom-type-caption`         |
+| `--message-link-gap`         | Space between text and a link | `--bloom-s1`                   |
+| `--message-link-font-weight` | Font weight                   | `--bloom-font-weight-semibold` |

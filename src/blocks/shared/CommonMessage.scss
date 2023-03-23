@@ -7,6 +7,8 @@
   --_common-message-max-width: var(--common-message-max-width, var(--bloom-width-sm));
   --_common-message-font: var(--common-message-font, var(--bloom-font-sans));
   --_common-message-font-size: var(--common-message-font-size, var(--bloom-type-caption));
+  --_common-message-link-gap: var(--common-message-link-gap, var(--bloom-s1));
+  --_common-message-link-font-weight: var(--common-message-link-font-weight, var(--bloom-font-weight-semibold));
 
   padding: var(--_common-message-padding);
   display: flex;
@@ -90,5 +92,13 @@
   .icon {
     font-size: var(--_common-message-icon-size);
     margin-block-start: -0.15em; /* Slightly adjust flex alignment */
+  }
+
+  a {
+    // margin-inline-start: var(--bloom-s1);
+    margin-inline-start: var(--_common-message-link-gap);
+    color: currentColor;
+    text-decoration: underline;
+    font-weight: var(--_common-message-link-font-weight);
   }
 }

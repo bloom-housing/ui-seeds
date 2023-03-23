@@ -29,6 +29,7 @@ const CommonMessageIconMap: Record<string, IconDefinition> = {
 export interface CommonMessageProps {
   /** Message content */
   children: React.ReactNode
+  /** Appearance of the component */
   variant?:
     | "primary"
     | "primary-inverse"
@@ -40,8 +41,11 @@ export interface CommonMessageProps {
     | "warn-inverse"
     | "secondary"
     | "secondary-inverse"
+  /** Pass in an `<Icon>` or SVG content */
   customIcon?: React.ReactNode
+  /** If the component can hide via a close icon */
   closable?: boolean
+  /** Scale to fit component to its container */
   fullwidth?: boolean
   /** Element ID */
   id?: string
