@@ -1,0 +1,33 @@
+import { ArgsTable } from "@storybook/addon-docs"
+import Toast from "../Toast"
+
+# &lt;Toast /&gt;
+
+## Properties
+
+<ArgsTable of={Toast} />
+
+## Theme Variables
+
+The Alert, Message, and Toast components all share a common set of theme variables. You can set those variables simultaneously using `.common-message` along with `--common-message` variable prefixes, or you can individually customize `.toast`:
+
+| Name                       | Description                   | Default                        |
+| -------------------------- | ----------------------------- | ------------------------------ |
+| `--toast-padding`          | Interior spacing              | `--bloom-s4`                   |
+| `--toast-border-radius`    | Radius                        | `0`                            |
+| `--toast-border`           | Border shorthand              | `none`                         |
+| `--toast-flex-gap`         | Space between icons/text      | `--bloom-s3`                   |
+| `--toast-icon-size`        | Size                          | `1em`                          |
+| `--toast-max-width`        | Size                          | `--bloom-width-sm`             |
+| `--toast-font`             | Font                          | `--bloom-font-sans`            |
+| `--toast-font-size`        | Component font size           | `--bloom-type-caption`         |
+| `--toast-link-gap`         | Space between text and a link | `--bloom-s1`                   |
+| `--toast-link-font-weight` | Font weight                   | `--bloom-font-weight-semibold` |
+
+In addition, there are a set of variables you can customize via `#toast-stack` which affects the fixed container within which toasts are rendered:
+
+| Name                        | Description                      | Default      |
+| --------------------------- | -------------------------------- | ------------ |
+| `--toast-stack-gap`         | Spacing between toasts           | `--bloom-s4` |
+| `--toast-stack-inset-top`   | Window top edge -> stack space   | `--bloom-s3` |
+| `--toast-stack-inset-right` | Window right edge -> stack space | `--bloom-s3` |

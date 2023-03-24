@@ -3,9 +3,16 @@ import { Story } from "@storybook/react"
 
 import Toast from "../Toast"
 
+import MDXDocs from "./Toast.docs.mdx"
+
 export default {
   title: "Blocks/Toast",
   component: Toast,
+  parameters: {
+    docs: {
+      page: MDXDocs,
+    },
+  },
 }
 
 export const toasts = () => (
@@ -22,8 +29,10 @@ export const showToasts = () => {
 
   return (
     <>
-      <button onClick={() => showSuccess(!success)}>Show Success Toast</button>
-      <button onClick={() => showWarning(!warning)}>Show Warn Toast</button>
+      <button onClick={() => showSuccess(!success)} style={{ background: "#f0f0f0" }}>
+        Show Success Toast
+      </button>{" "}
+      <button onClick={() => showWarning(!warning)} style={{ background: "#f0f0f0" }}>Show Warn Toast</button>
       {success && <Toast variant="success">Success message!</Toast>}
       {warning && <Toast variant="warn">Warn message!</Toast>}
     </>
