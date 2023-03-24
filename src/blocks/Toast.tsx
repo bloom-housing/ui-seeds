@@ -1,40 +1,50 @@
-import React, { useEffect, useMemo } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { createPortal } from "react-dom"
 import CommonMessage, { CommonMessageProps } from "./shared/CommonMessage"
 import "../hooks/useTimeout"
 
 import "./Toast.scss"
 import useTimeout from "../hooks/useTimeout"
-import useToggle from "../hooks/useToggle"
 
 interface ToastProps extends Omit<CommonMessageProps, "role" | "closable"> {
   hideTimeout?: number
 }
 
 const Toast = (props: ToastProps) => {
-  const [visible, toggler] = useToggle(true)
   const classNames = ["toast"]
   if (props.className) classNames.push(props.className)
 
-  // return the toast stack element, or create it if needed
-  const toastStack = useMemo(() => {
+  const toastStack = useRef<Element>()
+  const [mount, setMount] = useState(false)
+
+  useEffect(() => {
     let el = document.querySelector("#toast-stack")
     if (!el) {
       el = document.createElement("div")
       el.id = "toast-stack"
+      el.ariaLive = "polite"
+      el.ariaAtomic = "true"
       document.body.append(el)
     }
-    return el
-  }, [document.body])
+    const escHandler = (e) => {
+      // TODO: maybe this should hide just this toast, not all toasts
+      if (e.key == "Escape") setMount(false)
+    }
+    el.addEventListener("keyup", escHandler)
+    toastStack.current = el
+    setMount(true)
+
+    return () => el?.removeEventListener("keyup", escHandler)
+  }, [toastStack])
 
   useTimeout(() => {
-    toggler()
+    setMount(false)
   }, props.hideTimeout)
 
-  return createPortal(
-    visible && <CommonMessage {...props} role="alert" closable className={classNames.join(" ")} />,
-    toastStack
-  )
+  return (mount && toastStack.current) ? createPortal(
+    <CommonMessage {...props} tabIndex={0} role="alert" closable className={classNames.join(" ")} />,
+    toastStack.current
+  ) : null
 }
 
 export default Toast

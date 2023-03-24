@@ -54,6 +54,7 @@ export interface CommonMessageProps {
   role?: string
   "aria-label"?: string
   "aria-labelledby"?: string
+  tabIndex?: number
 }
 
 const CommonMessage = (props: CommonMessageProps) => {
@@ -71,13 +72,14 @@ const CommonMessage = (props: CommonMessageProps) => {
       data-variant={variant}
       hidden={visible === false}
       role={props.role}
+      tabIndex={props.tabIndex}
     >
       {props.customIcon
         ? props.customIcon
         : CommonMessageIconMap[variant] && <Icon icon={CommonMessageIconMap[variant]} size="md" />}
       <span data-part="content">{props.children}</span>
       {props.closable && (
-        <button onClick={toggler}>
+        <button aria-label="Close" onClick={toggler}>
           <Icon icon={faClose} size="md" />
         </button>
       )}
