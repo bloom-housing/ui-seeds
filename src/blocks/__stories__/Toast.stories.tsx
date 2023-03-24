@@ -30,11 +30,11 @@ export const showToasts = () => {
   return (
     <>
       <button onClick={() => showSuccess(!success)} style={{ background: "#f0f0f0" }}>
-        Show Success Toast
+        {success ? "Remove" : "Show"} Success Toast
       </button>{" "}
-      <button onClick={() => showWarning(!warning)} style={{ background: "#f0f0f0" }}>Show Warn Toast</button>
-      {success && <Toast variant="success">Success message!</Toast>}
-      {warning && <Toast variant="warn">Warn message!</Toast>}
+      <button onClick={() => showWarning(!warning)} style={{ background: "#f0f0f0" }}>{warning ? "Remove" : "Show"} Warn Toast</button>
+      {success && <Toast variant="success" hideTimeout={5000}>Success message!</Toast>}
+      {warning && <Toast variant="warn" hideTimeout={5000}>Warn message!</Toast>}
     </>
   )
 }

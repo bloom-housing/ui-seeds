@@ -1,12 +1,18 @@
-import React, { useMemo } from "react"
+import React, { useEffect, useMemo } from "react"
 import { createPortal } from "react-dom"
 import CommonMessage, { CommonMessageProps } from "./shared/CommonMessage"
+import "../hooks/useTimeout"
 
 import "./Toast.scss"
+import useTimeout from "../hooks/useTimeout"
+import useToggle from "../hooks/useToggle"
 
-interface ToastProps extends Omit<CommonMessageProps, "role" | "closable"> {}
+interface ToastProps extends Omit<CommonMessageProps, "role" | "closable"> {
+  hideTimeout?: number
+}
 
 const Toast = (props: ToastProps) => {
+  const [visible, toggler] = useToggle(true)
   const classNames = ["toast"]
   if (props.className) classNames.push(props.className)
 
@@ -21,8 +27,12 @@ const Toast = (props: ToastProps) => {
     return el
   }, [document.body])
 
+  useTimeout(() => {
+    toggler()
+  }, props.hideTimeout)
+
   return createPortal(
-    <CommonMessage {...props} role="alert" closable className={classNames.join(" ")} />,
+    visible && <CommonMessage {...props} role="alert" closable className={classNames.join(" ")} />,
     toastStack
   )
 }
