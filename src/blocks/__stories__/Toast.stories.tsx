@@ -17,10 +17,28 @@ export default {
 
 export const toasts = () => (
   <>
-    <Toast>A basic toast</Toast>
-    <Toast variant="secondary">An alert with a secondary style</Toast>
-    <Toast variant="success">An alert with a success style</Toast>
+    <Toast>Primary toast</Toast>
   </>
+)
+
+export const standardVariants = () => (
+  <div style={{ display: "grid", gap: "var(--bloom-s3)" }}>
+    <Toast variant="primary">Primary toast</Toast>
+    <Toast variant="success">Success toast</Toast>
+    <Toast variant="warn">Warning toast</Toast>
+    <Toast variant="alert">Alert toast</Toast>
+    <Toast variant="secondary">Secondary toast</Toast>
+  </div>
+)
+
+export const inverseVariants = () => (
+  <div style={{ display: "grid", gap: "var(--bloom-s3)" }}>
+    <Toast variant="primary-inverse">Primary toast</Toast>
+    <Toast variant="success-inverse">Success toast</Toast>
+    <Toast variant="warn-inverse">Warning toast</Toast>
+    <Toast variant="alert-inverse">Alert toast</Toast>
+    <Toast variant="secondary-inverse">Secondary toast</Toast>
+  </div>
 )
 
 export const showToasts = () => {

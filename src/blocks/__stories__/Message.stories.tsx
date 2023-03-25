@@ -32,3 +32,23 @@ export const status = () => (
     </style>
   </>
 )
+
+export const standardVariants = () => (
+  <div style={{ display: "grid", gap: "var(--bloom-s3)" }}>
+    <Message variant="primary">Primary Message</Message>
+    <Message variant="success">Success Message</Message>
+    <Message variant="warn">Warning Message</Message>
+    <Message variant="alert">Alert Message</Message>
+    <Message variant="secondary">Secondary Message</Message>
+  </div>
+)
+
+export const inverseVariants = () => (
+  <div style={{ display: "grid", gap: "var(--bloom-s3)" }}>
+    <Message variant="primary-inverse">Primary Message</Message>
+    <Message variant="success-inverse">Success Message</Message>
+    <Message variant="warn-inverse">Warning Message</Message>
+    <Message variant="alert-inverse">Alert Message</Message>
+    <Message variant="secondary-inverse">Secondary Message</Message>
+  </div>
+)
