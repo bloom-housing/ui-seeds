@@ -1,0 +1,38 @@
+.field-value {
+  /* Theme Variables */
+  --field-value-label-spacer: var(--bloom-spacer-label);
+  --field-value-content-spacer: var(--bloom-s1);
+  --field-value-font: var(--bloom-font-alt-sans);
+  --field-value-label-font-size: var(--bloom-type-label);
+  --field-value-help-text-font-size: var(--bloom-type-label);
+  --field-value-label-color: var(--bloom-input-text-label-color);
+  --field-value-value-color: var(--bloom-input-text-highlight-color);
+  --field-value-help-text-color: var(--bloom-text-color-light);
+
+  font-family: var(--field-value-font);
+
+  /* Reset child margins */
+  > * {
+    margin: 0;
+  }
+
+  /* Owl selector for flow margins */
+  > * + * {
+    margin-block-start: var(--field-value-content-spacer);
+  }
+
+  > [data-part="label"] {
+    color: var(--field-value-label-color);
+    font-size: var(--field-value-label-font-size);
+    margin-block-end: var(--field-value-label-spacer);
+  }
+
+  > [data-part="value"] {
+    color: var(--field-value-value-color);
+  }
+
+  > [data-part="help-text"] {
+    color: var(--field-value-help-text-color);
+    font-size: var(--field-value-help-text-font-size);
+  }
+}
