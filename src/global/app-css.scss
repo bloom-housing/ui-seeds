@@ -18,7 +18,9 @@ html {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -27,11 +29,20 @@ body {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
-p, ul, ol, blockquote, figure {
+p,
+ul,
+ol,
+blockquote,
+figure {
   overflow-wrap: break-word;
 }
 
@@ -67,3 +78,5 @@ body {
   color: var(--bloom-color-on-surface);
   line-height: inherit;
 }
+
+@import "text.scss";
