@@ -12,7 +12,7 @@ export default function useTimeout(callback: () => void, delay?: number) {
 
   React.useEffect(() => {
     const tick = () => savedCallback.current()
-    if (typeof delay === "number") {
+    if (delay) {
       timeoutRef.current = window.setTimeout(tick, delay)
       return () => window.clearTimeout(timeoutRef.current as number)
     }
