@@ -34,6 +34,7 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "markdown-to-jsx": "^6.11.4",
+    "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.4.2"
   },
@@ -66,9 +67,6 @@
     "storybook": "^6.5.16",
     "ts-loader": "9.4.1",
     "webpack": "^5.75.0"
-  },
-  "peerDependencies": {
-    "react": "18.x"
   },
   "scripts": {
     "start": "start-storybook -s ./public",
