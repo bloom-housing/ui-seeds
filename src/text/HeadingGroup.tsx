@@ -12,6 +12,8 @@ export interface HeadingGroupProps extends Pick<HeadingProps, "typography"> {
    * @default 2
    */
   headingPriority?: 1 | 2 | 3 |4
+  /** Element ID */
+  id?: string
   /** Additional class name for the whole group */
   className?: string
 }
@@ -21,7 +23,7 @@ const HeadingGroup = (props: HeadingGroupProps) => {
   if (props.className) classNames.push(props.className)
 
   return (
-    <hgroup className={classNames.join(" ")} role="group">
+    <hgroup id={props.id} className={classNames.join(" ")} role="group">
       <Heading priority={props.headingPriority ?? 2} typography={props.typography || "heading-2"}>{props.heading}</Heading>
       <p>{props.subheading}</p>
     </hgroup>
