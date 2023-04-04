@@ -3,13 +3,11 @@ import CommonMessage, { CommonMessageProps } from "./shared/CommonMessage"
 
 import "./Message.scss"
 
-interface MessageProps extends Omit<CommonMessageProps, "role"> {}
-
-const Message = (props: MessageProps) => {
+const Message = (props: CommonMessageProps) => {
   const classNames = ["message"]
   if (props.className) classNames.push(props.className)
 
-  return <CommonMessage {...props} role="region" className={classNames.join(" ")} />
+  return <CommonMessage {...props} className={classNames.join(" ")} />
 }
 
 export default Message

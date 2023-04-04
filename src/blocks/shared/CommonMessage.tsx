@@ -44,7 +44,7 @@ export interface CommonMessageProps {
   /** Pass in an `<Icon>` or SVG content */
   customIcon?: React.ReactNode
   /** If the component can hide via a close icon */
-  closable?: boolean
+  closeable?: boolean
   /** Scale to fit component to its container */
   fullwidth?: boolean
   /** Element ID */
@@ -78,7 +78,7 @@ const CommonMessage = (props: CommonMessageProps) => {
         ? props.customIcon
         : CommonMessageIconMap[variant] && <Icon icon={CommonMessageIconMap[variant]} size="md" />}
       <span data-part="content">{props.children}</span>
-      {props.closable && (
+      {props.closeable && (
         <button aria-label="Close" onClick={toggler}>
           <Icon icon={faClose} size="md" />
         </button>

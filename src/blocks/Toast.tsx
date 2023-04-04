@@ -5,7 +5,7 @@ import CommonMessage, { CommonMessageProps } from "./shared/CommonMessage"
 import "./Toast.scss"
 import useTimeout from "../hooks/useTimeout"
 
-interface ToastProps extends Omit<CommonMessageProps, "role" | "closable"> {
+interface ToastProps extends Omit<CommonMessageProps, "role" | "closeable"> {
   hideTimeout?: number
 }
 
@@ -41,7 +41,7 @@ const Toast = (props: ToastProps) => {
   }, props.hideTimeout)
 
   return (mount && toastStack.current) ? createPortal(
-    <CommonMessage {...props} tabIndex={0} role="alert" closable className={classNames.join(" ")} />,
+    <CommonMessage {...props} tabIndex={0} role="alert" closeable className={classNames.join(" ")} />,
     toastStack.current
   ) : null
 }
