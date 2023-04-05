@@ -1,7 +1,12 @@
 import React from "react"
 
-// Taken from this snippet:
-// https://www.joshwcomeau.com/snippets/react-hooks/use-timeout/
+/**
+ * This hook is a "React-friendly" wrapper around setTimeout. You can use it
+ * just like you'd use window.setTimeout
+ *
+ * Taken from this snippet:
+ * https://www.joshwcomeau.com/snippets/react-hooks/use-timeout/
+ */
 export default function useTimeout(callback: () => void, delay?: number) {
   const timeoutRef = React.useRef<number | undefined>()
   const savedCallback = React.useRef(callback)
