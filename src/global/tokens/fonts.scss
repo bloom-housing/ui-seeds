@@ -60,6 +60,10 @@
   --bloom-type-label: var(--bloom-font-size-sm);
   --bloom-type-caption: var(--bloom-font-size-xs);
 
+  --bloom-type-heading-1-mobile: var(--bloom-type-heading-2);
+  --bloom-type-heading-2-mobile: var(--bloom-type-heading-3);
+  --bloom-type-heading-3-mobile: var(--bloom-type-heading-4);
+
   --bloom-line-height-heading: var(--bloom-line-height-tight);
   --bloom-line-height-content: var(--bloom-line-height-normal);
 }
