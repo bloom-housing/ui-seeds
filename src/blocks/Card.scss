@@ -1,0 +1,91 @@
+.card {
+  /* Component Variables */
+  --card-background-color: var(--bloom-color-white);
+  --card-border-radius: var(--bloom-rounded-lg);
+  --card-border-width: var(--bloom-border-1);
+  --card-border-color: var(--bloom-color-gray-450);
+  --card-rule-width: 0;
+  --card-rule-color: var(--card-border-color);
+
+  --card-content-padding-block: var(--bloom-s8);
+  --card-content-margin-inline-desktop: var(--bloom-s8);
+  --card-content-margin-inline-mobile: var(--bloom-s4);
+  --card-content-margin-inline: var(--card-content-margin-inline-desktop);
+
+  --card-header-padding-block: var(--bloom-s8) 0;
+  --card-header-margin-inline-desktop: var(--card-content-margin-inline-desktop);
+  --card-header-margin-inline-mobile: var(--card-content-margin-inline-mobile);
+  --card-header-margin-inline: var(--card-header-margin-inline-desktop);
+
+  @media (max-width: 640px) {
+    --content-margin-inline: var(--card-content-margin-inline-mobile);
+    --header-margin-inline: var(--card-header-margin-inline-mobile);
+  }
+
+  /* Default Styles */
+  background-color: var(--card-background-color);
+  border: var(--card-border-width) solid var(--card-border-color);
+  overflow: hidden;
+  border-radius: var(--card-border-radius);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  padding-block: var(--card-header-padding-block);
+  margin-inline: var(--card-header-margin-inline);
+  border-bottom: var(--card-rule-width) solid var(--card-rule-color);
+
+  &[data-flex-children] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--bloom-s7);
+  }
+}
+
+.card-header + .card-footer {
+  margin-block-start: var(--card-content-padding-block);
+}
+
+.card > *:nth-child(n + 3),
+.card-footer > .card-section {
+  border-top: var(--card-rule-width) solid var(--card-rule-color);
+}
+
+.card-section {
+  padding-block: var(--card-content-padding-block);
+  margin-inline: var(--card-content-margin-inline);
+
+  > *:first-child {
+    margin-block-start: 0;
+  }
+
+  > *:last-child {
+    margin-block-end: 0;
+  }
+}
+
+.card-section + .card-section {
+  padding-block-start: 0;
+}
+
+/* Using the double-class specificity hack, proceed with caution: */
+.card-footer.card-footer,
+.card-footer.card-footer > :not(.card-section) + .card-section {
+  border-top: none;
+}
+
+.card-header, .card-footer {
+  > * {
+    margin-block: 0;
+  }
+
+  > * {
+    margin-block: 0;
+  }
+}
+
+.card-footer {
+  background: lightyellow;
+}
