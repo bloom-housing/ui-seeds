@@ -1,25 +1,27 @@
 .common-message {
-  --_common-message-padding: var(--common-message-padding, var(--bloom-s4));
-  --_common-message-border-radius: var(--common-message-border-radius, 0);
-  --_common-message-border: var(--common-message-border, none);
-  --_common-message-flex-gap: var(--common-message-flex-gap, var(--bloom-s3));
-  --_common-message-icon-size: var(--common-message-icon-size, 1em);
-  --_common-message-max-width: var(--common-message-max-width, var(--bloom-width-sm));
-  --_common-message-font: var(--common-message-font, var(--bloom-font-sans));
-  --_common-message-font-size: var(--common-message-font-size, var(--bloom-type-caption));
-  --_common-message-link-gap: var(--common-message-link-gap, var(--bloom-s1));
-  --_common-message-link-font-weight: var(--common-message-link-font-weight, var(--bloom-font-weight-semibold));
+  /* These are mainly here for reference…they're overridden by specific tokens from
+     Alert, Message, and Toast */
+  --common-message-padding: var(--bloom-s4);
+  --common-message-border-radius: 0;
+  --common-message-border: none;
+  --common-message-flex-gap: var(--bloom-s3);
+  --common-message-icon-size: 1em;
+  --common-message-max-width: var(--bloom-width-sm);
+  --common-message-font: var(--bloom-font-sans);
+  --common-message-font-size: var(--bloom-type-caption);
+  --common-message-link-gap: var(--bloom-s1);
+  --common-message-link-font-weight: var(--bloom-font-weight-semibold);
 
-  padding: var(--_common-message-padding);
+  padding: var(--common-message-padding);
   display: flex;
   align-items: center;
-  gap: var(--_common-message-flex-gap);
-  max-width: var(--_common-message-max-width);
-  font-family: var(--_common-message-font);
-  font-size: var(--_common-message-font-size);
+  gap: var(--common-message-flex-gap);
+  max-width: var(--common-message-max-width);
+  font-family: var(--common-message-font);
+  font-size: var(--common-message-font-size);
 
-  border-radius: var(--_common-message-border-radius);
-  border: var(--_common-message-border);
+  border-radius: var(--common-message-border-radius);
+  border: var(--common-message-border);
 
   &.is-fullwidth {
     max-width: 100%;
@@ -82,7 +84,7 @@
 
   &.is-fullwidth > [data-part="content"] {
     width: 100%;
-    max-width: var(--_common-message-max-width);
+    max-width: var(--common-message-max-width);
   }
 
   > button {
@@ -90,15 +92,15 @@
   }
 
   .icon {
-    font-size: var(--_common-message-icon-size);
+    font-size: var(--common-message-icon-size);
     margin-block-start: -0.15em; /* Slightly adjust flex alignment */
   }
 
   a {
     // margin-inline-start: var(--bloom-s1);
-    margin-inline-start: var(--_common-message-link-gap);
+    margin-inline-start: var(--common-message-link-gap);
     color: currentColor;
     text-decoration: underline;
-    font-weight: var(--_common-message-link-font-weight);
+    font-weight: var(--common-message-link-font-weight);
   }
 }

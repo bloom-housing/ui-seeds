@@ -16,6 +16,17 @@
 }
 
 .toast {
+  --toast-padding: var(--bloom-s4);
+  --toast-border-radius: 0;
+  --toast-border: none;
+  --toast-flex-gap: var(--bloom-s3);
+  --toast-icon-size: 1em;
+  --toast-max-width: var(--bloom-width-sm);
+  --toast-font: var(--bloom-font-sans);
+  --toast-font-size: var(--bloom-type-caption);
+  --toast-link-gap: var(--bloom-s1);
+  --toast-link-font-weight: var(--bloom-font-weight-semibold);
+
   --common-message-padding: var(--toast-padding);
   --common-message-border-radius: var(--toast-border-radius);
   --common-message-border: var(--toast-border);
