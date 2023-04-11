@@ -4,22 +4,24 @@
   --card-border-radius: var(--bloom-rounded-lg);
   --card-border-width: var(--bloom-border-1);
   --card-border-color: var(--bloom-color-gray-450);
-  --card-rule-width: 0;
-  --card-rule-color: var(--card-border-color);
+  --card-divider-width: var(--card-border-width);
+  --card-divider-color: var(--card-border-color);
 
-  --card-content-padding-block: var(--bloom-s8);
-  --card-content-margin-inline-desktop: var(--bloom-s8);
-  --card-content-margin-inline-mobile: var(--bloom-s4);
-  --card-content-margin-inline: var(--card-content-margin-inline-desktop);
+  --card-content-padding-block: var(--bloom-s6);
+  --card-content-padding-inline-desktop: var(--bloom-s6);
+  --card-content-padding-inline-mobile: var(--bloom-s6);
+  --card-content-padding-inline: var(--card-content-padding-inline-desktop);
 
-  --card-header-padding-block: var(--bloom-s8) 0;
-  --card-header-margin-inline-desktop: var(--card-content-margin-inline-desktop);
-  --card-header-margin-inline-mobile: var(--card-content-margin-inline-mobile);
-  --card-header-margin-inline: var(--card-header-margin-inline-desktop);
+  --card-header-padding-block: var(--card-content-padding-block);
+  --card-header-padding-inline-desktop: var(--card-content-padding-inline-desktop);
+  --card-header-padding-inline-mobile: var(--card-content-padding-inline-mobile);
+  --card-header-padding-inline: var(--card-header-padding-inline-desktop);
+
+  --card-footer-background-color:  var(--card-background-color);
 
   @media (max-width: 640px) {
-    --content-margin-inline: var(--card-content-margin-inline-mobile);
-    --header-margin-inline: var(--card-header-margin-inline-mobile);
+    --card-content-padding-inline: var(--card-content-padding-inline-mobile);
+    --card-header-padding-inline: var(--card-header-padding-inline-mobile);
   }
 
   /* Default Styles */
@@ -32,9 +34,20 @@
 }
 
 .card-header {
-  padding-block: var(--card-header-padding-block);
-  margin-inline: var(--card-header-margin-inline);
-  border-bottom: var(--card-rule-width) solid var(--card-rule-color);
+  padding-block-start: var(--card-header-padding-block);
+  padding-inline: var(--card-header-padding-inline);
+
+  [data-dividers="flush"] & {
+    padding-block-end: var(--card-header-padding-block);
+    border-bottom: var(--card-divider-width) solid var(--card-divider-color);
+  }
+
+  [data-dividers="inset"] & {
+    padding-inline: 0;
+    margin-inline: var(--card-header-padding-inline);
+    padding-block-end: var(--card-header-padding-block);
+    border-bottom: var(--card-divider-width) solid var(--card-divider-color);
+  }
 
   &[data-flex-children] {
     display: flex;
@@ -54,8 +67,28 @@
 }
 
 .card-section {
-  padding-block: var(--card-content-padding-block);
-  margin-inline: var(--card-content-margin-inline);
+  padding-block-start: var(--card-content-padding-block);
+  padding-inline: var(--card-content-padding-inline);
+
+  [data-dividers="flush"] & {
+    padding-block-end: var(--card-header-padding-block);
+    border-bottom: var(--card-divider-width) solid var(--card-divider-color);
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  [data-dividers="inset"] & {
+    padding-inline: 0;
+    margin-inline: var(--card-header-padding-inline);
+    padding-block-end: var(--card-header-padding-block);
+    border-bottom: var(--card-divider-width) solid var(--card-divider-color);
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
 
   > *:first-child {
     margin-block-start: 0;
@@ -66,14 +99,10 @@
   }
 }
 
-.card-section + .card-section {
-  padding-block-start: 0;
-}
-
-/* Using the double-class specificity hack, proceed with caution: */
-.card-footer.card-footer,
-.card-footer.card-footer > :not(.card-section) + .card-section {
-  border-top: none;
+:not([data-dividers]) {
+  .card-section:last-child {
+    padding-block-end: var(--card-content-padding-block);
+  }
 }
 
 .card-header, .card-footer {
@@ -87,5 +116,9 @@
 }
 
 .card-footer {
-  background: lightyellow;
+  background-color: var(--card-footer-background-color);
+
+  :not([data-dividers]) > &:first-of-type {
+    margin-block-start: var(--card-content-padding-block);
+  }
 }
