@@ -1,0 +1,40 @@
+#toast-stack {
+  --toast-stack-gap: var(--bloom-s4);
+  --toast-stack-inset-top: var(--bloom-s3);
+  --toast-stack-inset-right: var(--bloom-s3);
+  --toast-stack-max-width: var(--bloom-width-sm);
+
+  position: fixed;
+  z-index: var(--bloom-z-index-overlay);
+  display: flex;
+  flex-direction: column;
+  gap: var(--toast-stack-gap);
+  top: var(--toast-stack-inset-top);
+  right: var(--toast-stack-inset-right);
+  width: var(--toast-stack-max-width);
+  max-width: calc(100% - var(--toast-stack-inset-right) * 2);
+}
+
+.toast {
+  --toast-padding: var(--bloom-s4);
+  --toast-border-radius: 0;
+  --toast-border: none;
+  --toast-flex-gap: var(--bloom-s3);
+  --toast-icon-size: 1em;
+  --toast-max-width: var(--bloom-width-sm);
+  --toast-font: var(--bloom-font-sans);
+  --toast-font-size: var(--bloom-type-caption);
+  --toast-link-gap: var(--bloom-s1);
+  --toast-link-font-weight: var(--bloom-font-weight-semibold);
+
+  --common-message-padding: var(--toast-padding);
+  --common-message-border-radius: var(--toast-border-radius);
+  --common-message-border: var(--toast-border);
+  --common-message-flex-gap: var(--toast-flex-gap);
+  --common-message-icon-size: var(--toast-icon-size);
+  --common-message-max-width: var(--toast-max-width);
+  --common-message-font: var(--toast-font);
+  --common-message-font-size: var(--toast-font-size);
+  --common-message-link-gap: var(--toast-link-gap);
+  --common-message-link-font-weight: var(--toast-link-font-weight);
+}

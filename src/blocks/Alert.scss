@@ -1,0 +1,23 @@
+.alert {
+  --alert-padding: var(--bloom-s4);
+  --alert-border-radius: 0;
+  --alert-border: none;
+  --alert-flex-gap: var(--bloom-s3);
+  --alert-icon-size: 1em;
+  --alert-max-width: var(--bloom-width-sm);
+  --alert-font: var(--bloom-font-sans);
+  --alert-font-size: var(--bloom-type-caption);
+  --alert-link-gap: var(--bloom-s1);
+  --alert-link-font-weight: var(--bloom-font-weight-semibold);
+
+  --common-message-padding: var(--alert-padding);
+  --common-message-border-radius: var(--alert-border-radius);
+  --common-message-border: var(--alert-border);
+  --common-message-flex-gap: var(--alert-flex-gap);
+  --common-message-icon-size: var(--alert-icon-size);
+  --common-message-max-width: var(--alert-max-width);
+  --common-message-font: var(--alert-font);
+  --common-message-font-size: var(--alert-font-size);
+  --common-message-link-gap: var(--alert-link-gap);
+  --common-message-link-font-weight: var(--alert-link-font-weight);
+}
