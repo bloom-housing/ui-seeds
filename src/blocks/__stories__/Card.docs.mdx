@@ -1,0 +1,31 @@
+import { ArgsTable } from "@storybook/addon-docs"
+import Card from "../Card"
+import { Swatch } from "../../../documentation/components/Swatch.tsx"
+
+# &lt;Card /&gt;
+
+## Properties
+
+<ArgsTable of={Card} />
+
+## Theme Variables
+
+| Name                                    | Description                                                          | Default                   |
+| --------------------------------------- | -------------------------------------------------------------------- | ------------------------- |
+| `--card-spacing-base`                   | Default spacing around card elements                                 | `--bloom-s6`              |
+| `--card-spacing-sm`                     | Small card spacing                                                   | `--bloom-s4`              |
+| `--card-spacing-md`                     | Medium card spacing                                                  | `--bloom-s8`              |
+| `--card-spacing-lg`                     | Large card spacing                                                   | `--bloom-s12`             |
+| `--card-background-color`               | Background of the card                                               | `--bloom-color-white`     |
+| `--card-border-radius`                  | Card corner radius                                                   | `--bloom-rounded-lg`      |
+| `--card-border-width`                   | Border width                                                         | `--bloom-border-1`        |
+| `--card-border-color`                   | <Swatch color="bloom-color-gray-450" /> Border color                 | `--bloom-color-gray-450`  |
+| `--card-divider-width`                  | Width of intra-card dividers                                         | `--card-border-width`     |
+| `--card-divider-color`                  | <Swatch color="bloom-color-gray-450" /> Color of intra-card dividers | `--card-border-color`     |
+| `--card-footer-background-color`        | Background of the footer                                             | `--card-background-color` |
+| `--card-content-padding-block`          | Vertical padding between elements                                    | (card spacing)            |
+| `--card-content-padding-inline-desktop` | Horizontal padding                                                   | (card spacing)            |
+| `--card-content-padding-inline-mobile`  | Horizontal padding on mobile                                         | (card spacing)            |
+| `--card-header-padding-block`           | Vertical padding within the header                                   | (card spacing)            |
+| `--card-header-padding-inline-desktop`  | Horizontal padding within the header                                 | (card spacing)            |
+| `--card-header-padding-inline-mobile`   | Horizontal padding within the header                                 | (card spacing)            |

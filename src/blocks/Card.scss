@@ -1,5 +1,12 @@
 .card {
   /* Component Variables */
+  --card-spacing-base: var(--bloom-s6);
+  --card-spacing-sm: var(--bloom-s4);
+  --card-spacing-md: var(--bloom-s8);
+  --card-spacing-lg: var(--bloom-s12); 
+
+  --card-spacing: var(--card-spacing-base);
+
   --card-background-color: var(--bloom-color-white);
   --card-border-radius: var(--bloom-rounded-lg);
   --card-border-width: var(--bloom-border-1);
@@ -7,21 +14,24 @@
   --card-divider-width: var(--card-border-width);
   --card-divider-color: var(--card-border-color);
 
-  --card-content-padding-block: var(--bloom-s6);
-  --card-content-padding-inline-desktop: var(--bloom-s6);
-  --card-content-padding-inline-mobile: var(--bloom-s6);
+  --card-content-padding-block: var(--card-spacing);
+  --card-content-padding-inline-desktop: var(--card-content-padding-block);
+  --card-content-padding-inline-mobile: var(--card-content-padding-block);
+  
+  --card-header-padding-block: var(--card-spacing);
+  --card-header-padding-inline-desktop: var(--card-header-padding-block);
+  --card-header-padding-inline-mobile: var(--card-header-padding-block);
+
+  --card-footer-background-color: var(--card-background-color);
+
+  /* Responsive Settings */
+
+  --card-header-padding-inline: var(--card-header-padding-inline-desktop);
   --card-content-padding-inline: var(--card-content-padding-inline-desktop);
 
-  --card-header-padding-block: var(--card-content-padding-block);
-  --card-header-padding-inline-desktop: var(--card-content-padding-inline-desktop);
-  --card-header-padding-inline-mobile: var(--card-content-padding-inline-mobile);
-  --card-header-padding-inline: var(--card-header-padding-inline-desktop);
-
-  --card-footer-background-color:  var(--card-background-color);
-
-  @media (max-width: 640px) {
-    --card-content-padding-inline: var(--card-content-padding-inline-mobile);
+  @media (max-width: 640px) { /* small screen */
     --card-header-padding-inline: var(--card-header-padding-inline-mobile);
+    --card-content-padding-inline: var(--card-content-padding-inline-mobile);
   }
 
   /* Default Styles */
@@ -31,6 +41,18 @@
   border-radius: var(--card-border-radius);
   display: flex;
   flex-direction: column;
+
+  &[data-spacing="sm"] {
+    --card-spacing: var(--card-spacing-sm);
+  }
+
+  &[data-spacing="md"] {
+    --card-spacing: var(--card-spacing-md);
+  }
+
+  &[data-spacing="lg"] {
+    --card-spacing: var(--card-spacing-lg);
+  }
 }
 
 .card-header {
@@ -57,21 +79,12 @@
   }
 }
 
-.card-header + .card-footer {
-  margin-block-start: var(--card-content-padding-block);
-}
-
-.card > *:nth-child(n + 3),
-.card-footer > .card-section {
-  border-top: var(--card-rule-width) solid var(--card-rule-color);
-}
-
 .card-section {
   padding-block-start: var(--card-content-padding-block);
   padding-inline: var(--card-content-padding-inline);
 
   [data-dividers="flush"] & {
-    padding-block-end: var(--card-header-padding-block);
+    padding-block-end: var(--card-content-padding-block);
     border-bottom: var(--card-divider-width) solid var(--card-divider-color);
 
     &:last-of-type {
@@ -81,8 +94,8 @@
 
   [data-dividers="inset"] & {
     padding-inline: 0;
-    margin-inline: var(--card-header-padding-inline);
-    padding-block-end: var(--card-header-padding-block);
+    margin-inline: var(--card-content-padding-inline);
+    padding-block-end: var(--card-content-padding-block);
     border-bottom: var(--card-divider-width) solid var(--card-divider-color);
 
     &:last-of-type {
@@ -105,7 +118,8 @@
   }
 }
 
-.card-header, .card-footer {
+.card-header,
+.card-footer {
   > * {
     margin-block: 0;
   }

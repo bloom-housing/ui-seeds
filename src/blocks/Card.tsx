@@ -35,7 +35,11 @@ const CardSection = (props: CardSectionProps) => {
   const classNames = ["card-section"]
   if (props.className) classNames.push(props.className)
 
-  return <div id={props.id} className={classNames.join(" ")}>{props.children}</div>
+  return (
+    <div id={props.id} className={classNames.join(" ")}>
+      {props.children}
+    </div>
+  )
 }
 
 export interface CardFooterProps {
@@ -50,11 +54,20 @@ const CardFooter = (props: CardFooterProps) => {
   const classNames = ["card-footer"]
   if (props.className) classNames.push(props.className)
 
-  return <footer id={props.id} className={classNames.join(" ")}>{props.children}</footer>
+  return (
+    <footer id={props.id} className={classNames.join(" ")}>
+      {props.children}
+    </footer>
+  )
 }
 
 export interface CardProps {
+  /** Add dividers between card elements */
   dividers?: "flush" | "inset"
+  /** Control spacing around card elements
+   * @default base
+   */
+  spacing?: "sm" | "base" | "md" | "lg"
   /** Element ID */
   id?: string
   /** Additional class name */
@@ -64,9 +77,14 @@ export interface CardProps {
 
 const Card = (props: CardProps) => {
   const classNames = ["card"]
+  const spacing = props.spacing || "base"
   if (props.className) classNames.push(props.className)
 
-  return <article id={props.id} className={classNames.join(" ")} data-dividers={props.dividers}>{props.children}</article>
+  return (
+    <article id={props.id} className={classNames.join(" ")} data-dividers={props.dividers} data-spacing={spacing}>
+      {props.children}
+    </article>
+  )
 }
 
 Card.Header = CardHeader
