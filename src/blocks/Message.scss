@@ -1,0 +1,23 @@
+.message {
+  --message-padding: var(--bloom-s4);
+  --message-border-radius: 0;
+  --message-border: none;
+  --message-flex-gap: var(--bloom-s3);
+  --message-icon-size: 1em;
+  --message-max-width: var(--bloom-width-sm);
+  --message-font: var(--bloom-font-sans);
+  --message-font-size: var(--bloom-type-caption);
+  --message-link-gap: var(--bloom-s1);
+  --message-link-font-weight: var(--bloom-font-weight-semibold);
+
+  --common-message-padding: var(--message-padding);
+  --common-message-border-radius: var(--message-border-radius);
+  --common-message-border: var(--message-border);
+  --common-message-flex-gap: var(--message-flex-gap);
+  --common-message-icon-size: var(--message-icon-size);
+  --common-message-max-width: var(--message-max-width);
+  --common-message-font: var(--message-font);
+  --common-message-font-size: var(--message-font-size);
+  --common-message-link-gap: var(--message-link-gap);
+  --common-message-link-font-weight: var(--message-link-font-weight);
+}

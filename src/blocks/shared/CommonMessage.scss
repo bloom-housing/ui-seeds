@@ -1,0 +1,106 @@
+.common-message {
+  /* These are mainly here for reference…they're overridden by specific tokens from
+     Alert, Message, and Toast */
+  --common-message-padding: var(--bloom-s4);
+  --common-message-border-radius: 0;
+  --common-message-border: none;
+  --common-message-flex-gap: var(--bloom-s3);
+  --common-message-icon-size: 1em;
+  --common-message-max-width: var(--bloom-width-sm);
+  --common-message-font: var(--bloom-font-sans);
+  --common-message-font-size: var(--bloom-type-caption);
+  --common-message-link-gap: var(--bloom-s1);
+  --common-message-link-font-weight: var(--bloom-font-weight-semibold);
+
+  padding: var(--common-message-padding);
+  display: flex;
+  align-items: center;
+  gap: var(--common-message-flex-gap);
+  max-width: var(--common-message-max-width);
+  font-family: var(--common-message-font);
+  font-size: var(--common-message-font-size);
+
+  border-radius: var(--common-message-border-radius);
+  border: var(--common-message-border);
+
+  &.is-fullwidth {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  &[data-variant="primary"] {
+    background: var(--bloom-color-primary-light);
+    color: var(--bloom-color-on-surface);
+  }
+
+  &[data-variant="primary-inverse"] {
+    background: var(--bloom-color-primary);
+	  color: var(--bloom-color-on-inverse);
+  }
+
+  &[data-variant="success"] {
+    background: var(--bloom-color-success-light);
+    color: var(--bloom-color-on-surface);
+  }
+
+  &[data-variant="success-inverse"] {
+    background: var(--bloom-color-success);
+    color: var(--bloom-color-on-inverse);
+  }
+
+  &[data-variant="alert"] {
+    background: var(--bloom-color-alert-light);
+    color: var(--bloom-color-on-surface);
+  }
+
+  &[data-variant="alert-inverse"] {
+    background: var(--bloom-color-alert);
+    color: var(--bloom-color-on-inverse);
+  }
+
+  &[data-variant="warn"] {
+    background: var(--bloom-color-warn-light);
+    color: var(--bloom-color-on-surface);
+  }
+
+  &[data-variant="warn-inverse"] {
+    background: var(--bloom-color-warn);
+    color: var(--bloom-color-on-surface);
+  }
+
+  &[data-variant="secondary"] {
+    background: var(--bloom-color-secondary-light);
+    color: var(--bloom-color-on-surface);
+  }
+
+  &[data-variant="secondary-inverse"] {
+    background: var(--bloom-color-secondary-darker);
+    color: var(--bloom-color-on-inverse);
+  }
+
+  &:not(.is-fullwidth) > [data-part="content"] {
+    flex-grow: 1;
+  }
+
+  &.is-fullwidth > [data-part="content"] {
+    width: 100%;
+    max-width: var(--common-message-max-width);
+  }
+
+  > button {
+    padding: 0;
+  }
+
+  .icon {
+    font-size: var(--common-message-icon-size);
+    margin-block-start: -0.15em; /* Slightly adjust flex alignment */
+  }
+
+  a {
+    // margin-inline-start: var(--bloom-s1);
+    margin-inline-start: var(--common-message-link-gap);
+    color: currentColor;
+    text-decoration: underline;
+    font-weight: var(--common-message-link-font-weight);
+  }
+}
