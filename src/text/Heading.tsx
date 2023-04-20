@@ -21,7 +21,11 @@ const Heading = (props: HeadingProps) => {
   const classNames = [`text-heading-${size}`]
   if (props.className) classNames.push(props.className)
 
-  return <HnTag id={props.id} className={classNames.join(" ")}>{props.children}</HnTag>
+  return (
+    <HnTag id={props.id} className={classNames.join(" ")}>
+      {props.children}
+    </HnTag>
+  )
 }
 
 export default Heading

@@ -24,7 +24,9 @@ const HeadingGroup = (props: HeadingGroupProps) => {
 
   return (
     <hgroup id={props.id} className={classNames.join(" ")} role="group">
-      <Heading priority={props.headingPriority ?? 2} size={props.size || "3xl"}>{props.heading}</Heading>
+      <Heading priority={props.headingPriority ?? 2} size={props.size || "3xl"}>
+        {props.heading}
+      </Heading>
       <p>{props.subheading}</p>
     </hgroup>
   )
