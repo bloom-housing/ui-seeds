@@ -19,13 +19,13 @@ export const heading = () => <Heading>This is a heading</Heading>
 
 export const headings = () => (
   <div style={{display: "grid", gap: "1rem"}}>
-    <Heading typography="heading-1">Heading 1</Heading>
-    <Heading typography="heading-2">Heading 2</Heading>
-    <Heading typography="heading-3" priority={2}>Heading 3</Heading>
-    <Heading typography="heading-4" priority={3}>Heading 4</Heading>
-    <Heading typography="subheading" priority={4}>Subheading</Heading>
-    <Heading typography="strong" priority={4}>Strong</Heading>
-    <Heading typography="label" priority={4}>Label</Heading>
-    <Heading typography="small" priority={4}>Small</Heading>
+    <Heading size="4xl">Heading 4xl</Heading>
+    <Heading size="3xl">Heading 3xl</Heading>
+    <Heading size="2xl" priority={2}>Heading 2xl</Heading>
+    <Heading size="xl" priority={3}>Heading xl</Heading>
+    <Heading size="lg" priority={4}>Heading lg</Heading>
+    <Heading size="md" priority={4}>Heading md</Heading>
+    <Heading size="sm" priority={5}>Heading sm</Heading>
+    <Heading size="xs" priority={6}>Heading xs</Heading>
   </div>
 )

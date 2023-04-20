@@ -51,18 +51,22 @@
    * Semantic Typography
    */
 
-  --bloom-type-heading-1: var(--bloom-font-size-4xl);
-  --bloom-type-heading-2: var(--bloom-font-size-3xl);
-  --bloom-type-heading-3: var(--bloom-font-size-2xl);
-  --bloom-type-heading-4: var(--bloom-font-size-xl);
-  --bloom-type-subheading: var(--bloom-font-size-lg);
-  --bloom-type-body: var(--bloom-font-size-base);
-  --bloom-type-label: var(--bloom-font-size-sm);
-  --bloom-type-caption: var(--bloom-font-size-xs);
+  --bloom-type-body-size: var(--bloom-font-size-base);
+  --bloom-type-label-size: var(--bloom-font-size-sm);
+  --bloom-type-caption-size: var(--bloom-font-size-xs);
+ 
+  --bloom-type-heading-size-4xl: var(--bloom-font-size-4xl);
+  --bloom-type-heading-size-3xl: var(--bloom-font-size-3xl);
+  --bloom-type-heading-size-2xl: var(--bloom-font-size-2xl);
+  --bloom-type-heading-size-xl: var(--bloom-font-size-xl);
+  --bloom-type-heading-size-lg: var(--bloom-font-size-lg);
+  --bloom-type-heading-size-md: var(--bloom-font-size-base);
+  --bloom-type-heading-size-sm: var(--bloom-font-size-sm);
+  --bloom-type-heading-size-xs: var(--bloom-font-size-xs);
 
-  --bloom-type-heading-1-mobile: var(--bloom-type-heading-2);
-  --bloom-type-heading-2-mobile: var(--bloom-type-heading-3);
-  --bloom-type-heading-3-mobile: var(--bloom-type-heading-4);
+  --bloom-type-heading-size-4xl-mobile: var(--bloom-type-heading-size-3xl);
+  --bloom-type-heading-size-3xl-mobile: var(--bloom-type-heading-size-2xl);
+  --bloom-type-heading-size-2xl-mobile: var(--bloom-type-heading-size-xl);
 
   --bloom-line-height-heading: var(--bloom-line-height-tight);
   --bloom-line-height-content: var(--bloom-line-height-normal);

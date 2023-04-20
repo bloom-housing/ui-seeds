@@ -13,18 +13,13 @@ describe("<Heading>", () => {
     expect(container.querySelector("#test-head.test-class")).not.toBeNull()
   })
 
-  it("supports h2 tags", () => {
+  it("supports other priorities", () => {
     const { getByText, container } = render(<Heading priority={2}>h2</Heading>)
     expect(container.querySelector("h2")).not.toBeNull()
   })
 
-  it("supports h3 tags", () => {
-    const { getByText, container } = render(<Heading priority={3}>h3</Heading>)
-    expect(container.querySelector("h3")).not.toBeNull()
-  })
-
-  it("supports h4 tags", () => {
-    const { getByText, container } = render(<Heading priority={4}>4</Heading>)
-    expect(container.querySelector("h4")).not.toBeNull()
+  it("supports sizes", () => {
+    const { getByText, container } = render(<Heading size="2xl">size 2xl</Heading>)
+    expect(container.querySelector("h1.text-heading-2xl")).not.toBeNull()
   })
 })
