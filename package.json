@@ -36,6 +36,7 @@
     "markdown-to-jsx": "^6.11.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-tabs": "^6.0.0",
     "typescript": "^4.4.2"
   },
   "devDependencies": {
@@ -55,11 +56,11 @@
     "@testing-library/user-event": "^13.2.1",
     "@types/jest": "^27.0.1",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "postcss": "8.4.19",
     "postcss-import": "^14.1.0",
     "postcss-load-config": "^3.1.4",
     "postcss-loader": "7.0.1",
     "postcss-nested": "6.0.0",
-    "postcss": "8.4.19",
     "prop-types": "^15.8.1",
     "react-scripts": "5.0.1",
     "sass": "1.56.1",
