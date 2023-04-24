@@ -46,12 +46,12 @@ export const TextContent = () => (
 
 export const FlushDividers = () => (
   <div style={{ maxWidth: "500px" }}>
-    <Card dividers="flush">
-      <Card.Header className="test-card-header">
+    <Card>
+      <Card.Header divider="flush" className="test-card-header">
         <h3>Wildflower</h3>
       </Card.Header>
 
-      <Card.Section>
+      <Card.Section divider="flush">
         <p>
           A flower that grows in the wild, meaning it was not intentionally seeded or planted. The
           term implies that the plant probably is neither a hybrid nor a selected cultivar that is
@@ -60,7 +60,7 @@ export const FlushDividers = () => (
         </p>
       </Card.Section>
 
-      <Card.Section>
+      <Card.Section divider="flush">
         <p>
           The term can refer to the flowering plant as a whole, even when not in bloom, and not just
           the flower.
@@ -74,12 +74,12 @@ export const FlushDividers = () => (
 
 export const InsetDividers = () => (
   <div style={{ maxWidth: "500px" }}>
-    <Card dividers="inset">
-      <Card.Header className="test-card-header">
+    <Card>
+      <Card.Header className="test-card-header" divider="inset">
         <h3>Wildflower</h3>
       </Card.Header>
 
-      <Card.Section>
+      <Card.Section divider="inset">
         <p>
           A flower that grows in the wild, meaning it was not intentionally seeded or planted. The
           term implies that the plant probably is neither a hybrid nor a selected cultivar that is
@@ -88,7 +88,7 @@ export const InsetDividers = () => (
         </p>
       </Card.Section>
 
-      <Card.Section>
+      <Card.Section divider="inset">
         <p>
           The term can refer to the flowering plant as a whole, even when not in bloom, and not just
           the flower.
@@ -144,6 +144,19 @@ export const WithFooter = () => (
 
 export const Spacings = () => (
   <div style={{ maxWidth: "500px", display: "grid", gap: "2rem" }}>
+    <Card spacing="none">
+      <Card.Header className="test-card-header">
+        <h3>"None" Spacing</h3>
+      </Card.Header>
+
+      <Card.Section>
+        <p>
+          The term can refer to the flowering plant as a whole, even when not in bloom, and not just
+          the flower.
+        </p>
+      </Card.Section>
+    </Card>
+
     <Card spacing="sm">
       <Card.Header className="test-card-header">
         <h3>Small Spacing</h3>

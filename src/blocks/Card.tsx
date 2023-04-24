@@ -2,6 +2,8 @@ import React from "react"
 import "./Card.scss"
 
 export interface CardHeaderProps {
+  /** Add divider between this and the next element */
+  divider?: "flush" | "inset"
   /** An additional element(s) you can add to the side of the main child element(s) */
   suffix?: React.ReactNode
   /** Element ID */
@@ -16,7 +18,7 @@ const CardHeader = (props: CardHeaderProps) => {
   if (props.className) classNames.push(props.className)
 
   return (
-    <header id={props.id} className={classNames.join(" ")} data-flex-children={!!props.suffix}>
+    <header id={props.id} className={classNames.join(" ")} data-divider={props.divider} data-flex-children={!!props.suffix}>
       {props.children}
       {props.suffix}
     </header>
@@ -24,6 +26,8 @@ const CardHeader = (props: CardHeaderProps) => {
 }
 
 export interface CardSectionProps {
+  /** Add divider between this and the next element */
+  divider?: "flush" | "inset"
   /** Element ID */
   id?: string
   /** Additional class name */
@@ -36,13 +40,15 @@ const CardSection = (props: CardSectionProps) => {
   if (props.className) classNames.push(props.className)
 
   return (
-    <div id={props.id} className={classNames.join(" ")}>
+    <div id={props.id} className={classNames.join(" ")} data-divider={props.divider}>
       {props.children}
     </div>
   )
 }
 
 export interface CardFooterProps {
+  /** Add divider between this and the next element */
+  divider?: "flush" | "inset"
   /** Element ID */
   id?: string
   /** Additional class name */
@@ -55,19 +61,17 @@ const CardFooter = (props: CardFooterProps) => {
   if (props.className) classNames.push(props.className)
 
   return (
-    <footer id={props.id} className={classNames.join(" ")}>
+    <footer id={props.id} className={classNames.join(" ")} data-divider={props.divider}>
       {props.children}
     </footer>
   )
 }
 
 export interface CardProps {
-  /** Add dividers between card elements */
-  dividers?: "flush" | "inset"
   /** Control spacing around card elements
    * @default base
    */
-  spacing?: "sm" | "base" | "md" | "lg"
+  spacing?: "sm" | "base" | "md" | "lg" | "none"
   /** Element ID */
   id?: string
   /** Additional class name */
@@ -81,7 +85,7 @@ const Card = (props: CardProps) => {
   if (props.className) classNames.push(props.className)
 
   return (
-    <article id={props.id} className={classNames.join(" ")} data-dividers={props.dividers} data-spacing={spacing}>
+    <article id={props.id} className={classNames.join(" ")} data-spacing={spacing}>
       {props.children}
     </article>
   )
