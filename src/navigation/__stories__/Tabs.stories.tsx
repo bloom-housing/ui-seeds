@@ -58,3 +58,30 @@ export const Default = () => {
     </Tabs>
   )
 }
+
+export const SmallTabs = () => {
+  return (
+    <Tabs>
+      <Tabs.TabList size="sm">
+        <Tabs.Tab>Title 1</Tabs.Tab>
+        <Tabs.Tab>Title 2</Tabs.Tab>
+        <Tabs.Tab>Long Tab Title 3</Tabs.Tab>
+      </Tabs.TabList>
+
+      <Tabs.TabPanel>
+        <h2>Any content 1</h2>
+        <p>Paragraph text 1.</p>
+      </Tabs.TabPanel>
+      <Tabs.TabPanel>
+        <h2>Any content 2</h2>
+        <p>Paragraph text 2.</p>
+      </Tabs.TabPanel>
+      <Tabs.TabPanel>
+        <h2>Any kind of content here</h2>
+        <p>Paragraph text 3.</p>
+        <p>Paragraph text 3.</p>
+        <p>Paragraph text 3.</p>
+      </Tabs.TabPanel>
+    </Tabs>
+  )
+}

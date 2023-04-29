@@ -16,6 +16,7 @@ export interface TabsProps {
   defaultIndex?: number
   disabledTabClassName?: string
   domRef?: (node?: HTMLElement) => void
+  focusTabOnClick?: boolean
   forceRenderTabPanel?: boolean
   onSelect?: (index: number, last: number, event: Event) => boolean | void
   selectedIndex?: number
@@ -26,8 +27,10 @@ export interface TabsProps {
 const Tabs = (props: TabsProps) => {
   const className = ["tabs"]
   if (props.className) className.push(props.className)
+  const focusTab = typeof props.focusTabOnClick !== "undefined" ? props.focusTabOnClick : false
+
   return (
-    <ReactTabs {...props} className={className.join(" ")} />
+    <ReactTabs {...props} focusTabOnClick={focusTab} className={className.join(" ")} />
   )
 }
 
@@ -52,11 +55,15 @@ Tab.tabsRole = "Tab"
 
 export interface TabListProps {
   children: React.ReactNode
-  className?: string | string[] | { [name: string]: boolean }
+  size?: "sm" | "base"
+  className?: string
 }
 
 const TabList = (props: TabListProps) => {
-  return <ReactTabList {...props} />
+  const className = ["tabs-tablist"]
+  if (props.className) className.push(props.className)
+
+  return <ReactTabList data-size={props.size || "base"} className={className} children={props.children} />
 }
 
 TabList.tabsRole = "TabList"
