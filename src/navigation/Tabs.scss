@@ -16,8 +16,7 @@
   --tab-active-label-color: var(--bloom-color-on-surface);
   --tab-active-indicator-width: var(--bloom-border-2);
   --tab-active-indicator-color: var(--bloom-color-primary);
-
-  --tab-panel-spacing: var(--bloom-spacer-section);
+  --tab-panel-padding: var(--bloom-spacer-section);
   --tab-panel-background-color: var(--bloom-bg-color-surface);
 }
 
@@ -88,7 +87,7 @@
 }
 
 .tabs-panel {
-  padding: var(--tab-panel-spacing);
+  padding: var(--tab-panel-padding);
   background-color: var(--tab-panel-background-color);
   border: var(--tab-border-width) solid var(--tab-border-color);
 

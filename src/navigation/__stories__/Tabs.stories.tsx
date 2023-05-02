@@ -1,6 +1,8 @@
 import React from "react"
 import Tabs from "../Tabs"
 
+import MDXDocs from "./Tabs.docs.mdx"
+
 export default {
   title: "Navigation/Tabs",
   decorators: [
@@ -22,6 +24,11 @@ export default {
       </div>
     ),
   ],
+  parameters: {
+    docs: {
+      page: MDXDocs,
+    },
+  },
 }
 
 export const Default = () => {

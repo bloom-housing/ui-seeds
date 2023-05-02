@@ -1,0 +1,45 @@
+import { ArgsTable } from "@storybook/addon-docs"
+import Tabs from "../Tabs"
+import { Swatch } from "../../../documentation/components/Swatch.tsx"
+
+# &lt;Tabs /&gt;
+
+## Properties
+
+<ArgsTable of={Tabs} />
+
+## Tab List Properties
+
+<ArgsTable of={Tabs.TabList} />
+
+## Tab Properties
+
+<ArgsTable of={Tabs.Tab} />
+
+## Tab Panel Properties
+
+<ArgsTable of={Tabs.TabPanel} />
+
+## Theme Variables
+
+| Name                           | Description                               | Default                        |
+| ------------------------------ | ----------------------------------------- | ------------------------------ |
+| `--tab-font`                   | Font family                               | `--bloom-font-alt-sans`        |
+| `--tab-font-size`              | Font size                                 | `--bloom-type-body`            |
+| `--tab-font-size-sm`           | Font size on mobile screens               | `--bloom-type-label`           |
+| `--tab-font-weight`            | Font weight                               | `--bloom-font-weight-semibold` |
+| `--tab-font-weight-sm`         | Font weight on mobile screens             | `--bloom-font-weight-regular`  |
+| `--tab-background-color`       | <Swatch color="bloom-bg-color-surface" border={true} /> | `--bloom-bg-color-surface`     |
+| `--tab-label-color`            | <Swatch color="bloom-text-color-light" /> | `--bloom-text-color-light`     |
+| `--tab-padding-inline`         | Horizontal spacing within tab interior    | `--bloom-s6`                   |
+| `--tab-padding-block`          | Vertical spacing within tab interior      | `--bloom-s4`                   |
+| `--tab-padding-inline-sm`      | Horizontal spacing on mobile screens      | `--bloom-s6`                   |
+| `--tab-padding-block-sm`       | Vertical spacing on mobile screens        | `--bloom-s3`                   |
+| `--tab-border-radius`          | Tab border radius                         | `--bloom-rounded-lg`           |
+| `--tab-border-color`           | <Swatch color="bloom-border-color" />     | `--bloom-border-color`         |
+| `--tab-border-width`           | Tab border radius                         | `--bloom-border-1`             |
+| `--tab-active-label-color`     | <Swatch color="bloom-color-on-surface" /> | `--bloom-color-on-surface`     |
+| `--tab-active-indicator-width` | Width of the colorful border              | `--bloom-border-2`             |
+| `--tab-active-indicator-color` | <Swatch color="bloom-color-primary" />    | `--bloom-color-primary`        |
+| `--tab-panel-padding`          | Spacing within the panel interior         | `--bloom-spacer-section`       |
+| `--tab-panel-background-color` | <Swatch color="bloom-bg-color-surface" border={true} /> | `--bloom-bg-color-surface`     |
