@@ -4,8 +4,6 @@ import "./Card.scss"
 export interface CardHeaderProps {
   /** Add divider between this and the next element */
   divider?: "flush" | "inset"
-  /** An additional element(s) you can add to the side of the main child element(s) */
-  suffix?: React.ReactNode
   /** Element ID */
   id?: string
   /** Additional class name */
@@ -18,9 +16,8 @@ const CardHeader = (props: CardHeaderProps) => {
   if (props.className) classNames.push(props.className)
 
   return (
-    <header id={props.id} className={classNames.join(" ")} data-divider={props.divider} data-flex-children={!!props.suffix}>
+    <header id={props.id} className={classNames.join(" ")} data-divider={props.divider}>
       {props.children}
-      {props.suffix}
     </header>
   )
 }

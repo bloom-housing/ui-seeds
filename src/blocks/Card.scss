@@ -74,13 +74,6 @@
     padding-block-end: var(--card-header-padding-block);
     border-bottom: var(--card-divider-width) solid var(--card-divider-color);
   }
-
-  &[data-flex-children] {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--bloom-s7);
-  }
 }
 
 .card-section {
