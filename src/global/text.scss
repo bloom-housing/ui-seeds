@@ -58,15 +58,27 @@
   line-height: var(--bloom-line-height-content);
 }
 
-.text-heading-md, .text-body {
+.text-heading-md {
+  font-size: var(--bloom-type-heading-size-md);
+}
+
+.text-heading-sm {
+  font-size: var(--bloom-type-heading-size-sm);
+}
+
+.text-heading-xs {
+  font-size: var(--bloom-type-heading-size-xs);
+}
+
+.text-body {
   font-size: var(--bloom-type-body-size);
 }
 
-.text-heading-sm, .text-label {
+.text-label {
   font-size: var(--bloom-type-label-size);
 }
 
-.text-heading-xs, .text-caption {
+.text-caption {
   font-size: var(--bloom-type-caption-size);
 }
 
