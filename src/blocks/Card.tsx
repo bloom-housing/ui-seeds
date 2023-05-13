@@ -68,7 +68,7 @@ export interface CardProps {
   /** Control spacing around card elements
    * @default base
    */
-  spacing?: "sm" | "base" | "md" | "lg" | "none"
+  spacing?: "sm" | "md" | "lg" | "xl" | "none"
   /** Element ID */
   id?: string
   /** Additional class name */
