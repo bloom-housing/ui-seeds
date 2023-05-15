@@ -10,8 +10,11 @@ export default {
       <div style={{ padding: "1rem" }}>
         <style>
           {`
+      .funky {
+        color: var(--bloom-color-accent-warm-dark) !important;
+      }
       .styled {
-        color: blue !important;
+        color: var(--bloom-color-accent-cool) !important;
         font-weight: bold;
       }
       .tabs-panel.styled {

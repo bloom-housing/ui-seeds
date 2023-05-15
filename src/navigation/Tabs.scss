@@ -26,6 +26,7 @@
   font-size: var(--tab-font-size);
   font-weight: var(--tab-font-weight);
   margin: 0;
+  margin-block-end: -1px;
   padding: 0;
   list-style-type: none;
 
@@ -43,8 +44,7 @@
 
   border: var(--tab-border-width) solid var(--tab-border-color);
   border-radius: 0;
-  border-bottom-width: var(--tab-active-indicator-width);
-  border-bottom-color: transparent;
+
   cursor: pointer;
   position: relative;
 
@@ -60,6 +60,7 @@
 
   &:hover {
     border-bottom-color: var(--tab-border-color);
+    border-bottom-width: var(--tab-active-indicator-width);
   }
 
   &:not(:last-of-type) {
@@ -77,12 +78,13 @@
   &[aria-selected="true"] {
     color: var(--tab-active-label-color);
     border-bottom-color: var(--tab-active-indicator-color);
+    border-bottom-width: var(--tab-active-indicator-width);
     z-index: 1;
   }
 
   &[aria-disabled="true"] {
     color: var(--bloom-text-color-disabled);
-    border-bottom-color: transparent;
+    border-bottom-width: var(--tab-border-width);
   }
 }
 
@@ -118,17 +120,16 @@
 
     &:not(:last-of-type) {
       border-right-width: var(--tab-border-width);
+      border-bottom-width: 0;
     }
 
-    &:hover {
+    &:hover:not([aria-selected="true"]) {
       box-shadow: inset calc(var(--tab-active-indicator-width) + var(--tab-border-width)) 0px 0px var(--tab-border-color);
     }
 
     &[aria-selected="true"] {
       border-bottom-color: var(--tab-border-color);
       box-shadow: inset calc(var(--tab-active-indicator-width) + var(--tab-border-width)) 0px 0px var(--tab-active-indicator-color);
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
     }
   }
 
