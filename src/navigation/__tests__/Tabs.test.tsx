@@ -1,10 +1,10 @@
-import { render, cleanup } from "@testing-library/react"
+import { render, fireEvent, cleanup } from "@testing-library/react"
 import Tabs from "../Tabs"
 
 afterEach(cleanup)
 
 describe("<Tabs>", () => {
-  it("outputs the right markup", () => {
+  it("outputs the right markup for selected tab", () => {
     const { container, getByText } = render(
       <Tabs defaultIndex={1}>
         <Tabs.TabList>
@@ -24,7 +24,18 @@ describe("<Tabs>", () => {
     expect(container.getElementsByClassName("default-tab").length).toBe(1)
     expect(container.getElementsByClassName("default-panel").length).toBe(1)
 
-    expect(container.querySelectorAll(".tabs-tab.is-active").length).toBe(1)
-    expect(container.querySelectorAll(".tabs-panel.is-active").length).toBe(1)
+    let activeTabs = container.querySelectorAll(".tabs-tab.is-active")
+    expect(activeTabs.length).toBe(1)
+    expect(activeTabs[0].className).toStrictEqual("tabs-tab default-tab is-active")
+    let activePanels = container.querySelectorAll(".tabs-panel.is-active")
+    expect(activePanels.length).toBe(1)
+    expect(activePanels[0].className).toStrictEqual("tabs-panel default-panel is-active")
+
+    fireEvent.click(getByText("Other"))
+
+    activeTabs = container.querySelectorAll(".tabs-tab.is-active")
+    expect(activeTabs[0].className).toStrictEqual("tabs-tab other-tab is-active")
+    activePanels = container.querySelectorAll(".tabs-panel.is-active")
+    expect(activePanels[0].className).toStrictEqual("tabs-panel other-panel is-active")
   })
 })
