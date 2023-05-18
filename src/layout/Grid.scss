@@ -1,9 +1,4 @@
 .grid {
-  // --grid-gap-base: var(--bloom-s6);
-  // --grid-gap-sm: var(--bloom-s4);
-  // --grid-gap-md: var(--bloom-s8);
-  // --grid-gap-lg: var(--bloom-s12);
-
   --grid-gap-sm: var(--bloom-s4);
   --grid-gap-md: var(--bloom-s6);
   --grid-gap-lg: var(--bloom-s8);
@@ -20,7 +15,7 @@
   display: grid;
   gap: var(--grid-gap);
 
-  @media (min-width: 1024px) {    }
+  @media (min-width: 1024px) {
     &[data-spacing="sm"] {
       --grid-gap: var(--grid-gap-sm);
     }

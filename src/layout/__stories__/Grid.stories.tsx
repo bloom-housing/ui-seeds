@@ -5,24 +5,23 @@ import Grid from "../Grid"
 import FieldValue from "../../forms/FieldValue"
 import Heading from "../../text/Heading"
 
-//import MDXDocs from "./Grid.docs.mdx"
+import MDXDocs from "./Grid.docs.mdx"
 
 export default {
   title: "Layout/Grid",
   component: Grid,
-  // parameters: {
-  //   docs: {
-  //     page: MDXDocs,
-  //   },
-  // },
+  parameters: {
+    docs: {
+      page: MDXDocs,
+    },
+  },
 }
 
 export const gridExample = () => (
   <>
+    <Heading size="xl">Three Columns:</Heading>
+
     <Grid spacing="lg">
-
-      <p>Three Columns:</p>
-
       <Grid.Row>
         <Grid.Cell>Cell 1</Grid.Cell>
         <Grid.Cell>Cell 2</Grid.Cell>
@@ -34,33 +33,41 @@ export const gridExample = () => (
         <Grid.Cell>Cell 5</Grid.Cell>
         <Grid.Cell>Cell 6</Grid.Cell>
       </Grid.Row>
+    </Grid>
 
-      <p>Four Columns:</p>
+    <Heading size="xl">Four Columns:</Heading>
 
+    <Grid spacing="lg">
       <Grid.Row columns={4}>
         <Grid.Cell>Cell 1</Grid.Cell>
         <Grid.Cell>Cell 2</Grid.Cell>
         <Grid.Cell>Cell 3</Grid.Cell>
         <Grid.Cell>Cell 4</Grid.Cell>
       </Grid.Row>
+    </Grid>
 
-      <p>Two Columns:</p>
+    <Heading size="xl">Two Columns:</Heading>
 
+    <Grid spacing="lg">
       <Grid.Row>
         <Grid.Cell>Cell 1</Grid.Cell>
         <Grid.Cell>Cell 2</Grid.Cell>
       </Grid.Row>
+    </Grid>
 
-      <p>One Column + Two Columns:</p>
+    <Heading size="xl">One Column + Two Columns:</Heading>
 
+    <Grid spacing="lg">
       <Grid.Row columns="1+2">
         <Grid.Cell>Cell 1 (Long)</Grid.Cell>
         <Grid.Cell>Cell 2</Grid.Cell>
         <Grid.Cell>Cell 3</Grid.Cell>
       </Grid.Row>
+    </Grid>
 
-      <p>Two Columns + One Column:</p>
+    <Heading size="xl">Two Columns + One Column:</Heading>
 
+    <Grid spacing="lg">
       <Grid.Row columns="2+1">
         <Grid.Cell>Cell 1</Grid.Cell>
         <Grid.Cell>Cell 2</Grid.Cell>
@@ -68,13 +75,13 @@ export const gridExample = () => (
       </Grid.Row>
     </Grid>
 
-    <style>{".grid-row > * { background: #eee; padding: .5rem } .grid > p { margin: 0 }"}</style>
+    <style>{".grid {  margin-block: var(--bloom-spacer-content); } .grid-row > * { background: #eee; padding: .5rem }"}</style>
   </>
 )
 
 export const gridSpacings = () => (
   <>
-    <h3>Small Spacing</h3>
+    <Heading size="xl">Small Spacing</Heading>
 
     <Grid spacing="sm">
       <Grid.Row>
@@ -84,17 +91,7 @@ export const gridSpacings = () => (
       </Grid.Row>
     </Grid>
     
-    <h3>Base (Default) Spacing</h3>
-
-    <Grid spacing="base">
-      <Grid.Row>
-        <Grid.Cell>1</Grid.Cell>
-        <Grid.Cell>2</Grid.Cell>
-        <Grid.Cell>3</Grid.Cell>
-      </Grid.Row>
-    </Grid>
-
-    <h3>Medium Spacing</h3>
+    <Heading size="xl">Medium (Default) Spacing</Heading>
 
     <Grid spacing="md">
       <Grid.Row>
@@ -104,7 +101,7 @@ export const gridSpacings = () => (
       </Grid.Row>
     </Grid>
 
-    <h3>Large Spacing</h3>
+    <Heading size="xl">Large Spacing</Heading>
 
     <Grid spacing="lg">
       <Grid.Row>
@@ -114,7 +111,17 @@ export const gridSpacings = () => (
       </Grid.Row>
     </Grid>
 
-    <style>{".grid-row > * { background: #eee; padding: .5rem } .grid > p { margin: 0 }"}</style>
+    <Heading size="xl">Extra Large Spacing</Heading>
+
+    <Grid spacing="xl">
+      <Grid.Row>
+        <Grid.Cell>1</Grid.Cell>
+        <Grid.Cell>2</Grid.Cell>
+        <Grid.Cell>3</Grid.Cell>
+      </Grid.Row>
+    </Grid>
+
+    <style>{".grid {  margin-block: var(--bloom-spacer-content); } .grid-row > * { background: #eee; padding: .5rem }"}</style>
   </>
 )
 
@@ -145,6 +152,6 @@ export const sectionsAndForms = () => (
       </Grid>
     </section>
 
-    <style>{".grid { background: var(--bloom-bg-color-surface-primary); padding: var(--bloom-spacer-content); margin-top: var(--bloom-spacer-content) }"}</style>
+    <style>{".grid { background: var(--bloom-bg-color-surface-primary); padding: var(--bloom-spacer-content); margin-block: var(--bloom-spacer-content) }"}</style>
   </>
 )
