@@ -85,6 +85,7 @@
   &[aria-disabled="true"] {
     color: var(--bloom-text-color-disabled);
     border-bottom-width: var(--tab-border-width);
+    cursor: not-allowed;
   }
 }
 
