@@ -8,7 +8,7 @@ export interface GridCellProps {
   className?: string
 }
 
-const GridCell = (props: GridProps) => {
+const GridCell = (props: GridCellProps) => {
   const classNames = ["grid-cell"]
   if (props.className) classNames.push(props.className)
 
