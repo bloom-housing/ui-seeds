@@ -1,5 +1,6 @@
 import React from "react"
 import Card from "../Card"
+import HeadingGroup from "../../text/HeadingGroup"
 
 import MDXDocs from "./Card.docs.mdx"
 
@@ -13,14 +14,11 @@ export default {
   },
 }
 
-const sharedStyles =
-  ".test-card-header h3 { font-family: var(--bloom-font-serif); font-weight: normal; font-size: var(--bloom-font-size-2xl); line-height: var(--bloom-line-height-heading);"
-
 export const TextContent = () => (
   <div style={{ maxWidth: "500px" }}>
     <Card>
       <Card.Header className="test-card-header">
-        <h3>Wildflower</h3>
+        <HeadingGroup size="2xl" heading="Wildflower" subheading="Wildflower (or wild flower)"  />
       </Card.Header>
 
       <Card.Section>
@@ -39,8 +37,6 @@ export const TextContent = () => (
         </p>
       </Card.Section>
     </Card>
-
-    <style>{sharedStyles}</style>
   </div>
 )
 
@@ -48,7 +44,7 @@ export const FlushDividers = () => (
   <div style={{ maxWidth: "500px" }}>
     <Card>
       <Card.Header divider="flush" className="test-card-header">
-        <h3>Wildflower</h3>
+        <HeadingGroup size="2xl" heading="Wildflower" subheading="Wildflower (or wild flower)"  />
       </Card.Header>
 
       <Card.Section divider="flush">
@@ -67,8 +63,6 @@ export const FlushDividers = () => (
         </p>
       </Card.Section>
     </Card>
-
-    <style>{sharedStyles}</style>
   </div>
 )
 
@@ -76,7 +70,7 @@ export const InsetDividers = () => (
   <div style={{ maxWidth: "500px" }}>
     <Card>
       <Card.Header className="test-card-header" divider="inset">
-        <h3>Wildflower</h3>
+        <HeadingGroup size="2xl" heading="Wildflower" subheading="Wildflower (or wild flower)"  />
       </Card.Header>
 
       <Card.Section divider="inset">
@@ -95,8 +89,6 @@ export const InsetDividers = () => (
         </p>
       </Card.Section>
     </Card>
-
-    <style>{sharedStyles}</style>
   </div>
 )
 
@@ -104,7 +96,7 @@ export const WithFooter = () => (
   <div style={{ maxWidth: "500px" }}>
     <Card>
       <Card.Header className="test-card-header">
-        <h3>Wildflower</h3>
+        <HeadingGroup size="2xl" heading="Wildflower" subheading="Wildflower (or wild flower)"  />
       </Card.Header>
 
       <Card.Section>
@@ -138,7 +130,6 @@ export const WithFooter = () => (
     <style>
       {"#test-card-footer { --card-footer-background-color: var(--bloom-color-primary-lighter) }"}
     </style>
-    <style>{sharedStyles}</style>
   </div>
 )
 
@@ -146,9 +137,10 @@ export const Spacings = () => (
   <div style={{ maxWidth: "500px", display: "grid", gap: "2rem" }}>
     <Card spacing="none">
       <Card.Header className="test-card-header">
-        <h3>"None" Spacing</h3>
+        <HeadingGroup size="2xl" heading="none" subheading="No Spacing"  />
       </Card.Header>
 
+      <br/>
       <Card.Section>
         <p>
           The term can refer to the flowering plant as a whole, even when not in bloom, and not just
@@ -159,20 +151,7 @@ export const Spacings = () => (
 
     <Card spacing="sm">
       <Card.Header className="test-card-header">
-        <h3>Small Spacing</h3>
-      </Card.Header>
-
-      <Card.Section>
-        <p>
-          The term can refer to the flowering plant as a whole, even when not in bloom, and not just
-          the flower.
-        </p>
-      </Card.Section>
-    </Card>
-
-    <Card spacing="base">
-      <Card.Header className="test-card-header">
-        <h3>Default (Base) Spacing</h3>
+        <HeadingGroup size="2xl" heading="sm" subheading="Small Spacing"  />
       </Card.Header>
 
       <Card.Section>
@@ -185,7 +164,7 @@ export const Spacings = () => (
 
     <Card spacing="md">
       <Card.Header className="test-card-header">
-        <h3>Medium Spacing</h3>
+      <HeadingGroup size="2xl" heading="md" subheading="Medium (Default) Spacing"  />
       </Card.Header>
 
       <Card.Section>
@@ -198,7 +177,7 @@ export const Spacings = () => (
 
     <Card spacing="lg">
       <Card.Header className="test-card-header">
-        <h3>Large Spacing</h3>
+        <HeadingGroup size="2xl" heading="lg" subheading="Large Spacing"  />
       </Card.Header>
 
       <Card.Section>
@@ -209,6 +188,17 @@ export const Spacings = () => (
       </Card.Section>
     </Card>
 
-    <style>{sharedStyles}</style>
+    <Card spacing="xl">
+      <Card.Header className="test-card-header">
+        <HeadingGroup size="2xl" heading="xl" subheading="Extra Large Spacing"  />
+      </Card.Header>
+
+      <Card.Section>
+        <p>
+          The term can refer to the flowering plant as a whole, even when not in bloom, and not just
+          the flower.
+        </p>
+      </Card.Section>
+    </Card>
   </div>
 )
