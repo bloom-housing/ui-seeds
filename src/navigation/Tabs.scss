@@ -13,6 +13,7 @@
   --tab-border-radius: var(--bloom-rounded-lg);
   --tab-border-color: var(--bloom-border-color);
   --tab-border-width: var(--bloom-border-1);
+  --tab-hover-background-color: var(--bloom-bg-color-surface-primary);
   --tab-active-label-color: var(--bloom-color-on-surface);
   --tab-active-indicator-width: var(--bloom-border-2);
   --tab-active-indicator-color: var(--bloom-color-primary);
@@ -59,8 +60,8 @@
   }
 
   &:hover {
-    border-bottom-color: var(--tab-border-color);
-    border-bottom-width: var(--tab-active-indicator-width);
+    color: var(--tab-active-indicator-color);
+    background-color: var(--tab-hover-background-color);
   }
 
   &:not(:last-of-type) {
@@ -76,10 +77,13 @@
   }
 
   &[aria-selected="true"] {
-    color: var(--tab-active-label-color);
     border-bottom-color: var(--tab-active-indicator-color);
     border-bottom-width: var(--tab-active-indicator-width);
     z-index: 1;
+  }
+
+  &:not(:hover)[aria-selected="true"] {
+    color: var(--tab-active-label-color);
   }
 
   &[aria-disabled="true"] {
@@ -125,7 +129,7 @@
     }
 
     &:hover:not([aria-selected="true"]) {
-      box-shadow: inset calc(var(--tab-active-indicator-width) + var(--tab-border-width)) 0px 0px var(--tab-border-color);
+      
     }
 
     &[aria-selected="true"] {
