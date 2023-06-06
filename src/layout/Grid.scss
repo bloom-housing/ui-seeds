@@ -8,14 +8,14 @@
 
   --grid-gap: var(--grid-gap-md);
   
-  @media (max-width: 1023px) {
+  @media (--lg-down) {
     --grid-gap: var(--grid-gap-tablet);
   }
 
   display: grid;
   gap: var(--grid-gap);
 
-  @media (min-width: 1024px) {
+  @media (--lg-and-up) {
     &[data-spacing="sm"] {
       --grid-gap: var(--grid-gap-sm);
     }
@@ -38,7 +38,7 @@
   --grid-columns: auto-fit;
   --grid-minimum-column-size: 0;
 
-  @media (max-width: 639px) {
+  @media (--sm-only) {
     --grid-columns: 1;
   }
 
@@ -51,7 +51,7 @@
   overflow-wrap: break-word;
 }
 
-@media (min-width: 640px) {
+@media (--sm-and-up) {
   .grid-row[data-columns="4"] {
     --grid-columns: 4;
   }

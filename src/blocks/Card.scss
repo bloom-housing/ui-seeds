@@ -29,7 +29,7 @@
   --card-header-padding-inline: var(--card-header-padding-inline-desktop);
   --card-content-padding-inline: var(--card-content-padding-inline-desktop);
 
-  @media (max-width: 640px) { /* small screen */
+  @media (--sm-only) {
     --card-header-padding-inline: var(--card-header-padding-inline-mobile);
     --card-content-padding-inline: var(--card-content-padding-inline-mobile);
   }
