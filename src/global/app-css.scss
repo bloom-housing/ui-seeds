@@ -59,12 +59,6 @@ figure {
   letter-spacing: inherit;
 }
 
-:where(button):not(.button) {
-  background-color: transparent;
-  background-image: none;
-  border: none;
-}
-
 [hidden] {
   display: none !important;
 }

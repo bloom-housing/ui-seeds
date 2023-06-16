@@ -12,7 +12,7 @@ describe("<Toast>", () => {
       </Toast>
     )
     expect(getByText(content)).toBeInTheDocument()
-    expect(baseElement.querySelector("#seeds-toast-stack .toast")).not.toBeNull()
+    expect(baseElement.querySelector("#seeds-toast-stack .seeds-toast")).not.toBeNull()
     expect(baseElement.querySelector("#test-id")).not.toBeNull()
     expect(baseElement.querySelector("#test-id.test-class")).not.toBeNull()
     expect(baseElement.querySelector("[role=alert]")).not.toBeNull()
