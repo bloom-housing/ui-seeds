@@ -1,5 +1,5 @@
 :root {
-  --link-color: #1EA7FD;
+  --link-color: #1ea7fd;
 }
 
 .sbdocs-table {
@@ -15,19 +15,19 @@
 }
 
 :is(.sbdocs-table, .docblock-argstable) {
-  font-family: var(--bloom-font-sans) !important;
-  font-size: var(--bloom-font-size-sm) !important;
-  border: 1px solid var(--bloom-border-color);
-  color: var(--bloom-text-color-darker);
+  font-family: var(--seeds-font-sans) !important;
+  font-size: var(--seeds-font-size-sm) !important;
+  border: 1px solid var(--seeds-border-color);
+  color: var(--seeds-text-color-darker);
 }
 
 :is(.sbdocs-table, .docblock-argstable) thead th {
-  font-size: var(--bloom-font-size-base);
+  font-size: var(--seeds-font-size-base);
   text-align: left;
   text-transform: uppercase;
-  color: var(--bloom-input-text-placeholder-color) !important;
-  background-color: var(--bloom-color-primary-lighter);
-  border-bottom: 1px solid var(--bloom-border-color) !important;
+  color: var(--seeds-input-text-placeholder-color) !important;
+  background-color: var(--seeds-color-primary-lighter);
+  border-bottom: 1px solid var(--seeds-border-color) !important;
   border-radius: none !important;
 }
 

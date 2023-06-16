@@ -1,4 +1,4 @@
- .expandable-text {
+.expandable-text {
   p:not(:last-child),
   ul:not(:last-child) {
     margin-bottom: 0.9em;
@@ -10,7 +10,7 @@
 }
 
 .button-toggle {
-  color: var(--bloom-color-primary);
+  color: var(--seeds-color-primary);
   cursor: pointer;
   overflow-wrap: break-word;
   word-wrap: break-word;

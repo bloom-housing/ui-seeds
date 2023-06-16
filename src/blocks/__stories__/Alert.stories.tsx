@@ -20,7 +20,7 @@ export default {
 export const defaultAlert = () => <Alert>Primary alert</Alert>
 
 export const standardVariants = () => (
-  <div style={{ display: "grid", gap: "var(--bloom-s3)" }}>
+  <div style={{ display: "grid", gap: "var(--seeds-s3)" }}>
     <Alert variant="primary">Primary alert</Alert>
     <Alert variant="success">Success alert</Alert>
     <Alert variant="warn">Warning alert</Alert>
@@ -30,7 +30,7 @@ export const standardVariants = () => (
 )
 
 export const inverseVariants = () => (
-  <div style={{ display: "grid", gap: "var(--bloom-s3)" }}>
+  <div style={{ display: "grid", gap: "var(--seeds-s3)" }}>
     <Alert variant="primary-inverse">Primary alert</Alert>
     <Alert variant="success-inverse">Success alert</Alert>
     <Alert variant="warn-inverse">Warning alert</Alert>
@@ -60,7 +60,7 @@ export const wideContainerLayout = () => (
     <style>
       {`
       #in-container {
-        --alert-max-width: var(--bloom-width-4xl);
+        --alert-max-width: var(--seeds-width-4xl);
       }
       `}
     </style>

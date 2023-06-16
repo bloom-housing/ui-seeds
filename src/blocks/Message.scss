@@ -1,14 +1,14 @@
 .message {
-  --message-padding: var(--bloom-s4);
+  --message-padding: var(--seeds-s4);
   --message-border-radius: 0;
   --message-border: none;
-  --message-flex-gap: var(--bloom-s3);
+  --message-flex-gap: var(--seeds-s3);
   --message-icon-size: 1em;
-  --message-max-width: var(--bloom-width-sm);
-  --message-font: var(--bloom-font-sans);
-  --message-font-size: var(--bloom-type-caption-size);
-  --message-link-gap: var(--bloom-s1);
-  --message-link-font-weight: var(--bloom-font-weight-semibold);
+  --message-max-width: var(--seeds-width-sm);
+  --message-font: var(--seeds-font-sans);
+  --message-font-size: var(--seeds-type-caption-size);
+  --message-link-gap: var(--seeds-s1);
+  --message-link-font-weight: var(--seeds-font-weight-semibold);
 
   --common-message-padding: var(--message-padding);
   --common-message-border-radius: var(--message-border-radius);

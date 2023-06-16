@@ -1,14 +1,14 @@
 .alert {
-  --alert-padding: var(--bloom-s4);
+  --alert-padding: var(--seeds-s4);
   --alert-border-radius: 0;
   --alert-border: none;
-  --alert-flex-gap: var(--bloom-s3);
+  --alert-flex-gap: var(--seeds-s3);
   --alert-icon-size: 1em;
-  --alert-max-width: var(--bloom-width-sm);
-  --alert-font: var(--bloom-font-sans);
-  --alert-font-size: var(--bloom-type-caption-size);
-  --alert-link-gap: var(--bloom-s1);
-  --alert-link-font-weight: var(--bloom-font-weight-semibold);
+  --alert-max-width: var(--seeds-width-sm);
+  --alert-font: var(--seeds-font-sans);
+  --alert-font-size: var(--seeds-type-caption-size);
+  --alert-link-gap: var(--seeds-s1);
+  --alert-link-font-weight: var(--seeds-font-weight-semibold);
 
   --common-message-padding: var(--alert-padding);
   --common-message-border-radius: var(--alert-border-radius);

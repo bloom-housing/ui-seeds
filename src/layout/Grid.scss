@@ -1,13 +1,13 @@
 .grid {
-  --grid-gap-sm: var(--bloom-s4);
-  --grid-gap-md: var(--bloom-s6);
-  --grid-gap-lg: var(--bloom-s8);
-  --grid-gap-xl: var(--bloom-s12);
+  --grid-gap-sm: var(--seeds-s4);
+  --grid-gap-md: var(--seeds-s6);
+  --grid-gap-lg: var(--seeds-s8);
+  --grid-gap-xl: var(--seeds-s12);
 
   --grid-gap-tablet: var(--grid-gap-sm);
 
   --grid-gap: var(--grid-gap-md);
-  
+
   @media (--lg-down) {
     --grid-gap: var(--grid-gap-tablet);
   }

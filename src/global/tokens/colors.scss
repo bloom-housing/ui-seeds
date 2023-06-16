@@ -3,160 +3,160 @@
    * Base Colors
    */
 
-  --bloom-color-white: #ffffff;
-  --bloom-color-black: #000000;
+  --seeds-color-white: #ffffff;
+  --seeds-color-black: #000000;
 
   /* Red */
-  --bloom-color-red-900: #6a0c1b;
-  --bloom-color-red-700: #b21d38;
-  --bloom-color-red-500: #e41d3d;
-  --bloom-color-red-300: #f9d2d8;
-  --bloom-color-red-100: #fdebee;
+  --seeds-color-red-900: #6a0c1b;
+  --seeds-color-red-700: #b21d38;
+  --seeds-color-red-500: #e41d3d;
+  --seeds-color-red-300: #f9d2d8;
+  --seeds-color-red-100: #fdebee;
 
   /* Green */
-  --bloom-color-green-900: #1a4c25;
-  --bloom-color-green-700: #216e1f;
-  --bloom-color-green-500: #2e8540;
-  --bloom-color-green-300: #b4e5be;
-  --bloom-color-green-100: #e7f7ea;
+  --seeds-color-green-900: #1a4c25;
+  --seeds-color-green-700: #216e1f;
+  --seeds-color-green-500: #2e8540;
+  --seeds-color-green-300: #b4e5be;
+  --seeds-color-green-100: #e7f7ea;
 
   /* Blue */
-  --bloom-color-blue-900: #205493;
-  --bloom-color-blue-700: #0067be;
-  --bloom-color-blue-500: #0077da;
-  --bloom-color-blue-300: #daeeff;
-  --bloom-color-blue-100: #f5f8f9;
+  --seeds-color-blue-900: #205493;
+  --seeds-color-blue-700: #0067be;
+  --seeds-color-blue-500: #0077da;
+  --seeds-color-blue-300: #daeeff;
+  --seeds-color-blue-100: #f5f8f9;
 
   /* Cyan */
-  --bloom-color-cyan-900: #005863;
-  --bloom-color-cyan-700: #009db0;
-  --bloom-color-cyan-500: #00bed5;
-  --bloom-color-cyan-300: #c8f1ff;
-  --bloom-color-cyan-100: #eafdff;
+  --seeds-color-cyan-900: #005863;
+  --seeds-color-cyan-700: #009db0;
+  --seeds-color-cyan-500: #00bed5;
+  --seeds-color-cyan-300: #c8f1ff;
+  --seeds-color-cyan-100: #eafdff;
 
   /* Orange */
-  --bloom-color-orange-900: #8d2900;
-  --bloom-color-orange-700: #d54309;
-  --bloom-color-orange-500: #ff6627;
-  --bloom-color-orange-300: #ffd2c0;
-  --bloom-color-orange-100: #fff8f6;
+  --seeds-color-orange-900: #8d2900;
+  --seeds-color-orange-700: #d54309;
+  --seeds-color-orange-500: #ff6627;
+  --seeds-color-orange-300: #ffd2c0;
+  --seeds-color-orange-100: #fff8f6;
 
   /* Yellow */
-  --bloom-color-yellow-900: #825a01;
-  --bloom-color-yellow-700: #e5a000;
-  --bloom-color-yellow-500: #fdb81e;
-  --bloom-color-yellow-300: #fee8b6;
-  --bloom-color-yellow-100: #fff2d5;
+  --seeds-color-yellow-900: #825a01;
+  --seeds-color-yellow-700: #e5a000;
+  --seeds-color-yellow-500: #fdb81e;
+  --seeds-color-yellow-300: #fee8b6;
+  --seeds-color-yellow-100: #fff2d5;
 
   /* Gray */
-  --bloom-color-gray-950: #222222;
-  --bloom-color-gray-900: #292929;
-  --bloom-color-gray-850: #333333;
-  --bloom-color-gray-800: #373737;
-  --bloom-color-gray-750: #555555;
-  --bloom-color-gray-700: #767676;
-  --bloom-color-gray-650: #888888;
-  --bloom-color-gray-600: #999999;
-  --bloom-color-gray-550: #aaaaaa;
-  --bloom-color-gray-500: #cccccc;
-  --bloom-color-gray-450: #dedee0;
-  --bloom-color-gray-400: #efefef;
-  --bloom-color-gray-300: #f6f6f6;
-  --bloom-color-gray-200: #f7f7f7;
-  --bloom-color-gray-100: #f9f9f9;
+  --seeds-color-gray-950: #222222;
+  --seeds-color-gray-900: #292929;
+  --seeds-color-gray-850: #333333;
+  --seeds-color-gray-800: #373737;
+  --seeds-color-gray-750: #555555;
+  --seeds-color-gray-700: #767676;
+  --seeds-color-gray-650: #888888;
+  --seeds-color-gray-600: #999999;
+  --seeds-color-gray-550: #aaaaaa;
+  --seeds-color-gray-500: #cccccc;
+  --seeds-color-gray-450: #dedee0;
+  --seeds-color-gray-400: #efefef;
+  --seeds-color-gray-300: #f6f6f6;
+  --seeds-color-gray-200: #f7f7f7;
+  --seeds-color-gray-100: #f9f9f9;
 
   /**
    * Semantic Colors
    */
 
   /* Primary */
-  --bloom-color-primary: var(--bloom-color-blue-500);
-  --bloom-color-primary-dark: var(--bloom-color-blue-700);
-  --bloom-color-primary-darker: var(--bloom-color-blue-900);
-  --bloom-color-primary-light: var(--bloom-color-blue-300);
-  --bloom-color-primary-lighter: var(--bloom-color-blue-100);
+  --seeds-color-primary: var(--seeds-color-blue-500);
+  --seeds-color-primary-dark: var(--seeds-color-blue-700);
+  --seeds-color-primary-darker: var(--seeds-color-blue-900);
+  --seeds-color-primary-light: var(--seeds-color-blue-300);
+  --seeds-color-primary-lighter: var(--seeds-color-blue-100);
 
   /* Secondary */
-  --bloom-color-secondary: var(--bloom-color-gray-700);
-  --bloom-color-secondary-light: var(--bloom-color-gray-400);
-  --bloom-color-secondary-lighter: var(--bloom-color-gray-100);
-  --bloom-color-secondary-dark: var(--bloom-color-gray-750);
-  --bloom-color-secondary-darker: var(--bloom-color-gray-900);
+  --seeds-color-secondary: var(--seeds-color-gray-700);
+  --seeds-color-secondary-light: var(--seeds-color-gray-400);
+  --seeds-color-secondary-lighter: var(--seeds-color-gray-100);
+  --seeds-color-secondary-dark: var(--seeds-color-gray-750);
+  --seeds-color-secondary-darker: var(--seeds-color-gray-900);
 
   /* Alert */
-  --bloom-color-alert: var(--bloom-color-red-500);
-  --bloom-color-alert-light: var(--bloom-color-red-300);
-  --bloom-color-alert-lighter: var(--bloom-color-red-100);
-  --bloom-color-alert-dark: var(--bloom-color-red-700);
-  --bloom-color-alert-darker: var(--bloom-color-red-900);
+  --seeds-color-alert: var(--seeds-color-red-500);
+  --seeds-color-alert-light: var(--seeds-color-red-300);
+  --seeds-color-alert-lighter: var(--seeds-color-red-100);
+  --seeds-color-alert-dark: var(--seeds-color-red-700);
+  --seeds-color-alert-darker: var(--seeds-color-red-900);
 
   /* Success */
-  --bloom-color-success: var(--bloom-color-green-500);
-  --bloom-color-success-light: var(--bloom-color-green-300);
-  --bloom-color-success-lighter: var(--bloom-color-green-100);
-  --bloom-color-success-dark: var(--bloom-color-green-700);
-  --bloom-color-success-darker: var(--bloom-color-green-900);
+  --seeds-color-success: var(--seeds-color-green-500);
+  --seeds-color-success-light: var(--seeds-color-green-300);
+  --seeds-color-success-lighter: var(--seeds-color-green-100);
+  --seeds-color-success-dark: var(--seeds-color-green-700);
+  --seeds-color-success-darker: var(--seeds-color-green-900);
 
   /* Warn */
-  --bloom-color-warn: var(--bloom-color-yellow-500);
-  --bloom-color-warn-light: var(--bloom-color-yellow-300);
-  --bloom-color-warn-lighter: var(--bloom-color-yellow-100);
-  --bloom-color-warn-dark: var(--bloom-color-yellow-700);
-  --bloom-color-warn-darker: var(--bloom-color-yellow-900);
+  --seeds-color-warn: var(--seeds-color-yellow-500);
+  --seeds-color-warn-light: var(--seeds-color-yellow-300);
+  --seeds-color-warn-lighter: var(--seeds-color-yellow-100);
+  --seeds-color-warn-dark: var(--seeds-color-yellow-700);
+  --seeds-color-warn-darker: var(--seeds-color-yellow-900);
 
   /* Accent (Cool) */
-  --bloom-color-accent-cool: var(--bloom-color-cyan-500);
-  --bloom-color-accent-cool-light: var(--bloom-color-cyan-300);
-  --bloom-color-accent-cool-lighter: var(--bloom-color-cyan-100);
-  --bloom-color-accent-cool-dark: var(--bloom-color-cyan-700);
-  --bloom-color-accent-cool-darker: var(--bloom-color-cyan-900);
+  --seeds-color-accent-cool: var(--seeds-color-cyan-500);
+  --seeds-color-accent-cool-light: var(--seeds-color-cyan-300);
+  --seeds-color-accent-cool-lighter: var(--seeds-color-cyan-100);
+  --seeds-color-accent-cool-dark: var(--seeds-color-cyan-700);
+  --seeds-color-accent-cool-darker: var(--seeds-color-cyan-900);
 
   /* Accent (Warm) */
-  --bloom-color-accent-warm: var(--bloom-color-orange-500);
-  --bloom-color-accent-warm-dark: var(--bloom-color-orange-700);
-  --bloom-color-accent-warm-darker: var(--bloom-color-orange-900);
-  --bloom-color-accent-warm-light: var(--bloom-color-orange-300);
-  --bloom-color-accent-warm-lighter: var(--bloom-color-orange-100);
+  --seeds-color-accent-warm: var(--seeds-color-orange-500);
+  --seeds-color-accent-warm-dark: var(--seeds-color-orange-700);
+  --seeds-color-accent-warm-darker: var(--seeds-color-orange-900);
+  --seeds-color-accent-warm-light: var(--seeds-color-orange-300);
+  --seeds-color-accent-warm-lighter: var(--seeds-color-orange-100);
 
   /**
    * Common Component Colors
    */
 
   /* Text Colors */
-  --bloom-text-color: var(--bloom-color-gray-750);
-  --bloom-text-color-light: var(--bloom-color-gray-700);
-  --bloom-text-color-disabled: var(--bloom-color-gray-450);
-  --bloom-text-color-dark: var(--bloom-color-gray-800);
-  --bloom-text-color-darker: var(--bloom-color-gray-950);
+  --seeds-text-color: var(--seeds-color-gray-750);
+  --seeds-text-color-light: var(--seeds-color-gray-700);
+  --seeds-text-color-disabled: var(--seeds-color-gray-450);
+  --seeds-text-color-dark: var(--seeds-color-gray-800);
+  --seeds-text-color-darker: var(--seeds-color-gray-950);
 
   /* Form Input Colors */
-  --bloom-input-text-label-color: var(--bloom-color-gray-750);
-  --bloom-input-text-placeholder-color: var(--bloom-color-gray-700);
-  --bloom-input-text-highlight-color: var(--bloom-color-gray-900);
-  --bloom-input-icon-color: var(--bloom-color-gray-750);
-  --bloom-input-bg-color: var(--bloom-color-gray-100);
-  --bloom-input-border-color: var(--bloom-color-gray-450);
-  --bloom-input-text-color-disabled: var(--bloom-color-gray-700);
-  --bloom-input-icon-color-disabled: var(--bloom-color-gray-650);
-  --bloom-input-bg-color-disabled: var(--bloom-color-gray-400);
-  --bloom-input-border-color-disabled: var(--bloom-color-gray-500);
+  --seeds-input-text-label-color: var(--seeds-color-gray-750);
+  --seeds-input-text-placeholder-color: var(--seeds-color-gray-700);
+  --seeds-input-text-highlight-color: var(--seeds-color-gray-900);
+  --seeds-input-icon-color: var(--seeds-color-gray-750);
+  --seeds-input-bg-color: var(--seeds-color-gray-100);
+  --seeds-input-border-color: var(--seeds-color-gray-450);
+  --seeds-input-text-color-disabled: var(--seeds-color-gray-700);
+  --seeds-input-icon-color-disabled: var(--seeds-color-gray-650);
+  --seeds-input-bg-color-disabled: var(--seeds-color-gray-400);
+  --seeds-input-border-color-disabled: var(--seeds-color-gray-500);
 
   /* Background Colors */
-  --bloom-bg-color-canvas: var(--bloom-color-gray-300);
-  --bloom-bg-color-surface: var(--bloom-color-white);
-  --bloom-bg-color-muted: var(--bloom-color-gray-100);
-  --bloom-bg-color-disabled: var(--bloom-color-gray-450);
-  --bloom-bg-color-inverse: var(--bloom-colors-gray-800);
-  --bloom-bg-color-surface-primary: var(--bloom-color-blue-100);
-  --bloom-bg-color-surface-primary-inverse: var(--bloom-color-blue-900);
+  --seeds-bg-color-canvas: var(--seeds-color-gray-300);
+  --seeds-bg-color-surface: var(--seeds-color-white);
+  --seeds-bg-color-muted: var(--seeds-color-gray-100);
+  --seeds-bg-color-disabled: var(--seeds-color-gray-450);
+  --seeds-bg-color-inverse: var(--seeds-colors-gray-800);
+  --seeds-bg-color-surface-primary: var(--seeds-color-blue-100);
+  --seeds-bg-color-surface-primary-inverse: var(--seeds-color-blue-900);
 
   /* Border Color */
-  --bloom-border-color: var(--bloom-color-gray-450);
+  --seeds-border-color: var(--seeds-color-gray-450);
 
   /* Text / Element Colors */
-  --bloom-color-on-canvas: var(--bloom-color-gray-950);
-  --bloom-color-on-surface: var(--bloom-color-gray-950);
-  --bloom-color-on-disabled: var(--bloom-color-gray-700);
-  --bloom-color-on-inverse: var(--bloom-color-white);
-  --bloom-color-on-inverse-muted: var(--bloom-color-gray-500);
+  --seeds-color-on-canvas: var(--seeds-color-gray-950);
+  --seeds-color-on-surface: var(--seeds-color-gray-950);
+  --seeds-color-on-disabled: var(--seeds-color-gray-700);
+  --seeds-color-on-inverse: var(--seeds-color-white);
+  --seeds-color-on-inverse-muted: var(--seeds-color-gray-500);
 }

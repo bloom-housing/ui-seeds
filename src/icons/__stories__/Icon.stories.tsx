@@ -59,13 +59,13 @@ icons.args = {
 
 export const containerBasedSizes = () => (
   <>
-    <div style={{ fontSize: "var(--bloom-font-size-sm)" }}>
+    <div style={{ fontSize: "var(--seeds-font-size-sm)" }}>
       <Icon icon={faDoorOpen} /> door-open
     </div>
-    <div style={{ fontSize: "var(--bloom-font-size-lg)" }}>
+    <div style={{ fontSize: "var(--seeds-font-size-lg)" }}>
       <Icon icon={faDoorOpen} /> door-open
     </div>
-    <div style={{ fontSize: "var(--bloom-font-size-2xl)" }}>
+    <div style={{ fontSize: "var(--seeds-font-size-2xl)" }}>
       <Icon icon={faDoorOpen} /> door-open
     </div>
   </>

@@ -5,12 +5,12 @@ export const Swatch = (props: { color: string; border?: boolean; label?: string 
     <span
       style={{
         backgroundColor: `var(--${props.color})`,
-        width: "var(--bloom-s6)",
-        borderRadius: "var(--bloom-rounded-sm)",
+        width: "var(--seeds-s6)",
+        borderRadius: "var(--seeds-rounded-sm)",
         display: "block",
         borderWidth: "1px",
         borderStyle: "solid",
-        borderColor: props.border ? "var(--bloom-color-gray-500)" : "transparent",
+        borderColor: props.border ? "var(--seeds-color-gray-500)" : "transparent",
       }}
       title={props.color}
     >
