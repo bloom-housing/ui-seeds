@@ -6,7 +6,7 @@ import "./Alert.scss"
 interface AlertProps extends Omit<CommonMessageProps, "role" | "closeable"> {}
 
 const Alert = (props: AlertProps) => {
-  const classNames = ["alert"]
+  const classNames = ["seeds-alert"]
   if (props.className) classNames.push(props.className)
 
   return <CommonMessage {...props} role="alert" closeable className={classNames.join(" ")} />

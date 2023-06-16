@@ -1,4 +1,4 @@
-#toast-stack {
+#seeds-toast-stack {
   --toast-stack-gap: var(--seeds-s4);
   --toast-stack-inset-top: var(--seeds-s3);
   --toast-stack-inset-right: var(--seeds-s3);
@@ -15,7 +15,7 @@
   max-width: calc(100% - var(--toast-stack-inset-right) * 2);
 }
 
-.toast {
+.seeds-toast {
   --toast-padding: var(--seeds-s4);
   --toast-border-radius: 0;
   --toast-border: none;

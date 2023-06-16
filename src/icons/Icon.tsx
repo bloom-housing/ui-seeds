@@ -22,7 +22,7 @@ export interface IconProps {
 }
 
 const Icon = (props: IconProps) => {
-  const classNames = ["icon"]
+  const classNames = ["seeds-icon"]
   if (props.className) classNames.push(props.className)
   const isHidden = !(props["aria-hidden"] === false)
 

@@ -1,4 +1,4 @@
-.expandable-text {
+.seeds-expandable-text {
   p:not(:last-child),
   ul:not(:last-child) {
     margin-bottom: 0.9em;
@@ -9,7 +9,7 @@
   }
 }
 
-.button-toggle {
+.seeds-button-toggle {
   color: var(--seeds-color-primary);
   cursor: pointer;
   overflow-wrap: break-word;

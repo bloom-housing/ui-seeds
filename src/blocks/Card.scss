@@ -1,4 +1,4 @@
-.card {
+.seeds-card {
   /* Component Variables */
   --card-spacing-sm: var(--seeds-s4);
   --card-spacing-md: var(--seeds-s6);
@@ -63,7 +63,7 @@
   }
 }
 
-.card-header {
+.seeds-card-header {
   padding-block-start: var(--card-header-padding-block);
   padding-inline: var(--card-header-padding-inline);
 
@@ -85,7 +85,7 @@
   }
 }
 
-.card-section {
+.seeds-card-section {
   padding-block-start: var(--card-content-padding-block);
   padding-inline: var(--card-content-padding-inline);
 
@@ -118,12 +118,12 @@
   }
 }
 
-.card-section:not([data-divider]):last-child {
+.seeds-card-section:not([data-divider]):last-child {
   padding-block-end: var(--card-content-padding-block);
 }
 
-.card-header,
-.card-footer {
+.seeds-card-header,
+.seeds-card-footer {
   > * {
     margin-block: 0;
   }
@@ -133,7 +133,7 @@
   }
 }
 
-.card-footer {
+.seeds-card-footer {
   background-color: var(--card-footer-background-color);
 
   &:not([data-divider]):first-of-type {

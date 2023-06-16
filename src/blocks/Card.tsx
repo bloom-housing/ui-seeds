@@ -12,7 +12,7 @@ export interface CardHeaderProps {
 }
 
 const CardHeader = (props: CardHeaderProps) => {
-  const classNames = ["card-header"]
+  const classNames = ["seeds-card-header"]
   if (props.className) classNames.push(props.className)
 
   return (
@@ -33,7 +33,7 @@ export interface CardSectionProps {
 }
 
 const CardSection = (props: CardSectionProps) => {
-  const classNames = ["card-section"]
+  const classNames = ["seeds-card-section"]
   if (props.className) classNames.push(props.className)
 
   return (
@@ -54,7 +54,7 @@ export interface CardFooterProps {
 }
 
 const CardFooter = (props: CardFooterProps) => {
-  const classNames = ["card-footer"]
+  const classNames = ["seeds-card-footer"]
   if (props.className) classNames.push(props.className)
 
   return (
@@ -77,7 +77,7 @@ export interface CardProps {
 }
 
 const Card = (props: CardProps) => {
-  const classNames = ["card"]
+  const classNames = ["seeds-card"]
   const spacing = props.spacing || "base"
   if (props.className) classNames.push(props.className)
 

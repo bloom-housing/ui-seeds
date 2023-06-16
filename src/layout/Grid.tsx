@@ -9,10 +9,14 @@ export interface GridCellProps {
 }
 
 const GridCell = (props: GridCellProps) => {
-  const classNames = ["grid-cell"]
+  const classNames = ["seeds-grid-cell"]
   if (props.className) classNames.push(props.className)
 
-  return <div id={props.id} className={classNames.join(" ")} role="gridcell">{props.children}</div>
+  return (
+    <div id={props.id} className={classNames.join(" ")} role="gridcell">
+      {props.children}
+    </div>
+  )
 }
 
 export interface GridRowProps extends GridCellProps {
@@ -20,10 +24,14 @@ export interface GridRowProps extends GridCellProps {
 }
 
 const GridRow = (props: GridRowProps) => {
-  const classNames = ["grid-row"]
+  const classNames = ["seeds-grid-row"]
   if (props.className) classNames.push(props.className)
 
-  return <div id={props.id} className={classNames.join(" ")} role="row" data-columns={props.columns}>{props.children}</div>
+  return (
+    <div id={props.id} className={classNames.join(" ")} role="row" data-columns={props.columns}>
+      {props.children}
+    </div>
+  )
 }
 
 export interface GridProps extends GridCellProps {
@@ -35,10 +43,14 @@ export interface GridProps extends GridCellProps {
 }
 
 const Grid = (props: GridProps) => {
-  const classNames = ["grid"]
+  const classNames = ["seeds-grid"]
   if (props.className) classNames.push(props.className)
 
-  return <div id={props.id} className={classNames.join(" ")} data-spacing={props.spacing} role="grid">{props.children}</div>
+  return (
+    <div id={props.id} className={classNames.join(" ")} data-spacing={props.spacing} role="grid">
+      {props.children}
+    </div>
+  )
 }
 
 Grid.Cell = GridCell

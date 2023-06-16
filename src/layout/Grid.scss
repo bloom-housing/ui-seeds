@@ -1,4 +1,4 @@
-.grid {
+.seeds-grid {
   --grid-gap-sm: var(--seeds-s4);
   --grid-gap-md: var(--seeds-s6);
   --grid-gap-lg: var(--seeds-s8);
@@ -34,7 +34,7 @@
   }
 }
 
-.grid-row {
+.seeds-grid-row {
   --grid-columns: auto-fit;
   --grid-minimum-column-size: 0;
 
@@ -47,28 +47,28 @@
   grid-template-columns: repeat(var(--grid-columns), minmax(var(--grid-minimum-column-size), 1fr));
 }
 
-.grid-row > * {
+.seeds-grid-row > * {
   overflow-wrap: break-word;
 }
 
 @media (--sm-and-up) {
-  .grid-row[data-columns="4"] {
+  .seeds-grid-row[data-columns="4"] {
     --grid-columns: 4;
   }
 
-  .grid-row[data-columns="3"] {
+  .seeds-grid-row[data-columns="3"] {
     --grid-columns: 3;
   }
 
-  .grid-row[data-columns="2"] {
+  .seeds-grid-row[data-columns="2"] {
     --grid-columns: 2;
   }
 
-  .grid-row[data-columns="1"] {
+  .seeds-grid-row[data-columns="1"] {
     --grid-columns: 1;
   }
 
-  .grid-row[data-columns="1+2"] {
+  .seeds-grid-row[data-columns="1+2"] {
     --grid-columns: 4;
 
     > *:first-child {
@@ -76,7 +76,7 @@
     }
   }
 
-  .grid-row[data-columns="2+1"] {
+  .seeds-grid-row[data-columns="2+1"] {
     --grid-columns: 4;
 
     > *:last-child {
