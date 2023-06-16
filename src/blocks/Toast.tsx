@@ -20,7 +20,7 @@ const Toast = (props: ToastProps) => {
     let el: HTMLElement | null = document.querySelector("#seeds-toast-stack")
     if (!el) {
       el = document.createElement("div")
-      el.id = "toast-stack"
+      el.id = "seeds-toast-stack"
       el.ariaLive = "polite"
       el.ariaAtomic = "true"
       document.body.append(el)
