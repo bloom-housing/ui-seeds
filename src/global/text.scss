@@ -83,7 +83,7 @@
 }
 
 /* Stop largest headings down one size for mobile */
-@media (max-width: 640px) {
+@media (--sm-only) {
   .text-heading-4xl {
     font-size: var(--bloom-type-heading-size-3xl);
   }
