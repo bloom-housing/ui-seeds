@@ -1,11 +1,11 @@
 .card {
   /* Component Variables */
-  --card-spacing-base: var(--bloom-s6);
   --card-spacing-sm: var(--bloom-s4);
-  --card-spacing-md: var(--bloom-s8);
-  --card-spacing-lg: var(--bloom-s12); 
+  --card-spacing-md: var(--bloom-s6);
+  --card-spacing-lg: var(--bloom-s8);
+  --card-spacing-xl: var(--bloom-s12); 
 
-  --card-spacing: var(--card-spacing-base);
+  --card-spacing: var(--card-spacing-md);
 
   --card-background-color: var(--bloom-color-white);
   --card-border-radius: var(--bloom-rounded-lg);
@@ -54,6 +54,10 @@
     --card-spacing: var(--card-spacing-lg);
   }
 
+  &[data-spacing="xl"] {
+    --card-spacing: var(--card-spacing-xl);
+  }
+
   &[data-spacing="none"] {
     --card-spacing: 0rem;
   }
@@ -62,6 +66,11 @@
 .card-header {
   padding-block-start: var(--card-header-padding-block);
   padding-inline: var(--card-header-padding-inline);
+
+  /* Solves extra HeadingGroup paragraph spacing */
+  p:last-child {
+    margin-block-end: 0;
+  }
 
   &[data-divider="flush"] {
     padding-block-end: var(--card-header-padding-block);
