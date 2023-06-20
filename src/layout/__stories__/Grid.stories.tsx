@@ -77,7 +77,7 @@ export const gridExample = () => (
 
     <style>
       {
-        ".grid {  margin-block: var(--seeds-spacer-content); } .grid-row > * { background: #eee; padding: .5rem }"
+        ".seeds-grid {  margin-block: var(--seeds-spacer-content); } .grid-row > * { background: #eee; padding: .5rem }"
       }
     </style>
   </>
@@ -127,7 +127,7 @@ export const gridSpacings = () => (
 
     <style>
       {
-        ".grid {  margin-block: var(--seeds-spacer-content); } .grid-row > * { background: #eee; padding: .5rem }"
+        ".seeds-grid {  margin-block: var(--seeds-spacer-content); } .grid-row > * { background: #eee; padding: .5rem }"
       }
     </style>
   </>
@@ -152,7 +152,7 @@ export const sectionsAndForms = () => (
 
     <style>
       {
-        ".grid { background: var(--seeds-bg-color-surface-primary); padding: var(--seeds-spacer-content); margin-block: var(--seeds-spacer-content) }"
+        ".seeds-grid { background: var(--seeds-bg-color-surface-primary); padding: var(--seeds-spacer-content); margin-block: var(--seeds-spacer-content) }"
       }
     </style>
   </>
