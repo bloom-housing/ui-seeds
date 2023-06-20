@@ -128,10 +128,6 @@
       border-bottom-width: 0;
     }
 
-    &:hover:not([aria-selected="true"]) {
-      
-    }
-
     &[aria-selected="true"] {
       border-bottom-color: var(--tab-border-color);
       box-shadow: inset calc(var(--tab-active-indicator-width) + var(--tab-border-width)) 0px 0px var(--tab-active-indicator-color);
