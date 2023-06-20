@@ -27,9 +27,9 @@ export const singleFieldError = () => (
         value="Invalid content"
         aria-describedby="example-error"
         style={{
-          border: "1px solid var(--bloom-color-alert)",
-          padding: "var(--bloom-s2) var(--bloom-s3)",
-          borderRadius: "var(--bloom-rounded)",
+          border: "1px solid var(--seeds-color-alert)",
+          padding: "var(--seeds-s2) var(--seeds-s3)",
+          borderRadius: "var(--seeds-rounded)",
         }}
       />
     </div>

@@ -59,7 +59,7 @@ export interface CommonMessageProps {
 
 const CommonMessage = (props: CommonMessageProps) => {
   const [visible, toggler] = useToggle(true)
-  const classNames = ["common-message"]
+  const classNames = ["seeds-common-message"]
   if (props.fullwidth) classNames.push("is-fullwidth")
   if (props.className) classNames.push(props.className)
 

@@ -47,7 +47,7 @@ figure {
 }
 
 :where(a) {
-  color: var(--bloom-color-primary);
+  color: var(--seeds-color-primary);
   text-decoration: inherit;
 }
 
@@ -59,12 +59,6 @@ figure {
   letter-spacing: inherit;
 }
 
-:where(button) {
-  background-color: transparent;
-  background-image: none;
-  border: none;
-}
-
 [hidden] {
   display: none !important;
 }
@@ -73,13 +67,13 @@ figure {
  * Global Styles
  */
 html {
-  font-family: var(--bloom-font-sans);
-  line-height: var(--bloom-line-height-normal);
+  font-family: var(--seeds-font-sans);
+  line-height: var(--seeds-line-height-normal);
 }
 
 body {
-  background-color: var(--bloom-bg-color-surface);
-  color: var(--bloom-color-on-surface);
+  background-color: var(--seeds-bg-color-surface);
+  color: var(--seeds-color-on-surface);
   line-height: inherit;
 }
 

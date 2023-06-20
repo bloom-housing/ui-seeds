@@ -25,13 +25,11 @@ export interface TabsProps {
 }
 
 const Tabs = (props: TabsProps) => {
-  const className = ["tabs"]
+  const className = ["seeds-tabs"]
   if (props.className) className.push(props.className)
   const focusTab = typeof props.focusTabOnClick !== "undefined" ? props.focusTabOnClick : false
 
-  return (
-    <ReactTabs {...props} focusTabOnClick={focusTab} className={className.join(" ")} />
-  )
+  return <ReactTabs {...props} focusTabOnClick={focusTab} className={className.join(" ")} />
 }
 
 export interface TabProps {
@@ -46,9 +44,7 @@ export interface TabProps {
 const Tab = (props: TabProps) => {
   const className = ["tabs-tab"]
   if (props.className) className.push(props.className)
-  return (
-    <ReactTab selectedClassName="is-active" {...props} className={className} />
-  )
+  return <ReactTab selectedClassName="is-active" {...props} className={className} />
 }
 
 Tab.tabsRole = "Tab"
@@ -63,7 +59,13 @@ const TabList = (props: TabListProps) => {
   const className = ["tabs-tablist"]
   if (props.className) className.push(props.className)
 
-  return <ReactTabList data-size={props.size || "base"} className={className} children={props.children} />
+  return (
+    <ReactTabList
+      data-size={props.size || "base"}
+      className={className}
+      children={props.children}
+    />
+  )
 }
 
 TabList.tabsRole = "TabList"
@@ -78,9 +80,7 @@ export interface TabPanelProps {
 const TabPanel = (props: TabPanelProps) => {
   const className = ["tabs-panel"]
   if (props.className) className.push(props.className)
-  return (
-    <ReactTabPanel selectedClassName="is-active" {...props} className={className} />
-  )
+  return <ReactTabPanel selectedClassName="is-active" {...props} className={className} />
 }
 
 TabPanel.tabsRole = "TabPanel"
@@ -89,4 +89,4 @@ Tabs.Tab = Tab
 Tabs.TabList = TabList
 Tabs.TabPanel = TabPanel
 
-export {Tabs as default, Tab, TabList, TabPanel}
+export { Tabs as default, Tab, TabList, TabPanel }

@@ -33,7 +33,7 @@ const moreLessButton = (
   strings: ExpandableTextProps["strings"],
   buttonClassName: ExpandableTextProps["buttonClassName"]
 ) => {
-  const classes = ["button-toggle"]
+  const classes = ["seeds-button-toggle"]
   if (buttonClassName) {
     classes.push(buttonClassName)
   }
@@ -56,7 +56,7 @@ const ExpandableText = (props: ExpandableTextProps) => {
     button = moreLessButton(expanded, setExpanded, props.strings, props.buttonClassName)
   }
   return (
-    <div className={`expandable-text ${props?.className}`}>
+    <div className={`seeds-expandable-text ${props?.className}`}>
       <Markdown
         children={getText(props.children, expanded, maxLength)}
         options={props.markdownProps}

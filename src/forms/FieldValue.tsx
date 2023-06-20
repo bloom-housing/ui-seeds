@@ -16,7 +16,7 @@ export interface FieldValueProps {
 }
 
 const FieldValue = (props: FieldValueProps) => {
-  const classNames = ["field-value"]
+  const classNames = ["seeds-field-value"]
   if (props.className) classNames.push(props.className)
 
   return (

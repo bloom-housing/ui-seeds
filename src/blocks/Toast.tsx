@@ -10,17 +10,17 @@ interface ToastProps extends Omit<CommonMessageProps, "role" | "closeable"> {
 }
 
 const Toast = (props: ToastProps) => {
-  const classNames = ["toast"]
+  const classNames = ["seeds-toast"]
   if (props.className) classNames.push(props.className)
 
   const toastStack = useRef<Element>()
   const [mount, setMount] = useState(false)
 
   useEffect(() => {
-    let el: HTMLElement | null = document.querySelector("#toast-stack")
+    let el: HTMLElement | null = document.querySelector("#seeds-toast-stack")
     if (!el) {
       el = document.createElement("div")
-      el.id = "toast-stack"
+      el.id = "seeds-toast-stack"
       el.ariaLive = "polite"
       el.ariaAtomic = "true"
       document.body.append(el)
@@ -40,10 +40,18 @@ const Toast = (props: ToastProps) => {
     setMount(false)
   }, props.hideTimeout)
 
-  return (mount && toastStack.current) ? createPortal(
-    <CommonMessage {...props} tabIndex={0} role="alert" closeable className={classNames.join(" ")} />,
-    toastStack.current
-  ) : null
+  return mount && toastStack.current
+    ? createPortal(
+        <CommonMessage
+          {...props}
+          tabIndex={0}
+          role="alert"
+          closeable
+          className={classNames.join(" ")}
+        />,
+        toastStack.current
+      )
+    : null
 }
 
 export default Toast

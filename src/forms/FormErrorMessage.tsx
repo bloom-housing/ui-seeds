@@ -15,7 +15,7 @@ export interface FormErrorMessageProps {
  * Component used to display an error message under a form field when the user input is invalid.
  */
 const FormErrorMessage = (props: FormErrorMessageProps) => {
-  const classNames = ["form-error-message"]
+  const classNames = ["seeds-form-error-message"]
   if (props.className) classNames.push(props.className)
 
   return (

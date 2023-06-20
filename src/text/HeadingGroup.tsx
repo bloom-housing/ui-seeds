@@ -19,7 +19,7 @@ export interface HeadingGroupProps extends Pick<HeadingProps, "size"> {
 }
 
 const HeadingGroup = (props: HeadingGroupProps) => {
-  const classNames = ["heading-group"]
+  const classNames = ["seeds-heading-group"]
   if (props.className) classNames.push(props.className)
 
   return (

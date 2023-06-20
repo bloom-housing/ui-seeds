@@ -16,21 +16,21 @@
 .text-heading-4xl,
 .text-heading-3xl,
 .text-heading-2xl {
-  font-family: var(--bloom-font-serif);
+  font-family: var(--seeds-font-serif);
   font-weight: normal;
-  line-height: var(--bloom-line-height-heading);
+  line-height: var(--seeds-line-height-heading);
 }
 
 .text-heading-4xl {
-  font-size: var(--bloom-type-heading-size-4xl);
+  font-size: var(--seeds-type-heading-size-4xl);
 }
 
 .text-heading-3xl {
-  font-size: var(--bloom-type-heading-size-3xl);
+  font-size: var(--seeds-type-heading-size-3xl);
 }
 
 .text-heading-2xl {
-  font-size: var(--bloom-type-heading-size-2xl);
+  font-size: var(--seeds-type-heading-size-2xl);
 }
 
 .text-heading-xl,
@@ -38,61 +38,61 @@
 .text-heading-md,
 .text-heading-sm,
 .text-heading-xs {
-  font-family: var(--bloom-font-alt-sans);
-  font-weight: var(--bloom-font-weight-semibold);
+  font-family: var(--seeds-font-alt-sans);
+  font-weight: var(--seeds-font-weight-semibold);
 }
 
 .text-heading-xl {
-  font-size: var(--bloom-type-heading-size-xl);
-  line-height: var(--bloom-line-height-heading);
+  font-size: var(--seeds-type-heading-size-xl);
+  line-height: var(--seeds-line-height-heading);
 }
 
 .text-heading-lg {
-  font-size: var(--bloom-type-heading-size-lg);
-  line-height: var(--bloom-line-height-heading);
+  font-size: var(--seeds-type-heading-size-lg);
+  line-height: var(--seeds-line-height-heading);
 }
 
 .text-heading-md,
 .text-heading-sm,
 .text-heading-xs {
-  line-height: var(--bloom-line-height-content);
+  line-height: var(--seeds-line-height-content);
 }
 
 .text-heading-md {
-  font-size: var(--bloom-type-heading-size-md);
+  font-size: var(--seeds-type-heading-size-md);
 }
 
 .text-heading-sm {
-  font-size: var(--bloom-type-heading-size-sm);
+  font-size: var(--seeds-type-heading-size-sm);
 }
 
 .text-heading-xs {
-  font-size: var(--bloom-type-heading-size-xs);
+  font-size: var(--seeds-type-heading-size-xs);
 }
 
 .text-body {
-  font-size: var(--bloom-type-body-size);
+  font-size: var(--seeds-type-body-size);
 }
 
 .text-label {
-  font-size: var(--bloom-type-label-size);
+  font-size: var(--seeds-type-label-size);
 }
 
 .text-caption {
-  font-size: var(--bloom-type-caption-size);
+  font-size: var(--seeds-type-caption-size);
 }
 
 /* Stop largest headings down one size for mobile */
 @media (--sm-only) {
   .text-heading-4xl {
-    font-size: var(--bloom-type-heading-size-3xl);
+    font-size: var(--seeds-type-heading-size-3xl);
   }
-  
+
   .text-heading-3xl {
-    font-size: var(--bloom-type-heading-size-2xl);
+    font-size: var(--seeds-type-heading-size-2xl);
   }
-  
+
   .text-heading-2xl {
-    font-size: var(--bloom-type-heading-size-xl);
+    font-size: var(--seeds-type-heading-size-xl);
   }
 }

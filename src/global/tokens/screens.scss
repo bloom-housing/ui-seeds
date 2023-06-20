@@ -10,11 +10,11 @@
 @custom-media --2xl-and-up (min-width: 1440px);
 
 :root {
-  --bloom-screen-sm: 640px;
-  --bloom-screen-md: 768px;
-  --bloom-screen-lg: 1024px;
-  --bloom-screen-xl: 1280px;
-  --bloom-screen-2xl: 1440px;
+  --seeds-screen-sm: 640px;
+  --seeds-screen-md: 768px;
+  --seeds-screen-lg: 1024px;
+  --seeds-screen-xl: 1280px;
+  --seeds-screen-2xl: 1440px;
 
-  --bloom-z-index-overlay: 10;
+  --seeds-z-index-overlay: 10;
 }

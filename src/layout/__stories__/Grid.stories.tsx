@@ -75,7 +75,11 @@ export const gridExample = () => (
       </Grid.Row>
     </Grid>
 
-    <style>{".grid {  margin-block: var(--bloom-spacer-content); } .grid-row > * { background: #eee; padding: .5rem }"}</style>
+    <style>
+      {
+        ".seeds-grid {  margin-block: var(--seeds-spacer-content); } .grid-row > * { background: #eee; padding: .5rem }"
+      }
+    </style>
   </>
 )
 
@@ -90,7 +94,7 @@ export const gridSpacings = () => (
         <Grid.Cell>3</Grid.Cell>
       </Grid.Row>
     </Grid>
-    
+
     <Heading size="xl">Medium (Default) Spacing</Heading>
 
     <Grid spacing="md">
@@ -121,7 +125,11 @@ export const gridSpacings = () => (
       </Grid.Row>
     </Grid>
 
-    <style>{".grid {  margin-block: var(--bloom-spacer-content); } .grid-row > * { background: #eee; padding: .5rem }"}</style>
+    <style>
+      {
+        ".seeds-grid {  margin-block: var(--seeds-spacer-content); } .grid-row > * { background: #eee; padding: .5rem }"
+      }
+    </style>
   </>
 )
 
@@ -131,27 +139,21 @@ export const sectionsAndForms = () => (
       <Heading size="xl">Form Values</Heading>
       <Grid spacing="md">
         <Grid.Row>
-          <FieldValue label="Property Amenities">
-            Pool, BBQ, Rooftop View
-          </FieldValue>
-          <FieldValue label="Property Amenities">
-            Pool, BBQ, Rooftop View
-          </FieldValue>
-          <FieldValue label="Property Amenities">
-            Pool, BBQ, Rooftop View
-          </FieldValue>
+          <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
+          <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
+          <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
         </Grid.Row>
         <Grid.Row>
-          <FieldValue label="Property Amenities">
-            Pool, BBQ, Rooftop View
-          </FieldValue>
-          <FieldValue label="Property Amenities">
-            Pool, BBQ, Rooftop View
-          </FieldValue>
+          <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
+          <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
         </Grid.Row>
       </Grid>
     </section>
 
-    <style>{".grid { background: var(--bloom-bg-color-surface-primary); padding: var(--bloom-spacer-content); margin-block: var(--bloom-spacer-content) }"}</style>
+    <style>
+      {
+        ".seeds-grid { background: var(--seeds-bg-color-surface-primary); padding: var(--seeds-spacer-content); margin-block: var(--seeds-spacer-content) }"
+      }
+    </style>
   </>
 )

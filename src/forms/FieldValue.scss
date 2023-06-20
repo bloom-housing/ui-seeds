@@ -1,13 +1,13 @@
-.field-value {
+.seeds-field-value {
   /* Theme Variables */
-  --field-value-label-spacer: var(--bloom-spacer-label);
-  --field-value-content-spacer: var(--bloom-s1);
-  --field-value-font: var(--bloom-font-alt-sans);
-  --field-value-label-font-size: var(--bloom-type-label-size);
-  --field-value-help-text-font-size: var(--bloom-type-label-size);
-  --field-value-label-color: var(--bloom-input-text-label-color);
-  --field-value-value-color: var(--bloom-input-text-highlight-color);
-  --field-value-help-text-color: var(--bloom-text-color-light);
+  --field-value-label-spacer: var(--seeds-spacer-label);
+  --field-value-content-spacer: var(--seeds-s1);
+  --field-value-font: var(--seeds-font-alt-sans);
+  --field-value-label-font-size: var(--seeds-type-label-size);
+  --field-value-help-text-font-size: var(--seeds-type-label-size);
+  --field-value-label-color: var(--seeds-input-text-label-color);
+  --field-value-value-color: var(--seeds-input-text-highlight-color);
+  --field-value-help-text-color: var(--seeds-text-color-light);
 
   font-family: var(--field-value-font);
 
