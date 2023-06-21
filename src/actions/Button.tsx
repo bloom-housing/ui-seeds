@@ -1,6 +1,8 @@
 import React, { useContext } from "react"
 import { NavigationContext } from "../global/NavigationContext"
 
+import "./Button.scss"
+
 export const isExternalLink = (href: string) => {
   return href.startsWith("http://") || href.startsWith("https://")
 }
@@ -43,6 +45,8 @@ const setupButtonProps = (props: ButtonProps) => {
 
   return {
     ...props,
+    "data-variant": props.variant,
+    "data-size": props.size,
     className: classNames.join(" "),
     type: props.type || "submit",
   }
@@ -79,3 +83,5 @@ const Button = (props: ButtonProps) => {
     return <ButtonElement {...props}>{buttonInner}</ButtonElement>
   }
 }
+
+export default Button

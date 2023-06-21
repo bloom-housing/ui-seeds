@@ -1,9 +1,132 @@
 .button {
+  --border-width: var(--bloom-border-2);
+
+  --padding-sm: calc(var(--bloom-s3_5) - var(--border-width)) calc(var(--bloom-s5) - var(--border-width));
+  --font-size-sm: var(--bloom-font-size-sm);
+  --border-radius-sm: var(--bloom-rounded);
+  --padding-md: calc(var(--bloom-s4) - var(--border-width)) calc(var(--bloom-s6) - var(--border-width));
+  --font-size-md: var(--bloom-font-size-base);
+  --border-radius-md: var(--bloom-rounded);
+  --padding-lg: calc(var(--bloom-s5) - var(--border-width)) calc(var(--bloom-s7) - var(--border-width));
+  --font-size-lg: var(--bloom-font-size-lg);
+  --border-radius-lg: var(--bloom-rounded);
+
+  --padding: var(--padding-md);
+  --font-size: var(--font-size-md);
+  --font-family: var(--bloom-font-alt-sans);
+  --font-weight: bold;
+  --border-radius: var(--border-radius-md);
+
+  all: initial;
+  padding: var(--padding);
+  background-color: var(--bloom-color-primary);
+  color: var(--bloom-color-on-inverse);
+  border-color: var(--bloom-color-primary);
+  border-style: solid;
+  border-width: var(--border-width);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: var(--bloom-line-height-tight);
+  cursor: pointer;
+
+  &[data-size="sm"] {
+    --padding: var(--padding-sm);
+    --font-size: var(--font-size-sm);
+    --border-radius: var(--border-radius-sm);
+  }
+
+  &[data-size="lg"] {
+    --padding: var(--padding-lg);
+    --font-size: var(--font-size-lg);
+    --border-radius: var(--border-radius-lg);
+  }
+
   &[data-variant="primary"] {
-    
+    background-color: var(--bloom-color-primary);
+    border-color: var(--bloom-color-primary);
+    color: var(--bloom-color-on-inverse);
+
+    &:hover {
+      background-color: var(--bloom-color-primary-dark);
+      border-color: var(--bloom-color-primary-dark);
+    }
+  }
+
+  &[data-variant="primary-outlined"] {
+    background-color: var(--bloom-bg-color-surface);
+    border-color: var(--bloom-color-primary);
+    color: var(--bloom-color-primary);
+
+    &:hover {
+      border-color: var(--bloom-color-primary-dark);
+      color: var(--bloom-color-primary-dark);
+    }
   }
 
   &[data-variant="secondary"] {
+    background-color: var(--bloom-color-secondary);
+    border-color: var(--bloom-color-secondary);
+    color: var(--bloom-color-on-inverse);
+
+    &:hover {
+      background-color: var(--bloom-color-secondary-dark);
+      border-color: var(--bloom-color-secondary-dark);
+    }
+  }
+
+  &[data-variant="secondary-outlined"] {
+    background-color: var(--bloom-bg-color-surface);
+    border-color: var(--bloom-color-secondary);
+    color: var(--bloom-color-secondary);
+
+    &:hover {
+      border-color: var(--bloom-color-secondary-dark);
+      color: var(--bloom-color-secondary-dark);
+    }
+  }
+
+  &[data-variant="alert"] {
+    background-color: var(--bloom-color-alert);
+    border-color: var(--bloom-color-alert);
+    color: var(--bloom-color-on-inverse);
+
+    &:hover {
+      background-color: var(--bloom-color-alert-dark);
+      border-color: var(--bloom-color-alert-dark);
+    }
+  }
+
+  &[data-variant="alert-outlined"] {
+    background-color: var(--bloom-bg-color-surface);
+    border-color: var(--bloom-color-alert);
+    color: var(--bloom-color-alert);
+
+    &:hover {
+      border-color: var(--bloom-color-alert-dark);
+      color: var(--bloom-color-alert-dark);
+    }
+  }
+
+  &[data-variant="highlight"] {
+    background-color: var(--bloom-color-yellow-500);
+    border-color: var(--bloom-color-yellow-500);
+    color: var(--bloom-color-gray-900);
+
+    &:hover {
+      background-color: var(--bloom-color-yellow-700);
+      border-color: var(--bloom-color-yellow-700);
+    }
+  }
+
+  &[data-variant="highlight-outlined"] {
+    background-color: var(--bloom-bg-color-surface);
+    border-color: var(--bloom-color-yellow-500);
+    color: var(--bloom-color-gray-900);
     
+    &:hover {
+      border-color: var(--bloom-color-yellow-700);
+    }
   }
 }
