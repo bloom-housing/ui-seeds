@@ -1,5 +1,10 @@
 .button {
   --border-width: var(--bloom-border-2);
+  --font-family: var(--bloom-font-alt-sans);
+  --font-weight: bold;
+  --interior-gap: var(--bloom-s3);
+  --icon-size-percentage: 75%;
+  --icon-side-padding: var(--bloom-s4);
 
   --padding-sm: calc(var(--bloom-s3_5) - var(--border-width))
     calc(var(--bloom-s5) - var(--border-width));
@@ -7,7 +12,6 @@
   --border-radius-sm: var(--bloom-rounded);
   --padding-md: calc(var(--bloom-s4) - var(--border-width))
     calc(var(--bloom-s6) - var(--border-width));
-  --icon-side-padding-md: var(--bloom-s4);
   --font-size-md: var(--bloom-font-size-base);
   --border-radius-md: var(--bloom-rounded);
   --padding-lg: calc(var(--bloom-s5) - var(--border-width))
@@ -15,39 +19,29 @@
   --font-size-lg: var(--bloom-font-size-lg);
   --border-radius-lg: var(--bloom-rounded);
 
-  --padding: var(--padding-md);
-  --font-size: var(--font-size-md);
-  --font-family: var(--bloom-font-alt-sans);
-  --font-weight: bold;
-  --border-radius: var(--border-radius-md);
-
-  --interior-gap: var(--bloom-s3);
-
-  --icon-size-percentage: 75%;
-
   all: initial;
   display: inline-flex;
   gap: var(--interior-gap);
-  padding: var(--padding);
+  padding: var(--padding-md);
   border-style: solid;
   border-width: var(--border-width);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-md);
   font-family: var(--font-family);
   font-weight: var(--font-weight);
-  font-size: var(--font-size);
+  font-size: var(--font-size-md);
   line-height: var(--bloom-line-height-tight);
   cursor: pointer;
 
   &[data-size="sm"] {
-    --padding: var(--padding-sm);
-    --font-size: var(--font-size-sm);
-    --border-radius: var(--border-radius-sm);
+    padding: var(--padding-sm);
+    font-size: var(--font-size-sm);
+    border-radius: var(--border-radius-sm);
   }
 
   &[data-size="lg"] {
-    --padding: var(--padding-lg);
-    --font-size: var(--font-size-lg);
-    --border-radius: var(--border-radius-lg);
+    padding: var(--padding-lg);
+    font-size: var(--font-size-lg);
+    border-radius: var(--border-radius-lg);
   }
 
   &[data-variant="primary"] {
@@ -165,11 +159,11 @@
   }
 
   &.has-lead-icon {
-    padding-inline-start: var(--icon-side-padding-md);
+    padding-inline-start: var(--icon-side-padding);
   }
 
   &.has-tail-icon {
-    padding-inline-end: var(--icon-side-padding-md);
+    padding-inline-end: var(--icon-side-padding);
   }
 
   & > * {
