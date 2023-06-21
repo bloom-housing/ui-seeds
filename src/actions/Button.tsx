@@ -42,7 +42,7 @@ export interface ButtonProps {
   type?: "button" | "submit" | "reset"
   /** Set to true to disable the button */
   disabled?: boolean
-  /** Set to true to hide the button from he accessibility tree */
+  /** Set to true to hide the button from the accessibility tree */
   ariaHidden?: boolean
   /** Accessible label if button doesn't contain text content */
   ariaLabel?: string
