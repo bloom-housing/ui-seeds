@@ -20,14 +20,17 @@ export interface ButtonProps {
     | "secondary-outlined"
     | "alert"
     | "alert-outlined"
-    | "highlight"
-    | "highlight-outlined"
+    | "highlight" // or accent?
+    | "highlight-outlined" // or accent?
     | "borderless"
     | "link"
   size?: "sm" | "md" | "lg"
   leadIcon?: React.ReactNode
   tailIcon?: React.ReactNode
   href?: string
+  loading?: boolean
+  onClick?: (e: React.MouseEvent) => void
+  type?: "button" | "submit" | "reset"
   /** Element ID */
   id?: string
   /** Additional CSS classes */
@@ -39,7 +42,9 @@ const setupButtonProps = (props: ButtonProps) => {
   if (props.className) classNames.push(props.className)
 
   return {
-    className: classNames.join(" ")
+    ...props,
+    className: classNames.join(" "),
+    type: props.type || "submit",
   }
 }
 
@@ -53,6 +58,7 @@ const LinkButton = (props: ButtonProps) => {
   const updatedProps = setupButtonProps(props)
 
   if (props.href && isExternalLink(props.href)) {
+    updatedProps.tailIcon = "tab"
     return <a href={props.href} {...updatedProps}>{props.children}</a>
   } else {
     const { LinkComponent } = useContext(NavigationContext)
@@ -61,7 +67,11 @@ const LinkButton = (props: ButtonProps) => {
 }
 
 const Button = (props: ButtonProps) => {
-  const buttonInner = <>{props.children}</>
+  const buttonInner = <>
+    {props.leadIcon}
+    {props.children}
+    {props.tailIcon}
+  </>
 
   if (props.href) {
     return <LinkButton {...props}>{buttonInner}</LinkButton>
