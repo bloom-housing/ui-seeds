@@ -41,6 +41,6 @@ describe("<Button>", () => {
       "href",
       "https://example.com"
     )
-    expect(container.querySelector(".icon")).toBeVisible()
+    expect(container.querySelector(".seeds-icon")).toBeVisible()
   })
 })
