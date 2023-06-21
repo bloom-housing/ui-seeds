@@ -1,21 +1,20 @@
 import React from "react"
-import { Story } from "@storybook/react"
 
 import Button from "../Button"
 
 import Icon from "../../icons/Icon"
 import { faHeart } from "@fortawesome/free-solid-svg-icons"
 
-//import MDXDocs from "./Alert.docs.mdx"
+import MDXDocs from "./Button.docs.mdx"
 
 export default {
   title: "Actions/Button",
   component: Button,
-  // parameters: {
-  //   docs: {
-  //     page: MDXDocs,
-  //   },
-  // },
+  parameters: {
+    docs: {
+      page: MDXDocs,
+    },
+  },
 }
 
 export const defaultButton = () => <Button onClick={() => alert("Clicked!")}>Default Button</Button>

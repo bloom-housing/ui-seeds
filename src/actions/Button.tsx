@@ -111,7 +111,7 @@ const Button = (props: ButtonProps) => {
     </>
   )
 
-  ;["leadIcon", "tailIcon", "ariaLabel", "ariaHidden"].forEach(key => {
+  ;["leadIcon", "tailIcon", "ariaLabel", "ariaHidden"].forEach((key) => {
     delete updatedProps[key as keyof ButtonProps]
   })
 
