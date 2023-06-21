@@ -9,7 +9,32 @@ export const isInternalLink = (href: string) => {
   return href.startsWith("/") && !href.startsWith("//")
 }
 
-const setupButtonProps = (props) => {
+export interface ButtonProps {
+  /** Button content */
+  children: React.ReactNode
+  /** Appearance of the component */
+  variant?:
+    | "primary"
+    | "primary-outlined"
+    | "secondary"
+    | "secondary-outlined"
+    | "alert"
+    | "alert-outlined"
+    | "highlight"
+    | "highlight-outlined"
+    | "borderless"
+    | "link"
+  size?: "sm" | "md" | "lg"
+  leadIcon?: React.ReactNode
+  tailIcon?: React.ReactNode
+  href?: string
+  /** Element ID */
+  id?: string
+  /** Additional CSS classes */
+  className?: string
+}
+
+const setupButtonProps = (props: ButtonProps) => {
   const classNames = ["button"]
   if (props.className) classNames.push(props.className)
 
@@ -18,16 +43,16 @@ const setupButtonProps = (props) => {
   }
 }
 
-const ButtonElement = (props) => {
+const ButtonElement = (props: ButtonProps) => {
   const updatedProps = setupButtonProps(props)
 
   return <button {...updatedProps}>{props.children}</button>
 }
 
-const LinkButton = (props) => {
+const LinkButton = (props: ButtonProps) => {
   const updatedProps = setupButtonProps(props)
 
-  if (isExternalLink(props.href)) {
+  if (props.href && isExternalLink(props.href)) {
     return <a href={props.href} {...updatedProps}>{props.children}</a>
   } else {
     const { LinkComponent } = useContext(NavigationContext)
@@ -35,7 +60,7 @@ const LinkButton = (props) => {
   }
 }
 
-const Button = (props) => {
+const Button = (props: ButtonProps) => {
   const buttonInner = <>{props.children}</>
 
   if (props.href) {
