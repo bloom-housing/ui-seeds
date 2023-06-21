@@ -28,13 +28,19 @@ export interface ButtonProps {
     | "highlight" // or accent?
     | "highlight-outlined" // or accent?
     | "borderless-text"
+  /** Button size */
   size?: "sm" | "md" | "lg"
+  /** Icon to show before the label text */
   leadIcon?: React.ReactNode
+  /** Icon to show after the label text */
   tailIcon?: React.ReactNode
-  href?: string
-  loading?: boolean
+  /** Event handler for the button click */
   onClick?: (e: React.MouseEvent) => void
+  /** Use an `<a href>` tag instead of `<button>` for a hyperlink */
+  href?: string
+  /** HTML button type */
   type?: "button" | "submit" | "reset"
+  /** Set to true to disable the button */
   disabled?: boolean
   /** Element ID */
   id?: string
@@ -61,7 +67,7 @@ const setupButtonProps = (props: ButtonProps) => {
     "data-variant": props.variant || "primary",
     "data-size": props.size,
     className: classNames.join(" "),
-    type: props.type || "submit",
+    type: props.type || "button",
     tailIcon,
   }
 }

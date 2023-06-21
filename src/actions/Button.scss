@@ -23,6 +23,8 @@
 
   --interior-gap: var(--bloom-s3);
 
+  --icon-size-percentage: 75%;
+
   all: initial;
   display: inline-flex;
   gap: var(--interior-gap);
@@ -175,11 +177,11 @@
   }
 
   & > .icon {
-    font-size: 75%;
+    font-size: var(--icon-size-percentage);
   }
-  
+
   &:focus-visible {
-    outline: 2px solid white;
-    box-shadow: 0px 0px 3px 3px var(--bloom-color-accent-cool);
+    outline: var(--bloom-focus-ring-outline);
+    box-shadow: var(--bloom-focus-ring-box-shadow);
   }
 }
