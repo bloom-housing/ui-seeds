@@ -1,5 +1,8 @@
 import React, { useContext } from "react"
 import { NavigationContext } from "../global/NavigationContext"
+import Icon from "../icons/Icon"
+
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
 
 import "./Button.scss"
 
@@ -24,8 +27,7 @@ export interface ButtonProps {
     | "alert-outlined"
     | "highlight" // or accent?
     | "highlight-outlined" // or accent?
-    | "borderless"
-    | "link"
+    | "borderless-text"
   size?: "sm" | "md" | "lg"
   leadIcon?: React.ReactNode
   tailIcon?: React.ReactNode
@@ -33,6 +35,7 @@ export interface ButtonProps {
   loading?: boolean
   onClick?: (e: React.MouseEvent) => void
   type?: "button" | "submit" | "reset"
+  disabled?: boolean
   /** Element ID */
   id?: string
   /** Additional CSS classes */
@@ -41,46 +44,67 @@ export interface ButtonProps {
 
 const setupButtonProps = (props: ButtonProps) => {
   const classNames = ["button"]
+
+  const tailIcon =
+    props.href && isExternalLink(props.href) ? (
+      <Icon icon={faArrowUpRightFromSquare} />
+    ) : (
+      props.tailIcon
+    )
+
   if (props.className) classNames.push(props.className)
+  if (props.leadIcon) classNames.push("has-lead-icon")
+  if (tailIcon) classNames.push("has-tail-icon")
 
   return {
     ...props,
-    "data-variant": props.variant,
+    "data-variant": props.variant || "primary",
     "data-size": props.size,
     className: classNames.join(" "),
     type: props.type || "submit",
+    tailIcon,
   }
 }
 
 const ButtonElement = (props: ButtonProps) => {
-  const updatedProps = setupButtonProps(props)
-
-  return <button {...updatedProps}>{props.children}</button>
+  return <button {...props} />
 }
 
 const LinkButton = (props: ButtonProps) => {
-  const updatedProps = setupButtonProps(props)
-
   if (props.href && isExternalLink(props.href)) {
-    updatedProps.tailIcon = "tab"
-    return <a href={props.href} {...updatedProps}>{props.children}</a>
+    return (
+      <a href={props.href} target="_blank" {...props}>
+        {props.children}
+      </a>
+    )
   } else {
     const { LinkComponent } = useContext(NavigationContext)
-    return <LinkComponent href={props.href} {...updatedProps}>{props.children}</LinkComponent>
+    return (
+      <LinkComponent href={props.href} {...props}>
+        {props.children}
+      </LinkComponent>
+    )
   }
 }
 
 const Button = (props: ButtonProps) => {
-  const buttonInner = <>
-    {props.leadIcon}
-    {props.children}
-    {props.tailIcon}
-  </>
+  const updatedProps = setupButtonProps(props)
 
-  if (props.href) {
-    return <LinkButton {...props}>{buttonInner}</LinkButton>
+  const buttonInner = (
+    <>
+      {updatedProps.leadIcon}
+      {updatedProps.children}
+      {updatedProps.tailIcon}
+    </>
+  )
+
+  delete updatedProps.leadIcon
+  delete updatedProps.tailIcon
+
+  if (updatedProps.href) {
+    return <LinkButton {...updatedProps}>{buttonInner}</LinkButton>
   } else {
-    return <ButtonElement {...props}>{buttonInner}</ButtonElement>
+    return <ButtonElement {...updatedProps}>{buttonInner}</ButtonElement>
   }
 }
 

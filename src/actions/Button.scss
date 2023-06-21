@@ -1,13 +1,17 @@
 .button {
   --border-width: var(--bloom-border-2);
 
-  --padding-sm: calc(var(--bloom-s3_5) - var(--border-width)) calc(var(--bloom-s5) - var(--border-width));
+  --padding-sm: calc(var(--bloom-s3_5) - var(--border-width))
+    calc(var(--bloom-s5) - var(--border-width));
   --font-size-sm: var(--bloom-font-size-sm);
   --border-radius-sm: var(--bloom-rounded);
-  --padding-md: calc(var(--bloom-s4) - var(--border-width)) calc(var(--bloom-s6) - var(--border-width));
+  --padding-md: calc(var(--bloom-s4) - var(--border-width))
+    calc(var(--bloom-s6) - var(--border-width));
+  --icon-side-padding-md: var(--bloom-s4);
   --font-size-md: var(--bloom-font-size-base);
   --border-radius-md: var(--bloom-rounded);
-  --padding-lg: calc(var(--bloom-s5) - var(--border-width)) calc(var(--bloom-s7) - var(--border-width));
+  --padding-lg: calc(var(--bloom-s5) - var(--border-width))
+    calc(var(--bloom-s7) - var(--border-width));
   --font-size-lg: var(--bloom-font-size-lg);
   --border-radius-lg: var(--bloom-rounded);
 
@@ -17,11 +21,12 @@
   --font-weight: bold;
   --border-radius: var(--border-radius-md);
 
+  --interior-gap: var(--bloom-s3);
+
   all: initial;
+  display: inline-flex;
+  gap: var(--interior-gap);
   padding: var(--padding);
-  background-color: var(--bloom-color-primary);
-  color: var(--bloom-color-on-inverse);
-  border-color: var(--bloom-color-primary);
   border-style: solid;
   border-width: var(--border-width);
   border-radius: var(--border-radius);
@@ -110,23 +115,71 @@
   }
 
   &[data-variant="highlight"] {
-    background-color: var(--bloom-color-yellow-500);
-    border-color: var(--bloom-color-yellow-500);
-    color: var(--bloom-color-gray-900);
+    background-color: var(--bloom-color-highlight);
+    border-color: var(--bloom-color-highlight);
+    color: var(--bloom-color-highlight-darker);
 
     &:hover {
-      background-color: var(--bloom-color-yellow-700);
-      border-color: var(--bloom-color-yellow-700);
+      background-color: var(--bloom-color-highlight-dark);
+      border-color: var(--bloom-color-highlight-dark);
     }
   }
 
   &[data-variant="highlight-outlined"] {
     background-color: var(--bloom-bg-color-surface);
-    border-color: var(--bloom-color-yellow-500);
-    color: var(--bloom-color-gray-900);
-    
+    border-color: var(--bloom-color-highlight);
+    color: var(--bloom-color-highlight-darker);
+
     &:hover {
-      border-color: var(--bloom-color-yellow-700);
+      border-color: var(--bloom-color-highlight-dark);
     }
+  }
+
+  &[data-variant="borderless-text"] {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--bloom-color-primary);
+    font-weight: normal;
+    text-decoration: underline;
+    gap: var(--bloom-s1);
+  }
+
+  &:not([data-variant$="-outlined"]) {
+    &[disabled],
+    &[disabled]:hover {
+      background-color: var(--bloom-color-gray-450);
+      border-color: var(--bloom-color-gray-450);
+      color: white;
+    }
+  }
+
+  &[data-variant$="-outlined"] {
+    &[disabled],
+    &[disabled]:hover {
+      background-color: var(--bloom-color-bg-color-surface);
+      border-color: var(--bloom-color-gray-450);
+      color: var(--bloom-color-gray-450);
+    }
+  }
+
+  &.has-lead-icon {
+    padding-inline-start: var(--icon-side-padding-md);
+  }
+
+  &.has-tail-icon {
+    padding-inline-end: var(--icon-side-padding-md);
+  }
+
+  & > * {
+    align-self: center;
+  }
+
+  & > .icon {
+    font-size: 75%;
+  }
+  
+  &:focus-visible {
+    outline: 2px solid white;
+    box-shadow: 0px 0px 3px 3px var(--bloom-color-accent-cool);
   }
 }

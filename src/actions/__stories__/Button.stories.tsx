@@ -3,6 +3,9 @@ import { Story } from "@storybook/react"
 
 import Button from "../Button"
 
+import Icon from "../../icons/Icon"
+import { faHeart } from "@fortawesome/free-solid-svg-icons"
+
 //import MDXDocs from "./Alert.docs.mdx"
 
 export default {
@@ -15,7 +18,7 @@ export default {
   // },
 }
 
-export const defaultButton = () => <Button>Default Button</Button>
+export const defaultButton = () => <Button onClick={() => alert("Clicked!")}>Default Button</Button>
 
 export const buttonVariants = () => (
   <>
@@ -32,6 +35,9 @@ export const buttonVariants = () => (
       <Button variant="highlight" size="sm">
         Highlight Button
       </Button>
+      <Button size="sm" disabled onClick={() => alert("won't work")}>
+        Disabled Button
+      </Button>
     </div>
     <div>
       <Button variant="primary-outlined" size="sm">
@@ -45,6 +51,9 @@ export const buttonVariants = () => (
       </Button>
       <Button variant="highlight-outlined" size="sm">
         Highlight Button
+      </Button>
+      <Button variant="primary-outlined" size="sm" disabled onClick={() => alert("won't work")}>
+        Disabled Button
       </Button>
     </div>
     <div>
@@ -60,6 +69,9 @@ export const buttonVariants = () => (
       <Button variant="highlight" size="md">
         Highlight Button
       </Button>
+      <Button size="md" disabled>
+        Disabled Button
+      </Button>
     </div>
     <div>
       <Button variant="primary-outlined" size="md">
@@ -73,6 +85,9 @@ export const buttonVariants = () => (
       </Button>
       <Button variant="highlight-outlined" size="md">
         Highlight Button
+      </Button>
+      <Button variant="primary-outlined" size="md" disabled>
+        Disabled Button
       </Button>
     </div>
     <div>
@@ -88,6 +103,9 @@ export const buttonVariants = () => (
       <Button variant="highlight" size="lg">
         Highlight Button
       </Button>
+      <Button size="lg" disabled>
+        Disabled Button
+      </Button>
     </div>
     <div>
       <Button variant="primary-outlined" size="lg">
@@ -102,7 +120,46 @@ export const buttonVariants = () => (
       <Button variant="highlight-outlined" size="lg">
         Highlight Button
       </Button>
+      <Button variant="primary-outlined" size="lg" disabled>
+        Disabled Button
+      </Button>
     </div>
     <style>{".button { margin: .25rem }"}</style>
+  </>
+)
+
+export const linkButtons = () => (
+  <div style={{ display: "flex", gap: "1rem" }}>
+    <Button href="/test">Internal Link</Button>
+    <Button href="https://www.exygy.com">External Link</Button>
+  </div>
+)
+
+export const buttonsWithIcons = () => (
+  <div style={{ display: "flex", gap: "1rem" }}>
+    <Button leadIcon={<Icon icon={faHeart} />}>Lead Icon</Button>
+    <Button tailIcon={<Icon icon={faHeart} />}>Tail Icon</Button>
+  </div>
+)
+
+export const buttonsBorderlessText = () => (
+  <>
+    <div style={{ display: "flex", gap: "1rem" }}>
+      <Button variant="borderless-text" leadIcon={<Icon icon={faHeart} />}>
+        Lead Icon
+      </Button>
+      <Button variant="borderless-text" tailIcon={<Icon icon={faHeart} />}>
+        Tail Icon
+      </Button>
+    </div>
+    <div>
+      {" "}
+      <Button variant="borderless-text" size="sm">
+        Small Size
+      </Button>
+      <Button variant="borderless-text" size="lg">
+        Large Size
+      </Button>
+    </div>
   </>
 )
