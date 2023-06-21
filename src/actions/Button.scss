@@ -1,23 +1,23 @@
 .button {
-  --border-width: var(--bloom-border-2);
-  --font-family: var(--bloom-font-alt-sans);
+  --border-width: var(--seeds-border-2);
+  --font-family: var(--seeds-font-alt-sans);
   --font-weight: bold;
-  --interior-gap: var(--bloom-s3);
+  --interior-gap: var(--seeds-s3);
   --icon-size-percentage: 75%;
-  --icon-side-padding: var(--bloom-s4);
+  --icon-side-padding: var(--seeds-s4);
 
-  --padding-sm: calc(var(--bloom-s3_5) - var(--border-width))
-    calc(var(--bloom-s5) - var(--border-width));
-  --font-size-sm: var(--bloom-font-size-sm);
-  --border-radius-sm: var(--bloom-rounded);
-  --padding-md: calc(var(--bloom-s4) - var(--border-width))
-    calc(var(--bloom-s6) - var(--border-width));
-  --font-size-md: var(--bloom-font-size-base);
-  --border-radius-md: var(--bloom-rounded);
-  --padding-lg: calc(var(--bloom-s5) - var(--border-width))
-    calc(var(--bloom-s7) - var(--border-width));
-  --font-size-lg: var(--bloom-font-size-lg);
-  --border-radius-lg: var(--bloom-rounded);
+  --padding-sm: calc(var(--seeds-s3_5) - var(--border-width))
+    calc(var(--seeds-s5) - var(--border-width));
+  --font-size-sm: var(--seeds-font-size-sm);
+  --border-radius-sm: var(--seeds-rounded);
+  --padding-md: calc(var(--seeds-s4) - var(--border-width))
+    calc(var(--seeds-s6) - var(--border-width));
+  --font-size-md: var(--seeds-font-size-base);
+  --border-radius-md: var(--seeds-rounded);
+  --padding-lg: calc(var(--seeds-s5) - var(--border-width))
+    calc(var(--seeds-s7) - var(--border-width));
+  --font-size-lg: var(--seeds-font-size-lg);
+  --border-radius-lg: var(--seeds-rounded);
 
   all: initial;
   display: inline-flex;
@@ -29,7 +29,7 @@
   font-family: var(--font-family);
   font-weight: var(--font-weight);
   font-size: var(--font-size-md);
-  line-height: var(--bloom-line-height-tight);
+  line-height: var(--seeds-line-height-tight);
   cursor: pointer;
 
   &[data-size="sm"] {
@@ -45,106 +45,106 @@
   }
 
   &[data-variant="primary"] {
-    background-color: var(--bloom-color-primary);
-    border-color: var(--bloom-color-primary);
-    color: var(--bloom-color-on-inverse);
+    background-color: var(--seeds-color-primary);
+    border-color: var(--seeds-color-primary);
+    color: var(--seeds-color-on-inverse);
 
     &:hover {
-      background-color: var(--bloom-color-primary-dark);
-      border-color: var(--bloom-color-primary-dark);
+      background-color: var(--seeds-color-primary-dark);
+      border-color: var(--seeds-color-primary-dark);
     }
   }
 
   &[data-variant="primary-outlined"] {
-    background-color: var(--bloom-bg-color-surface);
-    border-color: var(--bloom-color-primary);
-    color: var(--bloom-color-primary);
+    background-color: var(--seeds-bg-color-surface);
+    border-color: var(--seeds-color-primary);
+    color: var(--seeds-color-primary);
 
     &:hover {
-      border-color: var(--bloom-color-primary-dark);
-      color: var(--bloom-color-primary-dark);
+      border-color: var(--seeds-color-primary-dark);
+      color: var(--seeds-color-primary-dark);
     }
   }
 
   &[data-variant="secondary"] {
-    background-color: var(--bloom-color-secondary);
-    border-color: var(--bloom-color-secondary);
-    color: var(--bloom-color-on-inverse);
+    background-color: var(--seeds-color-secondary);
+    border-color: var(--seeds-color-secondary);
+    color: var(--seeds-color-on-inverse);
 
     &:hover {
-      background-color: var(--bloom-color-secondary-dark);
-      border-color: var(--bloom-color-secondary-dark);
+      background-color: var(--seeds-color-secondary-dark);
+      border-color: var(--seeds-color-secondary-dark);
     }
   }
 
   &[data-variant="secondary-outlined"] {
-    background-color: var(--bloom-bg-color-surface);
-    border-color: var(--bloom-color-secondary);
-    color: var(--bloom-color-secondary);
+    background-color: var(--seeds-bg-color-surface);
+    border-color: var(--seeds-color-secondary);
+    color: var(--seeds-color-secondary);
 
     &:hover {
-      border-color: var(--bloom-color-secondary-dark);
-      color: var(--bloom-color-secondary-dark);
+      border-color: var(--seeds-color-secondary-dark);
+      color: var(--seeds-color-secondary-dark);
     }
   }
 
   &[data-variant="alert"] {
-    background-color: var(--bloom-color-alert);
-    border-color: var(--bloom-color-alert);
-    color: var(--bloom-color-on-inverse);
+    background-color: var(--seeds-color-alert);
+    border-color: var(--seeds-color-alert);
+    color: var(--seeds-color-on-inverse);
 
     &:hover {
-      background-color: var(--bloom-color-alert-dark);
-      border-color: var(--bloom-color-alert-dark);
+      background-color: var(--seeds-color-alert-dark);
+      border-color: var(--seeds-color-alert-dark);
     }
   }
 
   &[data-variant="alert-outlined"] {
-    background-color: var(--bloom-bg-color-surface);
-    border-color: var(--bloom-color-alert);
-    color: var(--bloom-color-alert);
+    background-color: var(--seeds-bg-color-surface);
+    border-color: var(--seeds-color-alert);
+    color: var(--seeds-color-alert);
 
     &:hover {
-      border-color: var(--bloom-color-alert-dark);
-      color: var(--bloom-color-alert-dark);
+      border-color: var(--seeds-color-alert-dark);
+      color: var(--seeds-color-alert-dark);
     }
   }
 
   &[data-variant="highlight"] {
-    background-color: var(--bloom-color-highlight);
-    border-color: var(--bloom-color-highlight);
-    color: var(--bloom-color-highlight-darker);
+    background-color: var(--seeds-color-highlight);
+    border-color: var(--seeds-color-highlight);
+    color: var(--seeds-color-highlight-darker);
 
     &:hover {
-      background-color: var(--bloom-color-highlight-dark);
-      border-color: var(--bloom-color-highlight-dark);
+      background-color: var(--seeds-color-highlight-dark);
+      border-color: var(--seeds-color-highlight-dark);
     }
   }
 
   &[data-variant="highlight-outlined"] {
-    background-color: var(--bloom-bg-color-surface);
-    border-color: var(--bloom-color-highlight);
-    color: var(--bloom-color-highlight-darker);
+    background-color: var(--seeds-bg-color-surface);
+    border-color: var(--seeds-color-highlight);
+    color: var(--seeds-color-highlight-darker);
 
     &:hover {
-      border-color: var(--bloom-color-highlight-dark);
+      border-color: var(--seeds-color-highlight-dark);
     }
   }
 
   &[data-variant="borderless-text"] {
     background-color: transparent;
     border-color: transparent;
-    color: var(--bloom-color-primary);
+    color: var(--seeds-color-primary);
     font-weight: normal;
     text-decoration: underline;
-    gap: var(--bloom-s1);
+    gap: var(--seeds-s1);
   }
 
   &:not([data-variant$="-outlined"]) {
     &[disabled],
     &[disabled]:hover {
-      background-color: var(--bloom-color-gray-450);
-      border-color: var(--bloom-color-gray-450);
+      background-color: var(--seeds-color-gray-450);
+      border-color: var(--seeds-color-gray-450);
       color: white;
     }
   }
@@ -152,9 +152,9 @@
   &[data-variant$="-outlined"] {
     &[disabled],
     &[disabled]:hover {
-      background-color: var(--bloom-color-bg-color-surface);
-      border-color: var(--bloom-color-gray-450);
-      color: var(--bloom-color-gray-450);
+      background-color: var(--seeds-color-bg-color-surface);
+      border-color: var(--seeds-color-gray-450);
+      color: var(--seeds-color-gray-450);
     }
   }
 
@@ -175,7 +175,7 @@
   }
 
   &:focus-visible {
-    outline: var(--bloom-focus-ring-outline);
-    box-shadow: var(--bloom-focus-ring-box-shadow);
+    outline: var(--seeds-focus-ring-outline);
+    box-shadow: var(--seeds-focus-ring-box-shadow);
   }
 }
