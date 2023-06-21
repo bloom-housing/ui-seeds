@@ -42,6 +42,10 @@ export interface ButtonProps {
   type?: "button" | "submit" | "reset"
   /** Set to true to disable the button */
   disabled?: boolean
+  /** Set to true to hide the button from he accessibility tree */
+  ariaHidden?: boolean
+  /** Accessible label if button doesn't contain text content */
+  ariaLabel?: string
   /** Element ID */
   id?: string
   /** Additional CSS classes */
@@ -68,6 +72,9 @@ const setupButtonProps = (props: ButtonProps) => {
     "data-size": props.size,
     className: classNames.join(" "),
     type: props.type || "button",
+    "aria-label": props.ariaLabel,
+    "aria-hidden": props.ariaHidden,
+    tabIndex: props.ariaHidden ? -1 : null,
     tailIcon,
   }
 }
@@ -104,8 +111,9 @@ const Button = (props: ButtonProps) => {
     </>
   )
 
-  delete updatedProps.leadIcon
-  delete updatedProps.tailIcon
+  ;["leadIcon", "tailIcon", "ariaLabel", "ariaHidden"].forEach(key => {
+    delete updatedProps[key as keyof ButtonProps]
+  })
 
   if (updatedProps.href) {
     return <LinkButton {...updatedProps}>{buttonInner}</LinkButton>
