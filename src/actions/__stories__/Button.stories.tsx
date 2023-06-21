@@ -6,6 +6,7 @@ import Icon from "../../icons/Icon"
 import { faHeart } from "@fortawesome/free-solid-svg-icons"
 
 import MDXDocs from "./Button.docs.mdx"
+import HeadingGroup from "../../text/HeadingGroup"
 
 export default {
   title: "Actions/Button",
@@ -21,7 +22,8 @@ export const defaultButton = () => <Button onClick={() => alert("Clicked!")}>Def
 
 export const buttonVariants = () => (
   <>
-    <div>
+    <HeadingGroup size="2xl" heading="sm" subheading="Small Size"  />
+    <div style={{marginTop: "1rem"}}>
       <Button variant="primary" size="sm">
         Primary Button
       </Button>
@@ -38,7 +40,7 @@ export const buttonVariants = () => (
         Disabled Button
       </Button>
     </div>
-    <div>
+    <div style={{marginBottom: "2rem"}}>
       <Button variant="primary-outlined" size="sm">
         Primary Button
       </Button>
@@ -55,7 +57,8 @@ export const buttonVariants = () => (
         Disabled Button
       </Button>
     </div>
-    <div>
+    <HeadingGroup size="2xl" heading="md" subheading="Medium Size"  />
+    <div style={{marginTop: "1rem"}}>
       <Button variant="primary" size="md">
         Primary Button
       </Button>
@@ -72,7 +75,7 @@ export const buttonVariants = () => (
         Disabled Button
       </Button>
     </div>
-    <div>
+    <div style={{marginBottom: "2rem"}}>
       <Button variant="primary-outlined" size="md">
         Primary Button
       </Button>
@@ -89,7 +92,8 @@ export const buttonVariants = () => (
         Disabled Button
       </Button>
     </div>
-    <div>
+    <HeadingGroup size="2xl" heading="lg" subheading="Large Size"  />
+    <div style={{marginTop: "1rem"}}>
       <Button variant="primary" size="lg">
         Primary Button
       </Button>
