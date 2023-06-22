@@ -77,7 +77,7 @@ export const gridExample = () => (
 
     <style>
       {
-        ".seeds-grid {  margin-block: var(--seeds-spacer-content); } .grid-row > * { background: #eee; padding: .5rem }"
+        ".seeds-grid {  margin-block: var(--seeds-spacer-content); } .seeds-grid-row > * { background: var(--seeds-color-accent-warm-light); color: var(--seeds-color-accent-warm-darker); padding: 1rem; text-align: center; }"
       }
     </style>
   </>
@@ -127,16 +127,46 @@ export const gridSpacings = () => (
 
     <style>
       {
-        ".seeds-grid {  margin-block: var(--seeds-spacer-content); } .grid-row > * { background: #eee; padding: .5rem }"
+        ".seeds-grid {  margin-block: var(--seeds-spacer-content); } .seeds-grid-row > * { background: var(--seeds-color-accent-warm-light); color: var(--seeds-color-accent-warm-darker); padding: 1rem; text-align: center; }"
       }
     </style>
   </>
 )
 
-export const sectionsAndForms = () => (
+export const differentColumnCounts = () => (
+  <>
+    <Grid>
+      <Grid.Row>
+        <Grid.Cell>1</Grid.Cell>
+        <Grid.Cell>2</Grid.Cell>
+        <Grid.Cell>3</Grid.Cell>
+      </Grid.Row>
+
+      <Grid.Row>
+        <Grid.Cell>4</Grid.Cell>
+        <Grid.Cell>5</Grid.Cell>
+      </Grid.Row>
+
+      <Grid.Row>
+        <Grid.Cell>6</Grid.Cell>
+        <Grid.Cell>7</Grid.Cell>
+        <Grid.Cell>8</Grid.Cell>
+        <Grid.Cell>9</Grid.Cell>
+      </Grid.Row>
+    </Grid>
+
+    <style>
+      {
+        ".seeds-grid-row > * { background: var(--seeds-color-accent-warm-light); color: var(--seeds-color-accent-warm-darker); padding: 1rem; text-align: center; }"
+      }
+    </style>
+  </>
+)
+
+export const sectionsAndFieldValues = () => (
   <>
     <section>
-      <Heading size="xl">Form Values</Heading>
+      <Heading size="xl">Field Values</Heading>
       <Grid spacing="md">
         <Grid.Row>
           <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
