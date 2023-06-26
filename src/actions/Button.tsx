@@ -53,7 +53,7 @@ export interface ButtonProps {
 }
 
 const setupButtonProps = (props: ButtonProps) => {
-  const classNames = ["button"]
+  const classNames = ["seeds-button"]
 
   const tailIcon =
     props.href && isExternalLink(props.href) ? (

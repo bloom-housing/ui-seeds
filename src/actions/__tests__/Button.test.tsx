@@ -30,7 +30,7 @@ describe("<Button>", () => {
       "href",
       "/my-page"
     )
-    expect(container.querySelector(".icon")).toBeNull()
+    expect(container.querySelector(".seeds-icon")).toBeNull()
   })
 
   it("displays external links with an icon", () => {
