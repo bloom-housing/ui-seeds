@@ -5,6 +5,26 @@ import React, {
   DetailedHTMLProps,
 } from "react"
 
+export const isExternalLink = (href: string) => {
+  return href.startsWith("http://") || href.startsWith("https://")
+}
+
+export const isInternalLink = (href: string) => {
+  return href.startsWith("/") && !href.startsWith("//")
+}
+
+export const shouldShowExternalLinkIcon = ({
+  href,
+  tailIcon,
+  hideExternalLinkIcon,
+}: {
+  href?: string | undefined
+  tailIcon?: React.ReactNode
+  hideExternalLinkIcon?: boolean
+}) => {
+  return href && !tailIcon && isExternalLink(href) && !hideExternalLinkIcon
+}
+
 type DefaultLinkProps = DetailedHTMLProps<
   AnchorHTMLAttributes<HTMLAnchorElement>,
   HTMLAnchorElement

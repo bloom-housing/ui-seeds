@@ -1,6 +1,9 @@
 import { render, cleanup, fireEvent } from "@testing-library/react"
 import Button from "../Button"
 
+import Icon from "../../icons/Icon"
+import { faHeart } from "@fortawesome/free-solid-svg-icons"
+
 afterEach(cleanup)
 
 describe("<Button>", () => {
@@ -30,7 +33,7 @@ describe("<Button>", () => {
       "href",
       "/my-page"
     )
-    expect(container.querySelector(".seeds-icon")).toBeNull()
+    expect(container.querySelector("svg")).toBeNull()
   })
 
   it("displays external links with an icon", () => {
@@ -41,6 +44,28 @@ describe("<Button>", () => {
       "href",
       "https://example.com"
     )
-    expect(container.querySelector(".seeds-icon")).toBeVisible()
+    expect(container.querySelector("svg[data-icon='arrow-up-right-from-square']")).toBeVisible()
+  })
+
+  it("displays external links with a custom icon", () => {
+    const content = "Button Label"
+    const { getByRole, container } = render(<Button href="https://example.com" tailIcon={<Icon icon={faHeart} />}>{content}</Button>)
+
+    expect(getByRole("link", { name: content })).toHaveAttribute(
+      "href",
+      "https://example.com"
+    )
+    expect(container.querySelector("svg[data-icon='heart']")).toBeVisible()
+  })
+
+  it("displays external links with no icon", () => {
+    const content = "Button Label"
+    const { getByRole, container } = render(<Button href="https://example.com" hideExternalLinkIcon>{content}</Button>)
+
+    expect(getByRole("link", { name: content })).toHaveAttribute(
+      "href",
+      "https://example.com"
+    )
+    expect(container.querySelector("svg")).toBeNull()
   })
 })

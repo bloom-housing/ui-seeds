@@ -127,7 +127,7 @@ export const buttonVariants = () => (
         Disabled Button
       </Button>
     </div>
-    <style>{".button { margin: .25rem }"}</style>
+    <style>{".seeds-button { margin: .25rem }"}</style>
   </>
 )
 

@@ -1,18 +1,10 @@
 import React, { useContext } from "react"
-import { NavigationContext } from "../global/NavigationContext"
+import { NavigationContext, isExternalLink, shouldShowExternalLinkIcon } from "../global/NavigationContext"
 import Icon from "../icons/Icon"
 
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
 
 import "./Button.scss"
-
-export const isExternalLink = (href: string) => {
-  return href.startsWith("http://") || href.startsWith("https://")
-}
-
-export const isInternalLink = (href: string) => {
-  return href.startsWith("/") && !href.startsWith("//")
-}
 
 export interface ButtonProps {
   /** Button content */
@@ -25,8 +17,8 @@ export interface ButtonProps {
     | "secondary-outlined"
     | "alert"
     | "alert-outlined"
-    | "highlight" // or accent?
-    | "highlight-outlined" // or accent?
+    | "highlight"
+    | "highlight-outlined"
     | "borderless-text"
   /** Button size */
   size?: "sm" | "md" | "lg"
@@ -34,6 +26,8 @@ export interface ButtonProps {
   leadIcon?: React.ReactNode
   /** Icon to show after the label text */
   tailIcon?: React.ReactNode
+  /** Set to true if you don't want external links to show a related icon */
+  hideExternalLinkIcon?: boolean
   /** Event handler for the button click */
   onClick?: (e: React.MouseEvent) => void
   /** Use an `<a href>` tag instead of `<button>` for a hyperlink */
@@ -55,12 +49,11 @@ export interface ButtonProps {
 const setupButtonProps = (props: ButtonProps) => {
   const classNames = ["seeds-button"]
 
-  const tailIcon =
-    props.href && isExternalLink(props.href) ? (
-      <Icon icon={faArrowUpRightFromSquare} />
-    ) : (
-      props.tailIcon
-    )
+  const tailIcon = shouldShowExternalLinkIcon(props) ? (
+    <Icon icon={faArrowUpRightFromSquare} />
+  ) : (
+    props.tailIcon
+  )
 
   if (props.className) classNames.push(props.className)
   if (props.leadIcon) classNames.push("has-lead-icon")
