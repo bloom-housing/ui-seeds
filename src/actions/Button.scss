@@ -61,8 +61,9 @@
     color: var(--seeds-color-primary);
 
     &:hover {
+      background-color: var(--seeds-color-primary-dark);
       border-color: var(--seeds-color-primary-dark);
-      color: var(--seeds-color-primary-dark);
+      color: var(--seeds-color-on-inverse);
     }
   }
 
@@ -83,8 +84,9 @@
     color: var(--seeds-color-secondary);
 
     &:hover {
+      background-color: var(--seeds-color-secondary-dark);
       border-color: var(--seeds-color-secondary-dark);
-      color: var(--seeds-color-secondary-dark);
+      color: var(--seeds-color-on-inverse);
     }
   }
 
@@ -105,8 +107,9 @@
     color: var(--seeds-color-alert);
 
     &:hover {
+      background-color: var(--seeds-color-alert-dark);
       border-color: var(--seeds-color-alert-dark);
-      color: var(--seeds-color-alert-dark);
+      color: var(--seeds-color-on-inverse);
     }
   }
 
@@ -127,6 +130,7 @@
     color: var(--seeds-color-highlight-darker);
 
     &:hover {
+      background-color: var(--seeds-color-highlight-dark);
       border-color: var(--seeds-color-highlight-dark);
     }
   }

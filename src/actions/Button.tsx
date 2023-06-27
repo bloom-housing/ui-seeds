@@ -1,5 +1,9 @@
 import React, { useContext } from "react"
-import { NavigationContext, isExternalLink, shouldShowExternalLinkIcon } from "../global/NavigationContext"
+import {
+  NavigationContext,
+  isExternalLink,
+  shouldShowExternalLinkIcon,
+} from "../global/NavigationContext"
 import Icon from "../icons/Icon"
 
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
@@ -60,15 +64,20 @@ const setupButtonProps = (props: ButtonProps) => {
   if (tailIcon) classNames.push("has-tail-icon")
 
   return {
-    ...props,
-    "data-variant": props.variant || "primary",
-    "data-size": props.size,
-    className: classNames.join(" "),
-    type: props.type || "button",
-    "aria-label": props.ariaLabel,
-    "aria-hidden": props.ariaHidden,
-    tabIndex: props.ariaHidden ? -1 : null,
-    tailIcon,
+    updatedProps: {
+      "data-variant": props.variant || "primary",
+      "data-size": props.size,
+      id: props.id,
+      className: classNames.join(" "),
+      "aria-label": props.ariaLabel,
+      "aria-hidden": props.ariaHidden,
+      tabIndex: props.ariaHidden ? -1 : null,
+    },
+    inner: {
+      leadIcon: props.leadIcon,
+      tailIcon,
+      children: props.children,
+    },
   }
 }
 
@@ -78,40 +87,41 @@ const ButtonElement = (props: ButtonProps) => {
 
 const LinkButton = (props: ButtonProps) => {
   if (props.href && isExternalLink(props.href)) {
-    return (
-      <a href={props.href} target="_blank" {...props}>
-        {props.children}
-      </a>
-    )
+    return <a target="_blank" {...props} />
   } else {
     const { LinkComponent } = useContext(NavigationContext)
-    return (
-      <LinkComponent href={props.href} {...props}>
-        {props.children}
-      </LinkComponent>
-    )
+    return <LinkComponent {...props} />
   }
 }
 
 const Button = (props: ButtonProps) => {
-  const updatedProps = setupButtonProps(props)
+  const { updatedProps, inner } = setupButtonProps(props)
 
   const buttonInner = (
     <>
-      {updatedProps.leadIcon}
-      {updatedProps.children}
-      {updatedProps.tailIcon}
+      {inner.leadIcon}
+      {inner.children}
+      {inner.tailIcon}
     </>
   )
 
-  ;["leadIcon", "tailIcon", "ariaLabel", "ariaHidden"].forEach((key) => {
-    delete updatedProps[key as keyof ButtonProps]
-  })
-
-  if (updatedProps.href) {
-    return <LinkButton {...updatedProps}>{buttonInner}</LinkButton>
+  if (props.href) {
+    return (
+      <LinkButton href={props.href} {...updatedProps}>
+        {buttonInner}
+      </LinkButton>
+    )
   } else {
-    return <ButtonElement {...updatedProps}>{buttonInner}</ButtonElement>
+    return (
+      <ButtonElement
+        type={props.type || "button"}
+        disabled={props.disabled}
+        onClick={props.onClick}
+        {...updatedProps}
+      >
+        {buttonInner}
+      </ButtonElement>
+    )
   }
 }
 
