@@ -51,6 +51,8 @@ export interface CommonMessageProps {
   id?: string
   /** Additional CSS classes */
   className?: string
+  /** ID for selecting in tests */
+  testId?: string
   role?: string
   "aria-label"?: string
   "aria-labelledby"?: string
@@ -73,6 +75,7 @@ const CommonMessage = (props: CommonMessageProps) => {
       hidden={visible === false}
       role={props.role}
       tabIndex={props.tabIndex}
+      data-testid={props.testId}
     >
       {props.customIcon
         ? props.customIcon
