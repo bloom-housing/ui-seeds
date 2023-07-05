@@ -1,3 +1,4 @@
+import React from "react"
 import { useState } from "react"
 import Markdown, { MarkdownOptions } from "markdown-to-jsx"
 import "./ExpandableText.scss"
