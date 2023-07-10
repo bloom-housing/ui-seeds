@@ -116,7 +116,7 @@
   &[data-variant="highlight"] {
     background-color: var(--seeds-color-highlight);
     border-color: var(--seeds-color-highlight);
-    color: var(--seeds-color-highlight-darker);
+    color: var(--seeds-color-secondary-darker);
 
     &:hover {
       background-color: var(--seeds-color-highlight-dark);
@@ -127,7 +127,7 @@
   &[data-variant="highlight-outlined"] {
     background-color: var(--seeds-bg-color-surface);
     border-color: var(--seeds-color-highlight);
-    color: var(--seeds-color-highlight-darker);
+    color: var(--seeds-color-secondary-darker);
 
     &:hover {
       background-color: var(--seeds-color-highlight-dark);
