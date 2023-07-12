@@ -1,47 +1,47 @@
 .seeds-button {
-  --border-width: var(--seeds-border-2);
-  --font-family: var(--seeds-font-alt-sans);
-  --font-weight: bold;
-  --interior-gap: var(--seeds-s3);
-  --icon-size-percentage: 75%;
-  --icon-side-padding: var(--seeds-s4);
+  --button-border-width: var(--seeds-border-2);
+  --button-font-family: var(--seeds-font-alt-sans);
+  --button-font-weight: bold;
+  --button-interior-gap: var(--seeds-s3);
+  --button-icon-size-percentage: 75%;
+  --button-icon-side-padding: var(--seeds-s4);
 
-  --padding-sm: calc(var(--seeds-s3_5) - var(--border-width))
-    calc(var(--seeds-s5) - var(--border-width));
-  --font-size-sm: var(--seeds-font-size-sm);
-  --border-radius-sm: var(--seeds-rounded);
-  --padding-md: calc(var(--seeds-s4) - var(--border-width))
-    calc(var(--seeds-s6) - var(--border-width));
-  --font-size-md: var(--seeds-font-size-base);
-  --border-radius-md: var(--seeds-rounded);
-  --padding-lg: calc(var(--seeds-s5) - var(--border-width))
-    calc(var(--seeds-s7) - var(--border-width));
-  --font-size-lg: var(--seeds-font-size-lg);
-  --border-radius-lg: var(--seeds-rounded);
+  --button-padding-sm: calc(var(--seeds-s3_5) - var(--button-border-width))
+    calc(var(--seeds-s5) - var(--button-border-width));
+  --button-font-size-sm: var(--seeds-font-size-sm);
+  --button-border-radius-sm: var(--seeds-rounded);
+  --button-padding-md: calc(var(--seeds-s4) - var(--button-border-width))
+    calc(var(--seeds-s6) - var(--button-border-width));
+  --button-font-size-md: var(--seeds-font-size-base);
+  --button-border-radius-md: var(--seeds-rounded);
+  --button-padding-lg: calc(var(--seeds-s5) - var(--button-border-width))
+    calc(var(--seeds-s7) - var(--button-border-width));
+  --button-font-size-lg: var(--seeds-font-size-lg);
+  --button-border-radius-lg: var(--seeds-rounded);
 
   all: initial;
   display: inline-flex;
-  gap: var(--interior-gap);
-  padding: var(--padding-md);
+  gap: var(--button-interior-gap);
+  padding: var(--button-padding-md);
   border-style: solid;
-  border-width: var(--border-width);
-  border-radius: var(--border-radius-md);
-  font-family: var(--font-family);
-  font-weight: var(--font-weight);
-  font-size: var(--font-size-md);
+  border-width: var(--button-border-width);
+  border-radius: var(--button-border-radius-md);
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-size: var(--button-font-size-md);
   line-height: var(--seeds-line-height-tight);
   cursor: pointer;
 
   &[data-size="sm"] {
-    padding: var(--padding-sm);
-    font-size: var(--font-size-sm);
-    border-radius: var(--border-radius-sm);
+    padding: var(--button-padding-sm);
+    font-size: var(--button-font-size-sm);
+    border-radius: var(--button-border-radius-sm);
   }
 
   &[data-size="lg"] {
-    padding: var(--padding-lg);
-    font-size: var(--font-size-lg);
-    border-radius: var(--border-radius-lg);
+    padding: var(--button-padding-lg);
+    font-size: var(--button-font-size-lg);
+    border-radius: var(--button-border-radius-lg);
   }
 
   &[data-variant="primary"] {
@@ -163,11 +163,11 @@
   }
 
   &.has-lead-icon {
-    padding-inline-start: var(--icon-side-padding);
+    padding-inline-start: var(--button-icon-side-padding);
   }
 
   &.has-tail-icon {
-    padding-inline-end: var(--icon-side-padding);
+    padding-inline-end: var(--button-icon-side-padding);
   }
 
   & > * {
@@ -175,7 +175,7 @@
   }
 
   & > .seeds-icon {
-    font-size: var(--icon-size-percentage);
+    font-size: var(--button-icon-size-percentage);
   }
 
   &:focus-visible {
