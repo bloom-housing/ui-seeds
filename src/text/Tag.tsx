@@ -36,6 +36,7 @@ export const Tag = (props: TagProps) => {
 
   return (
     <span
+      id={props.id}
       className={classNames.join(" ")}
       data-variant={props.variant || "primary"}
       data-size={props.size}
