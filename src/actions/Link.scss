@@ -3,17 +3,17 @@
 }
 
 .seeds-link {
-  --interior-gap: var(--seeds-s1);
-  --icon-size-percentage: 75%;
+  --link-interior-gap: var(--seeds-s1);
+  --link-icon-size-percentage: 75%;
 
   display: inline-flex;
-  gap: var(--interior-gap);
+  gap: var(--link-interior-gap);
 
   & > * {
     align-self: center;
   }
 
   & > .seeds-icon {
-    font-size: var(--icon-size-percentage);
+    font-size: var(--link-icon-size-percentage);
   }
 }

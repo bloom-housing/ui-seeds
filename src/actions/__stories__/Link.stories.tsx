@@ -5,16 +5,16 @@ import Link from "../Link"
 import Icon from "../../icons/Icon"
 import { faHeart } from "@fortawesome/free-solid-svg-icons"
 
-//import MDXDocs from "./Button.docs.mdx"
+import MDXDocs from "./Link.docs.mdx"
 
 export default {
   title: "Actions/Link",
   component: Link,
-  // parameters: {
-  //   docs: {
-  //     page: MDXDocs,
-  //   },
-  // },
+  parameters: {
+    docs: {
+      page: MDXDocs,
+    },
+  },
 }
 
 export const basicLink = () => <p>Hello world. <Link href="#">This is a link.</Link></p>
