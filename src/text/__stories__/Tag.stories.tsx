@@ -5,17 +5,17 @@ import Tag from "../Tag"
 import Icon from "../../icons/Icon"
 import { faFaceSmile } from "@fortawesome/free-solid-svg-icons"
 
-//import MDXDocs from "./Button.docs.mdx"
+import MDXDocs from "./Tag.docs.mdx"
 import HeadingGroup from "../HeadingGroup"
 
 export default {
   title: "Text/Tag",
   component: Tag,
-  // parameters: {
-  //   docs: {
-  //     page: MDXDocs,
-  //   },
-  // },
+  parameters: {
+    docs: {
+      page: MDXDocs,
+    },
+  },
 }
 
 export const defaultTag = () => <Tag>Default Tag</Tag>
