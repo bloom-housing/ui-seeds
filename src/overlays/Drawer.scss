@@ -66,6 +66,12 @@
   }
 }
 
+.seeds-drawer-close-icon {
+  svg {
+    color: var(--seeds-color-primary);
+  }
+}
+
 .seeds-drawer-footer {
   display: flex;
   flex-wrap: wrap;

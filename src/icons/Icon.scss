@@ -3,10 +3,12 @@
   --icon-sm-alignment: -0.05rem;
   --icon-md: 1rem;
   --icon-md-alignment: -0.125rem;
-  --icon-lg: 2.5rem;
-  --icon-lg-alignment: -0.75rem;
-  --icon-xl: 3rem;
-  --icon-xl-alignment: -1rem;
+  --icon-lg: 1.5rem;
+  --icon-lg-alignment: -0.5rem;
+  --icon-xl: 2.5rem;
+  --icon-xl-alignment: -0.75rem;
+  --icon-2xl: 3rem;
+  --icon-2xl-alignment: -1rem;
   --icon-height: 1em;
   --icon-alignment: -0.125em;
 
@@ -32,6 +34,11 @@
   &[data-size="xl"] {
     --icon-height: var(--icon-xl);
     --icon-alignment: var(--icon-xl-alignment);
+  }
+
+  &[data-size="2xl"] {
+    --icon-height: var(--icon-2xl);
+    --icon-alignment: var(--icon-2xl-alignment);
   }
 }
 

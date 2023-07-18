@@ -21,7 +21,7 @@ export default {
   },
   argTypes: {
     size: {
-      options: [undefined, "sm", "md", "lg", "xl"],
+      options: [undefined, "sm", "md", "lg", "xl", "2xl"],
       control: {
         labels: {
           undefined: "Default (undefined)",
@@ -84,6 +84,9 @@ export const presetSizes = () => (
     </div>
     <div>
       <Icon icon={faHouseChimney} size={"xl"} /> house-chimney (xl)
+    </div>
+    <div>
+      <Icon icon={faHouseChimney} size={"2xl"} /> house-chimney (2xl)
     </div>
   </>
 )

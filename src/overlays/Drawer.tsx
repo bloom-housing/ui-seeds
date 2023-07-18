@@ -42,7 +42,7 @@ const Drawer = (props: DrawerProps) => {
       <div role="dialog" className={classNames.join(" ")}>
         <div className={"seeds-drawer-header"}>
           <button onClick={props.onClose}>
-            <Icon icon={faXmark} size={"md"} />
+            <Icon icon={faXmark} size={"lg"} className={"seeds-drawer-close-icon"} />
           </button>
           <Heading priority={1} size="2xl" className={"seeds-drawer-heading"}>
             {props.heading}
