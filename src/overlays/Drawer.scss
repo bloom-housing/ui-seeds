@@ -28,6 +28,11 @@
   background-color: var(--drawer-content-background-color);
   padding: var(--seeds-s6);
   flex-grow: 1;
+  overflow: auto;
+
+  > .seeds-card:not(:first-child) {
+    margin-top: var(--seeds-s6);
+  }
 }
 
 .seeds-drawer-header {
@@ -45,5 +50,16 @@
   }
   > h1 {
     margin-left: var(--seeds-s4);
+  }
+}
+
+.seeds-drawer-footer {
+  display: flex;
+  flex-wrap: wrap;
+  > button {
+    margin-top: var(--seeds-s6);
+  }
+  > button:not(:last-child) {
+    margin-right: var(--seeds-s6);
   }
 }
