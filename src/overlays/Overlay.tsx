@@ -8,11 +8,11 @@ export interface OverlayProps {
 }
 
 const Overlay = (props: OverlayProps) => {
-  const className = ["seeds-overlay"]
-  if (props.className) className.push(props.className)
+  const classNames = ["seeds-overlay"]
+  if (props.className) classNames.push(props.className)
 
   return (
-    <div className="seeds-overlay">
+    <div className={classNames.join(" ")}>
       <div className="seeds-overlay-background" />
       <FocusTrap>{props.children}</FocusTrap>
     </div>

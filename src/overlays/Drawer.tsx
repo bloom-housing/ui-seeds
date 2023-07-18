@@ -25,19 +25,21 @@ export interface DrawerProps {
   isOpen: boolean
   heading: string
   onClose: () => void
+  nested?: boolean
 }
 
 const Drawer = (props: DrawerProps) => {
   if (!props.isOpen) return null
 
-  const className = ["seeds-drawer"]
-  if (props.className) className.push(props.className)
+  const classNames = ["seeds-drawer"]
+  if (props.className) classNames.push(props.className)
+  if (props.nested) classNames.push("seeds-drawer-nested")
 
   useKeyPress("Escape", () => props.onClose())
 
   return (
     <Overlay>
-      <div role="dialog" className={"seeds-drawer"}>
+      <div role="dialog" className={classNames.join(" ")}>
         <div className={"seeds-drawer-header"}>
           <button onClick={props.onClose}>
             <Icon icon={faXmark} size={"md"} />

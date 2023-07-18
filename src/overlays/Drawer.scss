@@ -24,6 +24,18 @@
   }
 }
 
+.seeds-drawer-nested {
+  @media (--md-and-up) {
+    width: 38rem;
+  }
+  @media (--lg-and-up) {
+    width: 65rem;
+  }
+  @media (--xl-and-up) {
+    width: 70rem;
+  }
+}
+
 .seeds-drawer-content {
   background-color: var(--drawer-content-background-color);
   padding: var(--seeds-s6);
