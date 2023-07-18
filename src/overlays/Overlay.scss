@@ -1,0 +1,14 @@
+.seeds-overlay {
+  --overlay-background-color: rgba(34, 34, 34, 0.5);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.seeds-overlay-background {
+  background-color: var(--overlay-background-color);
+  width: 100%;
+  height: 100%;
+}

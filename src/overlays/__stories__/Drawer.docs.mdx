@@ -1,0 +1,32 @@
+import { ArgsTable } from "@storybook/addon-docs"
+import Drawer from "../Drawer"
+import { Swatch } from "../../../documentation/components/Swatch.tsx"
+
+# &lt;Drawer /&gt;
+
+## Properties
+
+<ArgsTable of={Drawer} />
+
+## DrawerFooter Properties
+
+<ArgsTable of={Drawer.Footer} />
+
+## Theme Variables
+
+| Name                                | Description                                            | Default                    |
+| ----------------------------------- | ------------------------------------------------------ | -------------------------- |
+| `--drawer-border-color`             | Outside border color                                   | `--seeds-border-color`     |
+| `--drawer-close-icon-color`         | Close icon color                                       | `--seeds-color-primary`    |
+| `--drawer-content-background-color` | Background color of Drawer content                     | `--seeds-bg-color-canvas`  |
+| `--drawer-header-bg-color`          | Background color of Drawer header                      | `--seeds-bg-color-surface` |
+| `--drawer-header-font-family`       | Font familt of heading                                 | `--seeds-font-sans`        |
+| `--drawer-header-spacing`           | Padding around heading                                 | `--seeds-s4`               |
+| `--drawer-spacing`                  | Spacing outside of Drawer content and between sections | `--seeds-s6`               |
+| `--drawer-width-sm`                 | Drawer width at sm screen sizes                        | `100vw`                    |
+| `--drawer-width-md`                 | Drawer width at md screen sizes                        | `48rem`                    |
+| `--drawer-width-lg`                 | Drawer width at lg screen sizes                        | `64rem`                    |
+| `--drawer-width-xl`                 | Drawer width at xl and above screen sizes              | `80rem`                    |
+| `--drawer-nested-width-md`          | Nested Drawer width at sm screen sizes                 | `38rem`                    |
+| `--drawer-nested-width-lg`          | Nested Drawer width at sm screen sizes                 | `54rem`                    |
+| `--drawer-nested-width-xl`          | Nested Drawer width at xl and above screen sizes       | `70rem`                    |

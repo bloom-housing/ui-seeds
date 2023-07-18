@@ -1,0 +1,97 @@
+.seeds-drawer {
+  --drawer-border-color: var(--seeds-border-color);
+  --drawer-close-icon-color: var(--seeds-color-primary);
+  --drawer-content-background-color: var(--seeds-bg-color-canvas);
+  --drawer-header-bg-color: var(--seeds-bg-color-surface);
+  --drawer-header-font-family: var(--seeds-font-sans);
+  --drawer-header-spacing: var(--seeds-s4);
+  --drawer-spacing: var(--seeds-s6);
+  --drawer-width-sm: 100vw;
+  --drawer-width-md: 48rem;
+  --drawer-width-lg: 64rem;
+  --drawer-width-xl: 80rem;
+  --drawer-nested-width-md: 38rem;
+  --drawer-nested-width-lg: 54rem;
+  --drawer-nested-width-xl: 70rem;
+
+  border: 1px solid var(--drawer-border-color);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (--sm-only) {
+    width: var(--drawer-width-sm);
+  }
+  @media (--md-and-up) {
+    width: var(--drawer-width-md);
+  }
+  @media (--lg-and-up) {
+    width: var(--drawer-width-lg);
+  }
+  @media (--xl-and-up) {
+    width: var(--drawer-width-xl);
+  }
+}
+
+.seeds-drawer-nested {
+  @media (--md-and-up) {
+    width: var(--drawer-nested-width-md);
+  }
+  @media (--lg-and-up) {
+    width: var(--drawer-nested-width-lg);
+  }
+  @media (--xl-and-up) {
+    width: var(--drawer-nested-width-xl);
+  }
+}
+
+.seeds-drawer-content {
+  background-color: var(--drawer-content-background-color);
+  padding: var(--drawer-spacing);
+  flex-grow: 1;
+  overflow: auto;
+
+  > .seeds-card:not(:first-child) {
+    margin-top: var(--drawer-spacing);
+  }
+}
+
+.seeds-drawer-header {
+  padding: var(--drawer-header-spacing);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--drawer-border-color);
+  background-color: var(--drawer-header-bg-color);
+  > button {
+    padding: 0;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    cursor: pointer;
+  }
+  > h1 {
+    margin-left: var(--drawer-header-spacing);
+    font-family: var(--drawer-header-font-family);
+  }
+}
+
+.seeds-drawer-close-icon {
+  svg {
+    color: var(--drawer-close-icon-color);
+  }
+}
+
+.seeds-drawer-footer {
+  display: flex;
+  flex-wrap: wrap;
+  > button {
+    margin-top: var(--drawer-spacing);
+  }
+  > button:not(:last-child) {
+    margin-right: var(--drawer-spacing);
+  }
+}
