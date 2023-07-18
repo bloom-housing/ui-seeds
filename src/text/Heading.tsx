@@ -11,6 +11,8 @@ export interface HeadingProps {
   id?: string
   /** Additional CSS classes */
   className?: string
+  /** Tab index for the heading element */
+  tabIndex?: number
 }
 
 const Heading = (props: HeadingProps) => {
@@ -22,7 +24,7 @@ const Heading = (props: HeadingProps) => {
   if (props.className) classNames.push(props.className)
 
   return (
-    <HnTag id={props.id} className={classNames.join(" ")}>
+    <HnTag id={props.id} className={classNames.join(" ")} tabIndex={props.tabIndex}>
       {props.children}
     </HnTag>
   )
