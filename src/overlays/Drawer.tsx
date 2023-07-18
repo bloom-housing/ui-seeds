@@ -44,7 +44,7 @@ const Drawer = (props: DrawerProps) => {
           <button onClick={props.onClose}>
             <Icon icon={faXmark} size={"md"} />
           </button>
-          <Heading priority={1} size="xl">
+          <Heading priority={1} size="2xl" className={"seeds-drawer-heading"}>
             {props.heading}
           </Heading>
         </div>
