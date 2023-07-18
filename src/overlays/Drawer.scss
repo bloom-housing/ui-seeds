@@ -1,0 +1,49 @@
+.seeds-drawer {
+  --drawer-content-background-color: var(--seeds-bg-color-canvas);
+  --drawer-border-color: var(--seeds-border-color);
+  border: 1px solid var(--drawer-border-color);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (--sm-only) {
+    width: 100vw;
+  }
+  @media (--md-and-up) {
+    width: 48rem;
+  }
+  @media (--lg-and-up) {
+    width: 75rem;
+  }
+  @media (--xl-and-up) {
+    width: 80rem;
+  }
+}
+
+.seeds-drawer-content {
+  background-color: var(--drawer-content-background-color);
+  padding: var(--seeds-s6);
+  flex-grow: 1;
+}
+
+.seeds-drawer-header {
+  padding: var(--seeds-s4);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--drawer-border-color);
+  background-color: var(--seeds-bg-color-surface);
+  > button {
+    padding: 0;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    cursor: pointer;
+  }
+  > h1 {
+    margin-left: var(--seeds-s4);
+  }
+}
