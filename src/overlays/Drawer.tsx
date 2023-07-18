@@ -3,7 +3,9 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons"
 import Icon from "../icons/Icon"
 import Overlay from "./Overlay"
 import Heading from "../text/Heading"
+import useKeyPress from "../hooks/useKeyPress"
 import "./Drawer.scss"
+
 export interface DrawerFooterProps {
   /** Additional class name */
   className?: string
@@ -30,6 +32,8 @@ const Drawer = (props: DrawerProps) => {
 
   const className = ["seeds-drawer"]
   if (props.className) className.push(props.className)
+
+  useKeyPress("Escape", () => props.onClose())
 
   return (
     <Overlay>
