@@ -1,0 +1,87 @@
+.seeds-tag {
+  --tag-border-radius: var(--seeds-rounded-full);
+  --tag-padding-inline: var(--seeds-s2_5);
+  --tag-padding-block: var(--seeds-s0_5);
+  --tag-interior-gap: var(--seeds-s1);
+  --tag-font-size: var(--seeds-font-size-sm);
+  --tag-font-size-lg: var(--seeds-font-size-base);
+  --tag-font-weight: var(--seeds-font-weight-semibold);
+  --tag-font-weight-lg: var(--seeds-font-weight-semibold);
+
+  display: inline-flex;
+  border-radius: var(--tag-border-radius);
+  padding-inline: var(--tag-padding-inline);
+  padding-block: var(--tag-padding-block);
+  gap: var(--tag-interior-gap);
+  font-size: var(--tag-font-size);
+  font-weight: var(--tag-font-weight);
+
+  &[data-variant="primary"] {
+    background-color: var(--seeds-color-primary-light);
+    color: var(--seeds-color-primary-dark);
+  }
+
+  &[data-variant="primary-inverse"] {
+    background-color: var(--seeds-color-primary);
+    color: var(--seeds-color-white);
+  }
+
+  &[data-variant="secondary"] {
+    background-color: var(--seeds-color-secondary-light);
+    color: var(--seeds-color-secondary-dark);
+  }
+
+  &[data-variant="secondary-inverse"] {
+    background-color: var(--seeds-color-secondary-dark);
+    color: var(--seeds-color-secondary-light);
+  }
+
+  &[data-variant="success"] {
+    background-color: var(--seeds-color-success-light);
+    color: var(--seeds-color-success-darker);
+  }
+
+  &[data-variant="success-inverse"] {
+    background-color: var(--seeds-color-success);
+    color: var(--seeds-color-white);
+  }
+
+  &[data-variant="in-process"] {
+    background-color: var(--seeds-color-highlight-light);
+    color: var(--seeds-color-highlight-darker);
+  }
+
+  &[data-variant="in-process-inverse"] {
+    background-color: var(--seeds-color-highlight);
+    color: var(--seeds-color-secondary-darker);
+  }
+
+  &[data-variant="highlight-cool"] {
+    background-color: var(--seeds-color-accent-cool-lighter);
+    color: var(--seeds-color-accent-cool-darker);
+  }
+
+  &[data-variant="highlight-cool-inverse"] {
+    background-color: var(--seeds-color-accent-cool-darker);
+    color: var(--seeds-color-white);
+  }
+
+  &[data-variant="highlight-warm"] {
+    background-color: var(--seeds-color-accent-warm-light);
+    color: var(--seeds-color-accent-warm-darker);
+  }
+
+  &[data-variant="highlight-warm-inverse"] {
+    background-color: var(--seeds-color-accent-warm-dark);
+    color: var(--seeds-color-white);
+  }
+
+  &[data-size="lg"] {
+    font-size: var(--tag-font-size-lg);
+    font-weight: var(--tag-font-weight-lg);
+  }
+
+  > .seeds-icon {
+    align-self: center;
+  }
+}
