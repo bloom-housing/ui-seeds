@@ -17,8 +17,6 @@ export interface LinkProps {
   tailIcon?: React.ReactNode
   /** Set to true if you don't want external links to show a related icon */
   hideExternalLinkIcon?: boolean
-  /** Set to true to disable the button */
-  disabled?: boolean
   /** Set to true to hide the link from the accessibility tree */
   ariaHidden?: boolean
   /** Accessible label if link doesn't contain text content */
