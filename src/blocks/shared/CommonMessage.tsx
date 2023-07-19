@@ -28,7 +28,7 @@ const CommonMessageIconMap: Record<string, IconDefinition> = {
 
 export interface CommonMessageProps {
   /** Message content */
-  children: React.ReactNode
+  children?: React.ReactNode
   /** Appearance of the component */
   variant?:
     | "primary"
@@ -51,6 +51,8 @@ export interface CommonMessageProps {
   id?: string
   /** Additional CSS classes */
   className?: string
+  /** ID for selecting in tests */
+  testId?: string
   role?: string
   "aria-label"?: string
   "aria-labelledby"?: string
@@ -65,7 +67,7 @@ const CommonMessage = (props: CommonMessageProps) => {
 
   const variant = props.variant || "primary"
 
-  return (
+  return props.children ? (
     <div
       id={props.id}
       className={classNames.join(" ")}
@@ -73,6 +75,7 @@ const CommonMessage = (props: CommonMessageProps) => {
       hidden={visible === false}
       role={props.role}
       tabIndex={props.tabIndex}
+      data-testid={props.testId}
     >
       {props.customIcon
         ? props.customIcon
@@ -84,7 +87,7 @@ const CommonMessage = (props: CommonMessageProps) => {
         </button>
       )}
     </div>
-  )
+  ) : null
 }
 
 export default CommonMessage

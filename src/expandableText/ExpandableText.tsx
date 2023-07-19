@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React from "react"
 import Markdown, { MarkdownOptions } from "markdown-to-jsx"
 import "./ExpandableText.scss"
 
@@ -46,7 +46,7 @@ const moreLessButton = (
 }
 
 const ExpandableText = (props: ExpandableTextProps) => {
-  const [expanded, setExpanded] = useState(props.expand || false)
+  const [expanded, setExpanded] = React.useState(props.expand || false)
   const maxLength = props.maxLength || 350
   let button
 
