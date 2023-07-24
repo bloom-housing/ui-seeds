@@ -1,9 +1,10 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useCallback, useEffect, useRef, useState } from "react"
 import { createPortal } from "react-dom"
 import CommonMessage, { CommonMessageProps } from "./shared/CommonMessage"
 
 import "./Toast.scss"
 import useTimeout from "../hooks/useTimeout"
+import usePortal from "../hooks/usePortal"
 
 interface ToastProps extends Omit<CommonMessageProps, "role" | "closeable"> {
   hideTimeout?: number
@@ -13,28 +14,7 @@ const Toast = (props: ToastProps) => {
   const classNames = ["seeds-toast"]
   if (props.className) classNames.push(props.className)
 
-  const toastStack = useRef<Element>()
-  const [mount, setMount] = useState(false)
-
-  useEffect(() => {
-    let el: HTMLElement | null = document.querySelector("#seeds-toast-stack")
-    if (!el) {
-      el = document.createElement("div")
-      el.id = "seeds-toast-stack"
-      el.ariaLive = "polite"
-      el.ariaAtomic = "true"
-      document.body.append(el)
-    }
-    const escHandler = (e: KeyboardEvent) => {
-      // TODO: maybe this should hide just this toast, not all toasts
-      if (e.key == "Escape") setMount(false)
-    }
-    el.addEventListener("keyup", escHandler)
-    toastStack.current = el
-    setMount(true)
-
-    return () => el?.removeEventListener("keyup", escHandler)
-  }, [toastStack])
+  const [toastStack, toastRef, mount, setMount] = usePortal("seeds-toast-stack", () => setMount(false))
 
   useTimeout(() => {
     setMount(false)
@@ -44,6 +24,7 @@ const Toast = (props: ToastProps) => {
     ? createPortal(
         <CommonMessage
           {...props}
+          ref={toastRef}
           tabIndex={0}
           role="alert"
           closeable

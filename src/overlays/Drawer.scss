@@ -15,6 +15,7 @@
   --drawer-nested-width-xl: 70rem;
 
   border: 1px solid var(--drawer-border-color);
+  background-color: var(--drawer-content-background-color);
   position: absolute;
   top: 0;
   right: 0;
@@ -50,13 +51,15 @@
 }
 
 .seeds-drawer-content {
-  background-color: var(--drawer-content-background-color);
   padding: var(--drawer-spacing);
-  flex-grow: 1;
   overflow: auto;
 
-  > .seeds-card:not(:first-child) {
-    margin-top: var(--drawer-spacing);
+  > :not(:first-child) {
+    margin-block-start: var(--drawer-spacing);
+  }
+
+  &.is-full-height {
+    flex-grow: 1;
   }
 }
 
@@ -64,8 +67,9 @@
   padding: var(--drawer-header-spacing);
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--drawer-border-color);
+  border-block-end: 1px solid var(--drawer-border-color);
   background-color: var(--drawer-header-bg-color);
+
   > button {
     padding: 0;
     background-color: transparent;
@@ -73,8 +77,9 @@
     border: none;
     cursor: pointer;
   }
+
   > h1 {
-    margin-left: var(--drawer-header-spacing);
+    margin-inline-start: var(--drawer-header-spacing);
     font-family: var(--drawer-header-font-family);
   }
 }
@@ -87,11 +92,9 @@
 
 .seeds-drawer-footer {
   display: flex;
+  align-items: center;
+  gap: var(--drawer-spacing);
   flex-wrap: wrap;
-  > button {
-    margin-top: var(--drawer-spacing);
-  }
-  > button:not(:last-child) {
-    margin-right: var(--drawer-spacing);
-  }
+  background-color: var(--drawer-content-background-color);
+  padding: var(--drawer-spacing);
 }

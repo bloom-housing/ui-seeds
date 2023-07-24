@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import Drawer, { DrawerFooter } from "../Drawer"
+import Drawer from "../Drawer"
 import Card from "../../blocks/Card"
 import Button from "../../actions/Button"
 
@@ -47,16 +47,21 @@ export const Default = () => {
   return (
     <>
       <button onClick={() => setIsOpen(!isOpen)}>Toggle Drawer</button>
-      <Drawer isOpen={isOpen} heading={"Heading"} onClose={() => setIsOpen(false)}>
-        <CardExample />
-        <DrawerFooter>
+      <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <Drawer.Header onClose={() => setIsOpen(false)}>
+          Heading
+        </Drawer.Header>
+        <div className="seeds-drawer-content">
+          <CardExample />
+        </div>
+        <Drawer.Footer>
           <Button variant="primary" size="sm">
             Primary Button
           </Button>
           <Button variant="secondary" size="sm">
             Secondary Button
           </Button>
-        </DrawerFooter>
+        </Drawer.Footer>
       </Drawer>
     </>
   )
@@ -67,9 +72,14 @@ export const ManyButtons = () => {
   return (
     <>
       <button onClick={() => setIsOpen(!isOpen)}>Toggle Drawer</button>
-      <Drawer isOpen={isOpen} heading={"Heading"} onClose={() => setIsOpen(false)}>
-        <CardExample />
-        <DrawerFooter>
+      <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <Drawer.Header onClose={() => setIsOpen(false)}>
+          Heading
+        </Drawer.Header>
+        <div className="seeds-drawer-content">
+          <CardExample />
+        </div>
+        <Drawer.Footer>
           <Button variant="primary" size="sm">
             Primary Button
           </Button>
@@ -91,7 +101,7 @@ export const ManyButtons = () => {
           <Button variant="secondary" size="sm">
             Secondary Button
           </Button>
-        </DrawerFooter>
+        </Drawer.Footer>
       </Drawer>
     </>
   )
@@ -102,19 +112,24 @@ export const OverflowingContent = () => {
   return (
     <>
       <button onClick={() => setIsOpen(!isOpen)}>Toggle Drawer</button>
-      <Drawer isOpen={isOpen} heading={"Heading"} onClose={() => setIsOpen(false)}>
-        <CardExample />
-        <CardExample />
-        <CardExample />
-        <CardExample />
-        <DrawerFooter>
+      <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <Drawer.Header onClose={() => setIsOpen(false)}>
+          Heading
+        </Drawer.Header>
+        <div className="seeds-drawer-content">
+          <CardExample />
+          <CardExample />
+          <CardExample />
+          <CardExample />
+        </div>
+        <Drawer.Footer>
           <Button variant="primary" size="sm">
             Primary Button
           </Button>
           <Button variant="secondary" size="sm">
             Secondary Button
           </Button>
-        </DrawerFooter>
+        </Drawer.Footer>
       </Drawer>
     </>
   )
@@ -126,32 +141,41 @@ export const Nested = () => {
   return (
     <>
       <button onClick={() => setIsOpenFirst(!isOpenFirst)}>Toggle Drawer</button>
-      <Drawer isOpen={isOpenFirst} heading={"Heading"} onClose={() => setIsOpenFirst(false)}>
-        <CardExample />
-        <DrawerFooter>
+      <Drawer isOpen={isOpenFirst} onClose={() => setIsOpenFirst(false)}>
+        <Drawer.Header onClose={() => setIsOpenFirst(false)}>
+          Heading
+        </Drawer.Header>
+        <div className="seeds-drawer-content">
+          <CardExample />
+        </div>
+        <Drawer.Footer>
           <Button variant="primary" size="sm" onClick={() => setIsOpenSecond(true)}>
             Toggle Second Drawer
           </Button>
           <Button variant="secondary" size="sm">
             Secondary Button
           </Button>
-        </DrawerFooter>
+        </Drawer.Footer>
       </Drawer>
       <Drawer
         isOpen={isOpenSecond}
-        heading={"Heading"}
         onClose={() => setIsOpenSecond(false)}
         nested={true}
       >
-        <CardExample />
-        <DrawerFooter>
+        <Drawer.Header onClose={() => setIsOpenSecond(false)}>
+          Heading
+        </Drawer.Header>
+        <div className="seeds-drawer-content">
+          <CardExample />
+        </div>
+        <Drawer.Footer>
           <Button variant="primary" size="sm">
             Primary Button
           </Button>
           <Button variant="secondary" size="sm">
             Secondary Button
           </Button>
-        </DrawerFooter>
+        </Drawer.Footer>
       </Drawer>
     </>
   )
