@@ -29,14 +29,14 @@ export interface LinkProps {
 
 const Link = (props: LinkProps) => {
   const classNames = ["seeds-link"]
-  if (props.className) classNames.push(props.className)
-
+  
   const tailIcon = shouldShowExternalLinkIcon(props) ? (
     <Icon icon={faArrowUpRightFromSquare} />
   ) : (
     props.tailIcon
   )
 
+  if (props.className) classNames.push(props.className)
   if (props.leadIcon) classNames.push("has-lead-icon")
   if (tailIcon) classNames.push("has-tail-icon")
 
