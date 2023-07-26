@@ -10,7 +10,7 @@ export interface LinkProps {
   /** Link content */
   children: React.ReactNode
   /** URL to link to */
-  href?: string
+  href: string
   /** Icon to show before the label text */
   leadIcon?: React.ReactNode
   /** Icon to show after the label text */
