@@ -48,12 +48,12 @@ export const Default = () => {
     <>
       <button onClick={() => setIsOpen(!isOpen)}>Toggle Drawer</button>
       <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <Drawer.Header onClose={() => setIsOpen(false)}>
+        <Drawer.Header closeButtonLast onClose={() => setIsOpen(false)}>
           Heading
         </Drawer.Header>
-        <div className="seeds-drawer-content">
+        <Drawer.Content>
           <CardExample />
-        </div>
+        </Drawer.Content>
         <Drawer.Footer>
           <Button variant="primary" size="sm">
             Primary Button
@@ -76,6 +76,7 @@ export const ManyButtons = () => {
         <Drawer.Header onClose={() => setIsOpen(false)}>
           Heading
         </Drawer.Header>
+        
         <div className="seeds-drawer-content">
           <CardExample />
         </div>
@@ -116,12 +117,12 @@ export const OverflowingContent = () => {
         <Drawer.Header onClose={() => setIsOpen(false)}>
           Heading
         </Drawer.Header>
-        <div className="seeds-drawer-content">
+        <Drawer.Content>
           <CardExample />
           <CardExample />
           <CardExample />
           <CardExample />
-        </div>
+        </Drawer.Content>
         <Drawer.Footer>
           <Button variant="primary" size="sm">
             Primary Button
@@ -145,9 +146,9 @@ export const Nested = () => {
         <Drawer.Header onClose={() => setIsOpenFirst(false)}>
           Heading
         </Drawer.Header>
-        <div className="seeds-drawer-content">
+        <Drawer.Content>
           <CardExample />
-        </div>
+        </Drawer.Content>
         <Drawer.Footer>
           <Button variant="primary" size="sm" onClick={() => setIsOpenSecond(true)}>
             Toggle Second Drawer
@@ -165,9 +166,9 @@ export const Nested = () => {
         <Drawer.Header onClose={() => setIsOpenSecond(false)}>
           Heading
         </Drawer.Header>
-        <div className="seeds-drawer-content">
+        <Drawer.Content>
           <CardExample />
-        </div>
+        </Drawer.Content>
         <Drawer.Footer>
           <Button variant="primary" size="sm">
             Primary Button

@@ -9,27 +9,43 @@ export interface DrawerHeaderProps {
   children: React.ReactNode
   /** Function to call when clicking the close icon */
   onClose: () => void
+  closeButtonLast?: boolean
   /** Additional class name */
   className?: string
 }
 
 const DrawerHeader = (props: DrawerHeaderProps) => {
+  const classNames = ["seeds-drawer-header"]
+  if (props.closeButtonLast) classNames.push("has-close-button-last")
+
   const headerRef = useRef<HTMLElement>(null)
   // Focus on the heading on render so that it is read by screen readers
   useEffect(() => {
     headerRef.current?.querySelector<HTMLElement>(".seeds-drawer-heading")?.focus()
   }, [])
 
+  const closeButton = (
+    <button onClick={props.onClose}>
+      <Icon icon={faXmark} size={"lg"} className={"seeds-drawer-close-icon"} />
+    </button>
+  )
+
   return (
-    <header className={"seeds-drawer-header"} ref={headerRef}>
-      <button onClick={props.onClose}>
-        <Icon icon={faXmark} size={"lg"} className={"seeds-drawer-close-icon"} />
-      </button>
+    <header className={classNames.join(" ")} ref={headerRef}>
+      {!props.closeButtonLast && closeButton}
       <Heading priority={1} size="2xl" className={"seeds-drawer-heading"} tabIndex={-1}>
         {props.children}
       </Heading>
+      {props.closeButtonLast && closeButton}
     </header>
   )
+}
+
+const DrawerContent = (props) => {
+  const classNames = ["seeds-drawer-content"]
+  if (props.fullHeight) classNames.push("is-full-height")
+
+  return <div className={classNames.join(" ")}>{props.children}</div>
 }
 
 export interface DrawerFooterProps {
@@ -78,6 +94,7 @@ const Drawer = (props: DrawerProps) => {
 }
 
 Drawer.Header = DrawerHeader
+Drawer.Content = DrawerContent
 Drawer.Footer = DrawerFooter
 
-export { Drawer as default, DrawerFooter }
+export { Drawer as default, DrawerHeader, DrawerContent, DrawerFooter }

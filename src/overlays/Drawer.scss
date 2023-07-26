@@ -2,6 +2,7 @@
   --drawer-border-color: var(--seeds-border-color);
   --drawer-close-icon-color: var(--seeds-color-primary);
   --drawer-content-background-color: var(--seeds-bg-color-canvas);
+  --drawer-footer-background-color: var(--drawer-content-background-color);
   --drawer-header-bg-color: var(--seeds-bg-color-surface);
   --drawer-header-font-family: var(--seeds-font-sans);
   --drawer-header-spacing: var(--seeds-s4);
@@ -70,6 +71,10 @@
   border-block-end: 1px solid var(--drawer-border-color);
   background-color: var(--drawer-header-bg-color);
 
+  &.has-close-button-last {
+    justify-content: space-between;
+  }
+
   > button {
     padding: 0;
     background-color: transparent;
@@ -95,6 +100,6 @@
   align-items: center;
   gap: var(--drawer-spacing);
   flex-wrap: wrap;
-  background-color: var(--drawer-content-background-color);
+  background-color: var(--drawer-footer-background-color);
   padding: var(--drawer-spacing);
 }
