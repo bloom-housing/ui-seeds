@@ -48,7 +48,7 @@ export const Default = () => {
     <>
       <button onClick={() => setIsOpen(!isOpen)}>Toggle Drawer</button>
       <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <Drawer.Header closeButtonLast onClose={() => setIsOpen(false)}>
+        <Drawer.Header onClose={() => setIsOpen(false)}>
           Heading
         </Drawer.Header>
         <Drawer.Content>

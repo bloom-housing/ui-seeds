@@ -1,14 +1,86 @@
 .seeds-overlay {
   --overlay-background-color: rgba(34, 34, 34, 0.5);
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   width: 100vw;
   height: 100vh;
+  z-index: var(--seeds-z-index-overlay);
 }
 
 .seeds-overlay-background {
   background-color: var(--overlay-background-color);
   width: 100%;
   height: 100%;
+}
+
+.seeds-overlay-container {
+  --overlay-border-color: var(--seeds-border-color);
+  --overlay-close-icon-color: var(--seeds-color-primary);
+  --overlay-content-background-color: var(--seeds-bg-color-surface);
+  --overlay-footer-background-color: var(--seeds-bg-color-canvas);
+  --overlay-header-bg-color: var(--seeds-bg-color-surface);
+  --overlay-header-font-family: var(--seeds-font-sans);
+  --overlay-header-spacing: var(--seeds-s4);
+  --overlay-spacing: var(--seeds-s6);
+
+  border: 1px solid var(--overlay-border-color);
+  background-color: var(--overlay-content-background-color);
+
+  position: absolute;
+  inset: 0px;
+  margin: auto;
+  display: flex;
+  width: 500px;
+  height: min-content;
+  flex-direction: column;
+}
+
+.seeds-dialog-content {
+  padding: var(--overlay-spacing);
+  overflow: auto;
+
+  > :not(:first-child) {
+    margin-block-start: var(--overlay-spacing);
+  }
+}
+
+.seeds-dialog-header {
+  padding: var(--overlay-header-spacing);
+  display: flex;
+  align-items: center;
+  border-block-end: 1px solid var(--overlay-border-color);
+  background-color: var(--overlay-header-bg-color);
+
+  &.has-close-button-last {
+    justify-content: space-between;
+  }
+
+  > button {
+    padding: 0;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  > h1 {
+    margin-inline-start: var(--overlay-header-spacing);
+    font-family: var(--overlay-header-font-family);
+  }
+}
+
+.seeds-overlay-close-icon {
+  svg {
+    color: var(--overlay-close-icon-color);
+  }
+}
+
+.seeds-overlay-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--overlay-spacing);
+  flex-wrap: wrap;
+  background-color: var(--overlay-footer-background-color);
+  padding: var(--overlay-spacing);
 }

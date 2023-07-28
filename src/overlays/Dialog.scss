@@ -1,0 +1,70 @@
+.seeds-dialog {
+  --dialog-border-color: var(--seeds-border-color);
+  --dialog-close-icon-color: var(--seeds-color-primary);
+  --dialog-content-background-color: var(--seeds-bg-color-surface);
+  --dialog-footer-background-color: var(--seeds-bg-color-canvas);
+  --dialog-header-bg-color: var(--seeds-bg-color-surface);
+  --dialog-header-font-family: var(--seeds-font-sans);
+  --dialog-header-spacing: var(--seeds-s4);
+  --dialog-spacing: var(--seeds-s6);
+
+  border: 1px solid var(--dialog-border-color);
+  background-color: var(--dialog-content-background-color);
+
+  position: absolute;
+  inset: 0px;
+  margin: auto;
+  display: flex;
+  width: 500px;
+  height: min-content;
+  flex-direction: column;
+}
+
+.seeds-dialog-content {
+  padding: var(--dialog-spacing);
+  overflow: auto;
+
+  > :not(:first-child) {
+    margin-block-start: var(--dialog-spacing);
+  }
+}
+
+.seeds-dialog-header {
+  padding: var(--dialog-header-spacing);
+  display: flex;
+  align-items: center;
+  border-block-end: 1px solid var(--dialog-border-color);
+  background-color: var(--dialog-header-bg-color);
+
+  &.has-close-button-last {
+    justify-content: space-between;
+  }
+
+  > button {
+    padding: 0;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  > h1 {
+    margin-inline-start: var(--dialog-header-spacing);
+    font-family: var(--dialog-header-font-family);
+  }
+}
+
+.seeds-dialog-close-icon {
+  svg {
+    color: var(--dialog-close-icon-color);
+  }
+}
+
+.seeds-dialog-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--dialog-spacing);
+  flex-wrap: wrap;
+  background-color: var(--dialog-footer-background-color);
+  padding: var(--dialog-spacing);
+}
