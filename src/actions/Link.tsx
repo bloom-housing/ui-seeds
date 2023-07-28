@@ -1,5 +1,10 @@
 import React, { useContext } from "react"
-import { NavigationContext, isExternalLink, shouldShowExternalLinkIcon } from "../global/NavigationContext"
+import {
+  ExternalLinkScreenReaderText,
+  NavigationContext,
+  isExternalLink,
+  shouldShowExternalLinkIcon,
+} from "../global/NavigationContext"
 
 import Icon from "../icons/Icon"
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
@@ -29,7 +34,7 @@ export interface LinkProps {
 
 const Link = (props: LinkProps) => {
   const classNames = ["seeds-link"]
-  
+
   const tailIcon = shouldShowExternalLinkIcon(props) ? (
     <Icon icon={faArrowUpRightFromSquare} />
   ) : (
@@ -53,6 +58,7 @@ const Link = (props: LinkProps) => {
         {props.leadIcon}
         {props.children}
         {tailIcon}
+        {<ExternalLinkScreenReaderText />}
       </a>
     )
   } else {

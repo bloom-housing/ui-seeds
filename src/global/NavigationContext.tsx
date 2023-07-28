@@ -25,6 +25,10 @@ export const shouldShowExternalLinkIcon = ({
   return href && !tailIcon && isExternalLink(href) && !hideExternalLinkIcon
 }
 
+export const ExternalLinkScreenReaderText = () => (
+  <span className="seeds-screen-reader-only">(opens in a new tab)</span>
+)
+
 type DefaultLinkProps = DetailedHTMLProps<
   AnchorHTMLAttributes<HTMLAnchorElement>,
   HTMLAnchorElement

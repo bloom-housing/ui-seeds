@@ -1,6 +1,7 @@
 import React, { useContext } from "react"
 import {
   NavigationContext,
+  ExternalLinkScreenReaderText,
   isExternalLink,
   shouldShowExternalLinkIcon,
 } from "../global/NavigationContext"
@@ -87,7 +88,12 @@ const ButtonElement = (props: ButtonProps) => {
 
 const LinkButton = (props: ButtonProps) => {
   if (props.href && isExternalLink(props.href)) {
-    return <a target="_blank" {...props} />
+    return (
+      <a target="_blank" {...props}>
+        {props.children}
+        {<ExternalLinkScreenReaderText />}
+      </a>
+    )
   } else {
     const { LinkComponent } = useContext(NavigationContext)
     return <LinkComponent {...props} />
