@@ -145,24 +145,24 @@ export const buttonsWithIcons = () => (
   </div>
 )
 
-export const buttonsBorderlessText = () => (
+export const textButtons = () => (
   <>
+    <div style={{ display: "flex", gap: "1rem", marginBlockEnd: "1rem" }}>
+      <Button variant="text">
+        Medium Size
+      </Button>
+      <Button variant="text" size="sm">
+        Small Size
+      </Button>
+    </div>
     <div style={{ display: "flex", gap: "1rem" }}>
-      <Button variant="borderless-text" leadIcon={<Icon icon={faHeart} />}>
+      <Button variant="text" leadIcon={<Icon icon={faHeart} />}>
         Lead Icon
       </Button>
-      <Button variant="borderless-text" tailIcon={<Icon icon={faHeart} />}>
+      <Button variant="text" tailIcon={<Icon icon={faHeart} />}>
         Tail Icon
       </Button>
     </div>
-    <div>
-      {" "}
-      <Button variant="borderless-text" size="sm">
-        Small Size
-      </Button>
-      <Button variant="borderless-text" size="lg">
-        Large Size
-      </Button>
-    </div>
+
   </>
 )

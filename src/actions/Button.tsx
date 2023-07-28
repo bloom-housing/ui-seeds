@@ -23,7 +23,7 @@ export interface ButtonProps {
     | "alert-outlined"
     | "highlight"
     | "highlight-outlined"
-    | "borderless-text"
+    | "text"
   /** Button size */
   size?: "sm" | "md" | "lg"
   /** Icon to show before the label text */
