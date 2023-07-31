@@ -31,12 +31,12 @@
   inset: 0px;
   margin: auto;
   display: flex;
-  width: 500px;
+  width: max-content;
   height: min-content;
   flex-direction: column;
 }
 
-.seeds-dialog-content {
+.seeds-overlay-content {
   padding: var(--overlay-spacing);
   overflow: auto;
 
@@ -45,7 +45,7 @@
   }
 }
 
-.seeds-dialog-header {
+.seeds-overlay-header {
   padding: var(--overlay-header-spacing);
   display: flex;
   align-items: center;

@@ -18,7 +18,7 @@ export const Default = () => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-      <button onClick={() => setIsOpen(!isOpen)}>Toggle Drawer</button>
+      <button onClick={() => setIsOpen(!isOpen)}>Toggle Dialog</button>
       <Dialog isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <Dialog.Header closeButtonLast onClose={() => setIsOpen(false)}>
           Heading

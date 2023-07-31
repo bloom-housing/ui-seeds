@@ -77,6 +77,9 @@ export interface OverlayProps {
 }
 
 const Overlay = (props: OverlayProps) => {
+  const classNames = ["seeds-overlay-container"]
+  if (props.className) classNames.push(props.className)
+
   const overlayClassNames = ["seeds-overlay"]
   if (props.overlayClassName) overlayClassNames.push(props.overlayClassName)
 
@@ -94,7 +97,7 @@ const Overlay = (props: OverlayProps) => {
               fallbackFocus: `#{uniqueFocusId}`,
             }}
           >
-            <div id={uniqueFocusId} className={props.className} role="dialog">
+            <div id={uniqueFocusId} className={classNames.join(" ")} role="dialog">
               {props.children}
             </div>
           </FocusTrap>
@@ -104,4 +107,4 @@ const Overlay = (props: OverlayProps) => {
     : null
 }
 
-export { Overlay as default }
+export { Overlay as default, OverlayHeader, OverlayContent, OverlayFooter }
