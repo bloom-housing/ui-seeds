@@ -29,7 +29,7 @@ describe("<Link>", () => {
     const content = "Link Label"
     const { getByRole, container } = render(<Link href="https://example.com">{content}</Link>)
 
-    expect(getByRole("link", { name: content })).toHaveAttribute(
+    expect(getByRole("link", { name: `${content} (opens in a new tab)` })).toHaveAttribute(
       "href",
       "https://example.com"
     )
@@ -40,7 +40,7 @@ describe("<Link>", () => {
     const content = "Button Label"
     const { getByRole, container } = render(<Link href="https://example.com" tailIcon={<Icon icon={faHeart} />}>{content}</Link>)
 
-    expect(getByRole("link", { name: content })).toHaveAttribute(
+    expect(getByRole("link", { name: `${content} (opens in a new tab)` })).toHaveAttribute(
       "href",
       "https://example.com"
     )
@@ -51,7 +51,7 @@ describe("<Link>", () => {
     const content = "Button Label"
     const { getByRole, container } = render(<Link href="https://example.com" hideExternalLinkIcon>{content}</Link>)
 
-    expect(getByRole("link", { name: content })).toHaveAttribute(
+    expect(getByRole("link", { name: `${content} (opens in a new tab)` })).toHaveAttribute(
       "href",
       "https://example.com"
     )
