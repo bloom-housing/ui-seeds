@@ -66,7 +66,7 @@ const setupButtonProps = (props: ButtonProps) => {
   return {
     updatedProps: {
       "data-variant": props.variant || "primary",
-      "data-size": props.size,
+      "data-size": props.size || "md",
       id: props.id,
       className: classNames.join(" "),
       "aria-label": props.ariaLabel,
