@@ -24,7 +24,7 @@ export interface ButtonProps {
     | "highlight"
     | "highlight-outlined"
     | "text"
-  /** Button size */
+  /** Button size (only `sm`/`md` supported by `text` variant) */
   size?: "sm" | "md" | "lg"
   /** Icon to show before the label text */
   leadIcon?: React.ReactNode
