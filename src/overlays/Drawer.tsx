@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react"
 
-import Overlay, { OverlayContent, OverlayFooter, OverlayHeader } from "./Overlay"
+import Overlay, { OverlayContent, OverlayFooter, OverlayFooterProps, OverlayHeader } from "./Overlay"
 
 import "./Drawer.scss"
 
@@ -8,7 +8,13 @@ const DrawerHeader = OverlayHeader
 
 const DrawerContent = OverlayContent
 
-const DrawerFooter = OverlayFooter
+const DrawerFooter = (props: OverlayFooterProps) => {
+  const classNames = ["seeds-drawer-footer"]
+  if (props.className) classNames.push(props.className)
+
+  return <OverlayFooter {...props} className={classNames.join(" ")} />
+}
+
 
 export interface DrawerProps {
   children: React.ReactNode

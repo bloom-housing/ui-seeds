@@ -38,7 +38,7 @@ const OverlayHeader = (props: OverlayHeaderProps) => {
   return (
     <header className={classNames.join(" ")} ref={headerRef}>
       {!props.closeButtonLast && closeButton}
-      <Heading priority={1} size="2xl" className={"seeds-overlay-heading"} tabIndex={-1}>
+      <Heading priority={1} size="xl" className={"seeds-overlay-heading"} tabIndex={-1}>
         {props.children}
       </Heading>
       {props.closeButtonLast && closeButton}
@@ -46,9 +46,16 @@ const OverlayHeader = (props: OverlayHeaderProps) => {
   )
 }
 
-const OverlayContent = (props) => {
+export interface OverlayContentProps {
+  children: React.ReactNode
+  /** Additional class name */
+  className?: string
+}
+
+const OverlayContent = (props: OverlayContentProps) => {
   const classNames = ["seeds-overlay-content"]
-  if (props.fullHeight) classNames.push("is-full-height")
+  if (props.className) classNames.push(props.className)
+//  if (props.fullHeight) classNames.push("is-full-height")
 
   return <div className={classNames.join(" ")}>{props.children}</div>
 }

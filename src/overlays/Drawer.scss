@@ -1,12 +1,23 @@
 .seeds-drawer {
   --drawer-border-color: var(--seeds-border-color);
+  --drawer-spacing: var(--seeds-s6);
   --drawer-close-icon-color: var(--seeds-color-primary);
+  --drawer-header-background-color: var(--seeds-bg-color-surface);
+  --drawer-header-font-family: var(--seeds-font-sans);
+  --drawer-header-spacing: var(--seeds-s6);
   --drawer-content-background-color: var(--seeds-bg-color-canvas);
   --drawer-footer-background-color: var(--drawer-content-background-color);
-  --drawer-header-bg-color: var(--seeds-bg-color-surface);
-  --drawer-header-font-family: var(--seeds-font-sans);
-  --drawer-header-spacing: var(--seeds-s4);
-  --drawer-spacing: var(--seeds-s6);
+  --drawer-footer-spacing: 0 var(--drawer-spacing) var(--drawer-spacing);
+
+  --overlay-border-color: var(--drawer-border-color);
+  --overlay-spacing: var(--drawer-spacing);
+  --overlay-close-icon-color: var(--drawer-close-icon-color);
+  --overlay-header-background-color: var(--drawer-header-background-color);
+  --overlay-header-font-family: var(--drawer-header-font-family);
+  --overlay-header-spacing: var(--drawer-header-spacing);
+  --overlay-content-background-color: var(--drawer-content-background-color);
+  --overlay-footer-background-color: var(--drawer-footer-background-color);
+  --overlay-footer-spacing: var(--drawer-footer-spacing);
 
   --drawer-width-sm: 100vw;
   --drawer-width-md: 48rem;
@@ -49,4 +60,8 @@
   &.is-full-height {
     flex-grow: 1;
   }
+}
+
+.seeds-drawer-footer {
+  justify-content: start;
 }

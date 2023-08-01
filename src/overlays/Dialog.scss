@@ -1,22 +1,24 @@
 .seeds-dialog {
+  --dialog-border-radius: var(--seeds-rounded-lg);
   --dialog-border-color: var(--seeds-border-color);
   --dialog-close-icon-color: var(--seeds-color-primary);
   --dialog-content-background-color: var(--seeds-bg-color-surface);
-  --dialog-footer-background-color: var(--seeds-bg-color-canvas);
-  --dialog-header-bg-color: var(--seeds-bg-color-surface);
-  --dialog-header-font-family: var(--seeds-font-sans);
-  --dialog-header-spacing: var(--seeds-s4);
+  --dialog-header-background-color: var(--seeds-bg-color-surface);
+  --dialog-footer-background-color: var(--seeds-bg-color-surface-primary);
+  --dialog-header-spacing: var(--seeds-s4) var(--seeds-s6) 0;
   --dialog-spacing: var(--seeds-s6);
 
+  --overlay-border-radius: var(--dialog-border-radius);
   --overlay-border-color: var(--dialog-border-color);
   --overlay-close-icon-color: var(--dialog-close-icon-color);
   --overlay-content-background-color: var(--dialog-content-background-color);
   --overlay-footer-background-color: var(--dialog-footer-background-color);
-  --overlay-header-bg-color: var(--dialog-header-bg-color);
-  --overlay-header-font-family: var(--dialog-header-font-family);
+  --overlay-header-border-color: transparent;
+  --overlay-header-background-color: var(--dialog-header-background-color);
   --overlay-header-spacing: var(--dialog-header-spacing);
   --overlay-spacing: var(--dialog-spacing);
 
-  border-radius: var(--seeds-rounded-lg);
   overflow: hidden;
+  width: var(--seeds-width-lg);
+  max-width: 100%;
 }

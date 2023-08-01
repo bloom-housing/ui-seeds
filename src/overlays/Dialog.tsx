@@ -1,14 +1,29 @@
 import React, { useEffect, useRef } from "react"
 
-import Overlay, { OverlayContent, OverlayFooter, OverlayHeader } from "./Overlay"
+import Overlay, { OverlayContent, OverlayContentProps, OverlayFooter, OverlayFooterProps, OverlayHeader, OverlayHeaderProps } from "./Overlay"
 
 import "./Dialog.scss"
 
-const DialogHeader = OverlayHeader
+const DialogHeader = (props: OverlayHeaderProps) => {
+  const classNames = ["seeds-dialog-header"]
+  if (props.className) classNames.push(props.className)
 
-const DialogContent = OverlayContent
+  return <OverlayHeader {...props} className={classNames.join(" ")} />
+}
 
-const DialogFooter = OverlayFooter
+const DialogContent = (props: OverlayContentProps) => {
+  const classNames = ["seeds-dialog-content"]
+  if (props.className) classNames.push(props.className)
+
+  return <OverlayContent {...props} className={classNames.join(" ")} />
+}
+
+const DialogFooter = (props: OverlayFooterProps) => {
+  const classNames = ["seeds-dialog-footer"]
+  if (props.className) classNames.push(props.className)
+
+  return <OverlayFooter {...props} className={classNames.join(" ")} />
+}
 
 export interface DialogProps {
   children: React.ReactNode

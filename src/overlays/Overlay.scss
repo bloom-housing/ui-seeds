@@ -1,5 +1,5 @@
 .seeds-overlay {
-  --overlay-background-color: rgba(34, 34, 34, 0.5);
+  --overlay-background-color: rgba(34, 34, 34, 0.3);
   position: fixed;
   top: 0px;
   left: 0px;
@@ -15,17 +15,22 @@
 }
 
 .seeds-overlay-container {
+  --overlay-border-radius: 0;
   --overlay-border-color: var(--seeds-border-color);
+  --overlay-spacing: var(--seeds-s6);
   --overlay-close-icon-color: var(--seeds-color-primary);
   --overlay-content-background-color: var(--seeds-bg-color-surface);
-  --overlay-footer-background-color: var(--seeds-bg-color-canvas);
-  --overlay-header-bg-color: var(--seeds-bg-color-surface);
-  --overlay-header-font-family: var(--seeds-font-sans);
+  --overlay-header-border-color: var(--overlay-border-color);
+  --overlay-header-background-color: var(--seeds-bg-color-surface);
   --overlay-header-spacing: var(--seeds-s4);
-  --overlay-spacing: var(--seeds-s6);
+  --overlay-footer-background-color: var(--seeds-bg-color-surface-primary);
+  --overlay-footer-gap: var(--seeds-s4);
+  --overlay-footer-spacing: var(--overlay-spacing);
 
   border: 1px solid var(--overlay-border-color);
+  border-radius: var(--overlay-border-radius);
   background-color: var(--overlay-content-background-color);
+  box-shadow: var(--seeds-shadow-md);
 
   position: absolute;
   inset: 0px;
@@ -40,6 +45,14 @@
   padding: var(--overlay-spacing);
   overflow: auto;
 
+  > :first-child {
+    margin-block-start: 0;
+  }
+
+  > :last-child {
+    margin-block-end: 0;
+  }
+
   > :not(:first-child) {
     margin-block-start: var(--overlay-spacing);
   }
@@ -49,8 +62,8 @@
   padding: var(--overlay-header-spacing);
   display: flex;
   align-items: center;
-  border-block-end: 1px solid var(--overlay-border-color);
-  background-color: var(--overlay-header-bg-color);
+  border-block-end: 1px solid var(--overlay-header-border-color);
+  background-color: var(--overlay-header-background-color);
 
   &.has-close-button-last {
     justify-content: space-between;
@@ -66,7 +79,7 @@
 
   > h1 {
     margin-inline-start: var(--overlay-header-spacing);
-    font-family: var(--overlay-header-font-family);
+    font-size: var(--seeds-type-heading-size-2xl);
   }
 }
 
@@ -78,9 +91,10 @@
 
 .seeds-overlay-footer {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
-  gap: var(--overlay-spacing);
+  gap: var(--overlay-footer-gap);
   flex-wrap: wrap;
   background-color: var(--overlay-footer-background-color);
-  padding: var(--overlay-spacing);
+  padding: var(--overlay-footer-spacing);
 }
