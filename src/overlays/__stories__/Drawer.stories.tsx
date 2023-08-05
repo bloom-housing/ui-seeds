@@ -48,7 +48,7 @@ export const Default = () => {
     <>
       <button onClick={() => setIsOpen(!isOpen)}>Toggle Drawer</button>
       <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <Drawer.Header onClose={() => setIsOpen(false)}>
+        <Drawer.Header>
           Heading
         </Drawer.Header>
         <Drawer.Content>
@@ -73,13 +73,12 @@ export const ManyButtons = () => {
     <>
       <button onClick={() => setIsOpen(!isOpen)}>Toggle Drawer</button>
       <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <Drawer.Header onClose={() => setIsOpen(false)}>
+        <Drawer.Header>
           Heading
         </Drawer.Header>
-        
-        <div className="seeds-drawer-content">
+        <Drawer.Content>
           <CardExample />
-        </div>
+        </Drawer.Content>
         <Drawer.Footer>
           <Button variant="primary" size="sm">
             Primary Button
@@ -114,7 +113,7 @@ export const OverflowingContent = () => {
     <>
       <button onClick={() => setIsOpen(!isOpen)}>Toggle Drawer</button>
       <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <Drawer.Header onClose={() => setIsOpen(false)}>
+        <Drawer.Header>
           Heading
         </Drawer.Header>
         <Drawer.Content>
@@ -143,7 +142,7 @@ export const Nested = () => {
     <>
       <button onClick={() => setIsOpenFirst(!isOpenFirst)}>Toggle Drawer</button>
       <Drawer isOpen={isOpenFirst} onClose={() => setIsOpenFirst(false)}>
-        <Drawer.Header onClose={() => setIsOpenFirst(false)}>
+        <Drawer.Header>
           Heading
         </Drawer.Header>
         <Drawer.Content>
@@ -163,7 +162,7 @@ export const Nested = () => {
         onClose={() => setIsOpenSecond(false)}
         nested={true}
       >
-        <Drawer.Header onClose={() => setIsOpenSecond(false)}>
+        <Drawer.Header>
           Heading
         </Drawer.Header>
         <Drawer.Content>

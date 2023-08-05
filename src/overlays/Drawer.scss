@@ -1,23 +1,29 @@
 .seeds-drawer {
   --drawer-border-color: var(--seeds-border-color);
-  --drawer-spacing: var(--seeds-s6);
+  --drawer-padding: var(--seeds-s6);
   --drawer-close-icon-color: var(--seeds-color-primary);
   --drawer-header-background-color: var(--seeds-bg-color-surface);
   --drawer-header-font-family: var(--seeds-font-sans);
-  --drawer-header-spacing: var(--seeds-s6);
+  --drawer-header-padding-block: calc(var(--drawer-padding) - var(--seeds-s2));
+  --drawer-header-padding-inline: var(--drawer-padding);
+  --drawer-content-text-color: var(--seeds-text-color);
   --drawer-content-background-color: var(--seeds-bg-color-canvas);
   --drawer-footer-background-color: var(--drawer-content-background-color);
-  --drawer-footer-spacing: 0 var(--drawer-spacing) var(--drawer-spacing);
+  --drawer-footer-padding-block: var(--drawer-padding);
+  --drawer-footer-padding-inline: var(--drawer-padding);
 
   --overlay-border-color: var(--drawer-border-color);
-  --overlay-spacing: var(--drawer-spacing);
+  --overlay-padding: var(--drawer-padding);
   --overlay-close-icon-color: var(--drawer-close-icon-color);
   --overlay-header-background-color: var(--drawer-header-background-color);
   --overlay-header-font-family: var(--drawer-header-font-family);
-  --overlay-header-spacing: var(--drawer-header-spacing);
+  --overlay-header-padding-block: var(--drawer-header-padding-block);
+  --overlay-header-padding-inline: var(--drawer-header-padding-inline);
+  --overlay-content-text-color: var(--drawer-content-text-color);
   --overlay-content-background-color: var(--drawer-content-background-color);
   --overlay-footer-background-color: var(--drawer-footer-background-color);
-  --overlay-footer-spacing: var(--drawer-footer-spacing);
+  --overlay-footer-padding-block: var(--drawer-footer-padding-block);
+  --overlay-footer-padding-inline: var(--drawer-footer-padding-inline);
 
   --drawer-width-sm: 100vw;
   --drawer-width-md: 48rem;
@@ -57,6 +63,8 @@
 }
 
 .seeds-drawer-content {
+  padding-block-end: 0;
+
   &.is-full-height {
     flex-grow: 1;
   }

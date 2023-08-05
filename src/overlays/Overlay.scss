@@ -1,5 +1,5 @@
 .seeds-overlay {
-  --overlay-background-color: rgba(34, 34, 34, 0.3);
+  --overlay-background-color: rgba(34, 34, 34, 0.4);
   position: fixed;
   top: 0px;
   left: 0px;
@@ -17,15 +17,18 @@
 .seeds-overlay-container {
   --overlay-border-radius: 0;
   --overlay-border-color: var(--seeds-border-color);
-  --overlay-spacing: var(--seeds-s6);
+  --overlay-padding: var(--seeds-s6);
   --overlay-close-icon-color: var(--seeds-color-primary);
+  --overlay-content-text-color: var(--seeds-text-color);
   --overlay-content-background-color: var(--seeds-bg-color-surface);
   --overlay-header-border-color: var(--overlay-border-color);
   --overlay-header-background-color: var(--seeds-bg-color-surface);
-  --overlay-header-spacing: var(--seeds-s4);
+  --overlay-header-padding-block: var(--seeds-s4);
+  --overlay-header-padding-inline: var(--seeds-s6);
   --overlay-footer-background-color: var(--seeds-bg-color-surface-primary);
   --overlay-footer-gap: var(--seeds-s4);
-  --overlay-footer-spacing: var(--overlay-spacing);
+  --overlay-footer-padding-block: var(--overlay-padding);
+  --overlay-footer-padding-inline: var(--overlay-padding);
 
   border: 1px solid var(--overlay-border-color);
   border-radius: var(--overlay-border-radius);
@@ -42,7 +45,8 @@
 }
 
 .seeds-overlay-content {
-  padding: var(--overlay-spacing);
+  color: var(--overlay-content-text-color);
+  padding: var(--overlay-padding);
   overflow: auto;
 
   > :first-child {
@@ -54,18 +58,20 @@
   }
 
   > :not(:first-child) {
-    margin-block-start: var(--overlay-spacing);
+    margin-block-start: var(--overlay-padding);
   }
 }
 
 .seeds-overlay-header {
-  padding: var(--overlay-header-spacing);
+  padding-block: var(--overlay-header-padding-block);
+  padding-inline: var(--overlay-header-padding-inline);
   display: flex;
+  gap: var(--overlay-header-padding-inline);
   align-items: center;
   border-block-end: 1px solid var(--overlay-header-border-color);
   background-color: var(--overlay-header-background-color);
 
-  &.has-close-button-last {
+  &.has-close-button-end {
     justify-content: space-between;
   }
 
@@ -78,7 +84,6 @@
   }
 
   > h1 {
-    margin-inline-start: var(--overlay-header-spacing);
     font-size: var(--seeds-type-heading-size-2xl);
   }
 }
@@ -96,5 +101,6 @@
   gap: var(--overlay-footer-gap);
   flex-wrap: wrap;
   background-color: var(--overlay-footer-background-color);
-  padding: var(--overlay-footer-spacing);
+  padding-block: var(--overlay-footer-padding-block);
+  padding-inline: var(--overlay-footer-padding-inline);
 }

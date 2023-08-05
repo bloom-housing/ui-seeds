@@ -8,7 +8,7 @@ const DialogHeader = (props: OverlayHeaderProps) => {
   const classNames = ["seeds-dialog-header"]
   if (props.className) classNames.push(props.className)
 
-  return <OverlayHeader {...props} className={classNames.join(" ")} />
+  return <OverlayHeader {...props} closeButtonEnd className={classNames.join(" ")} />
 }
 
 const DialogContent = (props: OverlayContentProps) => {

@@ -12,16 +12,16 @@ import "./Overlay.scss"
 
 export interface OverlayHeaderProps {
   children: React.ReactNode
-  /** Function to call when clicking the close icon */
-  onClose: () => void
-  closeButtonLast?: boolean
+  /** Place the close button at the inline end of the header */
+  closeButtonEnd?: boolean
   /** Additional class name */
   className?: string
 }
 
 const OverlayHeader = (props: OverlayHeaderProps) => {
   const classNames = ["seeds-overlay-header"]
-  if (props.closeButtonLast) classNames.push("has-close-button-last")
+  if (props.closeButtonEnd) classNames.push("has-close-button-end")
+  if (props.className) classNames.push(props.className)
 
   const headerRef = useRef<HTMLElement>(null)
   // Focus on the heading on render so that it is read by screen readers
@@ -30,18 +30,18 @@ const OverlayHeader = (props: OverlayHeaderProps) => {
   }, [])
 
   const closeButton = (
-    <button onClick={props.onClose}>
+    <button onClick={() => headerRef.current?.dispatchEvent(new Event("seeds:close", { bubbles: true }))}>
       <Icon icon={faXmark} size={"lg"} className={"seeds-overlay-close-icon"} />
     </button>
   )
 
   return (
     <header className={classNames.join(" ")} ref={headerRef}>
-      {!props.closeButtonLast && closeButton}
+      {!props.closeButtonEnd && closeButton}
       <Heading priority={1} size="xl" className={"seeds-overlay-heading"} tabIndex={-1}>
         {props.children}
       </Heading>
-      {props.closeButtonLast && closeButton}
+      {props.closeButtonEnd && closeButton}
     </header>
   )
 }
@@ -55,7 +55,6 @@ export interface OverlayContentProps {
 const OverlayContent = (props: OverlayContentProps) => {
   const classNames = ["seeds-overlay-content"]
   if (props.className) classNames.push(props.className)
-//  if (props.fullHeight) classNames.push("is-full-height")
 
   return <div className={classNames.join(" ")}>{props.children}</div>
 }

@@ -1,12 +1,34 @@
 import React, { useEffect, useRef } from "react"
 
-import Overlay, { OverlayContent, OverlayFooter, OverlayFooterProps, OverlayHeader } from "./Overlay"
+import Overlay, {
+  OverlayFooter,
+  OverlayFooterProps,
+  OverlayContent,
+  OverlayContentProps,
+  OverlayHeader,
+  OverlayHeaderProps,
+} from "./Overlay"
 
 import "./Drawer.scss"
 
-const DrawerHeader = OverlayHeader
+const DrawerHeader = (props: OverlayHeaderProps) => {
+  const classNames = ["seeds-drawer-header"]
+  if (props.className) classNames.push(props.className)
 
-const DrawerContent = OverlayContent
+  return <OverlayHeader {...props} className={classNames.join(" ")} />
+}
+
+export interface DrawerContentProps extends OverlayContentProps {
+  fullHeight?: boolean
+}
+
+const DrawerContent = (props: DrawerContentProps) => {
+  const classNames = ["seeds-drawer-content"]
+  if (props.className) classNames.push(props.className)
+  if (props.fullHeight) classNames.push("is-full-height")
+
+  return <OverlayContent {...props} className={classNames.join(" ")} />
+}
 
 const DrawerFooter = (props: OverlayFooterProps) => {
   const classNames = ["seeds-drawer-footer"]
@@ -14,7 +36,6 @@ const DrawerFooter = (props: OverlayFooterProps) => {
 
   return <OverlayFooter {...props} className={classNames.join(" ")} />
 }
-
 
 export interface DrawerProps {
   children: React.ReactNode
