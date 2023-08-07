@@ -22,13 +22,10 @@
   all: initial;
   display: inline-flex;
   gap: var(--button-interior-gap);
-  padding: var(--button-padding-md);
   border-style: solid;
   border-width: var(--button-border-width);
-  border-radius: var(--button-border-radius-md);
   font-family: var(--button-font-family);
   font-weight: var(--button-font-weight);
-  font-size: var(--button-font-size-md);
   line-height: var(--seeds-line-height-tight);
   cursor: pointer;
 
@@ -36,6 +33,12 @@
     padding: var(--button-padding-sm);
     font-size: var(--button-font-size-sm);
     border-radius: var(--button-border-radius-sm);
+  }
+
+  &[data-size="md"] {
+    padding: var(--button-padding-md);
+    font-size: var(--button-font-size-md);
+    border-radius: var(--button-border-radius-md);
   }
 
   &[data-size="lg"] {
@@ -135,13 +138,22 @@
     }
   }
 
-  &[data-variant="borderless-text"] {
+  &[data-variant="text"] {
     background-color: transparent;
-    border-color: transparent;
+    border: none;
     color: var(--seeds-color-primary);
     font-weight: normal;
     text-decoration: underline;
     gap: var(--seeds-s1);
+
+    &[data-size] {
+      padding: 0;
+      border-radius: 0;
+    }
+
+    &[data-size="lg"] {
+      font-size: var(--button-font-size-md);
+    }
   }
 
   &:not([data-variant$="-outlined"]) {
@@ -162,11 +174,11 @@
     }
   }
 
-  &.has-lead-icon {
+  &.has-lead-icon:not([data-variant="text"]) {
     padding-inline-start: var(--button-icon-side-padding);
   }
 
-  &.has-tail-icon {
+  &.has-tail-icon:not([data-variant="text"]) {
     padding-inline-end: var(--button-icon-side-padding);
   }
 
