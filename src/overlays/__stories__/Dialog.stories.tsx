@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import Dialog from "../Dialog"
 import Button from "../../actions/Button"
 
-import MDXDocs from "./Drawer.docs.mdx"
+import MDXDocs from "./Dialog.docs.mdx"
 
 export default {
   title: "Overlays/Dialog",

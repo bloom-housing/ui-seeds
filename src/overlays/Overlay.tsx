@@ -1,7 +1,6 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState, RefObject } from "react"
+import React, { useEffect, useRef, useId } from "react"
 import { createPortal } from "react-dom"
 import FocusTrap from "focus-trap-react"
-import { nanoid } from "nanoid"
 import { faXmark } from "@fortawesome/free-solid-svg-icons"
 import Icon from "../icons/Icon"
 import Heading from "../text/Heading"
@@ -89,7 +88,9 @@ const Overlay = (props: OverlayProps) => {
   const overlayClassNames = ["seeds-overlay"]
   if (props.overlayClassName) overlayClassNames.push(props.overlayClassName)
 
-  const uniqueFocusId = useMemo(() => nanoid(), [])
+  // NOTE: the `useId` hook for some reason emits invalid selectors (with colons).
+  // So we'll replace those with hyphens:
+  const uniqueFocusId = useId().replace(/:/g, "-")
 
   const [overlayPortalEl, overlayRef, mount] = usePortal("seeds-overlay-portal", props.onClose)
 
@@ -100,7 +101,7 @@ const Overlay = (props: OverlayProps) => {
           <FocusTrap
             focusTrapOptions={{
               allowOutsideClick: true,
-              fallbackFocus: `#{uniqueFocusId}`,
+              fallbackFocus: `#${uniqueFocusId}`,
             }}
           >
             <div id={uniqueFocusId} className={classNames.join(" ")} role="dialog">

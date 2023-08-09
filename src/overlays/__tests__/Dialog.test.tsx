@@ -1,24 +1,24 @@
 import { render, fireEvent, cleanup } from "@testing-library/react"
 import Button from "../../actions/Button"
-import Drawer from "../Drawer"
+import Dialog from "../Dialog"
 
 afterEach(cleanup)
 
-describe("<Drawer>", () => {
-  it("renders and closes the drawer", () => {
+describe("<Dialog>", () => {
+  it("renders and closes the dialog", () => {
     const onCloseSpy = jest.fn()
     const { getByText, getAllByRole } = render(
-      <Drawer isOpen={true} onClose={onCloseSpy}>
-        <Drawer.Header>
+      <Dialog isOpen={true} onClose={onCloseSpy}>
+        <Dialog.Header>
           Heading
-        </Drawer.Header>
-        <Drawer.Content>
+        </Dialog.Header>
+        <Dialog.Content>
           Content
-        </Drawer.Content>
-        <Drawer.Footer>
+        </Dialog.Content>
+        <Dialog.Footer>
           <Button>Button</Button>
-        </Drawer.Footer>
-      </Drawer>
+        </Dialog.Footer>
+      </Dialog>
     )
     expect(getByText("Heading")).toBeInTheDocument()
     expect(getByText("Content")).toBeInTheDocument()

@@ -3,7 +3,6 @@
   --drawer-padding: var(--seeds-s6);
   --drawer-close-icon-color: var(--seeds-color-primary);
   --drawer-header-background-color: var(--seeds-bg-color-surface);
-  --drawer-header-font-family: var(--seeds-font-sans);
   --drawer-header-padding-block: calc(var(--drawer-padding) - var(--seeds-s2));
   --drawer-header-padding-inline: var(--drawer-padding);
   --drawer-content-text-color: var(--seeds-text-color);
@@ -16,7 +15,6 @@
   --overlay-padding: var(--drawer-padding);
   --overlay-close-icon-color: var(--drawer-close-icon-color);
   --overlay-header-background-color: var(--drawer-header-background-color);
-  --overlay-header-font-family: var(--drawer-header-font-family);
   --overlay-header-padding-block: var(--drawer-header-padding-block);
   --overlay-header-padding-inline: var(--drawer-header-padding-inline);
   --overlay-content-text-color: var(--drawer-content-text-color);
@@ -29,6 +27,7 @@
   --drawer-width-md: 48rem;
   --drawer-width-lg: 64rem;
   --drawer-width-xl: 80rem;
+  --drawer-nested-width-sm: 95vw;
   --drawer-nested-width-md: 38rem;
   --drawer-nested-width-lg: 54rem;
   --drawer-nested-width-xl: 70rem;
@@ -51,6 +50,9 @@
 }
 
 .seeds-drawer-nested {
+  @media (--sm-only) {
+    width: var(--drawer-nested-width-sm);
+  }
   @media (--md-and-up) {
     width: var(--drawer-nested-width-md);
   }
