@@ -22,6 +22,8 @@ export interface LinkProps {
   tailIcon?: React.ReactNode
   /** Set to true if you don't want external links to show a related icon */
   hideExternalLinkIcon?: boolean
+  /** Set external link target if it meets accessibility criteria */
+  newWindowTarget?: boolean
   /** Set to true to hide the link from the accessibility tree */
   ariaHidden?: boolean
   /** Accessible label if link doesn't contain text content */
@@ -54,11 +56,15 @@ const Link = (props: LinkProps) => {
 
   if (props.href && isExternalLink(props.href)) {
     return (
-      <a href={props.href} target="_blank" {...additionalProps}>
+      <a
+        href={props.href}
+        target={props.newWindowTarget ? "_blank" : undefined}
+        {...additionalProps}
+      >
         {props.leadIcon}
         {props.children}
         {tailIcon}
-        {<ExternalLinkScreenReaderText />}
+        {props.newWindowTarget && <ExternalLinkScreenReaderText />}
       </a>
     )
   } else {

@@ -37,6 +37,8 @@ export interface ButtonProps {
   onClick?: (e: React.MouseEvent) => void
   /** Use an `<a href>` tag instead of `<button>` for a hyperlink */
   href?: string
+  /** Set external link target if it meets accessibility criteria */
+  newWindowTarget?: boolean
   /** HTML button type */
   type?: "button" | "submit" | "reset"
   /** Set to true to disable the button */
@@ -49,6 +51,11 @@ export interface ButtonProps {
   id?: string
   /** Additional CSS classes */
   className?: string
+}
+
+// internal extended interface
+interface ButtonPropsWithTarget extends ButtonProps {
+  target?: string
 }
 
 const setupButtonProps = (props: ButtonProps) => {
@@ -70,6 +77,7 @@ const setupButtonProps = (props: ButtonProps) => {
       "data-size": props.size,
       id: props.id,
       className: classNames.join(" "),
+      target: props.newWindowTarget ? "_blank" : undefined,
       "aria-label": props.ariaLabel,
       "aria-hidden": props.ariaHidden,
       tabIndex: props.ariaHidden ? -1 : null,
@@ -86,12 +94,12 @@ const ButtonElement = (props: ButtonProps) => {
   return <button {...props} />
 }
 
-const LinkButton = (props: ButtonProps) => {
+const LinkButton = (props: ButtonPropsWithTarget) => {
   if (props.href && isExternalLink(props.href)) {
     return (
-      <a target="_blank" {...props}>
+      <a {...props}>
         {props.children}
-        {<ExternalLinkScreenReaderText />}
+        {props.target === "_blank" && <ExternalLinkScreenReaderText />}
       </a>
     )
   } else {
