@@ -1,44 +1,31 @@
-import { render, cleanup, fireEvent } from "@testing-library/react"
-import Button from "../Button"
+import { render, cleanup } from "@testing-library/react"
+import Link from "../Link"
 
 import Icon from "../../icons/Icon"
 import { faHeart } from "@fortawesome/free-solid-svg-icons"
 
 afterEach(cleanup)
 
-describe("<Button>", () => {
-  it("displays a clickable button", () => {
-    let wasClicked = false
-    const content = "Button Label"
-    const { getByText, container } = render(
-      <Button id="test-button" className="test-class" onClick={() => (wasClicked = true)}>
+describe("<Link>", () => {
+  it("displays a link with a URL", () => {
+    const content = "Link Label"
+    const { getByRole, getByText, container } = render(
+      <Link href="/my-page" id="test-link" className="test-class">
         {content}
-      </Button>
+      </Link>
     )
     expect(getByText(content)).toBeInTheDocument()
-    expect(
-      container.querySelector("#test-button.test-class[data-variant='primary']")
-    ).not.toBeNull()
-
-    fireEvent.click(getByText(content))
-
-    expect(wasClicked).toBeTruthy()
-  })
-
-  it("displays an anchor with an href", () => {
-    const content = "Button Label"
-    const { getByRole, container } = render(<Button href="/my-page">{content}</Button>)
-
+    expect(container.querySelector("#test-link.test-class")).not.toBeNull()
     expect(getByRole("link", { name: content })).toHaveAttribute("href", "/my-page")
     expect(container.querySelector("svg")).toBeNull()
   })
 
   it("displays external links with an icon", () => {
-    const content = "Button Label"
+    const content = "Link Label"
     const { getByRole, container } = render(
-      <Button href="https://example.com" newWindowTarget>
+      <Link href="https://example.com" newWindowTarget>
         {content}
-      </Button>
+      </Link>
     )
 
     expect(getByRole("link", { name: `${content} (opens in a new tab)` })).toHaveAttribute(
@@ -51,9 +38,9 @@ describe("<Button>", () => {
   it("displays external links with a custom icon", () => {
     const content = "Button Label"
     const { getByRole, container } = render(
-      <Button href="https://example.com" tailIcon={<Icon icon={faHeart} />}>
+      <Link href="https://example.com" tailIcon={<Icon icon={faHeart} />}>
         {content}
-      </Button>
+      </Link>
     )
 
     expect(getByRole("link", { name: content })).toHaveAttribute("href", "https://example.com")
@@ -63,9 +50,9 @@ describe("<Button>", () => {
   it("displays external links with no icon", () => {
     const content = "Button Label"
     const { getByRole, container } = render(
-      <Button href="https://example.com" hideExternalLinkIcon>
+      <Link href="https://example.com" hideExternalLinkIcon>
         {content}
-      </Button>
+      </Link>
     )
 
     expect(getByRole("link", { name: content })).toHaveAttribute("href", "https://example.com")

@@ -1,0 +1,19 @@
+.seeds-link, .seeds-prose a {
+  text-decoration: underline;
+}
+
+.seeds-link {
+  --link-interior-gap: var(--seeds-s1);
+  --link-icon-size-percentage: 75%;
+
+  display: inline-flex;
+  gap: var(--link-interior-gap);
+
+  & > * {
+    align-self: center;
+  }
+
+  & > .seeds-icon {
+    font-size: var(--link-icon-size-percentage);
+  }
+}

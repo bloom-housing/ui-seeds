@@ -22,8 +22,8 @@ export const defaultButton = () => <Button onClick={() => alert("Clicked!")}>Def
 
 export const buttonVariants = () => (
   <>
-    <HeadingGroup size="2xl" heading="sm" subheading="Small Size"  />
-    <div style={{marginTop: "1rem"}}>
+    <HeadingGroup size="2xl" heading="sm" subheading="Small Size" />
+    <div style={{ marginTop: "1rem" }}>
       <Button variant="primary" size="sm">
         Primary Button
       </Button>
@@ -40,7 +40,7 @@ export const buttonVariants = () => (
         Disabled Button
       </Button>
     </div>
-    <div style={{marginBottom: "2rem"}}>
+    <div style={{ marginBottom: "2rem" }}>
       <Button variant="primary-outlined" size="sm">
         Primary Button
       </Button>
@@ -57,8 +57,8 @@ export const buttonVariants = () => (
         Disabled Button
       </Button>
     </div>
-    <HeadingGroup size="2xl" heading="md" subheading="Medium Size"  />
-    <div style={{marginTop: "1rem"}}>
+    <HeadingGroup size="2xl" heading="md" subheading="Medium Size" />
+    <div style={{ marginTop: "1rem" }}>
       <Button variant="primary" size="md">
         Primary Button
       </Button>
@@ -75,7 +75,7 @@ export const buttonVariants = () => (
         Disabled Button
       </Button>
     </div>
-    <div style={{marginBottom: "2rem"}}>
+    <div style={{ marginBottom: "2rem" }}>
       <Button variant="primary-outlined" size="md">
         Primary Button
       </Button>
@@ -92,8 +92,8 @@ export const buttonVariants = () => (
         Disabled Button
       </Button>
     </div>
-    <HeadingGroup size="2xl" heading="lg" subheading="Large Size"  />
-    <div style={{marginTop: "1rem"}}>
+    <HeadingGroup size="2xl" heading="lg" subheading="Large Size" />
+    <div style={{ marginTop: "1rem" }}>
       <Button variant="primary" size="lg">
         Primary Button
       </Button>
@@ -134,7 +134,12 @@ export const buttonVariants = () => (
 export const linkButtons = () => (
   <div style={{ display: "flex", gap: "1rem" }}>
     <Button href="/test">Internal Link</Button>
-    <Button href="https://www.exygy.com">External Link</Button>
+    <Button href="https://www.exygy.com" hideExternalLinkIcon>
+      External Link (Same Window)
+    </Button>
+    <Button href="https://www.exygy.com" newWindowTarget>
+      External Link (New Window)
+    </Button>
   </div>
 )
 

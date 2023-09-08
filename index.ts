@@ -1,6 +1,7 @@
 export * from "./src/expandableText/ExpandableText"
 
 export { default as Button } from "./src/actions/Button"
+export { default as Link } from "./src/actions/Link"
 export { default as Alert } from "./src/blocks/Alert"
 export { default as Message } from "./src/blocks/Message"
 export { default as Toast } from "./src/blocks/Toast"
