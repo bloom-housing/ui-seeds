@@ -4,7 +4,7 @@
   --dialog-padding: var(--seeds-s6);
   --dialog-close-icon-color: var(--seeds-color-primary);
   --dialog-header-background-color: var(--seeds-bg-color-surface);
-  --dialog-header-padding-block: var(--seeds-s6) 0;
+  --dialog-header-padding-block: var(--seeds-s6);
   --dialog-header-padding-inline: var(--seeds-s6);
   --dialog-content-text-color: var(--seeds-text-color);
   --dialog-content-background-color: var(--seeds-bg-color-surface);
@@ -29,13 +29,24 @@
   overflow: hidden;
   width: var(--seeds-width-lg);
   max-width: 100%;
-  max-height: 100vh;
+  max-height: 90vh;
 
   @media (--sm-only) {
+    --dialog-border-radius: 0;
+
     margin-block-start: 0;
+    max-height: 100vh;
   }
 }
 
 .seeds-dialog-header {
   align-items: start;
+}
+
+.seeds-dialog-content {
+  padding-block-start: 0;
+}
+
+.seeds-dialog-footer {
+  flex-direction: row-reverse;
 }
