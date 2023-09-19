@@ -20,8 +20,10 @@
   --button-border-radius-lg: var(--seeds-rounded);
 
   all: initial;
+  box-sizing: inherit;
   display: inline-flex;
   gap: var(--button-interior-gap);
+  justify-content: center;
   border-style: solid;
   border-width: var(--button-border-width);
   font-family: var(--button-font-family);
