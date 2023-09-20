@@ -38,6 +38,9 @@
   @media (--sm-only) {
     width: var(--drawer-width-sm);
   }
+  @media (--sm-and-up) {
+    width: var(--drawer-width-sm);
+  }
   @media (--md-and-up) {
     width: var(--drawer-width-md);
   }
@@ -51,6 +54,9 @@
 
 .seeds-drawer-nested {
   @media (--sm-only) {
+    width: var(--drawer-nested-width-sm);
+  }
+  @media (--sm-and-up) {
     width: var(--drawer-nested-width-sm);
   }
   @media (--md-and-up) {
