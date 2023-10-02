@@ -30,6 +30,9 @@ export const buttonVariants = () => (
       <Button variant="secondary" size="sm">
         Secondary Button
       </Button>
+      <Button variant="success" size="sm">
+        Success Button
+      </Button>
       <Button variant="alert" size="sm">
         Alert Button
       </Button>
@@ -46,6 +49,9 @@ export const buttonVariants = () => (
       </Button>
       <Button variant="secondary-outlined" size="sm">
         Secondary Button
+      </Button>
+      <Button variant="success-outlined" size="sm">
+        Success Button
       </Button>
       <Button variant="alert-outlined" size="sm">
         Alert Button
@@ -65,6 +71,9 @@ export const buttonVariants = () => (
       <Button variant="secondary" size="md">
         Secondary Button
       </Button>
+      <Button variant="success" size="md">
+        Success Button
+      </Button>
       <Button variant="alert" size="md">
         Alert Button
       </Button>
@@ -81,6 +90,9 @@ export const buttonVariants = () => (
       </Button>
       <Button variant="secondary-outlined" size="md">
         Secondary Button
+      </Button>
+      <Button variant="success-outlined" size="md">
+        Success Button
       </Button>
       <Button variant="alert-outlined" size="md">
         Alert Button
@@ -100,6 +112,9 @@ export const buttonVariants = () => (
       <Button variant="secondary" size="lg">
         Secondary Button
       </Button>
+      <Button variant="success" size="lg">
+        Success Button
+      </Button>
       <Button variant="alert" size="lg">
         Alert Button
       </Button>
@@ -116,6 +131,9 @@ export const buttonVariants = () => (
       </Button>
       <Button variant="secondary-outlined" size="lg">
         Secondary Button
+      </Button>
+      <Button variant="success-outlined" size="lg">
+        Success Button
       </Button>
       <Button variant="alert-outlined" size="lg">
         Alert Button
