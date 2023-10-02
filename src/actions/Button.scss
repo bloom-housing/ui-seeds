@@ -95,6 +95,29 @@
     }
   }
 
+  &[data-variant="success"] {
+    background-color: var(--seeds-color-success);
+    border-color: var(--seeds-color-success);
+    color: var(--seeds-color-on-inverse);
+
+    &:hover {
+      background-color: var(--seeds-color-success-dark);
+      border-color: var(--seeds-color-success-dark);
+    }
+  }
+
+  &[data-variant="success-outlined"] {
+    background-color: var(--seeds-bg-color-surface);
+    border-color: var(--seeds-color-success);
+    color: var(--seeds-color-success);
+
+    &:hover {
+      background-color: var(--seeds-color-success-dark);
+      border-color: var(--seeds-color-success-dark);
+      color: var(--seeds-color-on-inverse);
+    }
+  }
+
   &[data-variant="alert"] {
     background-color: var(--seeds-color-alert);
     border-color: var(--seeds-color-alert);

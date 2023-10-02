@@ -20,6 +20,8 @@ export interface ButtonProps {
     | "primary-outlined"
     | "secondary"
     | "secondary-outlined"
+    | "success"
+    | "success-outlined"
     | "alert"
     | "alert-outlined"
     | "highlight"
