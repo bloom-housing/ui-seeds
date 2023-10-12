@@ -8,6 +8,8 @@ Seeds is built using TypeScript, React, and Sass. It uses Storybook for concrete
 
 We use [zeroheight to document tokens, components, and patterns](https://zeroheight.com/5e69dd4e1/p/938cb5-seeds-design-system) for the Seeds Design System.
 
+For code-level changes over time, [see GitHub Releases for Changelog](https://github.com/bloom-housing/ui-seeds/releases).
+
 ## Usage
 
 ### Next.js
