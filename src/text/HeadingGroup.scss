@@ -1,6 +1,7 @@
 .seeds-heading-group {
   --heading-margin: 0rem;
   --subheading-margin: var(--seeds-s4);
+  --subheading-margin-sm: var(--seeds-s3);
   --heading-color: inherit;
   --subheading-color: inherit;
   --subheading-font-size: var(--seeds-font-size-base);
@@ -19,5 +20,9 @@
     margin-block: var(--subheading-margin);
     font-size: var(--subheading-font-size);
     color: var(--subheading-color);
+  }
+
+  :not(.text-heading-4xl, .text-heading-3xl, .text-heading-2xl) + p {
+    margin-block-start: var(--subheading-margin-sm);
   }
 }

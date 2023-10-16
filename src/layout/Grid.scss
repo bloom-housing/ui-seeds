@@ -4,22 +4,22 @@
   --grid-gap-lg: var(--seeds-s8);
   --grid-gap-xl: var(--seeds-s12);
 
-  --grid-gap-tablet: var(--grid-gap-sm);
+  --grid-gap-mobile: var(--grid-gap-sm);
 
   --grid-gap: var(--grid-gap-md);
 
-  @media (--lg-down) {
-    --grid-gap: var(--grid-gap-tablet);
+  @media (--sm-only) {
+    --grid-gap: var(--grid-gap-mobile);
   }
 
   display: grid;
   gap: var(--grid-gap);
 
-  @media (--lg-and-up) {
-    &[data-spacing="sm"] {
-      --grid-gap: var(--grid-gap-sm);
-    }
+  &[data-spacing="sm"] {
+    --grid-gap: var(--grid-gap-sm);
+  }
 
+  @media (--lg-and-up) {
     &[data-spacing="md"] {
       --grid-gap: var(--grid-gap-md);
     }
@@ -42,6 +42,15 @@
     --grid-columns: 1;
   }
 
+  @media (--sm-and-up) and (--lg-down) {
+    /* This ensures a wide enough min column size at "tablet" breakpoint so that
+     * no more than 2 columns show:
+     */
+    &:not([data-columns="1"]) {
+      --grid-minimum-column-size: 40%; /* a reasonable value below 50% */
+    }
+  }
+
   display: grid;
   gap: inherit;
   grid-template-columns: repeat(var(--grid-columns), minmax(var(--grid-minimum-column-size), 1fr));
@@ -51,7 +60,17 @@
   overflow-wrap: break-word;
 }
 
-@media (--sm-and-up) {
+@media (--lg-and-up) {
+  /* Convenience utility classes for use by grid cells */
+  .seeds-grid-span-2 {
+    grid-column: span 2;
+  }
+
+  .seeds-grid-span-3 {
+    grid-column: span 3;
+  }
+
+  /* Only large screens can force more than two columns */
   .seeds-grid-row[data-columns="4"] {
     --grid-columns: 4;
   }
@@ -59,28 +78,14 @@
   .seeds-grid-row[data-columns="3"] {
     --grid-columns: 3;
   }
+}
 
+@media (--sm-and-up) {
   .seeds-grid-row[data-columns="2"] {
     --grid-columns: 2;
   }
+}
 
-  .seeds-grid-row[data-columns="1"] {
-    --grid-columns: 1;
-  }
-
-  .seeds-grid-row[data-columns="1+2"] {
-    --grid-columns: 4;
-
-    > *:first-child {
-      grid-column: span 2;
-    }
-  }
-
-  .seeds-grid-row[data-columns="2+1"] {
-    --grid-columns: 4;
-
-    > *:last-child {
-      grid-column: span 2;
-    }
-  }
+.seeds-grid-row[data-columns="1"] {
+  --grid-columns: 1;
 }
