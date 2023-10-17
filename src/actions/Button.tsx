@@ -47,8 +47,8 @@ export interface ButtonProps {
   ariaHidden?: boolean
   /** Accessible label if button doesn't contain text content */
   ariaLabel?: string
-  /** ARIA live message which also shows loading spinner and disables clicks */
-  loadingSpinnerMessage?: string
+  /** Show loading spinner and set ARIA live message while disabling clicks */
+  loadingMessage?: string | null
   /** Element ID */
   id?: string
   /** Additional CSS classes */
@@ -77,13 +77,13 @@ const setupButtonProps = (props: ButtonProps) => {
     updatedProps: {
       "data-variant": props.variant || "primary",
       "data-size": props.size || "md",
-      "data-loading": props.loadingSpinnerMessage ? "true" : undefined,
+      "data-loading": props.loadingMessage ? "true" : undefined,
       id: props.id,
       className: classNames.join(" "),
       target: props.newWindowTarget ? "_blank" : undefined,
       "aria-label": props.ariaLabel,
       "aria-hidden": props.ariaHidden,
-      "aria-disabled": props.loadingSpinnerMessage ? "true" : undefined,
+      "aria-disabled": props.loadingMessage ? "true" : undefined,
       tabIndex: props.ariaHidden ? -1 : null,
     },
     inner: {
@@ -120,7 +120,7 @@ const Button = (props: ButtonProps) => {
       {inner.leadIcon}
       {inner.children}
       {inner.tailIcon}
-      {!props.href && <span className="seeds-screen-reader-only" aria-live="assertive">{props.loadingSpinnerMessage}</span>}
+      {!props.href && <span className="seeds-screen-reader-only" aria-live="assertive">{props.loadingMessage}</span>}
     </>
   )
 
@@ -135,7 +135,7 @@ const Button = (props: ButtonProps) => {
       <ButtonElement
         type={props.type || "button"}
         disabled={props.disabled}
-        onClick={props.loadingSpinnerMessage ? (event) => event.preventDefault : props.onClick}
+        onClick={props.loadingMessage ? (event) => event.preventDefault : props.onClick}
         {...updatedProps}
       >
         {buttonInner}

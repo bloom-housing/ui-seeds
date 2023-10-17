@@ -173,6 +173,9 @@ export const textButtons = () => (
 )
 
 export const loadingButton = () => {
-  const [loading, setLoading] = React.useState<undefined | string>()
-  return <Button loadingSpinnerMessage={loading} onClick={() => setLoading("Saving form")}>Click to Spin</Button>
+  const [loading, setLoading] = React.useState<null | string>(null)
+  return <Button loadingMessage={loading} onClick={() => {
+    setLoading("Saving form")
+    setTimeout(() => setLoading(null), 3000)
+  }}>Click to Spin</Button>
 }
