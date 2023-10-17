@@ -120,7 +120,6 @@ const Button = (props: ButtonProps) => {
       {inner.leadIcon}
       {inner.children}
       {inner.tailIcon}
-      {!props.href && <span className="seeds-screen-reader-only" aria-live="assertive">{props.loadingMessage}</span>}
     </>
   )
 
@@ -139,6 +138,7 @@ const Button = (props: ButtonProps) => {
         {...updatedProps}
       >
         {buttonInner}
+        <span className="seeds-screen-reader-only" aria-live="assertive">{props.loadingMessage}</span>
       </ButtonElement>
     )
   }
