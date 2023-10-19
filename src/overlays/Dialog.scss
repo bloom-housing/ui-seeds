@@ -2,6 +2,7 @@
   --dialog-border-radius: var(--seeds-rounded-lg);
   --dialog-border-color: var(--seeds-border-color);
   --dialog-padding: var(--seeds-s6);
+  --dialog-width: calc(var(--seeds-width-lg) - var(--seeds-s8)); /* 480px */
   --dialog-close-icon-color: var(--seeds-color-primary);
   --dialog-header-background-color: var(--seeds-bg-color-surface);
   --dialog-header-padding-block: var(--seeds-s6);
@@ -27,7 +28,7 @@
   --overlay-footer-padding-inline: var(--dialog-footer-padding-inline);
 
   overflow: hidden;
-  width: var(--seeds-width-lg);
+  width: var(--dialog-width);
   max-width: 100%;
   max-height: 90vh;
 
