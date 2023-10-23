@@ -41,7 +41,7 @@ Finally, import the primary CSS entrypoint for Seeds in your `_app.tsx` file:
 import "@bloom-housing/ui-seeds/src/global/app-css.scss"
 ```
 
-Now you can import individual Seeds components on the pages where you need to use them.
+Now you can import individual Seeds React components on the pages where you need to use them.
 
 ## Contributing
 
@@ -55,7 +55,7 @@ Design tokens are broken out into two layers: **base tokens** and **semantic tok
 
 For example, `--seeds-color-blue-500` is set to `#0077da`. In addition, `--seeds-color-primary` is set to `var(--seeds-color-blue-500)`. Your component should utilize `--seeds-color-primary` rather than `--seeds-color-blue-500`, unless you know for certain you _always_ need to use that particular color regardless of downstream theme changes.
 
-Components are encouraged to set up their own component specific tokens, which can leverage both semantic or base tokens (when a suitable semantic token isn't available). For example:
+Components are encouraged to set up their own component-specific tokens, which can leverage both semantic or base tokens (when a suitable semantic token isn't available). For example:
 
 ```css
 .seeds-card {
@@ -64,13 +64,40 @@ Components are encouraged to set up their own component specific tokens, which c
 }
 ```
 
-Various parts/subcomponents within a component can consume component tokens which have been defined at the top-level.
+Various parts/subcomponents within a component many consume component tokens which have been defined at this top-level.
 
-### Components
+We don't encourage defining tokens below the top-level, as consumers would then have to know about the internal DOM structure of a component which is bad for future-compatibility.
+
+```css
+/* Bad */
+.seeds-component {
+  --component-token-1: var(--seeds-s3);
+
+  padding: var(--component-token-1);
+
+  > .seeds-component-section {
+    --component-token-2: var(--seeds-s5);
+
+    padding: var(--component-token-2);
+  }
+}
+
+/* Good */
+.seeds-component {
+  --component-token-1: var(--seeds-s3);
+  --component-section-token-1: var(--seeds-s5);
+
+  > .seeds-component-section {
+    padding: var(--component-section-token-1);
+  }
+}
+```
+
+### Component Definitions
 
 Components are built as functional React components, with filenames to match the component name. So `FieldValue.tsx` exports a component named `FieldValue`. Component files are located next to "sidecar" `.scss` files containing styles for the component.
 
-A component class is a kebab-cased name of the component prefixed with `seeds`. So the `FieldValue` component is associated with the `seeds-field-value` class name.
+A component class is a kebab-cased name of the component prefixed with `seeds`. So the `FieldValue` component would associated with the `seeds-field-value` class name.
 
 Components may offer many variations such as color/type variants, sizes, etc. It is encouraged to use `data-*` attributes in your HTML to specify these variations:
 
@@ -102,12 +129,22 @@ Then in your stylesheet, you can add style rules based on these attributes:
 }
 ```
 
-Some boolean-style variations or "states" are simply easier to do as conditional classes. In that case, we typically use `is-` or `has-` prefixes, e.g. `is-fullwidth` or `has-lead-icon`.
+Some boolean-style variations or "states" are more straightforward to do as conditional classes. In that case, we typically use `is-` or `has-` prefixes, e.g. `.is-fullwidth` or `.has-lead-icon`.
+
+Some states are also better expressed through the use of ARIA roles and attributes. If ARIA needs to be managed through the HTML markup anyway, it's best to hang styles off of those instead of introducing duplication through additional attributes/classes.
 
 ### Documentation
 
-Component props are documented using TypeScript interfaces.
+Storybook stories are written in the `__stories__` folders in `.stories.tsx` files. These stories can then be displayed in documentation within zeroheight.
+
+In addition, the `.docs.mdx` files will provide a display of props and styling information.
+
+Component props are documented using TypeScript interfaces along with JSDoc comments. These comments will show up in Storybook when using the `ArgsTable` component in the MDX files.
+
+Component tokens are also documented using a Markdown table in the story MDX files.
+
+In zeroheight, stories can easily be embedded one-by-one due to the integration which was set up. However, to embed the props/styles docs pages, you will need to open up Storybook, click the "Docs" tab for a component, and copy the URL to an "iframe" embed within zeroheight.
 
 ## Testing
 
-
+Unit tests are located within `__tests__` folders, written with React's Testing Library and executed via Jest. Unit tests are intended to verify the basic functionality of a component along with any major branches in display logic.
