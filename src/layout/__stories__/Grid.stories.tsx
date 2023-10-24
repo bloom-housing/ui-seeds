@@ -22,13 +22,10 @@ export const gridExample = () => (
     <Heading size="xl">Three Columns:</Heading>
 
     <Grid spacing="lg">
-      <Grid.Row>
+      <Grid.Row columns={3}>
         <Grid.Cell>Cell 1</Grid.Cell>
         <Grid.Cell>Cell 2</Grid.Cell>
         <Grid.Cell>Cell 3</Grid.Cell>
-      </Grid.Row>
-
-      <Grid.Row columns={3}>
         <Grid.Cell>Cell 4</Grid.Cell>
         <Grid.Cell>Cell 5</Grid.Cell>
         <Grid.Cell>Cell 6</Grid.Cell>
@@ -58,8 +55,8 @@ export const gridExample = () => (
     <Heading size="xl">One Column + Two Columns:</Heading>
 
     <Grid spacing="lg">
-      <Grid.Row columns="1+2">
-        <Grid.Cell>Cell 1 (Long)</Grid.Cell>
+      <Grid.Row columns="4">
+        <Grid.Cell className="seeds-grid-span-2">Cell 1 (Long)</Grid.Cell>
         <Grid.Cell>Cell 2</Grid.Cell>
         <Grid.Cell>Cell 3</Grid.Cell>
       </Grid.Row>
@@ -68,10 +65,10 @@ export const gridExample = () => (
     <Heading size="xl">Two Columns + One Column:</Heading>
 
     <Grid spacing="lg">
-      <Grid.Row columns="2+1">
+      <Grid.Row columns="4">
         <Grid.Cell>Cell 1</Grid.Cell>
         <Grid.Cell>Cell 2</Grid.Cell>
-        <Grid.Cell>Cell 3 (Long)</Grid.Cell>
+        <Grid.Cell className="seeds-grid-span-2">Cell 3 (Long)</Grid.Cell>
       </Grid.Row>
     </Grid>
 
