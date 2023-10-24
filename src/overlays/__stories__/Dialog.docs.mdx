@@ -1,0 +1,39 @@
+import { ArgsTable } from "@storybook/addon-docs"
+import Dialog from "../Dialog"
+import { Swatch } from "../../../documentation/components/Swatch.tsx"
+
+# &lt;Dialog /&gt;
+
+## Properties
+
+<ArgsTable of={Dialog} />
+
+## Dialog Header Properties
+
+<ArgsTable of={Dialog.Header} />
+
+## Dialog Content Properties
+
+<ArgsTable of={Dialog.Content} />
+
+## Dialog Footer Properties
+
+<ArgsTable of={Dialog.Footer} />
+
+## Theme Variables
+
+| Name                                | Description                                            | Default                           |
+| ----------------------------------- | ------------------------------------------------------ | --------------------------------- |
+| `--dialog-border-radius`            | Outside border radius                                  | `--seeds-rounded-lg`              |
+| `--dialog-border-color`             | Outside border color                                   | `--seeds-border-color`            |
+| `--dialog-padding`                  | Spacing outside of Dialog content and between sections | `--seeds-s6`                      |
+| `--dialog-width`                    | Width of the dialog                                    | `--seeds-width-lg` - `--seeds-s8` |
+| `--dialog-close-icon-color`         | Close icon color                                       | `--seeds-color-primary`           |
+| `--dialog-header-background-color`  | Background color of Dialog header                      | `--seeds-bg-color-surface`        |
+| `--dialog-header-padding-block`     | Vertical padding around heading                        | `--dialog-padding` - `--seeds-s2` |
+| `--dialog-header-padding-inline`    | Horizontal padding around heading                      | `--dialog-padding`                |
+| `--dialog-content-text-color`       | Text color of Dialog content                           | `--seeds-text-color`              |
+| `--dialog-content-background-color` | Background color of Dialog content                     | `--seeds-bg-color-canvas`         |
+| `--dialog-footer-background-color`  | Background color of Dialog footer                      | `--seeds-bg-color-surface`        |
+| `--dialog-footer-padding-block`     | Vertical padding around heading                        | `--dialog-padding` - `--seeds-s2` |
+| `--dialog-footer-padding-inline`    | Horizontal padding around heading                      | `--dialog-padding`                |

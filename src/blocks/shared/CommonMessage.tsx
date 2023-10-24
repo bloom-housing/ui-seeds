@@ -1,4 +1,4 @@
-import React from "react"
+import React, { forwardRef } from "react"
 import {
   faCheck,
   faClock,
@@ -59,7 +59,7 @@ export interface CommonMessageProps {
   tabIndex?: number
 }
 
-const CommonMessage = (props: CommonMessageProps) => {
+const CommonMessage = forwardRef((props: CommonMessageProps, ref: React.ForwardedRef<HTMLDivElement>) => {
   const [visible, toggler] = useToggle(true)
   const classNames = ["seeds-common-message"]
   if (props.fullwidth) classNames.push("is-fullwidth")
@@ -69,6 +69,7 @@ const CommonMessage = (props: CommonMessageProps) => {
 
   return props.children ? (
     <div
+      ref={ref}
       id={props.id}
       className={classNames.join(" ")}
       data-variant={variant}
@@ -88,6 +89,6 @@ const CommonMessage = (props: CommonMessageProps) => {
       )}
     </div>
   ) : null
-}
+})
 
 export default CommonMessage

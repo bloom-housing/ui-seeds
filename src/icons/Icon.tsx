@@ -10,7 +10,7 @@ export interface IconProps {
   /** Additional CSS classes */
   className?: string
   /** Specify a specific preset size */
-  size?: "sm" | "md" | "lg" | "xl"
+  size?: "sm" | "md" | "lg" | "xl" | "2xl"
   "aria-hidden"?: boolean
   "aria-label"?: string
   "aria-labelledby"?: string

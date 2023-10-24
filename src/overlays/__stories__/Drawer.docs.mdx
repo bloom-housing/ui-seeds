@@ -1,0 +1,39 @@
+import { ArgsTable } from "@storybook/addon-docs"
+import Drawer from "../Drawer"
+import { Swatch } from "../../../documentation/components/Swatch.tsx"
+
+# &lt;Drawer /&gt;
+
+## Properties
+
+<ArgsTable of={Drawer} />
+
+## Drawer Header Properties
+
+<ArgsTable of={Drawer.Header} />
+
+## Drawer Content Properties
+
+<ArgsTable of={Drawer.Content} />
+
+## Drawer Footer Properties
+
+<ArgsTable of={Drawer.Footer} />
+
+## Theme Variables
+
+| Name                                | Description                                            | Default                           |
+| ----------------------------------- | ------------------------------------------------------ | --------------------------------- |
+| `--drawer-border-color`             | Outside border color                                   | `--seeds-border-color`            |
+| `--drawer-padding`                  | Spacing outside of Drawer content and between sections | `--seeds-s6`                      |
+| `--drawer-width`                    | Width of the drawer                                    | `--seeds-width-5xl`               |
+| `--drawer-nested-offset`            | Space to offset a nested drawer                        | `--seeds-s32`                     |
+| `--drawer-close-icon-color`         | Close icon color                                       | `--seeds-color-primary`           |
+| `--drawer-header-background-color`  | Background color of Drawer header                      | `--seeds-bg-color-surface`        |
+| `--drawer-header-padding-block`     | Vertical padding around heading                        | `--drawer-padding` - `--seeds-s2` |
+| `--drawer-header-padding-inline`    | Horizontal padding around heading                      | `--drawer-padding`                |
+| `--drawer-content-text-color`       | Text color of Drawer content                           | `--seeds-text-color`              |
+| `--drawer-content-background-color` | Background color of Drawer content                     | `--seeds-bg-color-canvas`         |
+| `--drawer-footer-background-color`  | Background color of Drawer footer                      | `--seeds-bg-color-surface`        |
+| `--drawer-footer-padding-block`     | Vertical padding around heading                        | `--drawer-padding` - `--seeds-s2` |
+| `--drawer-footer-padding-inline`    | Horizontal padding around heading                      | `--drawer-padding`                |
