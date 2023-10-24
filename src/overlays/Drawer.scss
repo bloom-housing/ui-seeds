@@ -2,6 +2,7 @@
   --drawer-border-color: var(--seeds-border-color);
   --drawer-padding: var(--seeds-s6);
   --drawer-width: var(--seeds-width-5xl); /* 1024px */
+  --drawer-nested-offset: var(--seeds-s32);
   --drawer-close-icon-color: var(--seeds-color-primary);
   --drawer-header-background-color: var(--seeds-bg-color-surface);
   --drawer-header-padding-block: calc(var(--drawer-padding) - var(--seeds-s2));
@@ -28,16 +29,14 @@
   width: var(--drawer-width);
   max-width: 100%;
   height: 100vh;
-}
-
-.seeds-drawer-nested {
-  --drawer-nested-offset: var(--seeds-s32);
-
-  width: calc(var(--drawer-width) - var(--drawer-nested-offset));
-  max-width: calc(100% - var(--drawer-nested-offset));
-
-  @media (--sm-only) {
-    --drawer-nested-offset: var(--seeds-s6);
+  
+  &.is-nested {
+    width: calc(var(--drawer-width) - var(--drawer-nested-offset));
+    max-width: calc(100% - var(--drawer-nested-offset));
+  
+    @media (--sm-only) {
+      --drawer-nested-offset: var(--seeds-s6);
+    }
   }
 }
 

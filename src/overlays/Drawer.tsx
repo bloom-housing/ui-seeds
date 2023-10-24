@@ -56,7 +56,7 @@ const Drawer = (props: DrawerProps) => {
 
   const classNames = ["seeds-drawer"]
   if (props.className) classNames.push(props.className)
-  if (props.nested) classNames.push("seeds-drawer-nested")
+  if (props.nested) classNames.push("is-nested")
 
   return (
     <Overlay
