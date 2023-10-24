@@ -219,4 +219,43 @@
     outline: var(--seeds-focus-ring-outline);
     box-shadow: var(--seeds-focus-ring-box-shadow);
   }
+
+  // loading indicator
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    top: calc(50% - .75em);
+    left: calc(50% - .75em);
+    border: 3px solid var(--seeds-color-on-inverse);
+    border-left-color: transparent;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 250ms;
+  }
+
+  &[data-loading="true"] {
+    position: relative;
+    color: transparent;
+
+    &::after {
+      opacity: 1;
+      animation: spinning-rotation 1s linear infinite;
+    }
+
+    .btnSubmit-text {
+      visibility: hidden;
+    }
+  }
+}
+
+@keyframes spinning-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -49,6 +49,8 @@ export interface ButtonProps {
   ariaHidden?: boolean
   /** Accessible label if button doesn't contain text content */
   ariaLabel?: string
+  /** Show loading spinner and set ARIA live message while disabling clicks */
+  loadingMessage?: string | null
   /** Element ID */
   id?: string
   /** Additional CSS classes */
@@ -77,11 +79,13 @@ const setupButtonProps = (props: ButtonProps) => {
     updatedProps: {
       "data-variant": props.variant || "primary",
       "data-size": props.size || "md",
+      "data-loading": props.loadingMessage ? "true" : undefined,
       id: props.id,
       className: classNames.join(" "),
       target: props.newWindowTarget ? "_blank" : undefined,
       "aria-label": props.ariaLabel,
       "aria-hidden": props.ariaHidden,
+      "aria-disabled": props.loadingMessage ? "true" : undefined,
       tabIndex: props.ariaHidden ? -1 : null,
     },
     inner: {
@@ -132,10 +136,11 @@ const Button = (props: ButtonProps) => {
       <ButtonElement
         type={props.type || "button"}
         disabled={props.disabled}
-        onClick={props.onClick}
+        onClick={props.loadingMessage ? (event) => event.preventDefault : props.onClick}
         {...updatedProps}
       >
         {buttonInner}
+        <span className="seeds-screen-reader-only" aria-live="assertive">{props.loadingMessage}</span>
       </ButtonElement>
     )
   }
