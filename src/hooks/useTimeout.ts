@@ -20,6 +20,8 @@ export default function useTimeout(callback: () => void, delay?: number) {
     if (delay) {
       timeoutRef.current = window.setTimeout(tick, delay)
       return () => window.clearTimeout(timeoutRef.current as number)
+    } else {
+      return () => {} // makes TS happy to have an explicit return
     }
   }, [delay])
 
