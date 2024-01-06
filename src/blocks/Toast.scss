@@ -1,8 +1,8 @@
 #seeds-toast-stack {
   --toast-stack-gap: var(--seeds-s4);
-  --toast-stack-inset-top: var(--seeds-s3);
-  --toast-stack-inset-right: var(--seeds-s3);
-  --toast-stack-max-width: var(--seeds-width-sm);
+  --toast-stack-inset-top: var(--seeds-s4);
+  --toast-stack-inset-right: var(--seeds-s4);
+  --toast-stack-width: auto;
 
   position: fixed;
   z-index: var(--seeds-z-index-overlay);
@@ -11,7 +11,7 @@
   gap: var(--toast-stack-gap);
   top: var(--toast-stack-inset-top);
   right: var(--toast-stack-inset-right);
-  width: var(--toast-stack-max-width);
+  width: var(--toast-stack-width);
   max-width: calc(100% - var(--toast-stack-inset-right) * 2);
 }
 
