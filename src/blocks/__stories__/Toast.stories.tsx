@@ -61,7 +61,7 @@ export const showToasts = () => {
       )}
       {warning && (
         <Toast variant="warn" hideTimeout={5000}>
-          Warn message!
+          Warn message! (And a long bit of text to see what happens)
         </Toast>
       )}
     </>
