@@ -19,7 +19,7 @@
   --tab-active-indicator-color: var(--seeds-color-primary);
   --tab-panel-padding: var(--seeds-spacer-section);
   --tab-panel-background-color: var(--seeds-bg-color-surface);
-  @custom-media --tab-collapse-breakpoint (max-width: --sm-only);
+  @custom-media --tab-collapse-breakpoint (--sm-only);
 }
 
 .tabs-tablist {
