@@ -179,10 +179,10 @@ export const textButtons = () => (
       </Button>
     </div>
     <div style={{ display: "flex", gap: "1rem" }}>
-      <Button variant="text" leadIcon={<Icon icon={faHeart} />}>
+      <Button variant="text" leadIcon={<Icon><HeartIcon /></Icon>}>
         Lead Icon
       </Button>
-      <Button variant="text" tailIcon={<Icon icon={faHeart} />}>
+      <Button variant="text" tailIcon={<Icon><HeartIcon /></Icon>}>
         Tail Icon
       </Button>
     </div>
