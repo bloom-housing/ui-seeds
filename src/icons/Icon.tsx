@@ -15,9 +15,9 @@ export interface IconProps {
   "aria-label"?: string
   "aria-labelledby"?: string
   tabIndex?: number
-  /** Icon SVG metadata imported from Font Awesome */
+  /** DEPRECATED: Icon SVG metadata imported from Font Awesome */
   icon?: IconDefinition
-  /** Custom SVG in JSX if not using Font Awesome */
+  /** Custom SVG in JSX */
   children?: React.ReactNode
 }
 

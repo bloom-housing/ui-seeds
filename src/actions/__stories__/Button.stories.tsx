@@ -3,7 +3,7 @@ import React from "react"
 import Button from "../Button"
 
 import Icon from "../../icons/Icon"
-import { faHeart } from "@fortawesome/free-solid-svg-icons"
+import { HeartIcon } from "@heroicons/react/24/solid"
 
 import MDXDocs from "./Button.docs.mdx"
 import HeadingGroup from "../../text/HeadingGroup"
@@ -163,8 +163,8 @@ export const linkButtons = () => (
 
 export const buttonsWithIcons = () => (
   <div style={{ display: "flex", gap: "1rem" }}>
-    <Button leadIcon={<Icon icon={faHeart} />}>Lead Icon</Button>
-    <Button tailIcon={<Icon icon={faHeart} />}>Tail Icon</Button>
+    <Button leadIcon={<Icon><HeartIcon /></Icon>}>Lead Icon</Button>
+    <Button tailIcon={<Icon><HeartIcon /></Icon>}>Tail Icon</Button>
   </div>
 )
 
