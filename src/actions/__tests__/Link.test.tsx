@@ -32,7 +32,7 @@ describe("<Link>", () => {
       "href",
       "https://example.com"
     )
-    expect(container.querySelector("svg[data-icon='arrow-up-right-from-square']")).toBeVisible()
+    expect(container.querySelector("svg")).toBeVisible()
   })
 
   it("displays external links with a custom icon", () => {

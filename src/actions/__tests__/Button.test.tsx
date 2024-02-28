@@ -45,19 +45,19 @@ describe("<Button>", () => {
       "href",
       "https://example.com"
     )
-    expect(container.querySelector("svg[data-icon='arrow-up-right-from-square']")).toBeVisible()
+    expect(container.querySelector("svg")).toBeVisible()
   })
 
   it("displays external links with a custom icon", () => {
     const content = "Button Label"
     const { getByRole, container } = render(
-      <Button href="https://example.com" tailIcon={<Icon icon={faHeart} />}>
+      <Button href="https://example.com" tailIcon={<Icon><HeartIcon /></Icon>}>
         {content}
       </Button>
     )
 
     expect(getByRole("link", { name: content })).toHaveAttribute("href", "https://example.com")
-    expect(container.querySelector("svg[data-icon='heart']")).toBeVisible()
+    expect(container.querySelector("svg")).toBeVisible()
   })
 
   it("displays external links with no icon", () => {
