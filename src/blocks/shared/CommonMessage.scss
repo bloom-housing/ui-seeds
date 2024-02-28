@@ -94,9 +94,10 @@
     border: none;
   }
 
-  .icon {
+  .seeds-icon {
+    --icon-scale-factor: 1.2;
+
     font-size: var(--common-message-icon-size);
-    margin-block-start: -0.15em; /* Slightly adjust flex alignment */
   }
 
   a {

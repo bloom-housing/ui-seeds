@@ -2,7 +2,7 @@ import { render, cleanup, fireEvent } from "@testing-library/react"
 import Button from "../Button"
 
 import Icon from "../../icons/Icon"
-import { faHeart } from "@fortawesome/free-solid-svg-icons"
+import { HeartIcon } from "@heroicons/react/24/solid"
 
 afterEach(cleanup)
 

@@ -1,13 +1,4 @@
 import React, { forwardRef } from "react"
-import {
-  faCheck,
-  faClock,
-  faClose,
-  faInfoCircle,
-  faLock,
-  faTriangleExclamation,
-  IconDefinition,
-} from "@fortawesome/free-solid-svg-icons"
 import { CheckIcon, ClockIcon, XMarkIcon, InformationCircleIcon, LockClosedIcon, ExclamationTriangleIcon } from "@heroicons/react/20/solid"
 import Icon from "../../icons/Icon"
 import useToggle from "../../hooks/useToggle"
@@ -82,11 +73,11 @@ const CommonMessage = forwardRef((props: CommonMessageProps, ref: React.Forwarde
     >
       {props.customIcon
         ? props.customIcon
-        : VariantIcon && <Icon size="lg"><VariantIcon /></Icon>}
+        : VariantIcon && <Icon size="md"><VariantIcon /></Icon>}
       <span data-part="content">{props.children}</span>
       {props.closeable && (
         <button aria-label="Close" onClick={toggler}>
-          <Icon size="lg"><XMarkIcon /></Icon>
+          <Icon size="md"><XMarkIcon /></Icon>
         </button>
       )}
     </div>

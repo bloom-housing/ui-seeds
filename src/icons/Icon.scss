@@ -1,4 +1,6 @@
 .seeds-icon {
+  --icon-scale-factor: 1.1;
+
   --icon-sm: 0.75rem;
   --icon-sm-alignment: -0.05rem;
   --icon-md: 1rem;
@@ -10,11 +12,11 @@
   --icon-2xl: 3rem;
   --icon-2xl-alignment: -1rem;
   --icon-height: 1em;
-  --icon-alignment: -0.125em;
+  --icon-alignment: -0.15em;
 
   display: inline-block;
   vertical-align: var(--icon-alignment);
-  height: var(--icon-height);
+  height: calc(var(--icon-height) * var(--icon-scale-factor));
 
   &[data-size="sm"] {
     --icon-height: var(--icon-sm);
@@ -46,5 +48,12 @@
   display: block;
   height: 100%;
   aspect-ratio: 1 / 1;
+}
+
+.seeds-icon:not([data-outlined]) svg {
   fill: currentColor;
+}
+
+.seeds-icon[data-outlined] svg {
+  stroke: currentColor;
 }

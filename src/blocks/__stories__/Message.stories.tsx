@@ -3,7 +3,7 @@ import { Story } from "@storybook/react"
 
 import Message from "../Message"
 import Icon from "../../icons/Icon"
-import { faClock } from "@fortawesome/free-regular-svg-icons"
+import { ClockIcon } from "@heroicons/react/24/outline"
 
 import MDXDocs from "./Message.docs.mdx"
 
@@ -19,17 +19,9 @@ export default {
 
 export const status = () => (
   <>
-    <Message id="status-message" variant="primary-inverse" customIcon={<Icon icon={faClock} />}>
+    <Message id="status-message" variant="primary-inverse" customIcon={<Icon outlined><ClockIcon /></Icon>}>
       Application Due Date
     </Message>
-
-    <style>
-      {`
-      #status-message {
-        --message-icon-size: 1.25em;
-      }
-      `}
-    </style>
   </>
 )
 

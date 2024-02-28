@@ -11,6 +11,7 @@ export interface IconProps {
   className?: string
   /** Specify a specific preset size */
   size?: "sm" | "md" | "lg" | "xl" | "2xl"
+  outlined?: boolean
   "aria-hidden"?: boolean
   "aria-label"?: string
   "aria-labelledby"?: string
@@ -31,6 +32,7 @@ const Icon = (props: IconProps) => {
       id={props.id}
       className={classNames.join(" ")}
       data-size={props.size}
+      data-outlined={props.outlined}
       aria-hidden={isHidden}
       aria-label={props["aria-label"]}
       aria-labelledby={props["aria-labelledby"]}
