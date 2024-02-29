@@ -40,7 +40,7 @@ export const inverseVariants = () => (
 )
 
 export const withCustomIcon = () => (
-  <Alert variant="success" customIcon={<Icon><HomeModernIcon /></Icon>}>
+  <Alert variant="success" customIcon={<Icon size="md"><HomeModernIcon /></Icon>}>
     A custom icon (house-chimney)
   </Alert>
 )

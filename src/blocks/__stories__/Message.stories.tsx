@@ -19,7 +19,7 @@ export default {
 
 export const status = () => (
   <>
-    <Message id="status-message" variant="primary-inverse" customIcon={<Icon outlined><ClockIcon /></Icon>}>
+    <Message id="status-message" variant="primary-inverse" customIcon={<Icon size="md" outlined><ClockIcon /></Icon>}>
       Application Due Date
     </Message>
   </>

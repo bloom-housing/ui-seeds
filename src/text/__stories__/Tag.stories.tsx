@@ -88,10 +88,10 @@ export const withIcons = () => (
   <>
     <div style={{ display: "flex", gap: ".5rem" }}>
       <Tag>
-        <Icon size="md"><FaceSmileIcon /></Icon> Icon Left
+        <Icon><FaceSmileIcon /></Icon> Icon Left
       </Tag>
       <Tag>
-        Icon Right <Icon size="md"><FaceSmileIcon /></Icon>
+        Icon Right <Icon><FaceSmileIcon /></Icon>
       </Tag>
     </div>
   </>

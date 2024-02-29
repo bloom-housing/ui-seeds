@@ -5,7 +5,7 @@
   --common-message-border-radius: 0;
   --common-message-border: none;
   --common-message-flex-gap: var(--seeds-s3);
-  --common-message-icon-size: 1em;
+  --common-message-icon-scale-factor: 1;
   --common-message-max-width: var(--seeds-width-sm);
   --common-message-font: var(--seeds-font-sans);
   --common-message-font-size: var(--seeds-type-caption-size);
@@ -15,6 +15,7 @@
   padding: var(--common-message-padding);
   display: flex;
   align-items: center;
+  line-height: var(--seeds-line-height-4);
   gap: var(--common-message-flex-gap);
   max-width: var(--common-message-max-width);
   font-family: var(--common-message-font);
@@ -95,9 +96,7 @@
   }
 
   .seeds-icon {
-    --icon-scale-factor: 1.2;
-
-    font-size: var(--common-message-icon-size);
+    --icon-scale-factor: var(--common-message-icon-scale-factor);
   }
 
   a {
