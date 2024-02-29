@@ -11,6 +11,7 @@ export interface IconProps {
   className?: string
   /** Specify a specific preset size */
   size?: "sm" | "md" | "lg" | "xl" | "2xl"
+  /** Set this to true for icons which only use outlined paths */
   outlined?: boolean
   "aria-hidden"?: boolean
   "aria-label"?: string
