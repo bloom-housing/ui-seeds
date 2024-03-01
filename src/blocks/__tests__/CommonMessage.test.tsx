@@ -20,6 +20,6 @@ describe("<CommonMessage>", () => {
     expect(container.querySelector("#test-id.test-class")).not.toBeNull()
     expect(container.querySelector("#test-id[data-variant=warn]")).not.toBeNull()
     expect(container.querySelector("button[aria-label=Close]")).not.toBeNull()
-    expect(container.querySelector("svg.fa-clock")).not.toBeNull()
+    expect(container.querySelector("svg")).not.toBeNull()
   })
 })

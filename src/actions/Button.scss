@@ -3,7 +3,7 @@
   --button-font-family: var(--seeds-font-alt-sans);
   --button-font-weight: bold;
   --button-interior-gap: var(--seeds-s3);
-  --button-icon-size-percentage: 75%;
+  --button-icon-scale-factor: 0.85;
   --button-icon-side-padding: var(--seeds-s4);
 
   --button-padding-sm: calc(var(--seeds-s3_5) - var(--button-border-width))
@@ -212,7 +212,11 @@
   }
 
   & > .seeds-icon {
-    font-size: var(--button-icon-size-percentage);
+    --icon-scale-factor: var(--button-icon-scale-factor);
+  }
+
+  &[data-size="sm"] > .seeds-icon {
+    --icon-scale-factor: calc(var(--button-icon-scale-factor) * 1.15);
   }
 
   &:focus-visible {

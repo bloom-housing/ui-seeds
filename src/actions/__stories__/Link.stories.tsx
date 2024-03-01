@@ -3,7 +3,7 @@ import React from "react"
 import Link from "../Link"
 
 import Icon from "../../icons/Icon"
-import { faHeart } from "@fortawesome/free-solid-svg-icons"
+import { HeartIcon } from "@heroicons/react/24/solid"
 
 import MDXDocs from "./Link.docs.mdx"
 
@@ -37,10 +37,10 @@ export const externalLink = () => (
 
 export const linksWithIcons = () => (
   <div style={{ display: "flex", gap: "1rem" }}>
-    <Link href="/test" leadIcon={<Icon icon={faHeart} />}>
+    <Link href="/test" leadIcon={<Icon><HeartIcon /></Icon>}>
       Lead Icon
     </Link>
-    <Link href="/test" tailIcon={<Icon icon={faHeart} />}>
+    <Link href="/test" tailIcon={<Icon><HeartIcon /></Icon>}>
       Tail Icon
     </Link>
   </div>

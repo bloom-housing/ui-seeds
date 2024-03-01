@@ -1,11 +1,11 @@
 import React from "react"
 import { Story } from "@storybook/react"
 
-import { faHouseChimney } from "@fortawesome/free-solid-svg-icons"
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
-import { faDoorOpen } from "@fortawesome/free-solid-svg-icons"
-import { faPhone } from "@fortawesome/free-solid-svg-icons"
-import { faCircleUser } from "@fortawesome/free-regular-svg-icons"
+import { HomeModernIcon } from "@heroicons/react/24/solid"
+import { EnvelopeIcon } from "@heroicons/react/24/outline"
+import { BookOpenIcon } from "@heroicons/react/24/solid"
+import { PhoneIcon } from "@heroicons/react/24/solid"
+import { UserCircleIcon } from "@heroicons/react/24/outline"
 
 import Icon, { IconProps } from "../Icon"
 
@@ -34,19 +34,34 @@ export default {
 const Template: Story<IconProps> = ({ size }) => (
   <>
     <div style={{ fontSize: "1.5em" }}>
-      <Icon icon={faHouseChimney} size={size} /> house-chimney
+      <Icon size={size}>
+        <HomeModernIcon />
+      </Icon>{" "}
+      home-modern
     </div>
     <div style={{ fontSize: "1.5em" }}>
-      <Icon icon={faEnvelope} size={size} /> envelope
+      <Icon outlined size={size}>
+        <EnvelopeIcon />
+      </Icon>{" "}
+      envelope
     </div>
     <div style={{ fontSize: "1.5em" }}>
-      <Icon icon={faDoorOpen} size={size} /> door-open
+      <Icon size={size}>
+        <BookOpenIcon />
+      </Icon>{" "}
+      book-open
     </div>
     <div style={{ fontSize: "1.5em" }}>
-      <Icon icon={faPhone} size={size} /> phone
+      <Icon size={size}>
+        <PhoneIcon />
+      </Icon>{" "}
+      phone
     </div>
     <div style={{ fontSize: "1.5em" }}>
-      <Icon icon={faCircleUser} size={size} /> circle-user
+      <Icon outlined size={size}>
+        <UserCircleIcon />
+      </Icon>{" "}
+      user-circle
     </div>
   </>
 )
@@ -60,13 +75,22 @@ icons.args = {
 export const containerBasedSizes = () => (
   <>
     <div style={{ fontSize: "var(--seeds-font-size-sm)" }}>
-      <Icon icon={faDoorOpen} /> door-open
+      <Icon>
+        <BookOpenIcon />
+      </Icon>{" "}
+      book-open
     </div>
     <div style={{ fontSize: "var(--seeds-font-size-lg)" }}>
-      <Icon icon={faDoorOpen} /> door-open
+      <Icon>
+        <BookOpenIcon />
+      </Icon>{" "}
+      book-open
     </div>
     <div style={{ fontSize: "var(--seeds-font-size-2xl)" }}>
-      <Icon icon={faDoorOpen} /> door-open
+      <Icon>
+        <BookOpenIcon />
+      </Icon>{" "}
+      book-open
     </div>
   </>
 )
@@ -74,19 +98,34 @@ export const containerBasedSizes = () => (
 export const presetSizes = () => (
   <>
     <div>
-      <Icon icon={faHouseChimney} size={"sm"} /> house-chimney (sm)
+      <Icon size={"sm"}>
+        <HomeModernIcon />
+      </Icon>{" "}
+      home-modern (sm)
     </div>
     <div>
-      <Icon icon={faHouseChimney} size={"md"} /> house-chimney (md)
+      <Icon size={"md"}>
+        <HomeModernIcon />
+      </Icon>{" "}
+      home-modern (md)
     </div>
     <div>
-      <Icon icon={faHouseChimney} size={"lg"} /> house-chimney (lg)
+      <Icon size={"lg"}>
+        <HomeModernIcon />
+      </Icon>{" "}
+      home-modern (lg)
     </div>
     <div>
-      <Icon icon={faHouseChimney} size={"xl"} /> house-chimney (xl)
+      <Icon size={"xl"}>
+        <HomeModernIcon />
+      </Icon>{" "}
+      home-modern (xl)
     </div>
     <div>
-      <Icon icon={faHouseChimney} size={"2xl"} /> house-chimney (2xl)
+      <Icon size={"2xl"}>
+        <HomeModernIcon />
+      </Icon>{" "}
+      home-modern (2xl)
     </div>
   </>
 )

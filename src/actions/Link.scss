@@ -4,7 +4,7 @@
 
 .seeds-link {
   --link-interior-gap: var(--seeds-s1);
-  --link-icon-size-percentage: 75%;
+  --link-icon-scale-factor: 0.85;
 
   display: inline-flex;
   gap: var(--link-interior-gap);
@@ -14,6 +14,6 @@
   }
 
   & > .seeds-icon {
-    font-size: var(--link-icon-size-percentage);
+    --icon-scale-factor: var(--link-icon-scale-factor);
   }
 }

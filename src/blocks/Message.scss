@@ -3,7 +3,7 @@
   --message-border-radius: 0;
   --message-border: none;
   --message-flex-gap: var(--seeds-s3);
-  --message-icon-size: 1em;
+  --message-icon-scale-factor: 1;
   --message-max-width: var(--seeds-width-sm);
   --message-font: var(--seeds-font-sans);
   --message-font-size: var(--seeds-type-caption-size);
@@ -14,7 +14,7 @@
   --common-message-border-radius: var(--message-border-radius);
   --common-message-border: var(--message-border);
   --common-message-flex-gap: var(--message-flex-gap);
-  --common-message-icon-size: var(--message-icon-size);
+  --common-message-icon-scale-factor: var(--message-icon-scale-factor);
   --common-message-max-width: var(--message-max-width);
   --common-message-font: var(--message-font);
   --common-message-font-size: var(--message-font-size);

@@ -3,7 +3,7 @@ import React from "react"
 import Tag from "../Tag"
 
 import Icon from "../../icons/Icon"
-import { faFaceSmile } from "@fortawesome/free-solid-svg-icons"
+import { FaceSmileIcon } from "@heroicons/react/20/solid"
 
 import MDXDocs from "./Tag.docs.mdx"
 import HeadingGroup from "../HeadingGroup"
@@ -88,10 +88,10 @@ export const withIcons = () => (
   <>
     <div style={{ display: "flex", gap: ".5rem" }}>
       <Tag>
-        <Icon icon={faFaceSmile} /> Icon Left
+        <Icon><FaceSmileIcon /></Icon> Icon Left
       </Tag>
       <Tag>
-        Icon Right <Icon icon={faFaceSmile} />
+        Icon Right <Icon><FaceSmileIcon /></Icon>
       </Tag>
     </div>
   </>

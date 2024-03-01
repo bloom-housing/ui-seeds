@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useId } from "react"
 import { createPortal } from "react-dom"
 import FocusTrap from "focus-trap-react"
-import { faXmark } from "@fortawesome/free-solid-svg-icons"
+import { XMarkIcon } from "@heroicons/react/20/solid"
 import Icon from "../icons/Icon"
 import Heading from "../text/Heading"
 import usePortal from "../hooks/usePortal"
@@ -30,7 +30,7 @@ const OverlayHeader = (props: OverlayHeaderProps) => {
 
   const closeButton = (
     <button onClick={() => headerRef.current?.dispatchEvent(new Event("seeds:close", { bubbles: true }))}>
-      <Icon icon={faXmark} size={"lg"} className={"seeds-overlay-close-icon"} />
+      <Icon size={"lg"} className={"seeds-overlay-close-icon"}><XMarkIcon /></Icon>
     </button>
   )
 

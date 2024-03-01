@@ -5,9 +5,8 @@ import {
   isExternalLink,
   shouldShowExternalLinkIcon,
 } from "../global/NavigationContext"
-
 import Icon from "../icons/Icon"
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid"
 
 import "./Link.scss"
 
@@ -38,7 +37,7 @@ const Link = (props: LinkProps) => {
   const classNames = ["seeds-link"]
 
   const tailIcon = shouldShowExternalLinkIcon(props) ? (
-    <Icon icon={faArrowUpRightFromSquare} />
+    <Icon><ArrowTopRightOnSquareIcon /></Icon>
   ) : (
     props.tailIcon
   )
