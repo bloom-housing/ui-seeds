@@ -1,15 +1,15 @@
 .seeds-icon {
   --icon-scale-factor: 1.0;
 
-  --icon-sm: 0.85rem;
+  --icon-sm: var(--seeds-s3_5);
   --icon-sm-alignment: -0.05rem;
-  --icon-md: 1.25rem;
+  --icon-md: var(--seeds-s5);
   --icon-md-alignment: -0.125rem;
-  --icon-lg: 1.65rem;
+  --icon-lg: var(--seeds-s7);
   --icon-lg-alignment: -0.35rem;
-  --icon-xl: 2.75rem;
+  --icon-xl: var(--seeds-s11);
   --icon-xl-alignment: -0.95rem;
-  --icon-2xl: 3.25rem;
+  --icon-2xl: var(--seeds-s14);
   --icon-2xl-alignment: -1.25rem;
   --icon-height: 1.15em;
   --icon-alignment: -0.25em;
