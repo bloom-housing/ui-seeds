@@ -45,6 +45,8 @@ export interface CommonMessageProps {
   customIcon?: React.ReactNode
   /** If the component can hide via a close icon */
   closeable?: boolean
+  /** A callback function when the component has closed */
+  onClose?: () => void
   /** Scale to fit component to its container */
   fullwidth?: boolean
   /** Element ID */
@@ -59,36 +61,48 @@ export interface CommonMessageProps {
   tabIndex?: number
 }
 
-const CommonMessage = forwardRef((props: CommonMessageProps, ref: React.ForwardedRef<HTMLDivElement>) => {
-  const [visible, toggler] = useToggle(true)
-  const classNames = ["seeds-common-message"]
-  if (props.fullwidth) classNames.push("is-fullwidth")
-  if (props.className) classNames.push(props.className)
+const CommonMessage = forwardRef(
+  (props: CommonMessageProps, ref: React.ForwardedRef<HTMLDivElement>) => {
+    const [visible, toggler] = useToggle(true)
+    const classNames = ["seeds-common-message"]
+    if (props.fullwidth) classNames.push("is-fullwidth")
+    if (props.className) classNames.push(props.className)
 
-  const variant = props.variant || "primary"
+    const variant = props.variant || "primary"
 
-  return props.children ? (
-    <div
-      ref={ref}
-      id={props.id}
-      className={classNames.join(" ")}
-      data-variant={variant}
-      hidden={visible === false}
-      role={props.role}
-      tabIndex={props.tabIndex}
-      data-testid={props.testId}
-    >
-      {props.customIcon
-        ? props.customIcon
-        : CommonMessageIconMap[variant] && <Icon icon={CommonMessageIconMap[variant]} size="md" />}
-      <span data-part="content">{props.children}</span>
-      {props.closeable && (
-        <button aria-label="Close" onClick={toggler}>
-          <Icon icon={faClose} size="md" />
-        </button>
-      )}
-    </div>
-  ) : null
-})
+    return props.children ? (
+      <div
+        ref={ref}
+        id={props.id}
+        className={classNames.join(" ")}
+        data-variant={variant}
+        hidden={visible === false}
+        role={props.role}
+        tabIndex={props.tabIndex}
+        data-testid={props.testId}
+      >
+        {props.customIcon
+          ? props.customIcon
+          : CommonMessageIconMap[variant] && (
+              <Icon icon={CommonMessageIconMap[variant]} size="md" />
+            )}
+        <span data-part="content">{props.children}</span>
+        {props.closeable && (
+          <button
+            aria-label="Close"
+            onClick={() => {
+              toggler()
+              if (props.onClose) {
+                props.onClose()
+              }
+            }}
+          >
+            <Icon icon={faClose} size="md" />
+          </button>
+        )}
+      </div>
+    ) : null
+  }
+)
 
 export default CommonMessage

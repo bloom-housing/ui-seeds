@@ -53,7 +53,7 @@ export const withLink = () => (
 
 export const wideContainerLayout = () => (
   <>
-    <Alert id="in-container" variant="alert" fullwidth>
+    <Alert id="in-container" variant="alert" fullwidth onClose={() => alert("Closing!")}>
       An alert that scales to full container width
     </Alert>
 
