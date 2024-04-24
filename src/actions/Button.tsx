@@ -48,6 +48,10 @@ export interface ButtonProps {
   ariaHidden?: boolean
   /** Accessible label if button doesn't contain text content */
   ariaLabel?: string
+  /** The ID of an element you're expanding/collapsing as indicated by `ariaExpanded` */
+  ariaControls?: string
+  /** The expanded or collapsed state of the element whose ID is specified via `ariaControls` */
+  ariaExpanded?: boolean
   /** Show loading spinner and set ARIA live message while disabling clicks */
   loadingMessage?: string | null
   /** Element ID */
@@ -65,7 +69,9 @@ const setupButtonProps = (props: ButtonProps) => {
   const classNames = ["seeds-button"]
 
   const tailIcon = shouldShowExternalLinkIcon(props) ? (
-    <Icon><ArrowTopRightOnSquareIcon /></Icon>
+    <Icon>
+      <ArrowTopRightOnSquareIcon />
+    </Icon>
   ) : (
     props.tailIcon
   )
@@ -84,6 +90,8 @@ const setupButtonProps = (props: ButtonProps) => {
       target: props.newWindowTarget ? "_blank" : undefined,
       "aria-label": props.ariaLabel,
       "aria-hidden": props.ariaHidden,
+      "aria-controls": props.ariaControls,
+      "aria-expanded": props.ariaExpanded,
       "aria-disabled": props.loadingMessage ? "true" : undefined,
       tabIndex: props.ariaHidden ? -1 : null,
     },
@@ -139,7 +147,9 @@ const Button = (props: ButtonProps) => {
         {...updatedProps}
       >
         {buttonInner}
-        <span className="seeds-screen-reader-only" aria-live="assertive">{props.loadingMessage}</span>
+        <span className="seeds-screen-reader-only" aria-live="assertive">
+          {props.loadingMessage}
+        </span>
       </ButtonElement>
     )
   }

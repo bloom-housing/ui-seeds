@@ -163,37 +163,90 @@ export const linkButtons = () => (
 
 export const buttonsWithIcons = () => (
   <div style={{ display: "flex", gap: "1rem" }}>
-    <Button leadIcon={<Icon><HeartIcon /></Icon>}>Lead Icon</Button>
-    <Button tailIcon={<Icon><HeartIcon /></Icon>}>Tail Icon</Button>
+    <Button
+      leadIcon={
+        <Icon>
+          <HeartIcon />
+        </Icon>
+      }
+    >
+      Lead Icon
+    </Button>
+    <Button
+      tailIcon={
+        <Icon>
+          <HeartIcon />
+        </Icon>
+      }
+    >
+      Tail Icon
+    </Button>
   </div>
 )
 
 export const textButtons = () => (
   <>
     <div style={{ display: "flex", gap: "1rem", marginBlockEnd: "1rem" }}>
-      <Button variant="text">
-        Medium Size
-      </Button>
+      <Button variant="text">Medium Size</Button>
       <Button variant="text" size="sm">
         Small Size
       </Button>
     </div>
     <div style={{ display: "flex", gap: "1rem" }}>
-      <Button variant="text" leadIcon={<Icon><HeartIcon /></Icon>}>
+      <Button
+        variant="text"
+        leadIcon={
+          <Icon>
+            <HeartIcon />
+          </Icon>
+        }
+      >
         Lead Icon
       </Button>
-      <Button variant="text" tailIcon={<Icon><HeartIcon /></Icon>}>
+      <Button
+        variant="text"
+        tailIcon={
+          <Icon>
+            <HeartIcon />
+          </Icon>
+        }
+      >
         Tail Icon
       </Button>
     </div>
-
   </>
 )
 
 export const loadingButton = () => {
   const [loading, setLoading] = React.useState<null | string>(null)
-  return <Button loadingMessage={loading} onClick={() => {
-    setLoading("Saving form")
-    setTimeout(() => setLoading(null), 3000)
-  }}>Click to Spin</Button>
+  return (
+    <Button
+      loadingMessage={loading}
+      onClick={() => {
+        setLoading("Saving form")
+        setTimeout(() => setLoading(null), 3000)
+      }}
+    >
+      Click to Spin
+    </Button>
+  )
+}
+
+export const expandingButton = () => {
+  const [expanded, setExpanded] = React.useState<boolean>(false)
+
+  return (
+    <>
+      <Button
+        onClick={() => setExpanded(!expanded)}
+        ariaControls="show-or-hide"
+        ariaExpanded={expanded}
+      >
+        {expanded ? "Hide Content" : "Show Content"}
+      </Button>
+      <p id="show-or-hide" hidden={!expanded}>
+        Content that should only appear in the "expanded" state.
+      </p>
+    </>
+  )
 }

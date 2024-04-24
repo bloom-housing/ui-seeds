@@ -1,5 +1,12 @@
 import React, { forwardRef } from "react"
-import { CheckIcon, ClockIcon, XMarkIcon, InformationCircleIcon, LockClosedIcon, ExclamationTriangleIcon } from "@heroicons/react/20/solid"
+import {
+  CheckIcon,
+  ClockIcon,
+  XMarkIcon,
+  InformationCircleIcon,
+  LockClosedIcon,
+  ExclamationTriangleIcon,
+} from "@heroicons/react/20/solid"
 import Icon from "../../icons/Icon"
 import useToggle from "../../hooks/useToggle"
 
@@ -37,6 +44,8 @@ export interface CommonMessageProps {
   customIcon?: React.ReactNode
   /** If the component can hide via a close icon */
   closeable?: boolean
+  /** A callback function when the component has closed */
+  onClose?: () => void
   /** Scale to fit component to its container */
   fullwidth?: boolean
   /** Element ID */
@@ -51,37 +60,53 @@ export interface CommonMessageProps {
   tabIndex?: number
 }
 
-const CommonMessage = forwardRef((props: CommonMessageProps, ref: React.ForwardedRef<HTMLDivElement>) => {
-  const [visible, toggler] = useToggle(true)
-  const classNames = ["seeds-common-message"]
-  if (props.fullwidth) classNames.push("is-fullwidth")
-  if (props.className) classNames.push(props.className)
+const CommonMessage = forwardRef(
+  (props: CommonMessageProps, ref: React.ForwardedRef<HTMLDivElement>) => {
+    const [visible, toggler] = useToggle(true)
+    const classNames = ["seeds-common-message"]
+    if (props.fullwidth) classNames.push("is-fullwidth")
+    if (props.className) classNames.push(props.className)
 
-  const variant = props.variant || "primary"
-  const VariantIcon = CommonMessageIconMap[variant]
+    const variant = props.variant || "primary"
+    const VariantIcon = CommonMessageIconMap[variant]
 
-  return props.children ? (
-    <div
-      ref={ref}
-      id={props.id}
-      className={classNames.join(" ")}
-      data-variant={variant}
-      hidden={visible === false}
-      role={props.role}
-      tabIndex={props.tabIndex}
-      data-testid={props.testId}
-    >
-      {props.customIcon
-        ? props.customIcon
-        : VariantIcon && <Icon size="md"><VariantIcon /></Icon>}
-      <span data-part="content">{props.children}</span>
-      {props.closeable && (
-        <button aria-label="Close" onClick={toggler}>
-          <Icon size="md"><XMarkIcon /></Icon>
-        </button>
-      )}
-    </div>
-  ) : null
-})
+    return props.children ? (
+      <div
+        ref={ref}
+        id={props.id}
+        className={classNames.join(" ")}
+        data-variant={variant}
+        hidden={visible === false}
+        role={props.role}
+        tabIndex={props.tabIndex}
+        data-testid={props.testId}
+      >
+        {props.customIcon
+          ? props.customIcon
+          : VariantIcon && (
+              <Icon size="md">
+                <VariantIcon />
+              </Icon>
+            )}
+        <span data-part="content">{props.children}</span>
+        {props.closeable && (
+          <button
+            aria-label="Close"
+            onClick={() => {
+              toggler()
+              if (props.onClose) {
+                props.onClose()
+              }
+            }}
+          >
+            <Icon size="md">
+              <XMarkIcon />
+            </Icon>
+          </button>
+        )}
+      </div>
+    ) : null
+  }
+)
 
 export default CommonMessage
