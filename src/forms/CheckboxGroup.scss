@@ -1,0 +1,25 @@
+.seeds-checkbox-group {
+  --inner-button-gap: var(--seeds-s3);
+  display: flex;
+  gap: var(--inner-button-gap);
+}
+
+.seeds-checkbox-hide {
+  opacity: 0;
+}
+
+.seeds-checkbox-hide:checked + .seeds-button {
+  background-color: var(--seeds-color-secondary);
+  border-color: var(--seeds-color-secondary);
+  color: var(--seeds-color-on-inverse);
+
+  &:hover {
+    background-color: var(--seeds-color-secondary-dark);
+    border-color: var(--seeds-color-secondary-dark);
+  }
+}
+
+.seeds-checkbox-hide:focus-visible + .seeds-button {
+  outline: var(--seeds-focus-ring-outline);
+  box-shadow: var(--seeds-focus-ring-box-shadow);
+}
