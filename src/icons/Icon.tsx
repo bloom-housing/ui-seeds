@@ -11,13 +11,15 @@ export interface IconProps {
   className?: string
   /** Specify a specific preset size */
   size?: "sm" | "md" | "lg" | "xl" | "2xl"
+  /** Set this to true for icons which only use outlined paths */
+  outlined?: boolean
   "aria-hidden"?: boolean
   "aria-label"?: string
   "aria-labelledby"?: string
   tabIndex?: number
-  /** Icon SVG metadata imported from Font Awesome */
+  /** DEPRECATED: Icon SVG metadata imported from Font Awesome */
   icon?: IconDefinition
-  /** Custom SVG in JSX if not using Font Awesome */
+  /** Custom SVG in JSX */
   children?: React.ReactNode
 }
 
@@ -31,6 +33,7 @@ const Icon = (props: IconProps) => {
       id={props.id}
       className={classNames.join(" ")}
       data-size={props.size}
+      data-outlined={props.outlined}
       aria-hidden={isHidden}
       aria-label={props["aria-label"]}
       aria-labelledby={props["aria-labelledby"]}

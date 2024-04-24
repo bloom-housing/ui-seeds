@@ -3,7 +3,7 @@ import { Story } from "@storybook/react"
 
 import Alert from "../Alert"
 import Icon from "../../icons/Icon"
-import { faHouseChimney } from "@fortawesome/free-solid-svg-icons"
+import { HomeModernIcon } from "@heroicons/react/24/solid"
 
 import MDXDocs from "./Alert.docs.mdx"
 
@@ -40,7 +40,14 @@ export const inverseVariants = () => (
 )
 
 export const withCustomIcon = () => (
-  <Alert variant="success" customIcon={<Icon icon={faHouseChimney} />}>
+  <Alert
+    variant="success"
+    customIcon={
+      <Icon size="md">
+        <HomeModernIcon />
+      </Icon>
+    }
+  >
     A custom icon (house-chimney)
   </Alert>
 )

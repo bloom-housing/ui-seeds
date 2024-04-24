@@ -20,7 +20,7 @@
   --toast-border-radius: 0;
   --toast-border: none;
   --toast-flex-gap: var(--seeds-s3);
-  --toast-icon-size: 1em;
+  --toast-icon-scale-factor: 1;
   --toast-max-width: var(--seeds-width-sm);
   --toast-font: var(--seeds-font-sans);
   --toast-font-size: var(--seeds-type-caption-size);
@@ -31,7 +31,7 @@
   --common-message-border-radius: var(--toast-border-radius);
   --common-message-border: var(--toast-border);
   --common-message-flex-gap: var(--toast-flex-gap);
-  --common-message-icon-size: var(--toast-icon-size);
+  --common-message-icon-scale-factor: var(--toast-icon-scale-factor);
   --common-message-max-width: var(--toast-max-width);
   --common-message-font: var(--toast-font);
   --common-message-font-size: var(--toast-font-size);

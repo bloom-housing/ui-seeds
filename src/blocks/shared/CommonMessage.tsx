@@ -1,29 +1,28 @@
 import React, { forwardRef } from "react"
 import {
-  faCheck,
-  faClock,
-  faClose,
-  faInfoCircle,
-  faLock,
-  faTriangleExclamation,
-  IconDefinition,
-} from "@fortawesome/free-solid-svg-icons"
+  CheckIcon,
+  ClockIcon,
+  XMarkIcon,
+  InformationCircleIcon,
+  LockClosedIcon,
+  ExclamationTriangleIcon,
+} from "@heroicons/react/20/solid"
 import Icon from "../../icons/Icon"
 import useToggle from "../../hooks/useToggle"
 
 import "./CommonMessage.scss"
 
-const CommonMessageIconMap: Record<string, IconDefinition> = {
-  primary: faInfoCircle,
-  "primary-inverse": faInfoCircle,
-  success: faCheck,
-  "success-inverse": faCheck,
-  alert: faTriangleExclamation,
-  "alert-inverse": faTriangleExclamation,
-  warn: faClock,
-  "warn-inverse": faClock,
-  secondary: faLock,
-  "secondary-inverse": faLock,
+const CommonMessageIconMap: Record<string, any> = {
+  primary: InformationCircleIcon,
+  "primary-inverse": InformationCircleIcon,
+  success: CheckIcon,
+  "success-inverse": CheckIcon,
+  alert: ExclamationTriangleIcon,
+  "alert-inverse": ExclamationTriangleIcon,
+  warn: ClockIcon,
+  "warn-inverse": ClockIcon,
+  secondary: LockClosedIcon,
+  "secondary-inverse": LockClosedIcon,
 }
 
 export interface CommonMessageProps {
@@ -69,6 +68,7 @@ const CommonMessage = forwardRef(
     if (props.className) classNames.push(props.className)
 
     const variant = props.variant || "primary"
+    const VariantIcon = CommonMessageIconMap[variant]
 
     return props.children ? (
       <div
@@ -83,8 +83,10 @@ const CommonMessage = forwardRef(
       >
         {props.customIcon
           ? props.customIcon
-          : CommonMessageIconMap[variant] && (
-              <Icon icon={CommonMessageIconMap[variant]} size="md" />
+          : VariantIcon && (
+              <Icon size="md">
+                <VariantIcon />
+              </Icon>
             )}
         <span data-part="content">{props.children}</span>
         {props.closeable && (
@@ -97,7 +99,9 @@ const CommonMessage = forwardRef(
               }
             }}
           >
-            <Icon icon={faClose} size="md" />
+            <Icon size="md">
+              <XMarkIcon />
+            </Icon>
           </button>
         )}
       </div>
