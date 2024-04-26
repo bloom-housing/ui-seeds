@@ -19,11 +19,11 @@ export const Default = () => {
   return (
     <>
       <button onClick={() => setIsOpen(!isOpen)}>Toggle Dialog</button>
-      <Dialog isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <Dialog.Header>
+      <Dialog isOpen={isOpen} onClose={() => setIsOpen(false)} ariaLabelledBy="conf-needed" ariaDescribedBy="conf-details">
+        <Dialog.Header id="conf-needed">
           Confirmation needed
         </Dialog.Header>
-        <Dialog.Content>
+        <Dialog.Content id="conf-details">
           <p>An email has been sent to you@email.com</p>
           <p>Please click on the link in the email we sent you in order to complete account creation.</p>
         </Dialog.Content>
