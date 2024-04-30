@@ -1,12 +1,16 @@
 import { render, cleanup, screen, fireEvent } from "@testing-library/react"
-import CheckboxGroup from "forms/CheckboxGroup"
+import CheckboxGroup, { CheckboxItem } from "forms/CheckboxGroup"
 
 afterEach(cleanup)
 
 describe("<CheckboxGroup>", () => {
   it("displays the CheckboxGroup", () => {
-    const options = ["Option 1", "Option 2", "Option 3"]
-    let values: string[] = []
+    const options = [
+      { label: "1", value: "1" },
+      { label: "2", value: "2" },
+      { label: "3", value: "3" },
+    ]
+    let values: CheckboxItem[] = []
     const setValues = jest.fn((newValues) => {
       values = newValues
     })
@@ -21,18 +25,18 @@ describe("<CheckboxGroup>", () => {
         onChange={setValues}
       />
     )
-    expect(screen.getByText(options[0])).toBeInTheDocument()
-    expect(screen.getByText(options[1])).toBeInTheDocument()
-    expect(screen.getByText(options[2])).toBeInTheDocument()
+    expect(screen.getByText(options[0].label)).toBeInTheDocument()
+    expect(screen.getByText(options[1].label)).toBeInTheDocument()
+    expect(screen.getByText(options[2].label)).toBeInTheDocument()
 
     expect(screen.getByTestId("MyCheckboxGroup")).not.toBeNull()
     expect(screen.getByTestId("MyCheckboxGroup")).toHaveClass("test-class")
 
-    const checkboxOne = screen.getByRole("checkbox", { name: /Option 1/i })
+    const checkboxOne = screen.getByRole("checkbox", { name: /1/i })
     expect((checkboxOne as HTMLInputElement).checked).toBe(false)
 
     fireEvent.click(checkboxOne)
-    expect(setValues).toHaveBeenCalledWith(["Option 1"])
-    expect(values).toEqual(["Option 1"])
+    expect(setValues).toHaveBeenCalledWith([{label: "1", value: "1"}])
+    expect(values).toEqual([{label: "1", value: "1"}])
   })
 })
