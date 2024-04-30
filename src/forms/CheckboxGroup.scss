@@ -6,17 +6,7 @@
 
 .seeds-checkbox-hide {
   opacity: 0;
-}
-
-.seeds-checkbox-hide:checked + .seeds-button {
-  background-color: var(--seeds-color-secondary);
-  border-color: var(--seeds-color-secondary);
-  color: var(--seeds-color-on-inverse);
-
-  &:hover {
-    background-color: var(--seeds-color-secondary-dark);
-    border-color: var(--seeds-color-secondary-dark);
-  }
+  position: absolute;
 }
 
 .seeds-checkbox-hide:focus-visible + .seeds-button {
