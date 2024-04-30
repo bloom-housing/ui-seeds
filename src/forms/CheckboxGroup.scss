@@ -2,6 +2,7 @@
   --inner-button-gap: var(--seeds-s3);
   display: flex;
   gap: var(--inner-button-gap);
+  flex-wrap: wrap;
 }
 
 .seeds-checkbox-hide {
