@@ -24,18 +24,7 @@ export interface CheckboxGroupProps extends Pick<ButtonProps, "size" | "variant"
   /** function to call when a checkbox is clicked*/
   onChange: (values: CheckboxItem[]) => void
   /** Appearance of the checked input*/
-  checkedVariant?:
-    | "primary"
-    | "primary-outlined"
-    | "secondary"
-    | "secondary-outlined"
-    | "success"
-    | "success-outlined"
-    | "alert"
-    | "alert-outlined"
-    | "highlight"
-    | "highlight-outlined"
-    | "text"
+  checkedVariant?: ButtonProps["variant"]
 }
 
 const CheckboxGroup = (props: CheckboxGroupProps) => {
@@ -64,7 +53,7 @@ const CheckboxGroup = (props: CheckboxGroupProps) => {
             id={`${props.id}-${option.label}`}
             checked={isChecked(option)}
             onChange={(e) => handleCheckboxChange(option.label, e)}
-            className="seeds-checkbox-hide"
+            className="seeds-screen-reader-only"
           />
           <label
             className="seeds-button"
