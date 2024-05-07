@@ -1,0 +1,11 @@
+.seeds-checkbox-group {
+  --inner-button-gap: var(--seeds-s3);
+  display: flex;
+  gap: var(--inner-button-gap);
+  flex-wrap: wrap;
+}
+
+input[type="checkbox"]:focus-visible + .seeds-button {
+  outline: var(--seeds-focus-ring-outline);
+  box-shadow: var(--seeds-focus-ring-box-shadow);
+}
