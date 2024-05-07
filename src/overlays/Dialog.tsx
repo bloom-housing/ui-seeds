@@ -1,6 +1,14 @@
 import React, { useEffect, useRef } from "react"
 
-import Overlay, { OverlayContent, OverlayContentProps, OverlayFooter, OverlayFooterProps, OverlayHeader, OverlayHeaderProps } from "./Overlay"
+import Overlay, {
+  OverlayProps,
+  OverlayContent,
+  OverlayContentProps,
+  OverlayFooter,
+  OverlayFooterProps,
+  OverlayHeader,
+  OverlayHeaderProps,
+} from "./Overlay"
 
 import "./Dialog.scss"
 
@@ -25,17 +33,7 @@ const DialogFooter = (props: OverlayFooterProps) => {
   return <OverlayFooter {...props} className={classNames.join(" ")} />
 }
 
-export interface DialogProps {
-  children: React.ReactNode
-  /** Additional class name */
-  className?: string
-  /** If this dialog is open */
-  isOpen: boolean
-  /** Function to call when hitting ESC or clicking background overlay */
-  onClose: () => void
-  /** Additional class name for the Overlay */
-  overlayClassName?: string
-}
+export interface DialogProps extends OverlayProps {}
 
 const Dialog = (props: DialogProps) => {
   if (!props.isOpen) return null
@@ -44,11 +42,7 @@ const Dialog = (props: DialogProps) => {
   if (props.className) classNames.push(props.className)
 
   return (
-    <Overlay
-      className={classNames.join(" ")}
-      overlayClassName={props.overlayClassName}
-      onClose={props.onClose}
-    >
+    <Overlay {...props} className={classNames.join(" ")}>
       {props.children}
     </Overlay>
   )

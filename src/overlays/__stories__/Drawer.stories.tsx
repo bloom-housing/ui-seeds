@@ -47,11 +47,11 @@ export const Default = () => {
   return (
     <>
       <button onClick={() => setIsOpen(!isOpen)}>Toggle Drawer</button>
-      <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <Drawer.Header>
+      <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} ariaLabelledBy="drawer-heading" ariaDescribedBy="drawer-content">
+        <Drawer.Header id="drawer-heading">
           Heading
         </Drawer.Header>
-        <Drawer.Content>
+        <Drawer.Content id="drawer-content">
           <CardExample />
         </Drawer.Content>
         <Drawer.Footer>

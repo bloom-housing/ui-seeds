@@ -7,6 +7,7 @@ import Overlay, {
   OverlayContentProps,
   OverlayHeader,
   OverlayHeaderProps,
+  OverlayProps,
 } from "./Overlay"
 
 import "./Drawer.scss"
@@ -37,18 +38,9 @@ const DrawerFooter = (props: OverlayFooterProps) => {
   return <OverlayFooter {...props} className={classNames.join(" ")} />
 }
 
-export interface DrawerProps {
-  children: React.ReactNode
-  /** Additional class name */
-  className?: string
-  /** If this Drawer is open */
-  isOpen: boolean
-  /** Function to call when hitting ESC or clicking background overlay */
-  onClose: () => void
+export interface DrawerProps extends OverlayProps {
   /** If this Drawer renders nested above another Drawer */
   nested?: boolean
-  /** Additional class name for the Overlay */
-  overlayClassName?: string
 }
 
 const Drawer = (props: DrawerProps) => {
@@ -60,9 +52,8 @@ const Drawer = (props: DrawerProps) => {
 
   return (
     <Overlay
+      {...props}
       className={classNames.join(" ")}
-      overlayClassName={props.overlayClassName}
-      onClose={props.onClose}
     >
       {props.children}
     </Overlay>

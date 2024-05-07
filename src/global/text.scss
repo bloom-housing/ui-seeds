@@ -12,6 +12,10 @@
 .text-heading-xs {
   margin-block: 0;
   color: var(--seeds-text-color-darker);
+
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 .text-heading-4xl,

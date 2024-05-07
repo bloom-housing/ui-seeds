@@ -8,13 +8,14 @@ import usePortal from "../hooks/usePortal"
 
 import "./Overlay.scss"
 
-
 export interface OverlayHeaderProps {
   children: React.ReactNode
   /** Place the close button at the inline end of the header */
   closeButtonEnd?: boolean
   /** Additional class name */
   className?: string
+  /** Element ID */
+  id?: string
 }
 
 const OverlayHeader = (props: OverlayHeaderProps) => {
@@ -23,24 +24,30 @@ const OverlayHeader = (props: OverlayHeaderProps) => {
   if (props.className) classNames.push(props.className)
 
   const headerRef = useRef<HTMLElement>(null)
-  // Focus on the heading on render so that it is read by screen readers
-  useEffect(() => {
-    headerRef.current?.querySelector<HTMLElement>(".seeds-overlay-heading")?.focus()
-  }, [])
 
   const closeButton = (
-    <button onClick={() => headerRef.current?.dispatchEvent(new Event("seeds:close", { bubbles: true }))}>
-      <Icon size={"lg"} className={"seeds-overlay-close-icon"}><XMarkIcon /></Icon>
+    <button
+      aria-label="Close"
+      onClick={() => headerRef.current?.dispatchEvent(new Event("seeds:close", { bubbles: true }))}
+    >
+      <Icon size={"lg"} className={"seeds-overlay-close-icon"}>
+        <XMarkIcon />
+      </Icon>
     </button>
   )
 
   return (
     <header className={classNames.join(" ")} ref={headerRef}>
-      {!props.closeButtonEnd && closeButton}
-      <Heading priority={1} size="xl" className={"seeds-overlay-heading"} tabIndex={-1}>
+      <Heading
+        id={props.id}
+        priority={1}
+        size="xl"
+        className={"seeds-overlay-heading"}
+        tabIndex={-1}
+      >
         {props.children}
       </Heading>
-      {props.closeButtonEnd && closeButton}
+      {closeButton}
     </header>
   )
 }
@@ -49,13 +56,19 @@ export interface OverlayContentProps {
   children: React.ReactNode
   /** Additional class name */
   className?: string
+  /** Element ID */
+  id?: string
 }
 
 const OverlayContent = (props: OverlayContentProps) => {
   const classNames = ["seeds-overlay-content"]
   if (props.className) classNames.push(props.className)
 
-  return <div className={classNames.join(" ")}>{props.children}</div>
+  return (
+    <div id={props.id} className={classNames.join(" ")}>
+      {props.children}
+    </div>
+  )
 }
 
 export interface OverlayFooterProps {
@@ -71,14 +84,20 @@ const OverlayFooter = (props: OverlayFooterProps) => {
   return <footer className={classNames.join(" ")}>{props.children}</footer>
 }
 
-
 export interface OverlayProps {
   children: React.ReactNode
-  /** Function to call when clicking the close icon */
+  /** Function to call when hitting ESC or clicking background overlay */
   onClose: () => void
+  /** If this Overlay is open */
+  isOpen?: boolean
+  /** Additional class name for the Overlay */
   overlayClassName?: string
   /** Additional class name */
   className?: string
+  /** An ID of a heading element that titles the Overlay */
+  ariaLabelledBy?: string
+  /** An ID for content content */
+  ariaDescribedBy?: string
 }
 
 const Overlay = (props: OverlayProps) => {
@@ -101,10 +120,18 @@ const Overlay = (props: OverlayProps) => {
           <FocusTrap
             focusTrapOptions={{
               allowOutsideClick: true,
-              fallbackFocus: `#${uniqueFocusId}`,
+              initialFocus: `#${props.ariaLabelledBy || uniqueFocusId}`,
             }}
           >
-            <div id={uniqueFocusId} className={classNames.join(" ")} role="dialog">
+            <div
+              id={uniqueFocusId}
+              tabIndex={-1}
+              className={classNames.join(" ")}
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby={props.ariaLabelledBy}
+              aria-describedby={props.ariaDescribedBy}
+            >
               {props.children}
             </div>
           </FocusTrap>

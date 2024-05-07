@@ -75,12 +75,27 @@
     justify-content: space-between;
   }
 
+  &:not(.has-close-button-end) {
+    justify-content: start;
+    flex-direction: row-reverse;
+  }
+
   > button {
     padding: 0;
     background-color: transparent;
     background-image: none;
     border: none;
+    border-radius: var(--seeds-rounded);
     cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: var(--seeds-focus-ring-outline);
+      box-shadow: var(--seeds-focus-ring-box-shadow);
+    }
   }
 
   > h1 {
