@@ -46,11 +46,11 @@ const CheckboxGroup = (props: CheckboxGroupProps) => {
   return (
     <div id={props.id} className={classNames.join(" ")} data-testid={props.testId}>
       {props.options.map((option) => (
-        <div key={`${props.id}-${option.label}-container`}>
+        <div key={`${props.id}-${option.value}-container`}>
           <input
             type="checkbox"
             name={option.value}
-            id={`${props.id}-${option.label}`}
+            id={`${props.id}-${option.value}`}
             checked={isChecked(option)}
             onChange={(e) => handleCheckboxChange(option.label, e)}
             className="seeds-screen-reader-only"
