@@ -61,7 +61,7 @@ const CheckboxGroup = (props: CheckboxGroupProps) => {
               isChecked(option) ? props.checkedVariant || "primary" : props.variant || "secondary"
             }
             data-size={props.size || "lg"}
-            htmlFor={`${props.id}-${option.label}`}
+            htmlFor={`${props.id}-${option.value}`}
           >
             {option.label}
           </label>
