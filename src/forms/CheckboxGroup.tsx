@@ -2,7 +2,7 @@ import React from "react"
 
 import "./CheckboxGroup.scss"
 import "../actions/Button.scss"
-import { ButtonProps } from "actions/Button"
+import { ButtonProps } from "../actions/Button"
 
 export interface CheckboxItem {
   label: string
