@@ -60,8 +60,8 @@ export interface ButtonProps {
   className?: string
 }
 
-// internal extended interface
-interface ButtonPropsWithTarget extends ButtonProps {
+// extended interface for Link buttons
+export interface ButtonPropsWithTarget extends ButtonProps {
   target?: string
 }
 
