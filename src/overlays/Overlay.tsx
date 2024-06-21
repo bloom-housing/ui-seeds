@@ -121,6 +121,7 @@ const Overlay = (props: OverlayProps) => {
             focusTrapOptions={{
               allowOutsideClick: true,
               initialFocus: `#${props.ariaLabelledBy || uniqueFocusId}`,
+              fallbackFocus: `#${uniqueFocusId}`,
             }}
           >
             <div
