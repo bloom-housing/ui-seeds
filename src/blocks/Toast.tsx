@@ -6,7 +6,7 @@ import "./Toast.scss"
 import useTimeout from "../hooks/useTimeout"
 import usePortal from "../hooks/usePortal"
 
-interface ToastProps extends Omit<CommonMessageProps, "role" | "closeable"> {
+export interface ToastProps extends Omit<CommonMessageProps, "role" | "closeable"> {
   hideTimeout?: number
 }
 
