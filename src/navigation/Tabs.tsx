@@ -12,6 +12,8 @@ import {
 export interface TabsProps {
   children: React.ReactNode
   className?: string
+  /** If true, displays tabs and the selected tab panel side-by-side on larger displays */
+  verticalSidebar?: boolean
   defaultFocus?: boolean
   defaultIndex?: number
   disabledTabClassName?: string
@@ -27,6 +29,7 @@ export interface TabsProps {
 const Tabs = (props: TabsProps) => {
   const className = ["seeds-tabs"]
   if (props.className) className.push(props.className)
+  if (props.verticalSidebar) className.push("vertical-sidebar-layout")
   const focusTab = typeof props.focusTabOnClick !== "undefined" ? props.focusTabOnClick : false
 
   return <ReactTabs {...props} focusTabOnClick={focusTab} className={className.join(" ")} />

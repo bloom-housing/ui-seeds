@@ -1,5 +1,7 @@
 import React from "react"
 import Tabs from "../Tabs"
+import Card from "../../blocks/Card"
+import HeadingGroup from "../../text/HeadingGroup"
 
 import MDXDocs from "./Tabs.docs.mdx"
 
@@ -91,6 +93,59 @@ export const SmallTabs = () => {
         <p>Paragraph text 3.</p>
         <p>Paragraph text 3.</p>
         <p>Paragraph text 3.</p>
+      </Tabs.TabPanel>
+    </Tabs>
+  )
+}
+
+export const VerticalTabs = () => {
+  return (
+    <Tabs verticalSidebar>
+      <Tabs.TabList>
+        <Tabs.Tab>Title 1</Tabs.Tab>
+        <Tabs.Tab>Title 2</Tabs.Tab>
+      </Tabs.TabList>
+
+      <Tabs.TabPanel>
+        <Card>
+          <Card.Header className="test-card-header">
+            <HeadingGroup
+              size="2xl"
+              heading="Wildflower"
+              subheading="Wildflower (or wild flower)"
+            />
+          </Card.Header>
+
+          <Card.Section>
+            <p>
+              A flower that grows in the wild, meaning it was not intentionally seeded or planted.
+              The term implies that the plant probably is neither a hybrid nor a selected cultivar
+              that is in any way different from the way it appears in the wild as a native plant.
+              even if it is growing where it would not naturally.
+            </p>
+          </Card.Section>
+
+          <Card.Section>
+            <p>
+              The term can refer to the flowering plant as a whole, even when not in bloom, and not
+              just the flower.
+            </p>
+          </Card.Section>
+        </Card>
+      </Tabs.TabPanel>
+      <Tabs.TabPanel>
+        <Card spacing="lg">
+          <Card.Header className="test-card-header">
+            <HeadingGroup size="2xl" heading="lg" subheading="Large Spacing" />
+          </Card.Header>
+
+          <Card.Section>
+            <p>
+              The term can refer to the flowering plant as a whole, even when not in bloom, and not
+              just the flower.
+            </p>
+          </Card.Section>
+        </Card>
       </Tabs.TabPanel>
     </Tabs>
   )
