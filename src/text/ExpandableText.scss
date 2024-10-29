@@ -1,5 +1,4 @@
 .seeds-expandable-text {
-  --expandable-text-button-color: var(--seeds-color-primary);
   p:not(:last-child),
   ul:not(:last-child) {
     margin-bottom: 0.9em;
@@ -8,15 +7,15 @@
     list-style: disc;
     margin-left: 1.4em;
   }
+}
 
-  .seeds-button-toggle {
-    color: var(--expandable-text-button-color);
-    cursor: pointer;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-word;
-    background-color: transparent;
-    background-image: none;
-    border: none;
-  }
+.seeds-button-toggle {
+  color: var(--seeds-color-primary);
+  cursor: pointer;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  background-color: transparent;
+  background-image: none;
+  border: none;
 }
