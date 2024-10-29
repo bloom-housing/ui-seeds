@@ -79,8 +79,8 @@
     "build": "tsc",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "storybook dev -p 6006 -s public",
-    "build-storybook": "storybook build -s public"
+    "storybook": "storybook dev -p 6006 public",
+    "build-storybook": "storybook build"
   },
   "eslintConfig": {
     "extends": [
