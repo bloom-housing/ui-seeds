@@ -25,7 +25,7 @@ const DocsGridWrapper = (props: React.PropsWithChildren) => {
 export const TextContent = () => (
   <DocsWrapper>
     <Card>
-      <Card.Header className="test-card-header">
+      <Card.Header>
         <HeadingGroup size="2xl" heading="Wildflower" subheading="Wildflower (or wild flower)" />
       </Card.Header>
 
@@ -51,7 +51,7 @@ export const TextContent = () => (
 export const FlushDividers = () => (
   <DocsWrapper>
     <Card>
-      <Card.Header divider="flush" className="test-card-header">
+      <Card.Header divider="flush">
         <HeadingGroup size="2xl" heading="Wildflower" subheading="Wildflower (or wild flower)" />
       </Card.Header>
 
@@ -77,7 +77,7 @@ export const FlushDividers = () => (
 export const InsetDividers = () => (
   <DocsWrapper>
     <Card>
-      <Card.Header className="test-card-header" divider="inset">
+      <Card.Header divider="inset">
         <HeadingGroup size="2xl" heading="Wildflower" subheading="Wildflower (or wild flower)" />
       </Card.Header>
 
@@ -103,7 +103,7 @@ export const InsetDividers = () => (
 export const WithFooter = () => (
   <DocsWrapper>
     <Card>
-      <Card.Header className="test-card-header">
+      <Card.Header>
         <HeadingGroup size="2xl" heading="Wildflower" subheading="Wildflower (or wild flower)" />
       </Card.Header>
 
@@ -136,7 +136,7 @@ export const WithFooter = () => (
     </Card>
 
     <style>
-      {"#test-card-footer { --card-footer-background-color: var(--seeds-color-primary-lighter) }"}
+      {"#test-card-footer { --card-footer-background-color: var(--seeds-color-primary-light) }"}
     </style>
   </DocsWrapper>
 )
@@ -144,7 +144,7 @@ export const WithFooter = () => (
 export const Spacings = () => (
   <DocsGridWrapper>
     <Card spacing="none">
-      <Card.Header className="test-card-header">
+      <Card.Header>
         <HeadingGroup size="2xl" heading="none" subheading="No Spacing" />
       </Card.Header>
 
@@ -158,7 +158,7 @@ export const Spacings = () => (
     </Card>
 
     <Card spacing="sm">
-      <Card.Header className="test-card-header">
+      <Card.Header>
         <HeadingGroup size="2xl" heading="sm" subheading="Small Spacing" />
       </Card.Header>
 
@@ -171,7 +171,7 @@ export const Spacings = () => (
     </Card>
 
     <Card spacing="md">
-      <Card.Header className="test-card-header">
+      <Card.Header>
         <HeadingGroup size="2xl" heading="md" subheading="Medium (Default) Spacing" />
       </Card.Header>
 
@@ -184,7 +184,7 @@ export const Spacings = () => (
     </Card>
 
     <Card spacing="lg">
-      <Card.Header className="test-card-header">
+      <Card.Header>
         <HeadingGroup size="2xl" heading="lg" subheading="Large Spacing" />
       </Card.Header>
 
@@ -197,7 +197,7 @@ export const Spacings = () => (
     </Card>
 
     <Card spacing="xl">
-      <Card.Header className="test-card-header">
+      <Card.Header>
         <HeadingGroup size="2xl" heading="xl" subheading="Extra Large Spacing" />
       </Card.Header>
 

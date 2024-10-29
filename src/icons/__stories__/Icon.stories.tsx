@@ -1,5 +1,5 @@
 import React from "react"
-import { StoryFn, StoryObj } from "@storybook/react"
+import { StoryFn } from "@storybook/react"
 import { HomeModernIcon } from "@heroicons/react/24/solid"
 import { EnvelopeIcon } from "@heroicons/react/24/outline"
 import { BookOpenIcon } from "@heroicons/react/24/solid"
@@ -15,22 +15,8 @@ export default {
     docs: {
       page: MDXDocs,
     },
-    // controls: { include: ["size"] },
   },
-  // argTypes: {
-  //   size: {
-  //     options: [undefined, "sm", "md", "lg", "xl", "2xl"],
-  //     control: {
-  //       labels: {
-  //         undefined: "Default (undefined)",
-  //       },
-  //       type: "radio",
-  //     },
-  //   },
-  // },
 }
-
-type Story = StoryObj<typeof Icon>
 
 const DocsWrapper = (props: React.PropsWithChildren) => {
   return <div style={{ fontSize: "1.5em" }}>{props.children}</div>

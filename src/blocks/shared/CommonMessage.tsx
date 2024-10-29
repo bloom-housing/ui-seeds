@@ -11,6 +11,7 @@ import Icon from "../../icons/Icon"
 import useToggle from "../../hooks/useToggle"
 
 import "./CommonMessage.scss"
+import { SeedsColorInverseVariants, SeedsColorVariants } from "global/sharedTypes"
 
 const CommonMessageIconMap: Record<string, any> = {
   primary: InformationCircleIcon,
@@ -26,16 +27,11 @@ const CommonMessageIconMap: Record<string, any> = {
 }
 
 export type CommonMessageVariant =
-  | "primary"
-  | "primary-inverse"
-  | "success"
-  | "success-inverse"
-  | "alert"
-  | "alert-inverse"
-  | "warn"
-  | "warn-inverse"
-  | "secondary"
-  | "secondary-inverse"
+  | Extract<SeedsColorVariants, "primary" | "secondary" | "success" | "alert" | "warn">
+  | Extract<
+      SeedsColorInverseVariants,
+      "primary-inverse" | "secondary-inverse" | "success-inverse" | "alert-inverse" | "warn-inverse"
+    >
 
 export interface CommonMessageProps {
   /** Message content */
@@ -108,7 +104,7 @@ const CommonMessage = forwardRef(
         )}
       </div>
     ) : null
-  }
+  },
 )
 
 export default CommonMessage

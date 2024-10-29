@@ -107,7 +107,7 @@ export const VerticalTabs = () => {
 
       <Tabs.TabPanel>
         <Card>
-          <Card.Header className="test-card-header">
+          <Card.Header>
             <HeadingGroup
               size="2xl"
               heading="Wildflower"
@@ -134,7 +134,7 @@ export const VerticalTabs = () => {
       </Tabs.TabPanel>
       <Tabs.TabPanel>
         <Card spacing="lg">
-          <Card.Header className="test-card-header">
+          <Card.Header>
             <HeadingGroup size="2xl" heading="lg" subheading="Large Spacing" />
           </Card.Header>
 

@@ -19,7 +19,7 @@ export default {
 const CardExample = () => {
   return (
     <Card>
-      <Card.Header className="test-card-header">
+      <Card.Header>
         <Heading size="2xl">Wildflower</Heading>
       </Card.Header>
 

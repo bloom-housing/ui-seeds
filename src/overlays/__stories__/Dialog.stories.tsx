@@ -60,31 +60,31 @@ export const OverflowingContent = () => {
           <p>
             A flower that grows in the wild, meaning it was not intentionally seeded or planted. The
             term implies that the plant probably is neither a hybrid nor a selected cultivar that is
-            in any way different from the way it appears in the wild as a native plant. even if it
+            in any way different from the way it appears in the wild as a native plant, even if it
             is growing where it would not naturally.
           </p>
           <p>
             A flower that grows in the wild, meaning it was not intentionally seeded or planted. The
             term implies that the plant probably is neither a hybrid nor a selected cultivar that is
-            in any way different from the way it appears in the wild as a native plant. even if it
+            in any way different from the way it appears in the wild as a native plant, even if it
             is growing where it would not naturally.
           </p>
           <p>
             A flower that grows in the wild, meaning it was not intentionally seeded or planted. The
             term implies that the plant probably is neither a hybrid nor a selected cultivar that is
-            in any way different from the way it appears in the wild as a native plant. even if it
+            in any way different from the way it appears in the wild as a native plant, even if it
             is growing where it would not naturally.
           </p>
           <p>
             A flower that grows in the wild, meaning it was not intentionally seeded or planted. The
             term implies that the plant probably is neither a hybrid nor a selected cultivar that is
-            in any way different from the way it appears in the wild as a native plant. even if it
+            in any way different from the way it appears in the wild as a native plant, even if it
             is growing where it would not naturally.
           </p>
           <p>
             A flower that grows in the wild, meaning it was not intentionally seeded or planted. The
             term implies that the plant probably is neither a hybrid nor a selected cultivar that is
-            in any way different from the way it appears in the wild as a native plant. even if it
+            in any way different from the way it appears in the wild as a native plant, even if it
             is growing where it would not naturally.
           </p>
         </Dialog.Content>
