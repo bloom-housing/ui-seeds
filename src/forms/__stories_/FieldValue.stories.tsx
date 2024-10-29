@@ -1,7 +1,5 @@
 import React from "react"
-import { Story } from "@storybook/react"
 import FieldValue from "../FieldValue"
-
 import MDXDocs from "./FieldValue.docs.mdx"
 
 export default {
@@ -14,30 +12,12 @@ export default {
   },
 }
 
-export const standalone = () => <FieldValue>Pool, BBQ, Rooftop View</FieldValue>
+export const Default = () => <FieldValue label="Alternate Contact">Firstname Lastname</FieldValue>
 
-export const withLabel = () => (
-  <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
-)
+export const NoLabel = () => <FieldValue>Firstname Lastname</FieldValue>
 
-export const withHelperText = () => (
-  <FieldValue label="Property Amenities" helpText="All good stuff">
-    Pool, BBQ, Rooftop View
+export const WithHelperText = () => (
+  <FieldValue label="Alternate Contact" helpText="Family Member">
+    Firstname Lastname
   </FieldValue>
-)
-
-export const inAGrid = () => (
-  <div role="grid" style={{ maxWidth: "var(--seeds-width-4xl)" }}>
-    <div role="row" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
-      <FieldValue label="Property Amenities" helpText="All good stuff">
-        Pool, BBQ, Rooftop View
-      </FieldValue>
-      <FieldValue label="Property Amenities" helpText="All good stuff">
-        Pool, BBQ, Rooftop View
-      </FieldValue>
-      <FieldValue label="Property Amenities" helpText="All good stuff">
-        Pool, BBQ, Rooftop View
-      </FieldValue>
-    </div>
-  </div>
 )

@@ -1,5 +1,5 @@
 import React from "react"
-
+import { SeedsSizes } from "../global/sharedTypes"
 import "./Grid.scss"
 
 export interface GridCellProps {
@@ -34,12 +34,14 @@ const GridRow = (props: GridRowProps) => {
   )
 }
 
+export type GridSpacing = Extract<SeedsSizes, "sm" | "md" | "lg" | "xl">
+
 export interface GridProps extends GridCellProps {
   /**
    * Control the gap between grid cells
    * @default md
    */
-  spacing?: "sm" | "md" | "lg" | "xl"
+  spacing?: GridSpacing
 }
 
 const Grid = (props: GridProps) => {

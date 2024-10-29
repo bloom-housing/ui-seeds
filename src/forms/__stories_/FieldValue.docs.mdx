@@ -1,12 +1,21 @@
-import { ArgsTable } from "@storybook/addon-docs"
-import FieldValue from "../FieldValue"
+import { Meta } from "@storybook/addon-docs"
+import { ArgTypes, Title, Subtitle, Description } from "@storybook/blocks"
 import { Swatch } from "../../../documentation/components/Swatch.tsx"
+import FieldValue from "../FieldValue.tsx"
+import * as stories from "./FieldValue.stories.tsx"
 
-# &lt;FieldValue /&gt;
+<Meta of={stories} />
+
+<Title />
+<Subtitle>
+  FieldValue components display a label and its corresponding value in a form-like layout.
+</Subtitle>
+Read more documentation about the FieldValue component in
+[Zeroheight](https://zeroheight.com/5e69dd4e1/p/715019-field-value).
 
 ## Properties
 
-<ArgsTable of={FieldValue} />
+<ArgTypes of={FieldValue} />
 
 ## Theme Variables
 

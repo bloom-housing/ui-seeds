@@ -1,8 +1,5 @@
 import React, { useState } from "react"
-import { Story } from "@storybook/react"
-
 import Toast from "../Toast"
-
 import MDXDocs from "./Toast.docs.mdx"
 
 export default {
@@ -15,13 +12,13 @@ export default {
   },
 }
 
-export const toasts = () => (
+export const Default = () => (
   <>
     <Toast>Primary toast</Toast>
   </>
 )
 
-export const standardVariants = () => (
+export const StandardVariants = () => (
   <>
     <Toast variant="primary">Primary toast</Toast>
     <Toast variant="success">Success toast</Toast>
@@ -31,7 +28,7 @@ export const standardVariants = () => (
   </>
 )
 
-export const inverseVariants = () => (
+export const InverseVariants = () => (
   <>
     <Toast variant="primary-inverse">Primary toast</Toast>
     <Toast variant="success-inverse">Success toast</Toast>
@@ -41,7 +38,7 @@ export const inverseVariants = () => (
   </>
 )
 
-export const showToasts = () => {
+export const TimeoutToasts = () => {
   const [success, showSuccess] = useState(false)
   const [warning, showWarning] = useState(false)
 
@@ -53,7 +50,7 @@ export const showToasts = () => {
       <label>
         <input type="checkbox" onClick={() => showWarning(!warning)} /> Warn Toast
       </label>
-      <p>(they'll disappear after a few seconds)</p>
+      <p>(Toasts will dismiss after 5 seconds)</p>
       {success && (
         <Toast variant="success" hideTimeout={5000}>
           Success message!
@@ -61,7 +58,7 @@ export const showToasts = () => {
       )}
       {warning && (
         <Toast variant="warn" hideTimeout={5000}>
-          Warn message! (And a long bit of text to see what happens)
+          Warn message! (And with some longer text inside the toast)
         </Toast>
       )}
     </>

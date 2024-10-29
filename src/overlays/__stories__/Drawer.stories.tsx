@@ -47,10 +47,13 @@ export const Default = () => {
   return (
     <>
       <button onClick={() => setIsOpen(!isOpen)}>Toggle Drawer</button>
-      <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} ariaLabelledBy="drawer-heading" ariaDescribedBy="drawer-content">
-        <Drawer.Header id="drawer-heading">
-          Heading
-        </Drawer.Header>
+      <Drawer
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        ariaLabelledBy="drawer-heading"
+        ariaDescribedBy="drawer-content"
+      >
+        <Drawer.Header id="drawer-heading">Heading</Drawer.Header>
         <Drawer.Content id="drawer-content">
           <CardExample />
         </Drawer.Content>
@@ -73,9 +76,7 @@ export const ManyButtons = () => {
     <>
       <button onClick={() => setIsOpen(!isOpen)}>Toggle Drawer</button>
       <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <Drawer.Header>
-          Heading
-        </Drawer.Header>
+        <Drawer.Header>Heading</Drawer.Header>
         <Drawer.Content>
           <CardExample />
         </Drawer.Content>
@@ -113,9 +114,7 @@ export const OverflowingContent = () => {
     <>
       <button onClick={() => setIsOpen(!isOpen)}>Toggle Drawer</button>
       <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <Drawer.Header>
-          Heading
-        </Drawer.Header>
+        <Drawer.Header>Heading</Drawer.Header>
         <Drawer.Content>
           <CardExample />
           <CardExample />
@@ -142,9 +141,7 @@ export const Nested = () => {
     <>
       <button onClick={() => setIsOpenFirst(!isOpenFirst)}>Toggle Drawer</button>
       <Drawer isOpen={isOpenFirst} onClose={() => setIsOpenFirst(false)}>
-        <Drawer.Header>
-          Heading
-        </Drawer.Header>
+        <Drawer.Header>Heading</Drawer.Header>
         <Drawer.Content>
           <CardExample />
         </Drawer.Content>
@@ -157,14 +154,8 @@ export const Nested = () => {
           </Button>
         </Drawer.Footer>
       </Drawer>
-      <Drawer
-        isOpen={isOpenSecond}
-        onClose={() => setIsOpenSecond(false)}
-        nested={true}
-      >
-        <Drawer.Header>
-          Heading
-        </Drawer.Header>
+      <Drawer isOpen={isOpenSecond} onClose={() => setIsOpenSecond(false)} nested={true}>
+        <Drawer.Header>Heading</Drawer.Header>
         <Drawer.Content>
           <CardExample />
         </Drawer.Content>

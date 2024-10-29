@@ -1,9 +1,12 @@
 import React from "react"
 import "./Card.scss"
+import { SeedsSizes } from "global/sharedTypes"
+
+export type CardDivider = "flush" | "inset"
 
 export interface CardHeaderProps {
   /** Add divider between this and the next element */
-  divider?: "flush" | "inset"
+  divider?: CardDivider
   /** Element ID */
   id?: string
   /** Additional class name */
@@ -24,7 +27,7 @@ const CardHeader = (props: CardHeaderProps) => {
 
 export interface CardSectionProps {
   /** Add divider between this and the next element */
-  divider?: "flush" | "inset"
+  divider?: CardDivider
   /** Element ID */
   id?: string
   /** Additional class name */
@@ -45,7 +48,7 @@ const CardSection = (props: CardSectionProps) => {
 
 export interface CardFooterProps {
   /** Add divider between this and the next element */
-  divider?: "flush" | "inset"
+  divider?: CardDivider
   /** Element ID */
   id?: string
   /** Additional class name */
@@ -64,11 +67,13 @@ const CardFooter = (props: CardFooterProps) => {
   )
 }
 
+export type CardSpacing = Extract<SeedsSizes, "sm" | "md" | "lg" | "xl"> | "none"
+
 export interface CardProps {
   /** Control spacing around card elements
-   * @default base
+   * @default md
    */
-  spacing?: "sm" | "md" | "lg" | "xl" | "none"
+  spacing?: CardSpacing
   /** Element ID */
   id?: string
   /** Additional class name */
@@ -78,7 +83,7 @@ export interface CardProps {
 
 const Card = (props: CardProps) => {
   const classNames = ["seeds-card"]
-  const spacing = props.spacing || "base"
+  const spacing = props.spacing || "md"
   if (props.className) classNames.push(props.className)
 
   return (

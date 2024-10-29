@@ -1,18 +1,24 @@
-import { ArgsTable } from "@storybook/addon-docs"
-import { Link } from "../../../documentation/components/Link"
-
+import { Meta } from "@storybook/addon-docs"
+import { ArgTypes, Title, Subtitle, Description } from "@storybook/blocks"
 import Heading from "../Heading"
+import Link from "../../actions/Link"
+import * as stories from "./Heading.stories.tsx"
 
-# &lt;Heading /&gt;
+<Meta of={stories} />
+
+<Title />
+<Subtitle>Heading components are used to title any page or section.</Subtitle>
+Read more documentation about the Heading component in
+[Zeroheight](https://zeroheight.com/5e69dd4e1/p/533295-heading).
 
 ## Properties
 
-<ArgsTable of={Heading} />
+<ArgTypes of={Heading} />
 
 ## Theme Variables
 
 The heading typography styles are provided by global text utilities:  
-`text-heading-4xl`, `text-heading-3xl`, `text-heading-2xl`, `text-heading-xl`, `text-heading-lg`, `text-heading-md`, `text-heading-sm`, `text-heading-xs`. These utilities in turn utilize global type tokens. In addition to the <Link href="/?path=/docs/tokens-typography-tokens--page">ones listed here</Link>, they are:
+`text-heading-4xl`, `text-heading-3xl`, `text-heading-2xl`, `text-heading-xl`, `text-heading-lg`, `text-heading-md`, `text-heading-sm`, `text-heading-xs`. These utilities in turn utilize global type tokens. In addition to the <Link href="/?path=/docs/tokens-typography-tokens--docs">ones listed here</Link>, they are:
 
 | Name                            | Description | Default                      |
 | ------------------------------- | ----------- | ---------------------------- |

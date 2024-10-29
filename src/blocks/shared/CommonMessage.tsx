@@ -25,21 +25,23 @@ const CommonMessageIconMap: Record<string, any> = {
   "secondary-inverse": LockClosedIcon,
 }
 
+export type CommonMessageVariant =
+  | "primary"
+  | "primary-inverse"
+  | "success"
+  | "success-inverse"
+  | "alert"
+  | "alert-inverse"
+  | "warn"
+  | "warn-inverse"
+  | "secondary"
+  | "secondary-inverse"
+
 export interface CommonMessageProps {
   /** Message content */
   children?: React.ReactNode
   /** Appearance of the component */
-  variant?:
-    | "primary"
-    | "primary-inverse"
-    | "success"
-    | "success-inverse"
-    | "alert"
-    | "alert-inverse"
-    | "warn"
-    | "warn-inverse"
-    | "secondary"
-    | "secondary-inverse"
+  variant?: CommonMessageVariant
   /** Pass in an `<Icon>` or SVG content */
   customIcon?: React.ReactNode
   /** If the component can hide via a close icon */

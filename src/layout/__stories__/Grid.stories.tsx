@@ -1,10 +1,7 @@
 import React from "react"
-import { Story } from "@storybook/react"
-
 import Grid from "../Grid"
 import FieldValue from "../../forms/FieldValue"
 import Heading from "../../text/Heading"
-
 import MDXDocs from "./Grid.docs.mdx"
 
 export default {
@@ -17,7 +14,15 @@ export default {
   },
 }
 
-export const gridExample = () => (
+const StoryStyles = () => (
+  <style>
+    {
+      ".seeds-grid {  margin-block: var(--seeds-spacer-content); } .seeds-grid-row > * { background: var(--seeds-color-accent-warm-light); color: var(--seeds-color-accent-warm-darker); padding: 1rem; text-align: center; }"
+    }
+  </style>
+)
+
+export const GridExample = () => (
   <>
     <Heading size="xl">Three Columns:</Heading>
 
@@ -71,12 +76,7 @@ export const gridExample = () => (
         <Grid.Cell className="seeds-grid-span-2">Cell 3 (Long)</Grid.Cell>
       </Grid.Row>
     </Grid>
-
-    <style>
-      {
-        ".seeds-grid {  margin-block: var(--seeds-spacer-content); } .seeds-grid-row > * { background: var(--seeds-color-accent-warm-light); color: var(--seeds-color-accent-warm-darker); padding: 1rem; text-align: center; }"
-      }
-    </style>
+    <StoryStyles />
   </>
 )
 
@@ -122,11 +122,7 @@ export const gridSpacings = () => (
       </Grid.Row>
     </Grid>
 
-    <style>
-      {
-        ".seeds-grid {  margin-block: var(--seeds-spacer-content); } .seeds-grid-row > * { background: var(--seeds-color-accent-warm-light); color: var(--seeds-color-accent-warm-darker); padding: 1rem; text-align: center; }"
-      }
-    </style>
+    <StoryStyles />
   </>
 )
 
@@ -152,11 +148,7 @@ export const differentColumnCounts = () => (
       </Grid.Row>
     </Grid>
 
-    <style>
-      {
-        ".seeds-grid-row > * { background: var(--seeds-color-accent-warm-light); color: var(--seeds-color-accent-warm-darker); padding: 1rem; text-align: center; }"
-      }
-    </style>
+    <StoryStyles />
   </>
 )
 
@@ -177,10 +169,6 @@ export const sectionsAndFieldValues = () => (
       </Grid>
     </section>
 
-    <style>
-      {
-        ".seeds-grid { background: var(--seeds-bg-color-surface-primary); padding: var(--seeds-spacer-content); margin-block: var(--seeds-spacer-content) }"
-      }
-    </style>
+    <StoryStyles />
   </>
 )

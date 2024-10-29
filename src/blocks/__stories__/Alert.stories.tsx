@@ -1,10 +1,7 @@
 import React from "react"
-import { Story } from "@storybook/react"
-
+import { HomeModernIcon } from "@heroicons/react/24/solid"
 import Alert from "../Alert"
 import Icon from "../../icons/Icon"
-import { HomeModernIcon } from "@heroicons/react/24/solid"
-
 import MDXDocs from "./Alert.docs.mdx"
 
 export default {
@@ -17,9 +14,9 @@ export default {
   },
 }
 
-export const defaultAlert = () => <Alert>Primary alert</Alert>
+export const Default = () => <Alert>Primary alert</Alert>
 
-export const standardVariants = () => (
+export const StandardVariants = () => (
   <div style={{ display: "grid", gap: "var(--seeds-s3)" }}>
     <Alert variant="primary">Primary alert</Alert>
     <Alert variant="success">Success alert</Alert>
@@ -29,7 +26,7 @@ export const standardVariants = () => (
   </div>
 )
 
-export const inverseVariants = () => (
+export const InverseVariants = () => (
   <div style={{ display: "grid", gap: "var(--seeds-s3)" }}>
     <Alert variant="primary-inverse">Primary alert</Alert>
     <Alert variant="success-inverse">Success alert</Alert>
@@ -39,7 +36,9 @@ export const inverseVariants = () => (
   </div>
 )
 
-export const withCustomIcon = () => (
+export const CustomIcon = () => (
+  // import { Icon } from "@bloom-housing/ui-seeds"
+  // import { HomeModernIcon } from "@heroicons/react/24/solid"
   <Alert
     variant="success"
     customIcon={
@@ -48,28 +47,21 @@ export const withCustomIcon = () => (
       </Icon>
     }
   >
-    A custom icon (house-chimney)
+    A custom icon (home-modern)
   </Alert>
 )
 
-export const withLink = () => (
-  <Alert variant="primary-inverse" customIcon>
+export const Link = () => (
+  <Alert variant="primary-inverse">
     Just wanted to let you know <a href="#">You can click on me</a>
   </Alert>
 )
 
-export const wideContainerLayout = () => (
-  <>
-    <Alert id="in-container" variant="alert" fullwidth onClose={() => alert("Closing!")}>
+export const FullWidth = () => (
+  <div>
+    <Alert variant="alert" fullwidth onClose={() => alert("Closing!")}>
       An alert that scales to full container width
     </Alert>
-
-    <style>
-      {`
-      #in-container {
-        --alert-max-width: var(--seeds-width-4xl);
-      }
-      `}
-    </style>
-  </>
+    <style>{".seeds-alert { --alert-max-width: var(--seeds-width-4xl); }"}</style>
+  </div>
 )

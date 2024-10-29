@@ -14,8 +14,16 @@ export default {
   },
 }
 
+const DocsWrapper = (props: React.PropsWithChildren) => {
+  return <div style={{ maxWidth: "500px" }}>{props.children}</div>
+}
+
+const DocsGridWrapper = (props: React.PropsWithChildren) => {
+  return <div style={{ maxWidth: "500px", display: "grid", gap: "2rem" }}>{props.children}</div>
+}
+
 export const TextContent = () => (
-  <div style={{ maxWidth: "500px" }}>
+  <DocsWrapper>
     <Card>
       <Card.Header className="test-card-header">
         <HeadingGroup size="2xl" heading="Wildflower" subheading="Wildflower (or wild flower)" />
@@ -37,11 +45,11 @@ export const TextContent = () => (
         </p>
       </Card.Section>
     </Card>
-  </div>
+  </DocsWrapper>
 )
 
 export const FlushDividers = () => (
-  <div style={{ maxWidth: "500px" }}>
+  <DocsWrapper>
     <Card>
       <Card.Header divider="flush" className="test-card-header">
         <HeadingGroup size="2xl" heading="Wildflower" subheading="Wildflower (or wild flower)" />
@@ -63,11 +71,11 @@ export const FlushDividers = () => (
         </p>
       </Card.Section>
     </Card>
-  </div>
+  </DocsWrapper>
 )
 
 export const InsetDividers = () => (
-  <div style={{ maxWidth: "500px" }}>
+  <DocsWrapper>
     <Card>
       <Card.Header className="test-card-header" divider="inset">
         <HeadingGroup size="2xl" heading="Wildflower" subheading="Wildflower (or wild flower)" />
@@ -89,11 +97,11 @@ export const InsetDividers = () => (
         </p>
       </Card.Section>
     </Card>
-  </div>
+  </DocsWrapper>
 )
 
 export const WithFooter = () => (
-  <div style={{ maxWidth: "500px" }}>
+  <DocsWrapper>
     <Card>
       <Card.Header className="test-card-header">
         <HeadingGroup size="2xl" heading="Wildflower" subheading="Wildflower (or wild flower)" />
@@ -130,11 +138,11 @@ export const WithFooter = () => (
     <style>
       {"#test-card-footer { --card-footer-background-color: var(--seeds-color-primary-lighter) }"}
     </style>
-  </div>
+  </DocsWrapper>
 )
 
 export const Spacings = () => (
-  <div style={{ maxWidth: "500px", display: "grid", gap: "2rem" }}>
+  <DocsGridWrapper>
     <Card spacing="none">
       <Card.Header className="test-card-header">
         <HeadingGroup size="2xl" heading="none" subheading="No Spacing" />
@@ -200,5 +208,5 @@ export const Spacings = () => (
         </p>
       </Card.Section>
     </Card>
-  </div>
+  </DocsGridWrapper>
 )

@@ -1,24 +1,34 @@
-import { ArgsTable } from "@storybook/addon-docs"
-import Card from "../Card"
+import { Meta } from "@storybook/addon-docs"
+import { ArgTypes, Title, Subtitle, Description } from "@storybook/blocks"
 import { Swatch } from "../../../documentation/components/Swatch.tsx"
+import Card from "../Card"
+import * as stories from "./Card.stories.tsx"
 
-# &lt;Card /&gt;
+<Meta of={stories} />
 
-## Properties
+<Title />
+<Subtitle>
+  Card components are a flexible and versatile UI element that can be used to display content in an
+  organized manner. It might contain text, action buttons, and/or an image.
+</Subtitle>
+Read more documentation about the Card component in
+[Zeroheight](https://zeroheight.com/5e69dd4e1/p/25e5b8-card).
 
-<ArgsTable of={Card} />
+## Card Properties
+
+<ArgTypes of={Card} />
 
 ## Card Header Properties
 
-<ArgsTable of={Card.Header} />
+<ArgTypes of={Card.Header} />
 
 ## Card Section Properties
 
-<ArgsTable of={Card.Section} />
+<ArgTypes of={Card.Section} />
 
 ## Card Footer Properties
 
-<ArgsTable of={Card.Footer} />
+<ArgTypes of={Card.Footer} />
 
 ## Theme Variables
 

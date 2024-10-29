@@ -1,0 +1,18 @@
+import { Meta } from "@storybook/addon-docs"
+import { ArgTypes, Title, Subtitle, Description } from "@storybook/blocks"
+import ExpandableText from "../ExpandableText"
+import * as stories from "./ExpandableText.stories.tsx"
+
+<Meta of={stories} />
+
+<Title />
+
+## Properties
+
+<ArgTypes of={ExpandableText} />
+
+## Theme Variables
+
+| Name                             | Description          | Default                 |
+| -------------------------------- | -------------------- | ----------------------- |
+| `--expandable-text-button-color` | Text color of button | `--seeds-color-primary` |

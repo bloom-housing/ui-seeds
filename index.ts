@@ -1,5 +1,3 @@
-export * from "./src/expandableText/ExpandableText"
-
 export { default as Button } from "./src/actions/Button"
 export { default as Link } from "./src/actions/Link"
 export { default as Alert } from "./src/blocks/Alert"
@@ -17,3 +15,4 @@ export { default as Tabs } from "./src/navigation/Tabs"
 export { default as Heading } from "./src/text/Heading"
 export { default as HeadingGroup } from "./src/text/HeadingGroup"
 export { default as Tag } from "./src/text/Tag"
+export { default as ExpandableText } from "./src/text/ExpandableText"

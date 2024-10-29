@@ -2,7 +2,6 @@ import React from "react"
 import Tabs from "../Tabs"
 import Card from "../../blocks/Card"
 import HeadingGroup from "../../text/HeadingGroup"
-
 import MDXDocs from "./Tabs.docs.mdx"
 
 export default {
@@ -44,7 +43,7 @@ export const Default = () => {
         <Tabs.Tab>Title 2</Tabs.Tab>
         <Tabs.Tab>Long Tab Title 3</Tabs.Tab>
         <Tabs.Tab disabled>Disabled Tab</Tabs.Tab>
-        <Tabs.Tab selectedClassName="funky">Funky Tab</Tabs.Tab>
+        <Tabs.Tab selectedClassName="funky">Styled</Tabs.Tab>
       </Tabs.TabList>
 
       <Tabs.TabPanel>
@@ -65,7 +64,7 @@ export const Default = () => {
         <p>This is disabled</p>
       </Tabs.TabPanel>
       <Tabs.TabPanel selectedClassName="styled">
-        <p>Feeling funky!</p>
+        <p>Styled tab content</p>
       </Tabs.TabPanel>
     </Tabs>
   )

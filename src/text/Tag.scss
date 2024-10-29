@@ -47,13 +47,13 @@
     color: var(--seeds-color-white);
   }
 
-  &[data-variant="in-process"] {
-    background-color: var(--seeds-color-highlight-light);
-    color: var(--seeds-color-highlight-darker);
+  &[data-variant="warn"] {
+    background-color: var(--seeds-color-warn-light);
+    color: var(--seeds-color-warn-darker);
   }
 
-  &[data-variant="in-process-inverse"] {
-    background-color: var(--seeds-color-highlight);
+  &[data-variant="warn-inverse"] {
+    background-color: var(--seeds-color-warn);
     color: var(--seeds-color-secondary-darker);
   }
 

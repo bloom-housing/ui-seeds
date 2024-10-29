@@ -1,8 +1,5 @@
 import React from "react"
-import { Story } from "@storybook/react"
-
 import HeadingGroup from "../HeadingGroup"
-
 import MDXDocs from "./HeadingGroup.docs.mdx"
 
 export default {
@@ -22,8 +19,12 @@ export const headingGroup = () => (
   />
 )
 
+const DocsWrapper = (props: React.PropsWithChildren) => {
+  return <div style={{ display: "grid", gap: "var(--seeds-s6)" }}>{props.children}</div>
+}
+
 export const headingGroups = () => (
-  <div style={{ display: "grid", gap: "var(--seeds-s6)" }}>
+  <DocsWrapper>
     <HeadingGroup
       size="3xl"
       heading="Poppy"
@@ -39,5 +40,5 @@ export const headingGroups = () => (
       heading="Pumpkin"
       subheading="Some  pumpkin cultivars are huskless, and are grown only for their edible seed."
     />
-  </div>
+  </DocsWrapper>
 )

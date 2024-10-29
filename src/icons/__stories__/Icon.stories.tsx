@@ -1,14 +1,11 @@
 import React from "react"
-import { Story } from "@storybook/react"
-
+import { StoryFn, StoryObj } from "@storybook/react"
 import { HomeModernIcon } from "@heroicons/react/24/solid"
 import { EnvelopeIcon } from "@heroicons/react/24/outline"
 import { BookOpenIcon } from "@heroicons/react/24/solid"
 import { PhoneIcon } from "@heroicons/react/24/solid"
 import { UserCircleIcon } from "@heroicons/react/24/outline"
-
 import Icon, { IconProps } from "../Icon"
-
 import MDXDocs from "./Icon.docs.mdx"
 
 export default {
@@ -18,84 +15,111 @@ export default {
     docs: {
       page: MDXDocs,
     },
+    // controls: { include: ["size"] },
   },
-  argTypes: {
-    size: {
-      options: [undefined, "sm", "md", "lg", "xl", "2xl"],
-      control: {
-        labels: {
-          undefined: "Default (undefined)",
-        },
-      },
-    },
-  },
+  // argTypes: {
+  //   size: {
+  //     options: [undefined, "sm", "md", "lg", "xl", "2xl"],
+  //     control: {
+  //       labels: {
+  //         undefined: "Default (undefined)",
+  //       },
+  //       type: "radio",
+  //     },
+  //   },
+  // },
 }
 
-const Template: Story<IconProps> = ({ size }) => (
+type Story = StoryObj<typeof Icon>
+
+const DocsWrapper = (props: React.PropsWithChildren) => {
+  return <div style={{ fontSize: "1.5em" }}>{props.children}</div>
+}
+
+const iconsTemplate: StoryFn<IconProps> = ({ size }) => (
+  // import { HomeModernIcon } from "@heroicons/react/24/solid"
+  // import { EnvelopeIcon } from "@heroicons/react/24/outline"
+  // import { BookOpenIcon } from "@heroicons/react/24/solid"
+  // import { PhoneIcon } from "@heroicons/react/24/solid"
+  // import { UserCircleIcon } from "@heroicons/react/24/outline"
   <>
-    <div style={{ fontSize: "1.5em" }}>
+    <DocsWrapper>
       <Icon size={size}>
         <HomeModernIcon />
       </Icon>{" "}
       home-modern
-    </div>
-    <div style={{ fontSize: "1.5em" }}>
+    </DocsWrapper>
+    <DocsWrapper>
       <Icon outlined size={size}>
         <EnvelopeIcon />
       </Icon>{" "}
       envelope
-    </div>
-    <div style={{ fontSize: "1.5em" }}>
+    </DocsWrapper>
+    <DocsWrapper>
       <Icon size={size}>
         <BookOpenIcon />
       </Icon>{" "}
       book-open
-    </div>
-    <div style={{ fontSize: "1.5em" }}>
+    </DocsWrapper>
+    <DocsWrapper>
       <Icon size={size}>
         <PhoneIcon />
       </Icon>{" "}
       phone
-    </div>
-    <div style={{ fontSize: "1.5em" }}>
+    </DocsWrapper>
+    <DocsWrapper>
       <Icon outlined size={size}>
         <UserCircleIcon />
       </Icon>{" "}
       user-circle
-    </div>
+    </DocsWrapper>
   </>
 )
 
-export const icons: Story<IconProps> = Template.bind({})
+export const Icons: StoryFn<IconProps> = iconsTemplate.bind({})
 // es-ignore-next-line
-icons.args = {
-  size: undefined,
+Icons.parameters = {
+  controls: { include: ["size"] },
 }
 
-export const containerBasedSizes = () => (
-  <>
-    <div style={{ fontSize: "var(--seeds-font-size-sm)" }}>
-      <Icon>
-        <BookOpenIcon />
-      </Icon>{" "}
-      book-open
-    </div>
-    <div style={{ fontSize: "var(--seeds-font-size-lg)" }}>
-      <Icon>
-        <BookOpenIcon />
-      </Icon>{" "}
-      book-open
-    </div>
-    <div style={{ fontSize: "var(--seeds-font-size-2xl)" }}>
-      <Icon>
-        <BookOpenIcon />
-      </Icon>{" "}
-      book-open
-    </div>
-  </>
-)
+Icons.argTypes = {
+  size: {
+    options: [undefined, "sm", "md", "lg", "xl", "2xl"],
+    control: {
+      labels: {
+        undefined: "Default (undefined)",
+      },
+      type: "radio",
+    },
+  },
+}
 
-export const presetSizes = () => (
+export const ContainerBasedSizes = () => {
+  return (
+    <>
+      <div style={{ fontSize: "var(--seeds-font-size-sm)" }}>
+        <Icon>
+          <BookOpenIcon />
+        </Icon>{" "}
+        book-open
+      </div>
+      <div style={{ fontSize: "var(--seeds-font-size-lg)" }}>
+        <Icon>
+          <BookOpenIcon />
+        </Icon>{" "}
+        book-open
+      </div>
+      <div style={{ fontSize: "var(--seeds-font-size-2xl)" }}>
+        <Icon>
+          <BookOpenIcon />
+        </Icon>{" "}
+        book-open
+      </div>
+    </>
+  )
+}
+
+export const PresetSizes = () => (
   <>
     <div>
       <Icon size={"sm"}>
@@ -143,14 +167,8 @@ const customSVG = (
   </svg>
 )
 
-const CustomTemplate: Story<IconProps> = ({ size }) => (
-  <div style={{ fontSize: "1.5em" }}>
-    <Icon size={size}>{customSVG}</Icon> Chat
-  </div>
+export const CustomIcon = () => (
+  <DocsWrapper>
+    <Icon>{customSVG}</Icon> Chat
+  </DocsWrapper>
 )
-
-export const customIconUsingSvg: Story<IconProps> = CustomTemplate.bind({})
-// es-ignore-next-line
-customIconUsingSvg.args = {
-  size: undefined,
-}

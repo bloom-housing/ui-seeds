@@ -1,7 +1,7 @@
 .seeds-checkbox-group {
-  --inner-button-gap: var(--seeds-s3);
+  --checkbox-group-inner-button-gap: var(--seeds-s3);
   display: flex;
-  gap: var(--inner-button-gap);
+  gap: var(--checkbox-group-inner-button-gap);
   flex-wrap: wrap;
 }
 

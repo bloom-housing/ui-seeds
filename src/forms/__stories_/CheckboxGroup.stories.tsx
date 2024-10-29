@@ -13,7 +13,7 @@ export default {
   },
 }
 
-export const Standalone = () => {
+export const Default = () => {
   const options = [
     { label: "Option 1", value: "1" },
     { label: "Option 2", value: "2" },
@@ -32,7 +32,7 @@ export const Standalone = () => {
   )
 }
 
-export const WithVariant = () => {
+export const ButtonVariant = () => {
   const options = [
     { label: "Option 1", value: "1" },
     { label: "Option 2", value: "2" },

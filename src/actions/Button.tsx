@@ -1,33 +1,28 @@
 import React, { useContext } from "react"
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid"
 import {
   NavigationContext,
   ExternalLinkScreenReaderText,
   isExternalLink,
   shouldShowExternalLinkIcon,
 } from "../global/NavigationContext"
+import { SeedsColorOutlinedVariants, SeedsColorVariants, SeedsSizes } from "../global/sharedTypes"
 import Icon from "../icons/Icon"
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid"
-
 import "./Button.scss"
+
+export type ButtonVariant = SeedsColorVariants | SeedsColorOutlinedVariants | "text"
+
+export type ButtonSize = Extract<SeedsSizes, "sm" | "md" | "lg">
+
+export type ButtonType = "button" | "submit" | "reset"
 
 export interface ButtonProps {
   /** Button content */
   children: React.ReactNode
   /** Appearance of the component */
-  variant?:
-    | "primary"
-    | "primary-outlined"
-    | "secondary"
-    | "secondary-outlined"
-    | "success"
-    | "success-outlined"
-    | "alert"
-    | "alert-outlined"
-    | "highlight"
-    | "highlight-outlined"
-    | "text"
+  variant?: ButtonVariant
   /** Button size (only `sm`/`md` supported by `text` variant) */
-  size?: "sm" | "md" | "lg"
+  size?: ButtonSize
   /** Icon to show before the label text */
   leadIcon?: React.ReactNode
   /** Icon to show after the label text */
@@ -41,7 +36,7 @@ export interface ButtonProps {
   /** Set external link target if it meets accessibility criteria */
   newWindowTarget?: boolean
   /** HTML button type */
-  type?: "button" | "submit" | "reset"
+  type?: ButtonType
   /** Set to true to disable the button */
   disabled?: boolean
   /** Set to true to hide the button from the accessibility tree */
@@ -108,6 +103,8 @@ const ButtonElement = (props: ButtonProps) => {
 }
 
 const LinkButton = (props: ButtonPropsWithTarget) => {
+  const { LinkComponent } = useContext(NavigationContext)
+
   if (props.href && isExternalLink(props.href)) {
     return (
       <a {...props}>
@@ -116,7 +113,6 @@ const LinkButton = (props: ButtonPropsWithTarget) => {
       </a>
     )
   } else {
-    const { LinkComponent } = useContext(NavigationContext)
     return <LinkComponent {...props} />
   }
 }
