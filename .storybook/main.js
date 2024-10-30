@@ -6,9 +6,6 @@ module.exports = {
   features: { buildStoriesJson: true },
 
   addons: [
-    "@storybook/addon-storysource",
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
     {
       name: "@storybook/addon-docs",
       options: {
@@ -19,6 +16,9 @@ module.exports = {
         },
       },
     },
+    "@storybook/addon-storysource",
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
   ],
 
   webpackFinal: async (config, { configType }) => {
