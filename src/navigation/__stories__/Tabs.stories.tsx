@@ -12,10 +12,10 @@ export default {
         <style>
           {`
       .funky {
-        color: var(--seeds-color-accent-warm-dark) !important;
+        color: var(--seeds-color-highlight-warm-dark) !important;
       }
       .styled {
-        color: var(--seeds-color-accent-cool) !important;
+        color: var(--seeds-color-highlight-cool) !important;
         font-weight: bold;
       }
       .tabs-panel.styled {

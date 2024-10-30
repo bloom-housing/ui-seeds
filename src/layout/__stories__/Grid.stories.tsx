@@ -17,7 +17,7 @@ export default {
 const StoryStyles = () => (
   <style>
     {
-      ".seeds-grid {  margin-block: var(--seeds-spacer-content); } .seeds-grid-row > * { background: var(--seeds-color-accent-warm-light); color: var(--seeds-color-accent-warm-darker); padding: 1rem; text-align: center; }"
+      ".seeds-grid {  margin-block: var(--seeds-spacer-content); } .seeds-grid-row > * { background: var(--seeds-color-highlight-warm-light); color: var(--seeds-color-highlight-warm-darker); padding: 1rem; text-align: center; }"
     }
   </style>
 )

@@ -1,15 +1,10 @@
 import * as React from "react"
 import { ExpandableText } from "../ExpandableText"
-import MDXDocs from "./ExpandableText.docs.mdx"
 
 export default {
   title: "Text/Expandable Text",
   component: ExpandableText,
-  parameters: {
-    docs: {
-      page: MDXDocs,
-    },
-  },
+  tags: ["!dev", "!autodocs"], // Hide from sidebar
 }
 
 const longText =
