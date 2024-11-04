@@ -1,26 +1,17 @@
 import React from "react"
-
+import { SeedsColorInverseVariants, SeedsColorVariants, SeedsSizes } from "../global/sharedTypes"
 import "./Tag.scss"
+
+export type TagVariant = SeedsColorVariants | SeedsColorInverseVariants
+export type TagSize = Extract<SeedsSizes, "md" | "lg">
 
 export interface TagProps {
   /** Tag text */
   children: React.ReactNode
   /** Appearance of the component */
-  variant?:
-    | "primary"
-    | "primary-inverse"
-    | "secondary"
-    | "secondary-inverse"
-    | "success"
-    | "success-inverse"
-    | "in-process"
-    | "in-process-inverse"
-    | "highlight-cool"
-    | "highlight-cool-inverse"
-    | "highlight-warm"
-    | "highlight-warm-inverse"
+  variant?: TagVariant
   /** Tag size */
-  size?: "md" | "lg"
+  size?: TagSize
   /** Element ID */
   id?: string
   /** Additional CSS classes */

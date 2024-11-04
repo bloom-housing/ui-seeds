@@ -141,25 +141,25 @@
     }
   }
 
-  &[data-variant="highlight"] {
-    background-color: var(--seeds-color-highlight);
-    border-color: var(--seeds-color-highlight);
+  &[data-variant="warn"] {
+    background-color: var(--seeds-color-warn);
+    border-color: var(--seeds-color-warn);
     color: var(--seeds-color-secondary-darker);
 
     &:hover {
-      background-color: var(--seeds-color-highlight-dark);
-      border-color: var(--seeds-color-highlight-dark);
+      background-color: var(--seeds-color-warn-dark);
+      border-color: var(--seeds-color-warn-dark);
     }
   }
 
-  &[data-variant="highlight-outlined"] {
+  &[data-variant="warn-outlined"] {
     background-color: var(--seeds-bg-color-surface);
-    border-color: var(--seeds-color-highlight);
+    border-color: var(--seeds-color-warn);
     color: var(--seeds-color-secondary-darker);
 
     &:hover {
-      background-color: var(--seeds-color-highlight-dark);
-      border-color: var(--seeds-color-highlight-dark);
+      background-color: var(--seeds-color-warn-dark);
+      border-color: var(--seeds-color-warn-dark);
     }
   }
 
@@ -231,8 +231,8 @@
     display: block;
     width: 1.5em;
     height: 1.5em;
-    top: calc(50% - .75em);
-    left: calc(50% - .75em);
+    top: calc(50% - 0.75em);
+    left: calc(50% - 0.75em);
     border: 3px solid var(--seeds-color-on-inverse);
     border-left-color: transparent;
     border-radius: 50%;

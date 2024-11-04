@@ -1,11 +1,19 @@
-import { ArgsTable } from "@storybook/addon-docs"
+import { Meta } from "@storybook/addon-docs"
+import { ArgTypes, Title, Subtitle, Description } from "@storybook/blocks"
+import CommonMessage from "../shared/CommonMessage"
 import Alert from "../Alert"
+import * as stories from "./Alert.stories.tsx"
 
-# &lt;Alert /&gt;
+<Meta of={stories} />
+
+<Title />
+<Subtitle>Alert components are used to announce an important action or event.</Subtitle>
+Read more documentation about the Alert component in
+[Zeroheight](https://zeroheight.com/5e69dd4e1/p/77c280-alert).
 
 ## Properties
 
-<ArgsTable of={Alert} />
+<ArgTypes of={CommonMessage} exclude={["role", "closeable"]} />
 
 ## Theme Variables
 

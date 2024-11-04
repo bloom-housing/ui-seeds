@@ -1,24 +1,34 @@
-import { ArgsTable } from "@storybook/addon-docs"
-import Dialog from "../Dialog"
+import { Meta } from "@storybook/addon-docs"
+import { ArgTypes, Title, Subtitle, Description } from "@storybook/blocks"
 import { Swatch } from "../../../documentation/components/Swatch.tsx"
+import Dialog from "../Dialog"
+import * as stories from "./Dialog.stories.tsx"
 
-# &lt;Dialog /&gt;
+<Meta of={stories} />
+
+<Title />
+<Subtitle>
+  The Dialog component is a box/popup window that is displayed on top of the current page, used to
+  prompt the user for action or to provide additional content.
+</Subtitle>
+Read more documentation about the Dialog component in
+[Zeroheight](https://zeroheight.com/5e69dd4e1/p/86f988-dialog).
 
 ## Properties
 
-<ArgsTable of={Dialog} />
+<ArgTypes of={Dialog} />
 
 ## Dialog Header Properties
 
-<ArgsTable of={Dialog.Header} />
+<ArgTypes of={Dialog.Header} />
 
 ## Dialog Content Properties
 
-<ArgsTable of={Dialog.Content} />
+<ArgTypes of={Dialog.Content} />
 
 ## Dialog Footer Properties
 
-<ArgsTable of={Dialog.Footer} />
+<ArgTypes of={Dialog.Footer} />
 
 ## Theme Variables
 

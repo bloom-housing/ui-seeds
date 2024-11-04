@@ -1,12 +1,22 @@
-import { ArgsTable } from "@storybook/addon-docs"
+import { Meta } from "@storybook/addon-docs"
+import { ArgTypes, Title, Subtitle, Description } from "@storybook/blocks"
 import { Swatch } from "../../../documentation/components/Swatch.tsx"
 import FormErrorMessage from "../FormErrorMessage"
+import * as stories from "./FormErrorMessage.stories.tsx"
 
-# &lt;FormErrorMessage /&gt;
+<Meta of={stories} />
+
+<Title />
+<Subtitle>
+  FormErrorMessage components are used to display an error notification under a form field when the
+  user input is invalid.
+</Subtitle>
+Read more documentation about the FormErrorMessage component in
+[Zeroheight](https://zeroheight.com/5e69dd4e1/p/61d7de-form-error-message).
 
 ## Properties
 
-<ArgsTable of={FormErrorMessage} />
+<ArgTypes of={FormErrorMessage} />
 
 ## Theme Variables
 

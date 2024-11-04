@@ -1,12 +1,9 @@
 import React from "react"
-
-import Button from "../Button"
-
-import Icon from "../../icons/Icon"
 import { HeartIcon } from "@heroicons/react/24/solid"
-
-import MDXDocs from "./Button.docs.mdx"
+import Icon from "../../icons/Icon"
 import HeadingGroup from "../../text/HeadingGroup"
+import Button from "../Button"
+import MDXDocs from "./Button.docs.mdx"
 
 export default {
   title: "Actions/Button",
@@ -18,151 +15,167 @@ export default {
   },
 }
 
-export const defaultButton = () => <Button onClick={() => alert("Clicked!")}>Default Button</Button>
+export const DefaultButton = () => <Button onClick={() => alert("Clicked!")}>Default Button</Button>
 
-export const buttonVariants = () => (
+const DocsWrapper = (props: React.PropsWithChildren) => {
+  return <div style={{ marginTop: "1rem" }}>{props.children}</div>
+}
+
+const DocsRowWrapper = (props: React.PropsWithChildren) => {
+  return <div style={{ display: "flex", gap: "1rem", marginBottom: "1rem" }}>{props.children}</div>
+}
+
+export const ButtonVariants = () => (
   <>
-    <HeadingGroup size="2xl" heading="sm" subheading="Small Size" />
-    <div style={{ marginTop: "1rem" }}>
-      <Button variant="primary" size="sm">
-        Primary Button
-      </Button>
-      <Button variant="secondary" size="sm">
-        Secondary Button
-      </Button>
-      <Button variant="success" size="sm">
-        Success Button
-      </Button>
-      <Button variant="alert" size="sm">
-        Alert Button
-      </Button>
-      <Button variant="highlight" size="sm">
-        Highlight Button
-      </Button>
-      <Button size="sm" disabled onClick={() => alert("won't work")}>
-        Disabled Button
-      </Button>
-    </div>
-    <div style={{ marginBottom: "2rem" }}>
-      <Button variant="primary-outlined" size="sm">
-        Primary Button
-      </Button>
-      <Button variant="secondary-outlined" size="sm">
-        Secondary Button
-      </Button>
-      <Button variant="success-outlined" size="sm">
-        Success Button
-      </Button>
-      <Button variant="alert-outlined" size="sm">
-        Alert Button
-      </Button>
-      <Button variant="highlight-outlined" size="sm">
-        Highlight Button
-      </Button>
-      <Button variant="primary-outlined" size="sm" disabled onClick={() => alert("won't work")}>
-        Disabled Button
-      </Button>
-    </div>
-    <HeadingGroup size="2xl" heading="md" subheading="Medium Size" />
-    <div style={{ marginTop: "1rem" }}>
-      <Button variant="primary" size="md">
-        Primary Button
-      </Button>
-      <Button variant="secondary" size="md">
-        Secondary Button
-      </Button>
-      <Button variant="success" size="md">
-        Success Button
-      </Button>
-      <Button variant="alert" size="md">
-        Alert Button
-      </Button>
-      <Button variant="highlight" size="md">
-        Highlight Button
-      </Button>
-      <Button size="md" disabled>
-        Disabled Button
-      </Button>
-    </div>
-    <div style={{ marginBottom: "2rem" }}>
-      <Button variant="primary-outlined" size="md">
-        Primary Button
-      </Button>
-      <Button variant="secondary-outlined" size="md">
-        Secondary Button
-      </Button>
-      <Button variant="success-outlined" size="md">
-        Success Button
-      </Button>
-      <Button variant="alert-outlined" size="md">
-        Alert Button
-      </Button>
-      <Button variant="highlight-outlined" size="md">
-        Highlight Button
-      </Button>
-      <Button variant="primary-outlined" size="md" disabled>
-        Disabled Button
-      </Button>
-    </div>
-    <HeadingGroup size="2xl" heading="lg" subheading="Large Size" />
-    <div style={{ marginTop: "1rem" }}>
-      <Button variant="primary" size="lg">
-        Primary Button
-      </Button>
-      <Button variant="secondary" size="lg">
-        Secondary Button
-      </Button>
-      <Button variant="success" size="lg">
-        Success Button
-      </Button>
-      <Button variant="alert" size="lg">
-        Alert Button
-      </Button>
-      <Button variant="highlight" size="lg">
-        Highlight Button
-      </Button>
-      <Button size="lg" disabled>
-        Disabled Button
-      </Button>
-    </div>
-    <div>
-      <Button variant="primary-outlined" size="lg">
-        Primary Button
-      </Button>
-      <Button variant="secondary-outlined" size="lg">
-        Secondary Button
-      </Button>
-      <Button variant="success-outlined" size="lg">
-        Success Button
-      </Button>
-      <Button variant="alert-outlined" size="lg">
-        Alert Button
-      </Button>
-      <Button variant="highlight-outlined" size="lg">
-        Highlight Button
-      </Button>
-      <Button variant="primary-outlined" size="lg" disabled>
-        Disabled Button
-      </Button>
-    </div>
+    <DocsWrapper>
+      <HeadingGroup size="2xl" heading="sm" subheading="Small Size" />
+      <div>
+        <Button variant="primary" size="sm">
+          Primary Small
+        </Button>
+        <Button variant="secondary" size="sm">
+          Secondary Small
+        </Button>
+        <Button variant="success" size="sm">
+          Success Small
+        </Button>
+        <Button variant="alert" size="sm">
+          Alert Small
+        </Button>
+        <Button variant="warn" size="sm">
+          Warn Small
+        </Button>
+        <Button size="sm" disabled>
+          Disabled Small
+        </Button>
+      </div>
+      <div>
+        <Button variant="primary-outlined" size="sm">
+          Primary Small
+        </Button>
+        <Button variant="secondary-outlined" size="sm">
+          Secondary Small
+        </Button>
+        <Button variant="success-outlined" size="sm">
+          Success Small
+        </Button>
+        <Button variant="alert-outlined" size="sm">
+          Alert Small
+        </Button>
+        <Button variant="warn-outlined" size="sm">
+          Warn Small
+        </Button>
+        <Button variant="primary-outlined" size="sm" disabled>
+          Disabled Small
+        </Button>
+      </div>
+    </DocsWrapper>
+    <DocsWrapper>
+      <HeadingGroup size="2xl" heading="md" subheading="Medium Size" />
+      <div>
+        <Button variant="primary" size="md">
+          Primary Medium
+        </Button>
+        <Button variant="secondary" size="md">
+          Secondary Medium
+        </Button>
+        <Button variant="success" size="md">
+          Success Medium
+        </Button>
+        <Button variant="alert" size="md">
+          Alert Medium
+        </Button>
+        <Button variant="warn" size="md">
+          Warn Medium
+        </Button>
+        <Button size="md" disabled>
+          Disabled Medium
+        </Button>
+      </div>
+      <div>
+        <Button variant="primary-outlined" size="md">
+          Primary Medium
+        </Button>
+        <Button variant="secondary-outlined" size="md">
+          Secondary Medium
+        </Button>
+        <Button variant="success-outlined" size="md">
+          Success Medium
+        </Button>
+        <Button variant="alert-outlined" size="md">
+          Alert Medium
+        </Button>
+        <Button variant="warn-outlined" size="md">
+          Warn Medium
+        </Button>
+        <Button variant="primary-outlined" size="md" disabled>
+          Disabled Medium
+        </Button>
+      </div>
+    </DocsWrapper>
+    <DocsWrapper>
+      <HeadingGroup size="2xl" heading="lg" subheading="Large Size" />
+      <div>
+        <Button variant="primary" size="lg">
+          Primary Large
+        </Button>
+        <Button variant="secondary" size="lg">
+          Secondary Large
+        </Button>
+        <Button variant="success" size="lg">
+          Success Large
+        </Button>
+        <Button variant="alert" size="lg">
+          Alert Large
+        </Button>
+        <Button variant="warn" size="lg">
+          Warn Large
+        </Button>
+        <Button size="lg" disabled>
+          Disabled Large
+        </Button>
+      </div>
+      <div>
+        <Button variant="primary-outlined" size="lg">
+          Primary Large
+        </Button>
+        <Button variant="secondary-outlined" size="lg">
+          Secondary Large
+        </Button>
+        <Button variant="success-outlined" size="lg">
+          Success Large
+        </Button>
+        <Button variant="alert-outlined" size="lg">
+          Alert Large
+        </Button>
+        <Button variant="warn-outlined" size="lg">
+          Warn Large
+        </Button>
+        <Button variant="primary-outlined" size="lg" disabled>
+          Disabled Large
+        </Button>
+      </div>
+    </DocsWrapper>
     <style>{".seeds-button { margin: .25rem }"}</style>
   </>
 )
 
-export const linkButtons = () => (
-  <div style={{ display: "flex", gap: "1rem" }}>
-    <Button href="/test">Internal Link</Button>
+export const LinkButtons = () => (
+  <DocsRowWrapper>
+    <Button href="/story">Internal Link</Button>
     <Button href="https://www.exygy.com" hideExternalLinkIcon>
       External Link (Same Window)
     </Button>
     <Button href="https://www.exygy.com" newWindowTarget>
       External Link (New Window)
     </Button>
-  </div>
+  </DocsRowWrapper>
 )
 
-export const buttonsWithIcons = () => (
-  <div style={{ display: "flex", gap: "1rem" }}>
+export const ButtonsWithIcons = () => (
+  // import { Icon } from "@bloom-housing/ui-seeds"
+  // import { HeartIcon } from "@heroicons/react/24/solid"
+  <DocsRowWrapper>
     <Button
       leadIcon={
         <Icon>
@@ -181,18 +194,20 @@ export const buttonsWithIcons = () => (
     >
       Tail Icon
     </Button>
-  </div>
+  </DocsRowWrapper>
 )
 
-export const textButtons = () => (
+export const TextButtons = () => (
+  // import { Icon } from "@bloom-housing/ui-seeds"
+  // import { HeartIcon } from "@heroicons/react/24/solid"
   <>
-    <div style={{ display: "flex", gap: "1rem", marginBlockEnd: "1rem" }}>
-      <Button variant="text">Medium Size</Button>
+    <DocsRowWrapper>
       <Button variant="text" size="sm">
         Small Size
       </Button>
-    </div>
-    <div style={{ display: "flex", gap: "1rem" }}>
+      <Button variant="text">Medium Size</Button>
+    </DocsRowWrapper>
+    <DocsRowWrapper>
       <Button
         variant="text"
         leadIcon={
@@ -213,26 +228,26 @@ export const textButtons = () => (
       >
         Tail Icon
       </Button>
-    </div>
+    </DocsRowWrapper>
   </>
 )
 
-export const loadingButton = () => {
-  const [loading, setLoading] = React.useState<null | string>(null)
+export const LoadingButton = () => {
+  const [loadingMessage, setLoadingMessage] = React.useState<null | string>(null)
   return (
     <Button
-      loadingMessage={loading}
+      loadingMessage={loadingMessage}
       onClick={() => {
-        setLoading("Saving form")
-        setTimeout(() => setLoading(null), 3000)
+        setLoadingMessage("Submitting application")
+        setTimeout(() => setLoadingMessage(null), 3000)
       }}
     >
-      Click to Spin
+      Click to spin
     </Button>
   )
 }
 
-export const expandingButton = () => {
+export const ExpandingButton = () => {
   const [expanded, setExpanded] = React.useState<boolean>(false)
 
   return (
@@ -245,7 +260,7 @@ export const expandingButton = () => {
         {expanded ? "Hide Content" : "Show Content"}
       </Button>
       <p id="show-or-hide" hidden={!expanded}>
-        Content that should only appear in the "expanded" state.
+        Content that will only appear in the "expanded" state
       </p>
     </>
   )

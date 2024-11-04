@@ -1,10 +1,7 @@
 import React from "react"
-
-import Link from "../Link"
-
-import Icon from "../../icons/Icon"
 import { HeartIcon } from "@heroicons/react/24/solid"
-
+import Link from "../Link"
+import Icon from "../../icons/Icon"
 import MDXDocs from "./Link.docs.mdx"
 
 export default {
@@ -17,31 +14,51 @@ export default {
   },
 }
 
-export const basicLink = () => (
+export const BasicLink = () => (
   <p>
     Hello world. <Link href="#">This is a link.</Link>
   </p>
 )
 
-export const externalLink = () => (
-  <div style={{ display: "flex", gap: "1rem" }}>
+const DocsWrapper = (props: React.PropsWithChildren) => {
+  return <div style={{ display: "flex", gap: "1rem" }}>{props.children}</div>
+}
+
+export const ExternalLink = () => (
+  <DocsWrapper>
     <Link href="/test">Internal Link</Link>
-    <Link href="https://www.exygy.com" hideExternalLinkIcon>
-      External Link (Same Window)
-    </Link>
     <Link href="https://www.exygy.com" newWindowTarget>
       External Link (New Window)
     </Link>
-  </div>
+    <Link href="https://www.exygy.com" hideExternalLinkIcon>
+      External Link (Same Window)
+    </Link>
+  </DocsWrapper>
 )
 
-export const linksWithIcons = () => (
-  <div style={{ display: "flex", gap: "1rem" }}>
-    <Link href="/test" leadIcon={<Icon><HeartIcon /></Icon>}>
+export const LinksWithIcons = () => (
+  // import { Icon } from "@bloom-housing/ui-seeds"
+  // import { HeartIcon } from "@heroicons/react/24/solid"
+  <DocsWrapper>
+    <Link
+      href="/story"
+      leadIcon={
+        <Icon>
+          <HeartIcon />
+        </Icon>
+      }
+    >
       Lead Icon
     </Link>
-    <Link href="/test" tailIcon={<Icon><HeartIcon /></Icon>}>
+    <Link
+      href="/story"
+      tailIcon={
+        <Icon>
+          <HeartIcon />
+        </Icon>
+      }
+    >
       Tail Icon
     </Link>
-  </div>
+  </DocsWrapper>
 )

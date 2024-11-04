@@ -1,13 +1,12 @@
 import React from "react"
-
-import "./Tabs.scss"
-
 import {
   Tab as ReactTab,
   Tabs as ReactTabs,
   TabList as ReactTabList,
   TabPanel as ReactTabPanel,
 } from "react-tabs"
+import { SeedsSizes } from "../global/sharedTypes"
+import "./Tabs.scss"
 
 export interface TabsProps {
   children: React.ReactNode
@@ -52,9 +51,11 @@ const Tab = (props: TabProps) => {
 
 Tab.tabsRole = "Tab"
 
+export type TabSize = Extract<SeedsSizes, "sm" | "md">
+
 export interface TabListProps {
   children: React.ReactNode
-  size?: "sm" | "base"
+  size?: TabSize
   className?: string
 }
 
@@ -63,11 +64,7 @@ const TabList = (props: TabListProps) => {
   if (props.className) className.push(props.className)
 
   return (
-    <ReactTabList
-      data-size={props.size || "base"}
-      className={className}
-      children={props.children}
-    />
+    <ReactTabList data-size={props.size || "md"} className={className} children={props.children} />
   )
 }
 

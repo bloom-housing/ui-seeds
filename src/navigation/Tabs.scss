@@ -61,7 +61,7 @@
   }
 
   &:focus-visible {
-    outline: 2px solid var(--seeds-color-accent-cool);
+    outline: 2px solid var(--seeds-color-highlight-cool);
     outline-offset: 2px;
   }
 
@@ -139,7 +139,7 @@
       box-shadow: inset calc(var(--tab-active-indicator-width) + var(--tab-border-width)) 0px 0px
         var(--tab-active-indicator-color);
     }
-  }  
+  }
 }
 
 .seeds-tabs.vertical-sidebar-layout {

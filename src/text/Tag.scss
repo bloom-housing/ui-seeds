@@ -47,33 +47,33 @@
     color: var(--seeds-color-white);
   }
 
-  &[data-variant="in-process"] {
-    background-color: var(--seeds-color-highlight-light);
-    color: var(--seeds-color-highlight-darker);
+  &[data-variant="warn"] {
+    background-color: var(--seeds-color-warn-light);
+    color: var(--seeds-color-warn-darker);
   }
 
-  &[data-variant="in-process-inverse"] {
-    background-color: var(--seeds-color-highlight);
+  &[data-variant="warn-inverse"] {
+    background-color: var(--seeds-color-warn);
     color: var(--seeds-color-secondary-darker);
   }
 
   &[data-variant="highlight-cool"] {
-    background-color: var(--seeds-color-accent-cool-lighter);
-    color: var(--seeds-color-accent-cool-darker);
+    background-color: var(--seeds-color-highlight-cool-lighter);
+    color: var(--seeds-color-highlight-cool-darker);
   }
 
   &[data-variant="highlight-cool-inverse"] {
-    background-color: var(--seeds-color-accent-cool-darker);
+    background-color: var(--seeds-color-highlight-cool-darker);
     color: var(--seeds-color-white);
   }
 
   &[data-variant="highlight-warm"] {
-    background-color: var(--seeds-color-accent-warm-light);
-    color: var(--seeds-color-accent-warm-darker);
+    background-color: var(--seeds-color-highlight-warm-light);
+    color: var(--seeds-color-highlight-warm-darker);
   }
 
   &[data-variant="highlight-warm-inverse"] {
-    background-color: var(--seeds-color-accent-warm-dark);
+    background-color: var(--seeds-color-highlight-warm-dark);
     color: var(--seeds-color-white);
   }
 

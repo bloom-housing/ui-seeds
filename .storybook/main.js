@@ -1,29 +1,26 @@
 const path = require("path")
+import remarkGfm from "remark-gfm"
 
 module.exports = {
-  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   features: { buildStoriesJson: true },
-  /** Expose public folder to storybook as static */
-  // staticDirs: ['../public'],
+
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
     {
-      /**
-       * Fix Storybook issue with PostCSS@8
-       * @see https://github.com/storybookjs/storybook/issues/12668#issuecomment-773958085
-       */
-      name: "@storybook/addon-postcss",
+      name: "@storybook/addon-docs",
       options: {
-        postcssLoaderOptions: {
-          implementation: require("postcss"),
+        mdxPluginOptions: {
+          mdxCompileOptions: {
+            remarkPlugins: [remarkGfm],
+          },
         },
       },
     },
+    "@storybook/addon-storysource",
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
   ],
-  core: {
-    builder: "webpack5",
-  },
+
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
     // You can change the configuration based on that.
@@ -65,4 +62,11 @@ module.exports = {
     config.resolve.extensions.push(".ts", ".tsx")
     return config
   },
+
+  framework: {
+    name: "@storybook/react-webpack5",
+    options: {},
+  },
+
+  docs: {},
 }

@@ -1,11 +1,21 @@
-import { ArgsTable } from "@storybook/addon-docs"
+import { Meta } from "@storybook/addon-docs"
+import { ArgTypes, Title, Subtitle, Description } from "@storybook/blocks"
 import Link from "../Link"
+import * as stories from "./Link.stories.tsx"
 
-# &lt;Link /&gt;
+<Meta of={stories} />
+
+<Title />
+<Subtitle>
+  Link components provide users with a clickable element to navigate to another page or external
+  content.
+</Subtitle>
+Read more documentation about the Link component in
+[Zeroheight](https://zeroheight.com/5e69dd4e1/p/77fb4a-link).
 
 ## Properties
 
-<ArgsTable of={Link} />
+<ArgTypes of={Link} />
 
 ## Theme Variables
 

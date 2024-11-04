@@ -1,8 +1,10 @@
 import React from "react"
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-
+import { SeedsSizes } from "../global/sharedTypes"
 import "./Icon.scss"
+
+export type IconSize = Extract<SeedsSizes, "sm" | "md" | "lg" | "xl" | "2xl">
 
 export interface IconProps {
   /** Element ID */
@@ -10,7 +12,7 @@ export interface IconProps {
   /** Additional CSS classes */
   className?: string
   /** Specify a specific preset size */
-  size?: "sm" | "md" | "lg" | "xl" | "2xl"
+  size?: IconSize
   /** Set this to true for icons which only use outlined paths */
   outlined?: boolean
   "aria-hidden"?: boolean

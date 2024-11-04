@@ -1,11 +1,21 @@
-import { ArgsTable, Canvas, Story } from "@storybook/addon-docs"
+import { Meta } from "@storybook/addon-docs"
+import { ArgTypes, Title, Subtitle, Description } from "@storybook/blocks"
+import { Swatch } from "../../../documentation/components/Swatch.tsx"
 import Icon from "../Icon"
+import * as stories from "./Icon.stories.tsx"
 
-# &lt;Icon /&gt;
+<Meta of={stories} />
+
+<Title />
+<Subtitle>
+  Icon components display supported icon types including Hero icons and Custom SVGs
+</Subtitle>
+Read more documentation about the Icon component in
+[Zeroheight](https://zeroheight.com/5e69dd4e1/p/892a18-icon).
 
 ## Properties
 
-<ArgsTable of={Icon} />
+<ArgTypes of={Icon} />
 
 ## Theme Variables
 

@@ -1,10 +1,13 @@
 import React from "react"
+import { SeedsSizes } from "../global/sharedTypes"
+
+export type HeadingSize = SeedsSizes
 
 export interface HeadingProps {
   /** Heading text */
   children: React.ReactNode
   /** Heading size */
-  size?: "4xl" | "3xl" | "2xl" | "xl" | "lg" | "md" | "sm" | "xs"
+  size?: HeadingSize
   /** Heading level (`h1` through `h6`) */
   priority?: 1 | 2 | 3 | 4 | 5 | 6
   /** Element ID */
