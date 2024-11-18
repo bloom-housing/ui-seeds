@@ -29,11 +29,12 @@
   width: var(--drawer-width);
   max-width: 100%;
   height: 100vh;
-  
+  height: 100dvh;
+
   &.is-nested {
     width: calc(var(--drawer-width) - var(--drawer-nested-offset));
     max-width: calc(100% - var(--drawer-nested-offset));
-  
+
     @media (--sm-only) {
       --drawer-nested-offset: var(--seeds-s6);
     }
