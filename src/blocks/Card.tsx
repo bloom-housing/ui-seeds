@@ -1,6 +1,6 @@
 import React from "react"
 import "./Card.scss"
-import { SeedsSizes } from "global/sharedTypes"
+import { SeedsSizes } from "../global/sharedTypes"
 
 export type CardDivider = "flush" | "inset"
 

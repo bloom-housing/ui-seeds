@@ -11,7 +11,7 @@ import Icon from "../../icons/Icon"
 import useToggle from "../../hooks/useToggle"
 
 import "./CommonMessage.scss"
-import { SeedsColorInverseVariants, SeedsColorVariants } from "global/sharedTypes"
+import { SeedsColorInverseVariants, SeedsColorVariants } from "../../global/sharedTypes"
 
 const CommonMessageIconMap: Record<string, any> = {
   primary: InformationCircleIcon,
