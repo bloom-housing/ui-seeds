@@ -30,6 +30,9 @@ export const ExternalLink = () => (
     <Link href="https://www.exygy.com" newWindowTarget>
       External Link (New Window)
     </Link>
+    <Link href="https://www.exygy.com" newWindowTarget>
+      Internal Link (New Window)
+    </Link>
     <Link href="https://www.exygy.com" hideExternalLinkIcon>
       External Link (Same Window)
     </Link>
