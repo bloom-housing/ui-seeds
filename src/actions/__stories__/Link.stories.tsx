@@ -30,7 +30,7 @@ export const ExternalLink = () => (
     <Link href="https://www.exygy.com" newWindowTarget>
       External Link (New Window)
     </Link>
-    <Link href="https://www.exygy.com" newWindowTarget>
+    <Link href="/test" newWindowTarget>
       Internal Link (New Window)
     </Link>
     <Link href="https://www.exygy.com" hideExternalLinkIcon>
