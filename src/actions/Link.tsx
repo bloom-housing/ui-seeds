@@ -37,7 +37,9 @@ const Link = (props: LinkProps) => {
   const classNames = ["seeds-link"]
 
   const tailIcon = shouldShowExternalLinkIcon(props) ? (
-    <Icon><ArrowTopRightOnSquareIcon /></Icon>
+    <Icon>
+      <ArrowTopRightOnSquareIcon />
+    </Icon>
   ) : (
     props.tailIcon
   )
@@ -46,20 +48,22 @@ const Link = (props: LinkProps) => {
   if (props.leadIcon) classNames.push("has-lead-icon")
   if (tailIcon) classNames.push("has-tail-icon")
 
-  const additionalProps = {
+  let additionalProps: { [key: string]: unknown } = {
     id: props.id,
     className: classNames.join(" "),
     "aria-label": props.ariaLabel,
     "aria-hidden": props.ariaHidden,
   }
 
+  if (props.newWindowTarget) {
+    additionalProps = { ...additionalProps, target: "_blank", rel: "noreferrer" }
+  }
+
+  const { LinkComponent } = useContext(NavigationContext)
+
   if (props.href && isExternalLink(props.href)) {
     return (
-      <a
-        href={props.href}
-        target={props.newWindowTarget ? "_blank" : undefined}
-        {...additionalProps}
-      >
+      <a href={props.href} {...additionalProps}>
         {props.leadIcon}
         {props.children}
         {tailIcon}
@@ -67,7 +71,6 @@ const Link = (props: LinkProps) => {
       </a>
     )
   } else {
-    const { LinkComponent } = useContext(NavigationContext)
     return (
       <LinkComponent href={props.href} {...additionalProps}>
         {props.leadIcon}
