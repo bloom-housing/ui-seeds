@@ -29,6 +29,13 @@
     justify-content: center;
   }
 
+  .align-icon {
+    margin-block-end: auto;
+    margin-block-start: 0.1rem;
+    display: flex;
+    align-items: flex-start;
+  }
+
   &[data-variant="primary"] {
     background: var(--seeds-color-primary-light);
     color: var(--seeds-color-on-surface);

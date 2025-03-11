@@ -79,13 +79,15 @@ const CommonMessage = forwardRef(
         tabIndex={props.tabIndex}
         data-testid={props.testId}
       >
-        {props.customIcon
-          ? props.customIcon
-          : VariantIcon && (
-              <Icon size="md">
-                <VariantIcon />
-              </Icon>
-            )}
+        <span className={"align-icon"}>
+          {props.customIcon
+            ? props.customIcon
+            : VariantIcon && (
+                <Icon size="md">
+                  <VariantIcon />
+                </Icon>
+              )}
+        </span>
         <span data-part="content">{props.children}</span>
         {props.closeable && (
           <button
@@ -96,6 +98,7 @@ const CommonMessage = forwardRef(
                 props.onClose()
               }
             }}
+            className={"align-icon"}
           >
             <Icon size="md">
               <XMarkIcon />

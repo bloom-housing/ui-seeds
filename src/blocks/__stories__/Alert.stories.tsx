@@ -53,7 +53,8 @@ export const CustomIcon = () => (
 
 export const Link = () => (
   <Alert variant="primary-inverse">
-    Just wanted to let you know <a href="#">You can click on me</a>
+    Just wanted to let you know <a href="#">You can click on me</a>! I also have enough content to
+    wrap onto multiple lines.
   </Alert>
 )
 
