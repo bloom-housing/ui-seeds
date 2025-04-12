@@ -54,9 +54,11 @@
     border-color: var(--seeds-color-primary);
     color: var(--seeds-color-on-inverse);
 
-    &:hover {
-      background-color: var(--seeds-color-primary-dark);
-      border-color: var(--seeds-color-primary-dark);
+    @media (any-pointer: fine) {
+      &:hover {
+        background-color: var(--seeds-color-primary-dark);
+        border-color: var(--seeds-color-primary-dark);
+      }
     }
   }
 
@@ -65,10 +67,12 @@
     border-color: var(--seeds-color-primary);
     color: var(--seeds-color-primary);
 
-    &:hover {
-      background-color: var(--seeds-color-primary-dark);
-      border-color: var(--seeds-color-primary-dark);
-      color: var(--seeds-color-on-inverse);
+    @media (any-pointer: fine) {
+      &:hover {
+        background-color: var(--seeds-color-primary-dark);
+        border-color: var(--seeds-color-primary-dark);
+        color: var(--seeds-color-on-inverse);
+      }
     }
   }
 
@@ -77,9 +81,11 @@
     border-color: var(--seeds-color-secondary);
     color: var(--seeds-color-on-inverse);
 
-    &:hover {
-      background-color: var(--seeds-color-secondary-dark);
-      border-color: var(--seeds-color-secondary-dark);
+    @media (any-pointer: fine) {
+      &:hover {
+        background-color: var(--seeds-color-secondary-dark);
+        border-color: var(--seeds-color-secondary-dark);
+      }
     }
   }
 
@@ -88,10 +94,12 @@
     border-color: var(--seeds-color-secondary);
     color: var(--seeds-color-secondary);
 
-    &:hover {
-      background-color: var(--seeds-color-secondary-dark);
-      border-color: var(--seeds-color-secondary-dark);
-      color: var(--seeds-color-on-inverse);
+    @media (any-pointer: fine) {
+      &:hover {
+        background-color: var(--seeds-color-secondary-dark);
+        border-color: var(--seeds-color-secondary-dark);
+        color: var(--seeds-color-on-inverse);
+      }
     }
   }
 
@@ -100,9 +108,11 @@
     border-color: var(--seeds-color-success);
     color: var(--seeds-color-on-inverse);
 
-    &:hover {
-      background-color: var(--seeds-color-success-dark);
-      border-color: var(--seeds-color-success-dark);
+    @media (any-pointer: fine) {
+      &:hover {
+        background-color: var(--seeds-color-success-dark);
+        border-color: var(--seeds-color-success-dark);
+      }
     }
   }
 
@@ -111,10 +121,12 @@
     border-color: var(--seeds-color-success);
     color: var(--seeds-color-success);
 
-    &:hover {
-      background-color: var(--seeds-color-success-dark);
-      border-color: var(--seeds-color-success-dark);
-      color: var(--seeds-color-on-inverse);
+    @media (any-pointer: fine) {
+      &:hover {
+        background-color: var(--seeds-color-success-dark);
+        border-color: var(--seeds-color-success-dark);
+        color: var(--seeds-color-on-inverse);
+      }
     }
   }
 
@@ -123,9 +135,11 @@
     border-color: var(--seeds-color-alert);
     color: var(--seeds-color-on-inverse);
 
-    &:hover {
-      background-color: var(--seeds-color-alert-dark);
-      border-color: var(--seeds-color-alert-dark);
+    @media (any-pointer: fine) {
+      &:hover {
+        background-color: var(--seeds-color-alert-dark);
+        border-color: var(--seeds-color-alert-dark);
+      }
     }
   }
 
@@ -134,10 +148,12 @@
     border-color: var(--seeds-color-alert);
     color: var(--seeds-color-alert);
 
-    &:hover {
-      background-color: var(--seeds-color-alert-dark);
-      border-color: var(--seeds-color-alert-dark);
-      color: var(--seeds-color-on-inverse);
+    @media (any-pointer: fine) {
+      &:hover {
+        background-color: var(--seeds-color-alert-dark);
+        border-color: var(--seeds-color-alert-dark);
+        color: var(--seeds-color-on-inverse);
+      }
     }
   }
 
@@ -146,9 +162,11 @@
     border-color: var(--seeds-color-warn);
     color: var(--seeds-color-secondary-darker);
 
-    &:hover {
-      background-color: var(--seeds-color-warn-dark);
-      border-color: var(--seeds-color-warn-dark);
+    @media (any-pointer: fine) {
+      &:hover {
+        background-color: var(--seeds-color-warn-dark);
+        border-color: var(--seeds-color-warn-dark);
+      }
     }
   }
 
@@ -157,9 +175,11 @@
     border-color: var(--seeds-color-warn);
     color: var(--seeds-color-secondary-darker);
 
-    &:hover {
-      background-color: var(--seeds-color-warn-dark);
-      border-color: var(--seeds-color-warn-dark);
+    @media (any-pointer: fine) {
+      &:hover {
+        background-color: var(--seeds-color-warn-dark);
+        border-color: var(--seeds-color-warn-dark);
+      }
     }
   }
 
