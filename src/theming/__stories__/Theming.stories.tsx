@@ -64,9 +64,9 @@ export const ThemedButton = () => (
                 display: flex;
                 flex-direction: column;
                 width: fit-content;
-                margin-bottom: var(--seeds-s12);
+                margin-block-end: var(--seeds-s12);
                 div {
-                    margin-bottom: var(--seeds-s6);
+                    margin-block-end: var(--seeds-s6);
                 }
             }    
         }

@@ -9,8 +9,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--toast-stack-gap);
-  top: var(--toast-stack-inset-top);
-  right: var(--toast-stack-inset-right);
+  inset-block-start: var(--toast-stack-inset-top);
+  inset-inline-end: var(--toast-stack-inset-right);
   width: var(--toast-stack-width);
   max-width: calc(100% - var(--toast-stack-inset-right) * 2);
 }
