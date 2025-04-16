@@ -113,7 +113,7 @@ export const FullWidthVideo = () => {
         ariaDescribedBy="video-details"
         className={"custom-class-dialog"}
       >
-        <Dialog.Header id="conf">Video dialog</Dialog.Header>
+        <Dialog.Header id="video">Video dialog</Dialog.Header>
         <Dialog.Content id="video-details">
           <div className={"custom-class-video-wrapper"}>
             <iframe
