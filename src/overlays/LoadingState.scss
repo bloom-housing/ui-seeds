@@ -1,0 +1,28 @@
+.seeds-loading-state {
+  --loading-state-height: var(--seeds-s60);
+  --loading-state-spinner-border-width: 8px;
+  --loading-state-spinner-size: 5em;
+
+  > .loading-state-spinner {
+    border-radius: var(--seeds-rounded-lg);
+    height: var(--loading-state-height);
+    background-color: var(--seeds-bg-color-surface-primary);
+
+    // loading indicator
+    &::after {
+      content: "";
+      color: transparent;
+      position: relative;
+      display: block;
+      width: var(--loading-state-spinner-size);
+      height: var(--loading-state-spinner-size);
+      top: calc(50% - calc(var(--loading-state-spinner-size) / 2));
+      left: calc(50% - calc(var(--loading-state-spinner-size) / 2));
+      border: var(--loading-state-spinner-border-width) solid var(--seeds-color-secondary);
+      border-left-color: transparent;
+      border-radius: 50%;
+      opacity: 1;
+      animation: spinning-rotation 1.25s linear infinite;
+    }
+  }
+}
