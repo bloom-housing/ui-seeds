@@ -134,7 +134,7 @@ export const FullWidthVideo = () => {
       </style>
       <style>
         {
-          ".custom-class-video-wrapper { aspect-ratio: 16 / 9; height: calc(100% - var(--seeds-s0_5));}"
+          ".custom-class-video-wrapper { aspect-ratio: 16 / 9; height: calc(100% - var(--seeds-s0_5)); overflow: hidden;}"
         }
       </style>
       <style>{".custom-class-video { width: 100%; height: 100%; border: 0;}"}</style>
