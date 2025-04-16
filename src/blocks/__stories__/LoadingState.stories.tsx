@@ -1,16 +1,16 @@
 import React, { useState } from "react"
 import LoadingState from "../LoadingState"
 
-//import MDXDocs from "./Card.docs.mdx"
+import MDXDocs from "./LoadingState.docs.mdx"
 
 export default {
-  title: "Overlays/Loading State",
+  title: "Blocks/Loading State",
   component: LoadingState,
-  // parameters: {
-  //   docs: {
-  //     page: MDXDocs,
-  //   },
-  // },
+  parameters: {
+    docs: {
+      page: MDXDocs,
+    },
+  },
 }
 
 export const LoadingContent = () => {

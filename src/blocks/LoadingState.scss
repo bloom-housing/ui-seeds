@@ -1,7 +1,7 @@
 .seeds-loading-state {
   --loading-state-height: var(--seeds-s60);
   --loading-state-spinner-border-width: 8px;
-  --loading-state-spinner-size: 5em;
+  --loading-state-spinner-size: var(--seeds-s20);
 
   > .loading-state-spinner {
     border-radius: var(--seeds-rounded-lg);

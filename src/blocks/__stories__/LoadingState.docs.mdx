@@ -1,0 +1,24 @@
+import { Meta } from "@storybook/addon-docs"
+import { ArgTypes, Title, Subtitle, Description } from "@storybook/blocks"
+import LoadingState from "../LoadingState"
+import * as stories from "./LoadingState.stories.tsx"
+
+<Meta of={stories} />
+
+<Title />
+<Subtitle>
+  LoadingState components show a blank section with a spinner as async content is loading in.
+</Subtitle>
+Read more documentation about the LoadingState component in [Zeroheight](#).
+
+## Properties
+
+<ArgTypes of={LoadingState} />
+
+# Theme Variables
+
+| Name                                   | Description                      | Default       |
+| -------------------------------------- | -------------------------------- | ------------- |
+| `--loading-state-height`               | Height of the loading section    | `--seeds-s60` |
+| `--loading-state-spinner-border-width` | Width of the line of the spinner | `8px`         |
+| `--loading-state-spinner-size`         | Diameter of the spinner          | `--seeds-s20` |
