@@ -100,3 +100,44 @@ export const OverflowingContent = () => {
     </>
   )
 }
+
+export const FullWidthVideo = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  return (
+    <>
+      <button onClick={() => setIsOpen(!isOpen)}>Toggle Dialog</button>
+      <Dialog
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        ariaLabelledBy="video"
+        ariaDescribedBy="video-details"
+        className={"custom-class-dialog"}
+      >
+        <Dialog.Header id="conf">Video dialog</Dialog.Header>
+        <Dialog.Content id="video-details">
+          <div className={"custom-class-video-wrapper"}>
+            <iframe
+              title={"Label"}
+              src={"https://www.youtube.com/embed/UF3d34a6kqg?si=-uP6h3edIPS2INQE"}
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className={"custom-class-video"}
+            />
+          </div>
+        </Dialog.Content>
+      </Dialog>
+      <style>
+        {
+          ".custom-class-dialog {  --overlay-padding: 0; --overlay-border-color: none; --dialog-width: var(--seeds-width-3xl); }"
+        }
+      </style>
+      <style>
+        {
+          ".custom-class-video-wrapper { aspect-ratio: 16 / 9; height: calc(100% - var(--seeds-s0_5));}"
+        }
+      </style>
+      <style>{".custom-class-video { width: 100%; height: 100%; border: 0;}"}</style>
+    </>
+  )
+}
