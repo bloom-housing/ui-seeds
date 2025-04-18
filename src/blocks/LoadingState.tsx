@@ -3,7 +3,7 @@ import "./LoadingState.scss"
 
 interface LoadingStateProps {
   /** Show the loading state when true */
-  loading: boolean
+  loading?: boolean
   /** Content to show when not loading */
   children: React.ReactNode
   /** Element ID */
