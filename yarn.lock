@@ -6143,18 +6143,18 @@ flatted@^3.1.0:
   resolved "https://registry.npmjs.org/flatted/-/flatted-3.2.7.tgz"
   integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
 
-focus-trap-react@^10.2.1:
-  version "10.2.1"
-  resolved "https://registry.npmjs.org/focus-trap-react/-/focus-trap-react-10.2.1.tgz"
-  integrity sha512-UrAKOn52lvfHF6lkUMfFhlQxFgahyNW5i6FpHWkDxAeD4FSk3iwx9n4UEA4Sims0G5WiGIi0fAyoq3/UVeNCYA==
+focus-trap-react@^11.0.3:
+  version "11.0.3"
+  resolved "https://registry.yarnpkg.com/focus-trap-react/-/focus-trap-react-11.0.3.tgz#fe46bbe2a024379b3783cad73187197bafbadb88"
+  integrity sha512-tS1+enWS/gwCHk2WIF3KpM2oz7Y3HsnRImzHZNRgCBLWXzNG4XQVlJgbqdLr4lBKRXGdDBjQYitSh1bf2xe4Ag==
   dependencies:
-    focus-trap "^7.5.2"
+    focus-trap "^7.6.4"
     tabbable "^6.2.0"
 
-focus-trap@^7.5.2:
-  version "7.5.2"
-  resolved "https://registry.npmjs.org/focus-trap/-/focus-trap-7.5.2.tgz"
-  integrity sha512-p6vGNNWLDGwJCiEjkSK6oERj/hEyI9ITsSwIUICBoKLlWiTWXJRfQibCwcoi50rTZdbi87qDtUlMCmQwsGSgPw==
+focus-trap@^7.6.4:
+  version "7.6.4"
+  resolved "https://registry.yarnpkg.com/focus-trap/-/focus-trap-7.6.4.tgz#455ec5c51fee5ae99604ca15142409ffbbf84db9"
+  integrity sha512-xx560wGBk7seZ6y933idtjJQc1l+ck+pI3sKvhKozdBV1dRZoKhkW5xoCaFv9tQiX5RH1xfSxjuNu6g+lmN/gw==
   dependencies:
     tabbable "^6.2.0"
 
