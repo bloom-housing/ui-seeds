@@ -132,13 +132,11 @@ export const FullWidthVideo = () => {
           ".custom-class-dialog {  --overlay-padding: 0; --overlay-border-color: none; --dialog-width: var(--seeds-width-3xl); }"
         }
       </style>
-      <style>{".custom-class-video-content { height: 100%; display: contents;}"}</style>
+      <style>{".custom-class-video-content { display: contents; }"}</style>
       <style>
-        {
-          ".custom-class-video-wrapper { aspect-ratio: 16 / 9 auto; width: 100%; overflow: hidden; max-height: 80vh;}"
-        }
+        {".custom-class-video-wrapper { aspect-ratio: 16 / 9 auto; overflow: hidden; }"}
       </style>
-      <style>{".custom-class-video { width: 100%; height: 100%; border: 0;}"}</style>
+      <style>{".custom-class-video { width: 100%; height: 100%; border: 0; }"}</style>
     </>
   )
 }
