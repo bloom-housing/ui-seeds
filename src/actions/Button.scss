@@ -251,10 +251,10 @@
     display: block;
     width: 1.5em;
     height: 1.5em;
-    top: calc(50% - 0.75em);
-    left: calc(50% - 0.75em);
+    inset-block-start: calc(50% - 0.75em);
+    inset-inline-start: calc(50% - 0.75em);
     border: 3px solid var(--seeds-color-on-inverse);
-    border-left-color: transparent;
+    border-inline-start-color: transparent;
     border-radius: 50%;
     opacity: 0;
     transition: opacity 250ms;

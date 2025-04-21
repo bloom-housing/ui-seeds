@@ -71,20 +71,20 @@
   }
 
   &:not(:last-of-type) {
-    border-right-width: 0;
+    border-inline-end-width: 0;
   }
 
   &:first-of-type {
-    border-top-left-radius: var(--tab-border-radius);
+    border-start-start-radius: var(--tab-border-radius);
   }
 
   &:last-of-type {
-    border-top-right-radius: var(--tab-border-radius);
+    border-start-end-radius: var(--tab-border-radius);
   }
 
   &[aria-selected="true"] {
-    border-bottom-color: var(--tab-active-indicator-color);
-    border-bottom-width: var(--tab-active-indicator-width);
+    border-block-end-color: var(--tab-active-indicator-color);
+    border-block-end-width: var(--tab-active-indicator-width);
     z-index: 1;
   }
 
@@ -94,7 +94,7 @@
 
   &[aria-disabled="true"] {
     color: var(--seeds-text-color-disabled);
-    border-bottom-width: var(--tab-border-width);
+    border-block-end-width: var(--tab-border-width);
     cursor: not-allowed;
   }
 }
@@ -116,26 +116,26 @@
 
   .tabs-tab {
     border-color: var(--tab-border-color);
-    border-bottom-width: 0;
+    border-block-end-width: 0;
 
     &:first-of-type {
-      border-top-right-radius: var(--tab-border-radius);
+      border-start-end-radius: var(--tab-border-radius);
     }
 
     &:last-of-type {
-      border-top-right-radius: 0;
-      border-bottom-left-radius: var(--tab-border-radius);
-      border-bottom-right-radius: var(--tab-border-radius);
-      border-bottom-width: var(--tab-border-width);
+      border-start-end-radius: 0;
+      border-end-start-radius: var(--tab-border-radius);
+      border-end-end-radius: var(--tab-border-radius);
+      border-block-end-width: var(--tab-border-width);
     }
 
     &:not(:last-of-type) {
-      border-right-width: var(--tab-border-width);
-      border-bottom-width: 0;
+      border-inline-end-width: var(--tab-border-width);
+      border-block-end-width: 0;
     }
 
     &[aria-selected="true"] {
-      border-bottom-color: var(--tab-border-color);
+      border-block-end-color: var(--tab-border-color);
       box-shadow: inset calc(var(--tab-active-indicator-width) + var(--tab-border-width)) 0px 0px
         var(--tab-active-indicator-color);
     }

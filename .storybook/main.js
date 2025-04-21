@@ -19,6 +19,7 @@ module.exports = {
     "@storybook/addon-storysource",
     "@storybook/addon-links",
     "@storybook/addon-essentials",
+    "storybook-addon-rtl",
   ],
 
   webpackFinal: async (config, { configType }) => {
