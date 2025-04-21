@@ -114,7 +114,7 @@ export const FullWidthVideo = () => {
         className={"custom-class-dialog"}
       >
         <Dialog.Header id="video">Video dialog</Dialog.Header>
-        <Dialog.Content id="video-details">
+        <Dialog.Content id="video-details" className={"custom-class-video-content"}>
           <div className={"custom-class-video-wrapper"}>
             <iframe
               title={"Label"}
@@ -132,9 +132,10 @@ export const FullWidthVideo = () => {
           ".custom-class-dialog {  --overlay-padding: 0; --overlay-border-color: none; --dialog-width: var(--seeds-width-3xl); }"
         }
       </style>
+      <style>{".custom-class-video-content { height: 100%; display: contents;}"}</style>
       <style>
         {
-          ".custom-class-video-wrapper { aspect-ratio: 16 / 9; height: calc(100% - var(--seeds-s0_5)); overflow: hidden;}"
+          ".custom-class-video-wrapper { aspect-ratio: 16 / 9 auto; width: 100%; overflow: hidden; max-height: 80vh;}"
         }
       </style>
       <style>{".custom-class-video { width: 100%; height: 100%; border: 0;}"}</style>
