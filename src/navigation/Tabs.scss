@@ -92,6 +92,10 @@
     color: var(--tab-active-label-color);
   }
 
+  &[aria-selected="false"] {
+    font-weight: var(--seeds-font-weight-regular);
+  }
+
   &[aria-disabled="true"] {
     color: var(--seeds-text-color-disabled);
     border-block-end-width: var(--tab-border-width);
