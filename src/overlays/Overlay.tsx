@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useId } from "react"
+import React, { useRef, useId } from "react"
 import { createPortal } from "react-dom"
-import FocusTrap from "focus-trap-react"
+import { FocusTrap } from "focus-trap-react"
 import { XMarkIcon } from "@heroicons/react/20/solid"
 import Icon from "../icons/Icon"
 import Heading from "../text/Heading"
@@ -137,7 +137,7 @@ const Overlay = (props: OverlayProps) => {
             </div>
           </FocusTrap>
         </div>,
-        overlayPortalEl.current
+        overlayPortalEl.current,
       )
     : null
 }
