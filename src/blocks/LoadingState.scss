@@ -1,12 +1,14 @@
 .seeds-loading-state {
+  --loading-state-background-color: var(--seeds-bg-color-surface-primary);
   --loading-state-height: var(--seeds-s60);
+  --loading-state-spinner-color: var(--seeds-color-secondary);
   --loading-state-spinner-border-width: 8px;
   --loading-state-spinner-size: var(--seeds-s20);
 
   > .loading-state-spinner {
     border-radius: var(--seeds-rounded-lg);
     height: var(--loading-state-height);
-    background-color: var(--seeds-bg-color-surface-primary);
+    background-color: var(--loading-state-background-color);
 
     // loading indicator
     &::after {
@@ -18,7 +20,7 @@
       height: var(--loading-state-spinner-size);
       top: calc(50% - calc(var(--loading-state-spinner-size) / 2));
       left: calc(50% - calc(var(--loading-state-spinner-size) / 2));
-      border: var(--loading-state-spinner-border-width) solid var(--seeds-color-secondary);
+      border: var(--loading-state-spinner-border-width) solid var(--loading-state-spinner-color);
       border-left-color: transparent;
       border-radius: 50%;
       opacity: 1;

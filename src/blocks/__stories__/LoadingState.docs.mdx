@@ -1,5 +1,6 @@
 import { Meta } from "@storybook/addon-docs"
 import { ArgTypes, Title, Subtitle, Description } from "@storybook/blocks"
+import { Swatch } from "../../../documentation/components/Swatch.tsx"
 import LoadingState from "../LoadingState"
 import * as stories from "./LoadingState.stories.tsx"
 
@@ -9,7 +10,8 @@ import * as stories from "./LoadingState.stories.tsx"
 <Subtitle>
   LoadingState components show a blank section with a spinner as async content is loading in.
 </Subtitle>
-Read more documentation about the LoadingState component in [Zeroheight](https://zeroheight.com/5e69dd4e1/p/5669bc-loading-state).
+Read more documentation about the LoadingState component in
+[Zeroheight](https://zeroheight.com/5e69dd4e1/p/5669bc-loading-state).
 
 ## Properties
 
@@ -17,8 +19,10 @@ Read more documentation about the LoadingState component in [Zeroheight](https:/
 
 # Theme Variables
 
-| Name                                   | Description                      | Default       |
-| -------------------------------------- | -------------------------------- | ------------- |
-| `--loading-state-height`               | Height of the loading section    | `--seeds-s60` |
-| `--loading-state-spinner-border-width` | Width of the line of the spinner | `8px`         |
-| `--loading-state-spinner-size`         | Diameter of the spinner          | `--seeds-s20` |
+| Name                                   | Description                                                                    | Default                            |
+| -------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------- |
+| `--loading-state-background-color`     | <Swatch color="seeds-bg-color-surface-primary" /> Color of the loading section | `--seeds-bg-color-surface-primary` |
+| `--loading-state-height`               | Height of the loading section                                                  | `--seeds-s60`                      |
+| `--loading-state-spinner-color`.       | <Swatch color="seeds-color-secondary" /> Color of the spinner                  | `--seeds-color-secondary`          |
+| `--loading-state-spinner-border-width` | Width of the line of the spinner                                               | `8px`                              |
+| `--loading-state-spinner-size`         | Diameter of the spinner                                                        | `--seeds-s20`                      |
