@@ -13,11 +13,11 @@ describe("<Button>", () => {
     const { getByText, container } = render(
       <Button id="test-button" className="test-class" onClick={() => (wasClicked = true)}>
         {content}
-      </Button>
+      </Button>,
     )
     expect(getByText(content)).toBeInTheDocument()
     expect(
-      container.querySelector("#test-button.test-class[data-variant='primary']")
+      container.querySelector("#test-button.test-class[data-variant='primary']"),
     ).not.toBeNull()
 
     fireEvent.click(getByText(content))
@@ -38,12 +38,12 @@ describe("<Button>", () => {
     const { getByRole, container } = render(
       <Button href="https://example.com" newWindowTarget>
         {content}
-      </Button>
+      </Button>,
     )
 
     expect(getByRole("link", { name: `${content} (opens in a new tab)` })).toHaveAttribute(
       "href",
-      "https://example.com"
+      "https://example.com",
     )
     expect(container.querySelector("svg")).toBeVisible()
   })
@@ -51,9 +51,16 @@ describe("<Button>", () => {
   it("displays external links with a custom icon", () => {
     const content = "Button Label"
     const { getByRole, container } = render(
-      <Button href="https://example.com" tailIcon={<Icon><HeartIcon /></Icon>}>
+      <Button
+        href="https://example.com"
+        tailIcon={
+          <Icon>
+            <HeartIcon />
+          </Icon>
+        }
+      >
         {content}
-      </Button>
+      </Button>,
     )
 
     expect(getByRole("link", { name: content })).toHaveAttribute("href", "https://example.com")
@@ -65,10 +72,21 @@ describe("<Button>", () => {
     const { getByRole, container } = render(
       <Button href="https://example.com" hideExternalLinkIcon>
         {content}
-      </Button>
+      </Button>,
     )
 
     expect(getByRole("link", { name: content })).toHaveAttribute("href", "https://example.com")
     expect(container.querySelector("svg")).toBeNull()
+  })
+
+  it("correctly spread additional native attributes", () => {
+    const content = "Button Label"
+    const { getByRole } = render(
+      <Button onClick={() => {}} nativeButtonProps={{ form: "form1" }}>
+        {content}
+      </Button>,
+    )
+
+    expect(getByRole("button", { name: content })).toHaveAttribute("form", "form1")
   })
 })
