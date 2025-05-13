@@ -265,3 +265,24 @@ export const ExpandingButton = () => {
     </>
   )
 }
+
+export const AdditionalNativeProps = () => {
+  return (
+    <>
+      <form id="form1">
+        <label htmlFor="input1">First name</label>
+        <br />
+        <input id="input1" name="input1" />
+      </form>
+      <br />
+      <Button
+        onClick={() => alert("Form submitted")}
+        type="submit"
+        size={"sm"}
+        nativeButtonProps={{ form: "form1" }}
+      >
+        Submit
+      </Button>
+    </>
+  )
+}

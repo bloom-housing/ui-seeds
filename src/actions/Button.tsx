@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, PropsWithChildren } from "react"
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid"
 import {
   NavigationContext,
@@ -30,7 +30,7 @@ export interface ButtonProps {
   /** Set to true if you don't want external links to show a related icon */
   hideExternalLinkIcon?: boolean
   /** Event handler for the button click */
-  onClick?: (e: React.MouseEvent) => void
+  onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
   /** Use an `<a href>` tag instead of `<button>` for a hyperlink */
   href?: string
   /** Set external link target if it meets accessibility criteria */
@@ -53,10 +53,14 @@ export interface ButtonProps {
   id?: string
   /** Additional CSS classes */
   className?: string
+  /** Additional native button props not explicitly included */
+  nativeButtonProps?: PropsWithChildren<React.ButtonHTMLAttributes<HTMLButtonElement>>
+  /** Additional native anchor props not explicitly included */
+  nativeLinkProps?: PropsWithChildren<React.LinkHTMLAttributes<HTMLAnchorElement>>
 }
 
-// extended interface for Link buttons
-export interface ButtonPropsWithTarget extends ButtonProps {
+// Extended interface for Link buttons
+export interface ButtonPropsWithTarget extends Omit<ButtonProps, "onClick"> {
   target?: string
 }
 
@@ -107,13 +111,13 @@ const LinkButton = (props: ButtonPropsWithTarget) => {
 
   if (props.href && isExternalLink(props.href)) {
     return (
-      <a {...props}>
+      <a {...props} {...props.nativeLinkProps}>
         {props.children}
         {props.target === "_blank" && <ExternalLinkScreenReaderText />}
       </a>
     )
   } else {
-    return <LinkComponent {...props} />
+    return <LinkComponent {...props} {...props.nativeLinkProps} />
   }
 }
 
@@ -141,6 +145,7 @@ const Button = (props: ButtonProps) => {
         disabled={props.disabled}
         onClick={props.loadingMessage ? (event) => event.preventDefault : props.onClick}
         {...updatedProps}
+        {...props.nativeButtonProps}
       >
         {buttonInner}
         <span className="seeds-screen-reader-only" aria-live="assertive">
