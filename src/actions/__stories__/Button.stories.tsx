@@ -270,7 +270,7 @@ export const AdditionalNativeProps = () => {
   return (
     <>
       <form id="form1">
-        <label htmlFor="input1">What's your name?</label>
+        <label htmlFor="input1">First name</label>
         <br />
         <input id="input1" name="input1" />
       </form>
