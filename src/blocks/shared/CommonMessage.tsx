@@ -106,7 +106,17 @@ const CommonMessage = forwardRef(
           </button>
         )}
       </div>
-    ) : null
+    ) : <div
+          ref={ref}
+          id={props.id}
+          className={classNames.join(" ")}
+          data-variant={variant}
+          hidden={visible === false}
+          role={props.role}
+          tabIndex={props.tabIndex}
+          data-testid={props.testId}
+        >
+        </div>
   },
 )
 
