@@ -68,7 +68,7 @@ const CommonMessage = forwardRef(
     const variant = props.variant || "primary"
     const VariantIcon = CommonMessageIconMap[variant]
 
-    return props.children ? (
+    return (
       <div
         ref={ref}
         id={props.id}
@@ -88,7 +88,9 @@ const CommonMessage = forwardRef(
                 </Icon>
               )}
         </span>
-        <span data-part="content">{props.children}</span>
+        <span data-part="content">
+          {props.children || null}
+        </span>
         {props.closeable && (
           <button
             aria-label="Close"
@@ -106,17 +108,7 @@ const CommonMessage = forwardRef(
           </button>
         )}
       </div>
-    ) : <div
-          ref={ref}
-          id={props.id}
-          className={classNames.join(" ")}
-          data-variant={variant}
-          hidden={visible === false}
-          role={props.role}
-          tabIndex={props.tabIndex}
-          data-testid={props.testId}
-        >
-        </div>
+    )
   },
 )
 
