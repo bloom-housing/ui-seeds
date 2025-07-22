@@ -1,5 +1,5 @@
 import React from "react"
-import Markdown, { MarkdownOptions } from "markdown-to-jsx"
+import Markdown, { MarkdownToJSX } from "markdown-to-jsx"
 import "./ExpandableText.scss"
 
 export interface ExpandableTextProps {
@@ -11,7 +11,7 @@ export interface ExpandableTextProps {
     readMore: string
     readLess: string
   }
-  markdownProps?: MarkdownOptions
+  markdownProps?: MarkdownToJSX.Options
   buttonClassName?: string
 }
 
@@ -31,7 +31,7 @@ const moreLessButton = (
   expanded: boolean,
   setExpanded: (newValue: boolean) => void,
   strings: ExpandableTextProps["strings"],
-  buttonClassName: ExpandableTextProps["buttonClassName"]
+  buttonClassName: ExpandableTextProps["buttonClassName"],
 ) => {
   const classes = ["seeds-button-toggle"]
   if (buttonClassName) {
