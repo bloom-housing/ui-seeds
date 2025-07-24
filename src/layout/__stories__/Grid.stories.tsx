@@ -188,22 +188,22 @@ export const includeGridRoles = () => (
     <section>
       <Heading size="xl">Field Values</Heading>
       <Grid spacing="md" roles>
-        <Grid.Row roles>
-          <Grid.Cell roles>
+        <Grid.Row>
+          <Grid.Cell>
             <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
           </Grid.Cell>
-          <Grid.Cell roles>
+          <Grid.Cell>
             <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
           </Grid.Cell>
-          <Grid.Cell roles>
+          <Grid.Cell>
             <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
           </Grid.Cell>
         </Grid.Row>
-        <Grid.Row roles>
-          <Grid.Cell roles>
+        <Grid.Row>
+          <Grid.Cell>
             <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
           </Grid.Cell>
-          <Grid.Cell roles>
+          <Grid.Cell>
             <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
           </Grid.Cell>
         </Grid.Row>

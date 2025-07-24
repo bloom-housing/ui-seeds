@@ -1,6 +1,12 @@
-import React from "react"
+import React, { createContext, useContext } from "react"
 import { SeedsSizes } from "../global/sharedTypes"
 import "./Grid.scss"
+
+interface GridContextType {
+  roles: boolean | undefined
+}
+
+const GridContext = createContext<GridContextType | null>(null)
 
 export interface GridCellProps {
   children: React.ReactNode
@@ -13,8 +19,9 @@ const GridCell = (props: GridCellProps) => {
   const classNames = ["seeds-grid-cell"]
   if (props.className) classNames.push(props.className)
 
+  const context = useContext(GridContext)
   return (
-    <div id={props.id} className={classNames.join(" ")} role={props.roles ? "gridcell" : ""}>
+    <div id={props.id} className={classNames.join(" ")} role={context?.roles ? "gridcell" : ""}>
       {props.children}
     </div>
   )
@@ -28,11 +35,12 @@ const GridRow = (props: GridRowProps) => {
   const classNames = ["seeds-grid-row"]
   if (props.className) classNames.push(props.className)
 
+  const context = useContext(GridContext)
   return (
     <div
       id={props.id}
       className={classNames.join(" ")}
-      role={props.roles ? "row" : ""}
+      role={context?.roles ? "row" : ""}
       data-columns={props.columns}
     >
       {props.children}
@@ -55,14 +63,16 @@ const Grid = (props: GridProps) => {
   if (props.className) classNames.push(props.className)
 
   return (
-    <div
-      id={props.id}
-      className={classNames.join(" ")}
-      data-spacing={props.spacing}
-      role={props.roles ? "grid" : ""}
-    >
-      {props.children}
-    </div>
+    <GridContext.Provider value={{ roles: props.roles }}>
+      <div
+        id={props.id}
+        className={classNames.join(" ")}
+        data-spacing={props.spacing}
+        role={props.roles ? "grid" : ""}
+      >
+        {props.children}
+      </div>
+    </GridContext.Provider>
   )
 }
 
