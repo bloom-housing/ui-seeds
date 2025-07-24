@@ -22,7 +22,7 @@ const FieldValue = (props: FieldValueProps) => {
   if (props.className) classNames.push(props.className)
 
   return (
-    <div id={props.id} className={classNames.join(" ")} role="gridcell" data-testid={props.testId}>
+    <div id={props.id} className={classNames.join(" ")} data-testid={props.testId}>
       {props.label && <p data-part="label">{props.label}</p>}
       <p data-part="value">{props.children}</p>
       {props.helpText && <p data-part="help-text">{props.helpText}</p>}

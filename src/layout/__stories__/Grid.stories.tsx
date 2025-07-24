@@ -158,13 +158,54 @@ export const sectionsAndFieldValues = () => (
       <Heading size="xl">Field Values</Heading>
       <Grid spacing="md">
         <Grid.Row>
-          <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
-          <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
-          <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
+          <Grid.Cell>
+            <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
+          </Grid.Cell>
+          <Grid.Cell>
+            <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
+          </Grid.Cell>
+          <Grid.Cell>
+            <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
+          </Grid.Cell>
         </Grid.Row>
         <Grid.Row>
-          <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
-          <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
+          <Grid.Cell>
+            <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
+          </Grid.Cell>
+          <Grid.Cell>
+            <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
+          </Grid.Cell>
+        </Grid.Row>
+      </Grid>
+    </section>
+
+    <StoryStyles />
+  </>
+)
+
+export const includeGridRoles = () => (
+  <>
+    <section>
+      <Heading size="xl">Field Values</Heading>
+      <Grid spacing="md" roles>
+        <Grid.Row>
+          <Grid.Cell>
+            <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
+          </Grid.Cell>
+          <Grid.Cell>
+            <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
+          </Grid.Cell>
+          <Grid.Cell>
+            <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
+          </Grid.Cell>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Cell>
+            <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
+          </Grid.Cell>
+          <Grid.Cell>
+            <FieldValue label="Property Amenities">Pool, BBQ, Rooftop View</FieldValue>
+          </Grid.Cell>
         </Grid.Row>
       </Grid>
     </section>
