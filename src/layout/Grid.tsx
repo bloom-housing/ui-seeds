@@ -6,6 +6,7 @@ export interface GridCellProps {
   children: React.ReactNode
   id?: string
   className?: string
+  roles?: boolean
 }
 
 const GridCell = (props: GridCellProps) => {
@@ -13,7 +14,7 @@ const GridCell = (props: GridCellProps) => {
   if (props.className) classNames.push(props.className)
 
   return (
-    <div id={props.id} className={classNames.join(" ")} role="gridcell">
+    <div id={props.id} className={classNames.join(" ")} role={props.roles ? "gridcell" : ""}>
       {props.children}
     </div>
   )
@@ -28,7 +29,12 @@ const GridRow = (props: GridRowProps) => {
   if (props.className) classNames.push(props.className)
 
   return (
-    <div id={props.id} className={classNames.join(" ")} role="row" data-columns={props.columns}>
+    <div
+      id={props.id}
+      className={classNames.join(" ")}
+      role={props.roles ? "row" : ""}
+      data-columns={props.columns}
+    >
       {props.children}
     </div>
   )
@@ -49,7 +55,12 @@ const Grid = (props: GridProps) => {
   if (props.className) classNames.push(props.className)
 
   return (
-    <div id={props.id} className={classNames.join(" ")} data-spacing={props.spacing} role="grid">
+    <div
+      id={props.id}
+      className={classNames.join(" ")}
+      data-spacing={props.spacing}
+      role={props.roles ? "grid" : ""}
+    >
       {props.children}
     </div>
   )
