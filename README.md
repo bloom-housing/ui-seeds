@@ -6,7 +6,9 @@ Seeds is built using TypeScript, React, and Sass. It uses Storybook for concrete
 
 ## Design System Documentation
 
-We use [zeroheight to document tokens, components, and patterns](https://zeroheight.com/5e69dd4e1/p/938cb5-seeds-design-system) for the Seeds Design System.
+[This Notion page](https://exygy.notion.site/Seeds-11a684ea9b7544f4bbc99d2284aa4613?source=copy_link) is a hub for additional Seeds documentation.
+
+Also linked in the Notion, we use [zeroheight to document tokens, components, and patterns](https://zeroheight.com/5e69dd4e1/p/938cb5-seeds-design-system) for the Seeds Design System.
 
 For code-level changes over time, [see GitHub Releases for Changelog](https://github.com/bloom-housing/ui-seeds/releases).
 
