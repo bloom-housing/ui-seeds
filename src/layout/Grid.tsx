@@ -12,7 +12,6 @@ export interface GridCellProps {
   children: React.ReactNode
   id?: string
   className?: string
-  roles?: boolean
 }
 
 const GridCell = (props: GridCellProps) => {
@@ -51,6 +50,11 @@ const GridRow = (props: GridRowProps) => {
 export type GridSpacing = Extract<SeedsSizes, "sm" | "md" | "lg" | "xl">
 
 export interface GridProps extends GridCellProps {
+  /**
+   * If true, adds grid, row, and gridcell roles to each component. Only recommended for use where the grid itself is a primary interactive widget, such as a data grid or a spreadsheet-like interface - not just for displaying data that happens to be visually arranged in a grid
+   * @default md
+   */
+  roles?: boolean
   /**
    * Control the gap between grid cells
    * @default md
