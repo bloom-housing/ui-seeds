@@ -12,6 +12,10 @@ export interface HeadingGroupProps extends Pick<HeadingProps, "size"> {
    * @default 2
    */
   headingPriority?: 1 | 2 | 3 | 4 | 5 | 6
+  /** Tab index for the heading element */
+  headingTabIndex?: number
+  /** ID of the heading element */
+  headingId?: string
   /** Element ID */
   id?: string
   /** Additional class name for the whole group */
@@ -24,7 +28,12 @@ const HeadingGroup = (props: HeadingGroupProps) => {
 
   return (
     <hgroup id={props.id} className={classNames.join(" ")} role="group">
-      <Heading priority={props.headingPriority ?? 2} size={props.size || "3xl"}>
+      <Heading
+        id={props.headingId}
+        priority={props.headingPriority ?? 2}
+        size={props.size || "3xl"}
+        tabIndex={props.headingTabIndex}
+      >
         {props.heading}
       </Heading>
       <p>{props.subheading}</p>
