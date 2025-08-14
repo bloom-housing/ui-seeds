@@ -3,7 +3,7 @@ import Heading, { HeadingProps } from "./Heading"
 import "./HeadingGroup.scss"
 
 export interface HeadingGroupProps extends Pick<HeadingProps, "size"> {
-  /** A string or element to display in an `h2` tag (overridable via `headingPriority`) */
+  /** A string or element to display in an `h2` tag (overridable via `headingProps.priority`) */
   heading: React.ReactNode
   /** A string or element to display in a `p` tag */
   subheading: React.ReactNode
@@ -11,11 +11,7 @@ export interface HeadingGroupProps extends Pick<HeadingProps, "size"> {
    * The heading level (1 through 6)
    * @default 2
    */
-  headingPriority?: 1 | 2 | 3 | 4 | 5 | 6
-  /** Tab index for the heading element */
-  headingTabIndex?: number
-  /** ID of the heading element */
-  headingId?: string
+  headingProps?: HeadingProps
   /** Element ID */
   id?: string
   /** Additional class name for the whole group */
@@ -28,12 +24,7 @@ const HeadingGroup = (props: HeadingGroupProps) => {
 
   return (
     <hgroup id={props.id} className={classNames.join(" ")} role="group">
-      <Heading
-        id={props.headingId}
-        priority={props.headingPriority ?? 2}
-        size={props.size || "3xl"}
-        tabIndex={props.headingTabIndex}
-      >
+      <Heading priority={2} size={"3xl"} {...props.headingProps}>
         {props.heading}
       </Heading>
       <p>{props.subheading}</p>
