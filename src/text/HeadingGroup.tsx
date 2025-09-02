@@ -2,7 +2,7 @@ import React from "react"
 import Heading, { HeadingProps } from "./Heading"
 import "./HeadingGroup.scss"
 
-export interface HeadingGroupProps extends Pick<HeadingProps, "size"> {
+export interface HeadingGroupProps {
   /** A string or element to display in an `h2` tag (overridable via `headingProps.priority`) */
   heading: React.ReactNode
   /** A string or element to display in a `p` tag */
