@@ -1,7 +1,13 @@
-const path = require("path")
+import path, { dirname, join } from "path"
 import remarkGfm from "remark-gfm"
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
 
-module.exports = {
+function getAbsolutePath(value) {
+  return dirname(require.resolve(join(value, 'package.json')));
+}
+
+export default {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   features: { buildStoriesJson: true },
 
@@ -45,7 +51,7 @@ module.exports = {
           loader: "sass-loader",
         },
       ],
-      include: path.resolve(__dirname, "../"),
+      include: path.resolve(getAbsolutePath("../")),
     })
 
     config.module.rules.push({
