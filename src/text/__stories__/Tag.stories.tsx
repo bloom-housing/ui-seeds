@@ -94,18 +94,34 @@ export const TagVariants = () => (
 )
 
 export const withIcons = () => (
-  <DocsIconWrapper>
-    <Tag>
-      <Icon>
-        <FaceSmileIcon />
-      </Icon>{" "}
-      Icon Left
-    </Tag>
-    <Tag>
-      Icon Right{" "}
-      <Icon>
-        <FaceSmileIcon />
-      </Icon>
-    </Tag>
-  </DocsIconWrapper>
+  <>
+    <DocsWrapper>
+      <DocsIconWrapper>
+        <Tag>
+          <Icon>
+            <FaceSmileIcon />
+          </Icon>{" "}
+          Icon Left
+        </Tag>
+        <Tag>
+          Icon Right{" "}
+          <Icon>
+            <FaceSmileIcon />
+          </Icon>
+        </Tag>
+      </DocsIconWrapper>
+    </DocsWrapper>
+    <DocsWrapper>
+      <Tag>
+        <span>
+          <Icon>
+            <FaceSmileIcon />
+          </Icon>{" "}
+          Very long tag text which
+          <br />
+          spans multiple lines
+        </span>
+      </Tag>
+    </DocsWrapper>
+  </>
 )

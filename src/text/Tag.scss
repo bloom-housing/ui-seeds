@@ -1,12 +1,13 @@
 .seeds-tag {
   --tag-border-radius: var(--seeds-rounded-full);
-  --tag-padding-inline: var(--seeds-s2_5);
-  --tag-padding-block: var(--seeds-s0_5);
+  --tag-padding-inline: var(--seeds-s3);
+  --tag-padding-block: var(--seeds-s1_5);
   --tag-interior-gap: var(--seeds-s1);
   --tag-font-size: var(--seeds-font-size-sm);
   --tag-font-size-lg: var(--seeds-font-size-base);
   --tag-font-weight: var(--seeds-font-weight-semibold);
   --tag-font-weight-lg: var(--seeds-font-weight-semibold);
+  --tag-line-height: var(--seeds-line-height-4);
 
   display: inline-flex;
   align-items: center;
@@ -16,6 +17,7 @@
   gap: var(--tag-interior-gap);
   font-size: var(--tag-font-size);
   font-weight: var(--tag-font-weight);
+  line-height: var(--tag-line-height);
 
   &[data-variant="primary"] {
     background-color: var(--seeds-color-primary-light);
