@@ -28,7 +28,7 @@ const DocsIconWrapper = (props: React.PropsWithChildren) => {
 export const TagVariants = () => (
   <>
     <DocsWrapper>
-      <HeadingGroup size="2xl" heading="md" subheading="Regular Size" />
+      <HeadingGroup heading="md" subheading="Regular Size" headingProps={{ size: "2xl" }} />
       <div>
         <Tag variant="primary">Primary Tag</Tag>
         <Tag variant="secondary">Secondary Tag</Tag>
@@ -47,7 +47,7 @@ export const TagVariants = () => (
       </div>
     </DocsWrapper>
     <DocsWrapper>
-      <HeadingGroup size="2xl" heading="lg" subheading="Large Size" />
+      <HeadingGroup heading="lg" subheading="Large Size" headingProps={{ size: "2xl" }} />
       <div>
         <Tag variant="primary" size="lg">
           Primary Tag

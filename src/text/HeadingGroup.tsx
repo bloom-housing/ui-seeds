@@ -11,7 +11,7 @@ export interface HeadingGroupProps {
    * The heading level (1 through 6)
    * @default 2
    */
-  headingProps?: HeadingProps
+  headingProps?: Omit<HeadingProps, "children">
   /** Element ID */
   id?: string
   /** Additional class name for the whole group */
