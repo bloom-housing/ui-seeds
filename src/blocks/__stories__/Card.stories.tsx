@@ -26,7 +26,11 @@ export const TextContent = () => (
   <DocsWrapper>
     <Card>
       <Card.Header>
-        <HeadingGroup size="2xl" heading="Wildflower" subheading="Wildflower (or wild flower)" />
+        <HeadingGroup
+          heading="Wildflower"
+          subheading="Wildflower (or wild flower)"
+          headingProps={{ size: "2xl" }}
+        />
       </Card.Header>
 
       <Card.Section>
@@ -52,7 +56,11 @@ export const FlushDividers = () => (
   <DocsWrapper>
     <Card>
       <Card.Header divider="flush">
-        <HeadingGroup size="2xl" heading="Wildflower" subheading="Wildflower (or wild flower)" />
+        <HeadingGroup
+          heading="Wildflower"
+          subheading="Wildflower (or wild flower)"
+          headingProps={{ size: "2xl" }}
+        />
       </Card.Header>
 
       <Card.Section divider="flush">
@@ -78,7 +86,11 @@ export const InsetDividers = () => (
   <DocsWrapper>
     <Card>
       <Card.Header divider="inset">
-        <HeadingGroup size="2xl" heading="Wildflower" subheading="Wildflower (or wild flower)" />
+        <HeadingGroup
+          heading="Wildflower"
+          subheading="Wildflower (or wild flower)"
+          headingProps={{ size: "2xl" }}
+        />
       </Card.Header>
 
       <Card.Section divider="inset">
@@ -104,7 +116,11 @@ export const WithFooter = () => (
   <DocsWrapper>
     <Card>
       <Card.Header>
-        <HeadingGroup size="2xl" heading="Wildflower" subheading="Wildflower (or wild flower)" />
+        <HeadingGroup
+          heading="Wildflower"
+          subheading="Wildflower (or wild flower)"
+          headingProps={{ size: "2xl" }}
+        />
       </Card.Header>
 
       <Card.Section>
@@ -145,7 +161,7 @@ export const Spacings = () => (
   <DocsGridWrapper>
     <Card spacing="none">
       <Card.Header>
-        <HeadingGroup size="2xl" heading="none" subheading="No Spacing" />
+        <HeadingGroup heading="none" subheading="No Spacing" headingProps={{ size: "2xl" }} />
       </Card.Header>
 
       <br />
@@ -159,7 +175,7 @@ export const Spacings = () => (
 
     <Card spacing="sm">
       <Card.Header>
-        <HeadingGroup size="2xl" heading="sm" subheading="Small Spacing" />
+        <HeadingGroup heading="sm" subheading="Small Spacing" headingProps={{ size: "2xl" }} />
       </Card.Header>
 
       <Card.Section>
@@ -172,7 +188,11 @@ export const Spacings = () => (
 
     <Card spacing="md">
       <Card.Header>
-        <HeadingGroup size="2xl" heading="md" subheading="Medium (Default) Spacing" />
+        <HeadingGroup
+          heading="md"
+          subheading="Medium (Default) Spacing"
+          headingProps={{ size: "2xl" }}
+        />
       </Card.Header>
 
       <Card.Section>
@@ -185,7 +205,7 @@ export const Spacings = () => (
 
     <Card spacing="lg">
       <Card.Header>
-        <HeadingGroup size="2xl" heading="lg" subheading="Large Spacing" />
+        <HeadingGroup heading="lg" subheading="Large Spacing" headingProps={{ size: "2xl" }} />
       </Card.Header>
 
       <Card.Section>
@@ -198,7 +218,11 @@ export const Spacings = () => (
 
     <Card spacing="xl">
       <Card.Header>
-        <HeadingGroup size="2xl" heading="xl" subheading="Extra Large Spacing" />
+        <HeadingGroup
+          heading="xl"
+          subheading="Extra Large Spacing"
+          headingProps={{ size: "2xl" }}
+        />
       </Card.Header>
 
       <Card.Section>

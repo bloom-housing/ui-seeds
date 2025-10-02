@@ -109,7 +109,7 @@ export const VerticalTabs = () => {
         <Card>
           <Card.Header>
             <HeadingGroup
-              size="2xl"
+              headingProps={{ size: "2xl" }}
               heading="Wildflower"
               subheading="Wildflower (or wild flower)"
             />
@@ -135,7 +135,7 @@ export const VerticalTabs = () => {
       <Tabs.TabPanel>
         <Card spacing="lg">
           <Card.Header>
-            <HeadingGroup size="2xl" heading="lg" subheading="Large Spacing" />
+            <HeadingGroup heading="lg" subheading="Large Spacing" headingProps={{ size: "2xl" }} />
           </Card.Header>
 
           <Card.Section>

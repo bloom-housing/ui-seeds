@@ -28,7 +28,7 @@ const DocsRowWrapper = (props: React.PropsWithChildren) => {
 export const ButtonVariants = () => (
   <>
     <DocsWrapper>
-      <HeadingGroup size="2xl" heading="sm" subheading="Small Size" />
+      <HeadingGroup heading="sm" subheading="Small Size" headingProps={{ size: "2xl" }} />
       <div>
         <Button variant="primary" size="sm">
           Primary Small
@@ -71,7 +71,7 @@ export const ButtonVariants = () => (
       </div>
     </DocsWrapper>
     <DocsWrapper>
-      <HeadingGroup size="2xl" heading="md" subheading="Medium Size" />
+      <HeadingGroup heading="md" subheading="Medium Size" headingProps={{ size: "2xl" }} />
       <div>
         <Button variant="primary" size="md">
           Primary Medium
@@ -114,7 +114,7 @@ export const ButtonVariants = () => (
       </div>
     </DocsWrapper>
     <DocsWrapper>
-      <HeadingGroup size="2xl" heading="lg" subheading="Large Size" />
+      <HeadingGroup heading="lg" subheading="Large Size" headingProps={{ size: "2xl" }} />
       <div>
         <Button variant="primary" size="lg">
           Primary Large
