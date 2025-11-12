@@ -1,4 +1,4 @@
-import React, { useRef, useId } from "react"
+import React, { useRef, useId, useEffect } from "react"
 import { createPortal } from "react-dom"
 import { FocusTrap } from "focus-trap-react"
 import { XMarkIcon } from "@heroicons/react/20/solid"
@@ -65,7 +65,7 @@ const OverlayContent = (props: OverlayContentProps) => {
   if (props.className) classNames.push(props.className)
 
   return (
-    <div id={props.id} className={classNames.join(" ")}>
+    <div id={props.id} className={classNames.join(" ")} tabIndex={-1}>
       {props.children}
     </div>
   )
@@ -126,7 +126,6 @@ const Overlay = (props: OverlayProps) => {
           >
             <div
               id={uniqueFocusId}
-              tabIndex={-1}
               className={classNames.join(" ")}
               role="dialog"
               aria-modal="true"

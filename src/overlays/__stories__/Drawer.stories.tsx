@@ -16,9 +16,9 @@ export default {
   },
 }
 
-const CardExample = () => {
+export const CardExample = () => {
   return (
-    <Card>
+    <Card className={"seeds-m-b-4"}>
       <Card.Header>
         <Heading size="2xl">Wildflower</Heading>
       </Card.Header>
@@ -75,8 +75,8 @@ export const ManyButtons = () => {
   return (
     <>
       <button onClick={() => setIsOpen(!isOpen)}>Toggle Drawer</button>
-      <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <Drawer.Header>Heading</Drawer.Header>
+      <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} ariaLabelledBy="drawer-heading">
+        <Drawer.Header id="drawer-heading">Heading</Drawer.Header>
         <Drawer.Content>
           <CardExample />
         </Drawer.Content>
@@ -113,8 +113,40 @@ export const OverflowingContent = () => {
   return (
     <>
       <button onClick={() => setIsOpen(!isOpen)}>Toggle Drawer</button>
-      <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <Drawer.Header>Heading</Drawer.Header>
+      <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} ariaLabelledBy="drawer-heading">
+        <Drawer.Header id="drawer-heading">Heading</Drawer.Header>
+        <Drawer.Content>
+          <CardExample />
+          <CardExample />
+          <CardExample />
+          <CardExample />
+        </Drawer.Content>
+        <Drawer.Footer>
+          <Button variant="primary" size="sm">
+            Primary Button
+          </Button>
+          <Button variant="secondary" size="sm">
+            Secondary Button
+          </Button>
+        </Drawer.Footer>
+      </Drawer>
+    </>
+  )
+}
+
+export const PreventBackgroundScroll = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  return (
+    <>
+      <button onClick={() => setIsOpen(!isOpen)}>Toggle Drawer</button>
+      <CardExample />
+      <CardExample />
+      <CardExample />
+      <CardExample />
+      <CardExample />
+      <CardExample />
+      <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} ariaLabelledBy="drawer-heading">
+        <Drawer.Header id="drawer-heading">Heading</Drawer.Header>
         <Drawer.Content>
           <CardExample />
           <CardExample />
@@ -140,9 +172,24 @@ export const Nested = () => {
   return (
     <>
       <button onClick={() => setIsOpenFirst(!isOpenFirst)}>Toggle Drawer</button>
-      <Drawer isOpen={isOpenFirst} onClose={() => setIsOpenFirst(false)}>
-        <Drawer.Header>Heading</Drawer.Header>
+      <CardExample />
+      <CardExample />
+      <CardExample />
+      <CardExample />
+      <CardExample />
+      <CardExample />
+      <Drawer
+        isOpen={isOpenFirst}
+        onClose={() => setIsOpenFirst(false)}
+        ariaLabelledBy="drawer-heading"
+      >
+        <Drawer.Header id="drawer-heading">Heading</Drawer.Header>
         <Drawer.Content>
+          <CardExample />
+          <CardExample />
+          <CardExample />
+          <CardExample />
+          <CardExample />
           <CardExample />
         </Drawer.Content>
         <Drawer.Footer>
@@ -155,8 +202,13 @@ export const Nested = () => {
         </Drawer.Footer>
       </Drawer>
       <Drawer isOpen={isOpenSecond} onClose={() => setIsOpenSecond(false)} nested={true}>
-        <Drawer.Header>Heading</Drawer.Header>
+        <Drawer.Header id="drawer-heading">Heading</Drawer.Header>
         <Drawer.Content>
+          <CardExample />
+          <CardExample />
+          <CardExample />
+          <CardExample />
+          <CardExample />
           <CardExample />
         </Drawer.Content>
         <Drawer.Footer>
