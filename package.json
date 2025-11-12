@@ -15,7 +15,8 @@
       {
         "name": "alpha",
         "prerelease": true
-      }
+      },
+      "2.x.x"
     ]
   },
   "files": [
