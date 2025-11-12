@@ -16,12 +16,12 @@ export default function usePortal(
   closeFn: () => void,
   liveAndAtomic = false
 ): [
-  React.MutableRefObject<Element | undefined>,
+  React.RefObject<Element | null>,
   (overlayEl: HTMLDivElement) => void,
   boolean,
   React.Dispatch<React.SetStateAction<boolean>>
 ] {
-  const portalEl = useRef<Element>()
+  const portalEl = useRef<Element>(null)
   const [mount, setMount] = useState(false)
 
   useEffect(() => {

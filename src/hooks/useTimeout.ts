@@ -8,7 +8,7 @@ import React from "react"
  * https://www.joshwcomeau.com/snippets/react-hooks/use-timeout/
  */
 export default function useTimeout(callback: () => void, delay?: number) {
-  const timeoutRef = React.useRef<number | undefined>()
+  const timeoutRef = React.useRef<number>(null)
   const savedCallback = React.useRef(callback)
 
   React.useEffect(() => {

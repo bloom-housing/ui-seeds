@@ -21,7 +21,7 @@ export interface HeadingProps {
 const Heading = (props: HeadingProps) => {
   const priority = props.priority || 1
   const size = props.size || "4xl"
-  const HnTag = `h${priority}` as keyof JSX.IntrinsicElements
+  const HnTag = `h${priority}` as keyof React.JSX.IntrinsicElements
 
   const classNames = [`text-heading-${size}`]
   if (props.className) classNames.push(props.className)
