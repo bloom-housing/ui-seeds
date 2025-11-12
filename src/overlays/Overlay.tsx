@@ -113,14 +113,6 @@ const Overlay = (props: OverlayProps) => {
 
   const [overlayPortalEl, overlayRef, mount] = usePortal("seeds-overlay-portal", props.onClose)
 
-  useEffect(() => {
-    document.body.style.overflow = "hidden"
-
-    return () => {
-      document.body.style.overflow = "unset"
-    }
-  }, [])
-
   return mount && overlayPortalEl.current
     ? createPortal(
         <div className={overlayClassNames.join(" ")} ref={overlayRef}>
