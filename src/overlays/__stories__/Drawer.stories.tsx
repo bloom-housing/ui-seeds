@@ -16,7 +16,7 @@ export default {
   },
 }
 
-const CardExample = () => {
+export const CardExample = () => {
   return (
     <Card className={"seeds-m-b-4"}>
       <Card.Header>
@@ -172,6 +172,12 @@ export const Nested = () => {
   return (
     <>
       <button onClick={() => setIsOpenFirst(!isOpenFirst)}>Toggle Drawer</button>
+      <CardExample />
+      <CardExample />
+      <CardExample />
+      <CardExample />
+      <CardExample />
+      <CardExample />
       <Drawer
         isOpen={isOpenFirst}
         onClose={() => setIsOpenFirst(false)}
@@ -179,6 +185,11 @@ export const Nested = () => {
       >
         <Drawer.Header id="drawer-heading">Heading</Drawer.Header>
         <Drawer.Content>
+          <CardExample />
+          <CardExample />
+          <CardExample />
+          <CardExample />
+          <CardExample />
           <CardExample />
         </Drawer.Content>
         <Drawer.Footer>
@@ -193,6 +204,11 @@ export const Nested = () => {
       <Drawer isOpen={isOpenSecond} onClose={() => setIsOpenSecond(false)} nested={true}>
         <Drawer.Header id="drawer-heading">Heading</Drawer.Header>
         <Drawer.Content>
+          <CardExample />
+          <CardExample />
+          <CardExample />
+          <CardExample />
+          <CardExample />
           <CardExample />
         </Drawer.Content>
         <Drawer.Footer>
