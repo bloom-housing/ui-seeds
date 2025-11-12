@@ -45,11 +45,10 @@ export interface DrawerProps extends OverlayProps {
 
 const Drawer = (props: DrawerProps) => {
   useEffect(() => {
-    if (props.nested) return
     if (props.isOpen) {
       document.body.style.overflow = "hidden"
     } else {
-      document.body.style.overflow = "unset"
+      if (!props.nested) document.body.style.overflow = "unset"
     }
   }, [props.isOpen, props.nested])
 
