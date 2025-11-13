@@ -40,12 +40,7 @@ const DrawerFooter = (props: OverlayFooterProps) => {
   return <OverlayFooter {...props} className={classNames.join(" ")} />
 }
 
-export interface DrawerProps extends OverlayProps {
-  /** If this Drawer renders nested above another Drawer */
-  nested?: boolean
-}
-
-const Drawer = (props: DrawerProps) => {
+const Drawer = (props: OverlayProps) => {
   useEffect(() => {
     if (props.isOpen) {
       disableBodyScroll()
