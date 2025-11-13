@@ -35,9 +35,7 @@ const DialogFooter = (props: OverlayFooterProps) => {
   return <OverlayFooter {...props} className={classNames.join(" ")} />
 }
 
-export interface DialogProps extends OverlayProps {}
-
-const Dialog = (props: DialogProps) => {
+const Dialog = (props: OverlayProps) => {
   useEffect(() => {
     if (props.isOpen) {
       disableBodyScroll()

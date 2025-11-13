@@ -128,7 +128,7 @@ const Overlay = (props: OverlayProps) => {
   return mount && overlayPortalEl.current
     ? createPortal(
         <div className={overlayClassNames.join(" ")} ref={overlayRef}>
-          <div className="seeds-overlay-background" onClick={() => props.onClose()} />
+          <div className="seeds-overlay-background" onClick={props.onClose} />
           <FocusTrap
             focusTrapOptions={{
               allowOutsideClick: true,
