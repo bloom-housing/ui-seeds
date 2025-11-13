@@ -44,6 +44,14 @@ export interface DrawerProps extends OverlayProps {
 }
 
 const Drawer = (props: DrawerProps) => {
+  useEffect(() => {
+    if (props.isOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      if (!props.nested) document.body.style.overflow = "unset"
+    }
+  }, [props.isOpen, props.nested])
+
   if (!props.isOpen) return null
 
   const classNames = ["seeds-drawer"]
@@ -51,10 +59,7 @@ const Drawer = (props: DrawerProps) => {
   if (props.nested) classNames.push("is-nested")
 
   return (
-    <Overlay
-      {...props}
-      className={classNames.join(" ")}
-    >
+    <Overlay {...props} className={classNames.join(" ")}>
       {props.children}
     </Overlay>
   )

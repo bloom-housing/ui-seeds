@@ -50,6 +50,7 @@
   color: var(--overlay-content-text-color);
   padding: var(--overlay-padding);
   overflow: auto;
+  outline: 0;
 
   > :first-child {
     margin-block-start: 0;
