@@ -1,4 +1,4 @@
-import React, { useRef, useId, useEffect } from "react"
+import React, { useRef, useId } from "react"
 import { createPortal } from "react-dom"
 import { FocusTrap } from "focus-trap-react"
 import { XMarkIcon } from "@heroicons/react/20/solid"
@@ -16,6 +16,16 @@ export interface OverlayHeaderProps {
   className?: string
   /** Element ID */
   id?: string
+}
+
+export const enableBodyScroll = () => {
+  document.body.style.overflow = "unset"
+  return
+}
+
+export const disableBodyScroll = () => {
+  document.body.style.overflow = "hidden"
+  return
 }
 
 const OverlayHeader = (props: OverlayHeaderProps) => {
@@ -98,6 +108,8 @@ export interface OverlayProps {
   ariaLabelledBy?: string
   /** An ID for content content */
   ariaDescribedBy?: string
+  /** If this Overlay renders nested above another Overlay */
+  nested?: boolean
 }
 
 const Overlay = (props: OverlayProps) => {
