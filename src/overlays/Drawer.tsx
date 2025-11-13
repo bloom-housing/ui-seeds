@@ -38,12 +38,7 @@ const DrawerFooter = (props: OverlayFooterProps) => {
   return <OverlayFooter {...props} className={classNames.join(" ")} />
 }
 
-export interface DrawerProps extends OverlayProps {
-  /** If this Drawer renders nested above another Drawer */
-  nested?: boolean
-}
-
-const Drawer = (props: DrawerProps) => {
+const Drawer = (props: OverlayProps) => {
   if (!props.isOpen) return null
 
   const classNames = ["seeds-drawer"]
@@ -51,10 +46,7 @@ const Drawer = (props: DrawerProps) => {
   if (props.nested) classNames.push("is-nested")
 
   return (
-    <Overlay
-      {...props}
-      className={classNames.join(" ")}
-    >
+    <Overlay {...props} className={classNames.join(" ")}>
       {props.children}
     </Overlay>
   )
