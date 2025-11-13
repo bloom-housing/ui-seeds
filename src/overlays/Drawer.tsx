@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect } from "react"
 
 import Overlay, {
   OverlayFooter,
@@ -8,6 +8,8 @@ import Overlay, {
   OverlayHeader,
   OverlayHeaderProps,
   OverlayProps,
+  disableBodyScroll,
+  enableBodyScroll,
 } from "./Overlay"
 
 import "./Drawer.scss"
@@ -41,9 +43,10 @@ const DrawerFooter = (props: OverlayFooterProps) => {
 const Drawer = (props: OverlayProps) => {
   useEffect(() => {
     if (props.isOpen) {
-      document.body.style.overflow = "hidden"
-    } else if (!props.nested) {
-      document.body.style.overflow = "unset"
+      disableBodyScroll()
+    }
+    return () => {
+      if (!props.nested) enableBodyScroll()
     }
   }, [props.isOpen, props.nested])
 

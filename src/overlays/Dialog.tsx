@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 import Overlay, {
   OverlayProps,
@@ -8,6 +8,8 @@ import Overlay, {
   OverlayFooterProps,
   OverlayHeader,
   OverlayHeaderProps,
+  disableBodyScroll,
+  enableBodyScroll,
 } from "./Overlay"
 
 import "./Dialog.scss"
@@ -36,6 +38,15 @@ const DialogFooter = (props: OverlayFooterProps) => {
 export interface DialogProps extends OverlayProps {}
 
 const Dialog = (props: DialogProps) => {
+  useEffect(() => {
+    if (props.isOpen) {
+      disableBodyScroll()
+    }
+    return () => {
+      if (!props.nested) enableBodyScroll()
+    }
+  }, [props.isOpen, props.nested])
+
   if (!props.isOpen) return null
 
   const classNames = ["seeds-dialog"]
