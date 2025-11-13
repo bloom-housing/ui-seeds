@@ -38,17 +38,12 @@ const DrawerFooter = (props: OverlayFooterProps) => {
   return <OverlayFooter {...props} className={classNames.join(" ")} />
 }
 
-export interface DrawerProps extends OverlayProps {
-  /** If this Drawer renders nested above another Drawer */
-  nested?: boolean
-}
-
-const Drawer = (props: DrawerProps) => {
+const Drawer = (props: OverlayProps) => {
   useEffect(() => {
     if (props.isOpen) {
       document.body.style.overflow = "hidden"
-    } else {
-      if (!props.nested) document.body.style.overflow = "unset"
+    } else if (!props.nested) {
+      document.body.style.overflow = "unset"
     }
   }, [props.isOpen, props.nested])
 

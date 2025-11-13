@@ -98,6 +98,8 @@ export interface OverlayProps {
   ariaLabelledBy?: string
   /** An ID for content content */
   ariaDescribedBy?: string
+  /** If this Overlay renders nested above another Overlay */
+  nested?: boolean
 }
 
 const Overlay = (props: OverlayProps) => {
@@ -113,10 +115,26 @@ const Overlay = (props: OverlayProps) => {
 
   const [overlayPortalEl, overlayRef, mount] = usePortal("seeds-overlay-portal", props.onClose)
 
+  useEffect(() => {
+    if (props.isOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      if (!props.nested) document.body.style.overflow = "unset"
+    }
+  }, [props.isOpen, props.nested])
+
   return mount && overlayPortalEl.current
     ? createPortal(
         <div className={overlayClassNames.join(" ")} ref={overlayRef}>
-          <div className="seeds-overlay-background" onClick={props.onClose} />
+          <div
+            className="seeds-overlay-background"
+            onClick={() => {
+              props.onClose()
+              if (!props.nested) {
+                document.body.style.overflow = "unset"
+              }
+            }}
+          />
           <FocusTrap
             focusTrapOptions={{
               allowOutsideClick: true,

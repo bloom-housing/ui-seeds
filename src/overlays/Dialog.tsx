@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react"
+import React from "react"
 
 import Overlay, {
   OverlayProps,
@@ -36,14 +36,6 @@ const DialogFooter = (props: OverlayFooterProps) => {
 export interface DialogProps extends OverlayProps {}
 
 const Dialog = (props: DialogProps) => {
-  useEffect(() => {
-    if (props.isOpen) {
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = "unset"
-    }
-  }, [props.isOpen])
-
   if (!props.isOpen) return null
 
   const classNames = ["seeds-dialog"]
