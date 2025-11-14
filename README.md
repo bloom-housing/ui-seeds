@@ -4,6 +4,8 @@ This package serves as the home of [Bloom](https://www.exygy.com/housing)'s core
 
 Seeds is built using TypeScript, React, and Sass. It uses Storybook for concrete component examples and Jest for testing.
 
+We recommended Node version 22 to use when loading Seeds.
+
 ## Design System Documentation
 
 [This Notion page](https://exygy.notion.site/Seeds-11a684ea9b7544f4bbc99d2284aa4613?source=copy_link) is a hub for additional Seeds documentation.
