@@ -24,7 +24,7 @@ const FieldValue = (props: FieldValueProps) => {
   return (
     <div id={props.id} className={classNames.join(" ")} data-testid={props.testId}>
       {props.label && <p data-part="label">{props.label}</p>}
-      <p data-part="value">{props.children}</p>
+      <div data-part="value">{props.children}</div>
       {props.helpText && <p data-part="help-text">{props.helpText}</p>}
     </div>
   )
