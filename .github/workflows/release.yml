@@ -4,6 +4,9 @@ on:
     branches:
       - main
       - alpha
+permissions:
+  id-token: write
+  contents: read
 jobs:
   release:
     name: Release
