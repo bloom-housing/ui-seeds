@@ -1,6 +1,6 @@
 # Seeds – Component Library for Bloom
 
-This package serves as the home of [Bloom](https://www.exygy.com/housing)'s core UI components, meant to be imported from within various applications. Seeds supersedes Bloom's previous "ui-components" package.
+This package serves as the home of [Bloom](https://bloomhousing.com)'s core UI components, meant to be imported from within various applications. Seeds supersedes Bloom's previous "ui-components" package.
 
 Seeds is built using TypeScript, React, and Sass. It uses Storybook for concrete component examples and Jest for testing.
 
