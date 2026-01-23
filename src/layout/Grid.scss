@@ -11,9 +11,7 @@
   @media (--sm-only) {
     --grid-gap: var(--grid-gap-mobile);
   }
-
   display: grid;
-  gap: var(--grid-gap);
 
   &[data-spacing="sm"] {
     --grid-gap: var(--grid-gap-sm);
@@ -32,6 +30,8 @@
       --grid-gap: var(--grid-gap-xl);
     }
   }
+
+  gap: var(--grid-gap);
 }
 
 .seeds-grid-row {
