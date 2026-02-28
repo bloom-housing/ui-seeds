@@ -100,6 +100,7 @@ const Tab = (props: TabProps) => {
       )
     }
 
+    // If the tab is disabled or doesn't have an href, render a non-interactive element with appropriate aria attributes, as a native anchor element doesn't support disabled state
     return (
       <li data-active={selected} data-disabled={disabled} className={className.join(" ")}>
         <span aria-disabled={disabled} role="link" className="tabs-tab-link">
