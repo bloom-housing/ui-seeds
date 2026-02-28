@@ -102,7 +102,7 @@ const Tab = (props: TabProps) => {
 
     return (
       <li data-active={selected} data-disabled={disabled} className={className.join(" ")}>
-        <span aria-disabled={disabled} className="tabs-tab-link">
+        <span aria-disabled={disabled} role="link" className="tabs-tab-link">
           {props.children}
         </span>
       </li>

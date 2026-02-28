@@ -38,13 +38,14 @@ navigates to a URL. You can also pass `navigationLabel` to set the accessible na
 for the `<nav>` landmark (defaults to `Section navigation`).
 
 ```tsx
-<Tabs navigation>
+<Tabs navigation navigationLabel="Site sections">
   <Tabs.TabList>
-    <Tabs.Tab href="/listings" active>
-      Listings
+    <Tabs.Tab href="/test1">Internal page 1</Tabs.Tab>
+    <Tabs.Tab href="/test2" active>
+      Internal page 2
     </Tabs.Tab>
-    <Tabs.Tab href="/applications">Applications</Tabs.Tab>
-    <Tabs.Tab href="/settings">Settings</Tabs.Tab>
+    <Tabs.Tab href="/test3">Internal page 3</Tabs.Tab>
+    <Tabs.Tab disabled>Disabled page</Tabs.Tab>
   </Tabs.TabList>
 </Tabs>
 ```
