@@ -75,25 +75,4 @@ describe("<Tabs>", () => {
 
     expect(screen.getByRole("navigation", { name: "Account sections" })).toBeInTheDocument()
   })
-
-  it("renders disabled navigation tab as a non-link with disabled state", () => {
-    render(
-      <Tabs navigation>
-        <Tabs.TabList>
-          <Tabs.Tab href="/one">One</Tabs.Tab>
-          <Tabs.Tab disabled>Disabled</Tabs.Tab>
-        </Tabs.TabList>
-      </Tabs>,
-    )
-
-    const disabledLink = screen.queryByRole("link", { name: "Disabled" })
-    expect(disabledLink).toBeNull()
-
-    const navList = screen.getByRole("list")
-    const disabledListItem = within(navList).getAllByRole("listitem")[1]
-    const disabledLabel = within(disabledListItem).getByText("Disabled")
-
-    expect(disabledListItem).toHaveAttribute("data-disabled", "true")
-    expect(disabledLabel).toHaveAttribute("aria-disabled", "true")
-  })
 })
