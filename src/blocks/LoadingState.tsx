@@ -10,7 +10,7 @@ interface LoadingStateProps {
   id?: string
   /** Additional CSS classes */
   className?: string
-  /** Disable aria-live attribute for screen readers */
+  /** Disable aria-live attribute for screen readers - if you set this to true, screen readers will not be automatically notified of loading state changes in this content, so ensure you provide intentional alternative feedback */
   disableAriaLive?: boolean
 }
 
