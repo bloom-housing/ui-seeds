@@ -149,3 +149,33 @@ export const VerticalTabs = () => {
     </Tabs>
   )
 }
+
+export const NavigationTabs = () => {
+  return (
+    <Tabs navigation navigationLabel="Site sections">
+      <Tabs.TabList>
+        <Tabs.Tab href="/test1">Internal page 1</Tabs.Tab>
+        <Tabs.Tab href="/test2" active>
+          Internal page 2
+        </Tabs.Tab>
+        <Tabs.Tab href="/test3">Internal page 3</Tabs.Tab>
+        <Tabs.Tab disabled>Disabled page</Tabs.Tab>
+      </Tabs.TabList>
+    </Tabs>
+  )
+}
+
+export const VerticalNavigationTabs = () => {
+  return (
+    <Tabs navigation verticalSidebar navigationLabel="Site sections">
+      <Tabs.TabList>
+        <Tabs.Tab href="/test1">Internal page 1</Tabs.Tab>
+        <Tabs.Tab href="/test2" active>
+          Internal page 2
+        </Tabs.Tab>
+        <Tabs.Tab href="/test3">Internal page 3</Tabs.Tab>
+        <Tabs.Tab disabled>Disabled page</Tabs.Tab>
+      </Tabs.TabList>
+    </Tabs>
+  )
+}

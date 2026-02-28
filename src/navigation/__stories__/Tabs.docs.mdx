@@ -8,7 +8,8 @@ import * as stories from "./Tabs.stories.tsx"
 
 <Title />
 <Subtitle>
-  Tabs allows users to navigate between multiple sections of content within a single container.
+  Tabs allows users to navigate between multiple sections of content within a single container, or
+  present tab styling for URL-based navigation.
 </Subtitle>
 Read more documentation about the Tabs component in
 [Zeroheight](https://zeroheight.com/5e69dd4e1/p/99dc98-tabs).
@@ -28,6 +29,25 @@ Read more documentation about the Tabs component in
 ## Tab Panel Properties
 
 <ArgTypes of={Tabs.TabPanel} />
+
+## Navigation Mode
+
+Use `navigation` when you want tab styling for URL-based navigation without tab-panel behavior. In this mode,
+each `Tabs.Tab` can receive an `href` and optional `active` state, and clicking a tab
+navigates to a URL. You can also pass `navigationLabel` to set the accessible name
+for the `<nav>` landmark (defaults to `Section navigation`).
+
+```tsx
+<Tabs navigation>
+  <Tabs.TabList>
+    <Tabs.Tab href="/listings" active>
+      Listings
+    </Tabs.Tab>
+    <Tabs.Tab href="/applications">Applications</Tabs.Tab>
+    <Tabs.Tab href="/settings">Settings</Tabs.Tab>
+  </Tabs.TabList>
+</Tabs>
+```
 
 ## Theme Variables
 
