@@ -27,6 +27,8 @@ export interface LinkProps {
   ariaHidden?: boolean
   /** Accessible label if link doesn't contain text content */
   ariaLabel?: string
+  /** Indicates whether this link represents the current item within a set */
+  ariaCurrent?: string
   /** Element ID */
   id?: string
   /** Additional CSS classes */
@@ -53,6 +55,7 @@ const Link = (props: LinkProps) => {
     className: classNames.join(" "),
     "aria-label": props.ariaLabel,
     "aria-hidden": props.ariaHidden,
+    "aria-current": props.ariaCurrent,
   }
 
   if (props.newWindowTarget) {
