@@ -5,6 +5,7 @@ import {
   TabList as ReactTabList,
   TabPanel as ReactTabPanel,
 } from "react-tabs"
+import Link from "../actions/Link"
 import { SeedsSizes } from "../global/sharedTypes"
 import "./Tabs.scss"
 
@@ -93,9 +94,9 @@ const Tab = (props: TabProps) => {
     if (!disabled && href) {
       return (
         <li data-active={selected} data-disabled={disabled} className={className.join(" ")}>
-          <a href={href} aria-current={selected ? "page" : undefined} className="tabs-tab-link">
+          <Link href={href} ariaCurrent={selected ? "page" : undefined} className="tabs-tab-link">
             {props.children}
-          </a>
+          </Link>
         </li>
       )
     }
