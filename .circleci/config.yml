@@ -4,7 +4,8 @@ orbs:
   node: circleci/node@5.0.2
 
 jobs:
-  build_and_test: # this can be any name you choose
+  # TODO: We should remove this file and decouple the infra from CircleCI once we've proven GitHub Actions is working
+  build_and_test:
     executor: node/default # use the default executor defined within the orb
     steps:
       - checkout
