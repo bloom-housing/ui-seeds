@@ -1,0 +1,29 @@
+name: Unit Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: yarn install
+      - name: Build package
+        run: yarn build
+      - name: Run tests
+        run: yarn test --watchAll=false
