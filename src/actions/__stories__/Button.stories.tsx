@@ -2,7 +2,7 @@ import React from "react"
 import { HeartIcon } from "@heroicons/react/24/solid"
 import Icon from "../../icons/Icon"
 import HeadingGroup from "../../text/HeadingGroup"
-import Button from "../Button"
+import Button, { ButtonVariant } from "../Button"
 import MDXDocs from "./Button.docs.mdx"
 
 export default {
@@ -244,6 +244,40 @@ export const LoadingButton = () => {
     >
       Click to spin
     </Button>
+  )
+}
+
+export const LoadingButtonVariants = () => {
+  const [loading, setLoading] = React.useState(false)
+  const variants: ButtonVariant[] = [
+    "primary",
+    "primary-outlined",
+    "secondary",
+    "secondary-outlined",
+    "success",
+    "success-outlined",
+    "alert",
+    "alert-outlined",
+    "warn",
+    "warn-outlined",
+  ]
+  return (
+    <div>
+      <button style={{ marginBottom: 16 }} onClick={() => setLoading((l) => !l)}>
+        Toggle Loading
+      </button>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+        {variants.map((variant) => (
+          <Button
+            key={variant}
+            variant={variant}
+            loadingMessage={loading ? "Loading..." : undefined}
+          >
+            {variant}
+          </Button>
+        ))}
+      </div>
+    </div>
   )
 }
 
